@@ -1,6 +1,6 @@
 # RSThing
  
- ## Todo List
+## Todo List
  - create actual project
  - saving of username and other information
  
