@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
         {
             string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=X";
             string NewUrl = url.Replace("X", Name);
-            var textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
+            string textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
             string NewText = textFromFile.Replace(" ", "..");
             return textFromFile;
         }
