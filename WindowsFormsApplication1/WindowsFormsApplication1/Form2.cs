@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,10 +29,10 @@ namespace WindowsFormsApplication1
         private String GetPlayerAgilityXP(string Name)
         {
             string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=X";
-            string NewUrl = url.Replace("X", Name);
+            string NewUrl = url.Replace("X", Name);           
             string textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
-            string NewText = textFromFile.Replace(" ", "..");
-            return textFromFile;
+            string[] LevelArray = textFromFile.Split(',');
+            return string.Join("  ", LevelArray);
         }
     }
 } 
