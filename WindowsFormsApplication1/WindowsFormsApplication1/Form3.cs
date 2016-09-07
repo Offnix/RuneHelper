@@ -24,10 +24,9 @@ namespace WindowsFormsApplication1
         /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
-            StreamWriter Data = new StreamWriter(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
-            Data.Write(UsernameTextBox.Text);
-            Data.Close();
+            API.StreamWriter(UsernameTextBox.Text, @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
             Form1.Username = UsernameTextBox.Text;
+            // IF I CALL IT FROM HERE IT DOESNT WORK
             this.Hide();
         }
     }

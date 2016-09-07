@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Net;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
@@ -12,7 +11,6 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-
         /// <summary>
         /// On form load
         /// </summary>
@@ -32,11 +30,11 @@ namespace WindowsFormsApplication1
                 // else if they already exsist and have more than 0 chars in it.. read the file and put it into a -
                 // string array  split by commas
                 if (new FileInfo(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt").Length > 0)
-                {   
-                    StreamReader File = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
-                    Username = File.ReadToEnd();
-                    File.Close();                 
+                {
+                    Username = API.StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");                     
                     ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
+                    API.UpdateLevels();
+                    UpdateBars();
                 }
             }           
         }
@@ -50,7 +48,12 @@ namespace WindowsFormsApplication1
             this.Hide();
         }
 
-      
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
         /// <summary>
         /// Toolbar functions
         /// </summary>
@@ -63,14 +66,39 @@ namespace WindowsFormsApplication1
         /// <summary>
         /// Misc code/ functions
         /// </summary>
+        // THIS IS THE ISSUE RIGHT HERE
         public void UpdatePage()
         {
            ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
+            UsernameLabel.Text = Username;
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
+        public void UpdateBars()
         {
-            this.Close();
+            AttackBar.Value = Convert.ToInt32(API.LevelArray[5]);
+            DefenceBar.Value = Convert.ToInt32(API.LevelArray[7]);
+            StrengthBar.Value = Convert.ToInt32(API.LevelArray[9]);
+            HealthBar.Value = Convert.ToInt32(API.LevelArray[11]);
+            RangedBar.Value = Convert.ToInt32(API.LevelArray[13]);
+            PrayerBar.Value = Convert.ToInt32(API.LevelArray[15]);
+            MagicBar.Value = Convert.ToInt32(API.LevelArray[17]);
+            WoodcuttingBar.Value = Convert.ToInt32(API.LevelArray[19]);
+            FletchingBar.Value = Convert.ToInt32(API.LevelArray[21]);
+            FishingBar.Value = Convert.ToInt32(API.LevelArray[23]);
+            FiremakingBar.Value = Convert.ToInt32(API.LevelArray[25]);
+            CraftingBar.Value = Convert.ToInt32(API.LevelArray[27]);
+            SmithingBar.Value = Convert.ToInt32(API.LevelArray[29]);
+            MiningBar.Value = Convert.ToInt32(API.LevelArray[31]);
+            HerbloreBar.Value = Convert.ToInt32(API.LevelArray[33]);
+            AgilityBar.Value = Convert.ToInt32(API.LevelArray[35]);
+            ThievingBar.Value = Convert.ToInt32(API.LevelArray[37]);
+            SlayerBar.Value = Convert.ToInt32(API.LevelArray[39]);
+            FarmingBar.Value = Convert.ToInt32(API.LevelArray[41]);
+            RunecraftingBar.Value = Convert.ToInt32(API.LevelArray[43]);
+            HunterBar.Value = Convert.ToInt32(API.LevelArray[45]);
+            ConstructionBar.Value = Convert.ToInt32(API.LevelArray[47]);
+            SummoningBar.Value = Convert.ToInt32(API.LevelArray[49]);
+            DungeoneeringBar.Value = Convert.ToInt32(API.LevelArray[51]);
         }
     }
 }
