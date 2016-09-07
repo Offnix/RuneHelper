@@ -35,6 +35,8 @@
             this.TargetBox = new System.Windows.Forms.TextBox();
             this.TargetLabel = new System.Windows.Forms.Label();
             this.CalculateButton = new System.Windows.Forms.Button();
+            this.NeededLabel = new System.Windows.Forms.Label();
+            this.NeededBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CharNameBox
@@ -86,14 +88,14 @@
             this.TargetLabel.AutoSize = true;
             this.TargetLabel.Location = new System.Drawing.Point(12, 122);
             this.TargetLabel.Name = "TargetLabel";
-            this.TargetLabel.Size = new System.Drawing.Size(124, 13);
+            this.TargetLabel.Size = new System.Drawing.Size(95, 13);
             this.TargetLabel.TabIndex = 5;
-            this.TargetLabel.Text = "Enter Target Level or XP";
+            this.TargetLabel.Text = "Enter Target Level";
             this.TargetLabel.Visible = false;
             // 
             // CalculateButton
             // 
-            this.CalculateButton.Location = new System.Drawing.Point(125, 170);
+            this.CalculateButton.Location = new System.Drawing.Point(124, 190);
             this.CalculateButton.Name = "CalculateButton";
             this.CalculateButton.Size = new System.Drawing.Size(75, 23);
             this.CalculateButton.TabIndex = 6;
@@ -102,11 +104,31 @@
             this.CalculateButton.Visible = false;
             this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
+            // NeededLabel
+            // 
+            this.NeededLabel.AutoSize = true;
+            this.NeededLabel.Location = new System.Drawing.Point(27, 288);
+            this.NeededLabel.Name = "NeededLabel";
+            this.NeededLabel.Size = new System.Drawing.Size(94, 13);
+            this.NeededLabel.TabIndex = 7;
+            this.NeededLabel.Text = "Feathers Required";
+            this.NeededLabel.Visible = false;
+            // 
+            // NeededBox
+            // 
+            this.NeededBox.Location = new System.Drawing.Point(127, 285);
+            this.NeededBox.Name = "NeededBox";
+            this.NeededBox.Size = new System.Drawing.Size(100, 20);
+            this.NeededBox.TabIndex = 8;
+            this.NeededBox.Visible = false;
+            // 
             // SilverhawkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 415);
+            this.Controls.Add(this.NeededBox);
+            this.Controls.Add(this.NeededLabel);
             this.Controls.Add(this.CalculateButton);
             this.Controls.Add(this.TargetLabel);
             this.Controls.Add(this.TargetBox);
@@ -130,5 +152,7 @@
         private System.Windows.Forms.TextBox TargetBox;
         private System.Windows.Forms.Label TargetLabel;
         private System.Windows.Forms.Button CalculateButton;
+        private System.Windows.Forms.Label NeededLabel;
+        private System.Windows.Forms.TextBox NeededBox;
     }
 }
