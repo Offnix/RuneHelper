@@ -37,6 +37,7 @@
             this.CalculateButton = new System.Windows.Forms.Button();
             this.NeededLabel = new System.Windows.Forms.Label();
             this.NeededBox = new System.Windows.Forms.TextBox();
+            this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CharNameBox
@@ -122,11 +123,22 @@
             this.NeededBox.TabIndex = 8;
             this.NeededBox.Visible = false;
             // 
+            // BackButton
+            // 
+            this.BackButton.Location = new System.Drawing.Point(127, 380);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 9;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // SilverhawkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 415);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NeededBox);
             this.Controls.Add(this.NeededLabel);
             this.Controls.Add(this.CalculateButton);
@@ -154,5 +166,6 @@
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Label NeededLabel;
         private System.Windows.Forms.TextBox NeededBox;
+        private System.Windows.Forms.Button BackButton;
     }
 }

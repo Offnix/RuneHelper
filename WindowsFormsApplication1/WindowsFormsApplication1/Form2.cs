@@ -87,5 +87,12 @@ namespace WindowsFormsApplication1
             NeededBox.Text = feathers.ToString();
             NeededBox.Visible = true;
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Form1 Form1 = new Form1();
+            Form1.Show();
+            this.Close();
+        }
     }
 } 
