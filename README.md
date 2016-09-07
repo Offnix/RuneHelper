@@ -11,8 +11,10 @@ E.G.
  
  
 ## Todo List
- - create actual project
- - saving of username and other information
+ - addition of progress bars and basic skeleton of form1 - offnix
+ - silverhawk calc - peter
+ - Api for level import for all purposes -offnix
+ - 
  
 
 ## Idea's And Features that could be added
