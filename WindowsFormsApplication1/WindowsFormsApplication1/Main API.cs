@@ -50,5 +50,4 @@ public static class API
             MessageBox.Show("Username was not found in the runescape Highscores or are offline", "ERROR");
         }
     }
-
 }

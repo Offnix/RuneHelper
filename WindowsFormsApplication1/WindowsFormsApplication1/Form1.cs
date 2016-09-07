@@ -33,6 +33,7 @@ namespace WindowsFormsApplication1
                 {
                     Username = API.StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");                     
                     ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
+                    UsernameLabel.Text = Username;
                     API.UpdateLevels();
                     UpdateBars();
                 }
@@ -99,6 +100,8 @@ namespace WindowsFormsApplication1
             ConstructionBar.Value = Convert.ToInt32(API.LevelArray[47]);
             SummoningBar.Value = Convert.ToInt32(API.LevelArray[49]);
             DungeoneeringBar.Value = Convert.ToInt32(API.LevelArray[51]);
+            DivinationBar.Value = Convert.ToInt32(API.LevelArray[53]);
+            InventorBar.Value = Convert.ToInt32(API.LevelArray[55]);
         }
     }
 }
