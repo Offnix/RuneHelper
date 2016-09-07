@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         /// </summary>
         private void Form3_Load(object sender, EventArgs e)
         {
-            UsernameTextBox.Text = Form1.GetValue(0);
+            UsernameTextBox.Text = Form1.Username;
         }
 
         /// <summary>
@@ -27,11 +27,8 @@ namespace WindowsFormsApplication1
             StreamWriter Data = new StreamWriter(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
             Data.Write(UsernameTextBox.Text);
             Data.Close();
+            Form1.Username = UsernameTextBox.Text;
             this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {      
         }
     }
 }

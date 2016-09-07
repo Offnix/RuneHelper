@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        public static string[] StatArray;
+        public static string Username;
         public Form1()
         {
             InitializeComponent();
@@ -34,11 +34,9 @@ namespace WindowsFormsApplication1
                 if (new FileInfo(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt").Length > 0)
                 {   
                     StreamReader File = new StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
-                    string wholetext = File.ReadToEnd();
-                    File.Close();
-                    StatArray = wholetext.Split(',');
-                    UsernameLabel.Text = StatArray[0];
-                    ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + StatArray[0] + "/chat.gif");
+                    Username = File.ReadToEnd();
+                    File.Close();                 
+                    ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
                 }
             }           
         }
@@ -65,9 +63,9 @@ namespace WindowsFormsApplication1
         /// <summary>
         /// Misc code/ functions
         /// </summary>
-        public static string GetValue(int Value)
+        public void UpdatePage()
         {
-            return StatArray[Value];
+           ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
         }
     }
 }

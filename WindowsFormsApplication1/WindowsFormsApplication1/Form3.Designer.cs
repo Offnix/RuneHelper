@@ -60,16 +60,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "User Name";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(180, 292);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(160, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Update Profile Image";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
