@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.HeaderLabel = new System.Windows.Forms.Label();
+            this.SilverhawkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // HeaderLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(158, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PUT STUFF HERE";
+            this.HeaderLabel.AutoSize = true;
+            this.HeaderLabel.Location = new System.Drawing.Point(171, 9);
+            this.HeaderLabel.Name = "HeaderLabel";
+            this.HeaderLabel.Size = new System.Drawing.Size(86, 13);
+            this.HeaderLabel.TabIndex = 0;
+            this.HeaderLabel.Text = "Runescape Tool";
             // 
-            // button1
+            // SilverhawkButton
             // 
-            this.button1.Location = new System.Drawing.Point(182, 102);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SilverhawkButton.Location = new System.Drawing.Point(120, 35);
+            this.SilverhawkButton.Name = "SilverhawkButton";
+            this.SilverhawkButton.Size = new System.Drawing.Size(195, 23);
+            this.SilverhawkButton.TabIndex = 1;
+            this.SilverhawkButton.Text = "Silverhawk Feather Calculator";
+            this.SilverhawkButton.UseVisualStyleBackColor = true;
+            this.SilverhawkButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 462);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SilverhawkButton);
+            this.Controls.Add(this.HeaderLabel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -67,8 +67,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label HeaderLabel;
+        private System.Windows.Forms.Button SilverhawkButton;
     }
 }
 
