@@ -67,5 +67,10 @@ namespace WindowsFormsApplication1
         {
            ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
         }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
