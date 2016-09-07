@@ -47,7 +47,7 @@ public static class API
         }
         catch
         {
-            MessageBox.Show("Username was not found in the runescape Highscores", "ERROR");
+            MessageBox.Show("Username was not found in the runescape Highscores or are offline", "ERROR");
         }
     }
 
