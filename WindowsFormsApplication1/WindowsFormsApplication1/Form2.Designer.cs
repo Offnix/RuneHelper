@@ -31,11 +31,15 @@
             this.CharNameBox = new System.Windows.Forms.TextBox();
             this.CharSearchButton = new System.Windows.Forms.Button();
             this.WebReturnBox = new System.Windows.Forms.TextBox();
+            this.XpLabel = new System.Windows.Forms.Label();
+            this.TargetBox = new System.Windows.Forms.TextBox();
+            this.TargetLabel = new System.Windows.Forms.Label();
+            this.CalculateButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CharNameBox
             // 
-            this.CharNameBox.Location = new System.Drawing.Point(34, 36);
+            this.CharNameBox.Location = new System.Drawing.Point(15, 34);
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.Size = new System.Drawing.Size(140, 20);
             this.CharNameBox.TabIndex = 0;
@@ -53,17 +57,60 @@
             // 
             // WebReturnBox
             // 
-            this.WebReturnBox.Location = new System.Drawing.Point(34, 86);
-            this.WebReturnBox.Multiline = true;
+            this.WebReturnBox.Location = new System.Drawing.Point(88, 74);
             this.WebReturnBox.Name = "WebReturnBox";
-            this.WebReturnBox.Size = new System.Drawing.Size(302, 317);
+            this.WebReturnBox.Size = new System.Drawing.Size(189, 20);
             this.WebReturnBox.TabIndex = 2;
+            this.WebReturnBox.Visible = false;
+            // 
+            // XpLabel
+            // 
+            this.XpLabel.AutoSize = true;
+            this.XpLabel.Location = new System.Drawing.Point(12, 77);
+            this.XpLabel.Name = "XpLabel";
+            this.XpLabel.Size = new System.Drawing.Size(51, 13);
+            this.XpLabel.TabIndex = 3;
+            this.XpLabel.Text = "Agility XP";
+            this.XpLabel.Visible = false;
+            // 
+            // TargetBox
+            // 
+            this.TargetBox.Location = new System.Drawing.Point(161, 122);
+            this.TargetBox.Name = "TargetBox";
+            this.TargetBox.Size = new System.Drawing.Size(116, 20);
+            this.TargetBox.TabIndex = 4;
+            this.TargetBox.Visible = false;
+            // 
+            // TargetLabel
+            // 
+            this.TargetLabel.AutoSize = true;
+            this.TargetLabel.Location = new System.Drawing.Point(12, 122);
+            this.TargetLabel.Name = "TargetLabel";
+            this.TargetLabel.Size = new System.Drawing.Size(124, 13);
+            this.TargetLabel.TabIndex = 5;
+            this.TargetLabel.Text = "Enter Target Level or XP";
+            this.TargetLabel.Visible = false;
+            // 
+            // CalculateButton
+            // 
+            this.CalculateButton.Location = new System.Drawing.Point(125, 170);
+            this.CalculateButton.Name = "CalculateButton";
+            this.CalculateButton.Size = new System.Drawing.Size(75, 23);
+            this.CalculateButton.TabIndex = 6;
+            this.CalculateButton.Text = "Calculate";
+            this.CalculateButton.UseVisualStyleBackColor = true;
+            this.CalculateButton.Visible = false;
+            this.CalculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // SilverhawkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 415);
+            this.Controls.Add(this.CalculateButton);
+            this.Controls.Add(this.TargetLabel);
+            this.Controls.Add(this.TargetBox);
+            this.Controls.Add(this.XpLabel);
             this.Controls.Add(this.WebReturnBox);
             this.Controls.Add(this.CharSearchButton);
             this.Controls.Add(this.CharNameBox);
@@ -79,5 +126,9 @@
         private System.Windows.Forms.TextBox CharNameBox;
         private System.Windows.Forms.Button CharSearchButton;
         private System.Windows.Forms.TextBox WebReturnBox;
+        private System.Windows.Forms.Label XpLabel;
+        private System.Windows.Forms.TextBox TargetBox;
+        private System.Windows.Forms.Label TargetLabel;
+        private System.Windows.Forms.Button CalculateButton;
     }
 }
