@@ -38,9 +38,9 @@ namespace WindowsFormsApplication1
                     File.Close();
                     StatArray = wholetext.Split(',');
                     UsernameLabel.Text = StatArray[0];
+                    ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + StatArray[0] + "/chat.gif");
                 }
-            }
-            ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + StatArray[0] + "/chat.gif");
+            }           
         }
         /// <summary>
         /// Buttons on form
