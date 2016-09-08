@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         public static string Username;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -39,6 +39,7 @@ namespace WindowsFormsApplication1
                 }
             }           
         }
+
         /// <summary>
         /// Buttons on form
         /// </summary>
@@ -71,7 +72,9 @@ namespace WindowsFormsApplication1
         public void UpdatePage()
         {
            ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
+            API.UpdateLevels();
             UsernameLabel.Text = Username;
+            UpdateBars();
         }
 
         public void UpdateBars()

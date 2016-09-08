@@ -41,14 +41,22 @@ namespace WindowsFormsApplication1
 
         private String GetPlayerAgilityXP(string Name)
         {
-            string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=X";
-            string NewUrl = url.Replace("X", Name);
-            string textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
-            LevelArray = textFromFile.Split('\n');
-            AgilArray = LevelArray[17].Split(',');
-            return AgilArray[2];
-            //So I managed to get it working by splitting the text after every \n character, then getting the 18th item in the array, which is agil
-            //after that i seperated it into another array seperated by commas, then returned the 3rd item, which is the xp value alone
+            try
+            {
+                string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=X";
+                string NewUrl = url.Replace("X", Name);
+                string textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
+                LevelArray = textFromFile.Split('\n');
+                AgilArray = LevelArray[17].Split(',');
+                return AgilArray[2];
+                //So I managed to get it working by splitting the text after every \n character, then getting the 18th item in the array, which is agil
+                //after that i seperated it into another array seperated by commas, then returned the 3rd item, which is the xp value alone
+            }
+            catch
+            {
+                MessageBox.Show("Username was not found in the runescape highscores. Or highscores or are offline", "ERROR");
+            }
+            return null;
         }
 
         private void ShowBoxes()
@@ -90,7 +98,7 @@ namespace WindowsFormsApplication1
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            Form1 Form1 = new Form1();
+            MainForm Form1 = new MainForm();
             Form1.Show();
             this.Close();
         }

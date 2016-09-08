@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
         /// </summary>
         private void Form3_Load(object sender, EventArgs e)
         {
-            UsernameTextBox.Text = Form1.Username;
+            UsernameTextBox.Text = MainForm.Username;
         }
 
         /// <summary>
@@ -25,8 +25,8 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             API.StreamWriter(UsernameTextBox.Text, @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
-            Form1.Username = UsernameTextBox.Text;
-            // IF I CALL IT FROM HERE IT DOESNT WORK
+            MainForm.Username = UsernameTextBox.Text;
+            // to be fixed MainForm.UpdatePage();
             this.Hide();
         }
     }

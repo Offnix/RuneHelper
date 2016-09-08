@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using WindowsFormsApplication1;
 
@@ -42,12 +43,32 @@ public static class API
     {
         try
         {
-            string RawExp = (new System.Net.WebClient()).DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + Form1.Username);
+            string RawExp = (new System.Net.WebClient()).DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + MainForm.Username);
             LevelArray = RawExp.Split(',');
         }
         catch
         {
-            MessageBox.Show("Username was not found in the runescape Highscores or are offline", "ERROR");
+            MessageBox.Show("Username was not found in the runescape highscores or highscores or are offline", "ERROR");
         }
+    }
+
+    public static int GetMean()
+    {
+        int counter = 5;
+        int total = 0;
+        try
+        {
+            while (counter != 55)
+            {
+                total = total + Convert.ToInt32(LevelArray[counter]);
+                counter = counter + 2;
+            }
+            return total / 27;
+        }
+        catch
+        {
+            return 0;
+        }
+        
     }
 }
