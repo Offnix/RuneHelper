@@ -67,6 +67,7 @@ public static class API
         }
         catch
         {
+            MessageBox.Show("error getting mean", "ERROR");
             return 0;
         }
         

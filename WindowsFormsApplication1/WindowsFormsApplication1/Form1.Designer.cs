@@ -89,6 +89,9 @@
             this.InventorBar = new System.Windows.Forms.ProgressBar();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.AverageLevel = new System.Windows.Forms.Label();
+            this.TotalLevelText = new System.Windows.Forms.Label();
+            this.TotalLevel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -122,11 +125,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(568, 78);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(388, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 13);
+            this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "MAKE THIS LOOK PRETTY PLEASE";
+            this.label1.Text = "Average Level";
             // 
             // button1
             // 
@@ -690,11 +694,44 @@
             this.pictureBox26.TabIndex = 57;
             this.pictureBox26.TabStop = false;
             // 
+            // AverageLevel
+            // 
+            this.AverageLevel.AutoSize = true;
+            this.AverageLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AverageLevel.Location = new System.Drawing.Point(500, 76);
+            this.AverageLevel.Name = "AverageLevel";
+            this.AverageLevel.Size = new System.Drawing.Size(16, 18);
+            this.AverageLevel.TabIndex = 59;
+            this.AverageLevel.Text = "0";
+            // 
+            // TotalLevelText
+            // 
+            this.TotalLevelText.AutoSize = true;
+            this.TotalLevelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalLevelText.Location = new System.Drawing.Point(388, 54);
+            this.TotalLevelText.Name = "TotalLevelText";
+            this.TotalLevelText.Size = new System.Drawing.Size(79, 18);
+            this.TotalLevelText.TabIndex = 60;
+            this.TotalLevelText.Text = "Total Level";
+            // 
+            // TotalLevel
+            // 
+            this.TotalLevel.AutoSize = true;
+            this.TotalLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalLevel.Location = new System.Drawing.Point(470, 54);
+            this.TotalLevel.Name = "TotalLevel";
+            this.TotalLevel.Size = new System.Drawing.Size(16, 18);
+            this.TotalLevel.TabIndex = 61;
+            this.TotalLevel.Text = "0";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 529);
+            this.Controls.Add(this.TotalLevel);
+            this.Controls.Add(this.TotalLevelText);
+            this.Controls.Add(this.AverageLevel);
             this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox26);
             this.Controls.Add(this.InventorBar);
@@ -853,6 +890,9 @@
         private System.Windows.Forms.ProgressBar InventorBar;
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.PictureBox pictureBox26;
+        private System.Windows.Forms.Label AverageLevel;
+        private System.Windows.Forms.Label TotalLevelText;
+        private System.Windows.Forms.Label TotalLevel;
     }
 }
 

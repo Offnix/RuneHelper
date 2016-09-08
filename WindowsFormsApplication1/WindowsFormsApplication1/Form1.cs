@@ -36,6 +36,8 @@ namespace WindowsFormsApplication1
                     UsernameLabel.Text = Username;
                     API.UpdateLevels();
                     UpdateBars();
+                    AverageLevel.Text = API.GetMean().ToString();
+                    TotalLevel.Text = API.LevelArray[1];
                 }
             }           
         }
