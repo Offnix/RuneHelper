@@ -83,6 +83,7 @@
             // TargetBox
             // 
             this.TargetBox.Location = new System.Drawing.Point(161, 122);
+            this.TargetBox.MaxLength = 2;
             this.TargetBox.Name = "TargetBox";
             this.TargetBox.Size = new System.Drawing.Size(116, 20);
             this.TargetBox.TabIndex = 4;
