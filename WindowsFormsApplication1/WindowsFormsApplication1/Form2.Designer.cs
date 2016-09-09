@@ -40,6 +40,8 @@
             this.NeededBox = new System.Windows.Forms.TextBox();
             this.BackButton = new System.Windows.Forms.Button();
             this.CachedName = new System.Windows.Forms.Button();
+            this.BonusXP = new System.Windows.Forms.TextBox();
+            this.EnterBonusXP = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CharNameBox
@@ -145,11 +147,32 @@
             this.CachedName.UseVisualStyleBackColor = true;
             this.CachedName.Click += new System.EventHandler(this.CachedName_Click);
             // 
+            // BonusXP
+            // 
+            this.BonusXP.Location = new System.Drawing.Point(161, 148);
+            this.BonusXP.Name = "BonusXP";
+            this.BonusXP.Size = new System.Drawing.Size(116, 20);
+            this.BonusXP.TabIndex = 11;
+            this.BonusXP.Text = "0";
+            this.BonusXP.Visible = false;
+            // 
+            // EnterBonusXP
+            // 
+            this.EnterBonusXP.AutoSize = true;
+            this.EnterBonusXP.Location = new System.Drawing.Point(12, 155);
+            this.EnterBonusXP.Name = "EnterBonusXP";
+            this.EnterBonusXP.Size = new System.Drawing.Size(82, 13);
+            this.EnterBonusXP.TabIndex = 12;
+            this.EnterBonusXP.Text = "Enter Bonus XP";
+            this.EnterBonusXP.Visible = false;
+            // 
             // SilverhawkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 415);
+            this.Controls.Add(this.EnterBonusXP);
+            this.Controls.Add(this.BonusXP);
             this.Controls.Add(this.CachedName);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NeededBox);
@@ -182,5 +205,7 @@
         private System.Windows.Forms.TextBox NeededBox;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button CachedName;
+        private System.Windows.Forms.TextBox BonusXP;
+        private System.Windows.Forms.Label EnterBonusXP;
     }
 }

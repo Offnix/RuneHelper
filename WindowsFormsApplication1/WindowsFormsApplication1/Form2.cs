@@ -59,6 +59,8 @@ namespace WindowsFormsApplication1
             TargetBox.Visible = true;
             TargetLabel.Visible = true;
             CalculateButton.Visible = true;
+            EnterBonusXP.Visible = true;
+            BonusXP.Visible = true;
         }
 
         private void CalculateButton_Click(object sender, EventArgs e)
@@ -70,7 +72,7 @@ namespace WindowsFormsApplication1
         {
             int CurrentLevel = Convert.ToInt32(AgilArray[1]);
             double NextLevelXp = API.LevelXpArray[CurrentLevel + 1];
-            double CurrentXp = Convert.ToInt32(AgilArray[2]);
+            double CurrentXp = Convert.ToInt32(AgilArray[2]) - Convert.ToInt32(BonusXP.Text);
             double difference = NextLevelXp - CurrentXp;
             feathers = feathers + Convert.ToInt32((difference / FeatherXp[CurrentLevel]));
             //First section Gets all the needed Values Sorted out, then gets the initial Feather count to the Next level
