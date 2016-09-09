@@ -6,10 +6,7 @@ using WindowsFormsApplication1;
 
 public static class API
 {
-    public static string[] LevelArray;
-    // this array being here is temporary until i create the woodcutting calc form!!!
-    // tree to exp order = tree/evergreen/achery tree,oak,willow,teak,maple,hollow wood,hollow bark,mahoghany,artic pine,eucalyptus,ivy, yew, magic, cursed magic, bloodwood, elder, Bamboo,crystal,golden bamboo
-    public static float[] WoodCutXpArray = new float[] { 25, 37.5f, 67.5f, 85, 100, 82.5f, 357.7f, 125, 140.2f, 165, 332.5f, 175, 250, 275, 320, 325, 120, 434.5f, 655.5f };
+    public static string[] LevelArray;    
 
     public static double[] LevelXpArray = new double[] { 0, 0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 1833, 2107, 2411, 2746, 3115, 3523, 3973, 4470
                             , 5018, 5624, 6291, 7028, 7842, 8740, 9730, 10824, 12031, 13363, 14833, 16456, 18247, 20224, 22406, 24815

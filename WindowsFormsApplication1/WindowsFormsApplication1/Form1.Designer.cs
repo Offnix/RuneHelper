@@ -118,6 +118,7 @@
             this.InventionLabel = new System.Windows.Forms.Label();
             this.DivinationLabel = new System.Windows.Forms.Label();
             this.DungeoneeringLabel = new System.Windows.Forms.Label();
+            this.woodcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -176,7 +177,6 @@
             this.AttackBar.Name = "AttackBar";
             this.AttackBar.Size = new System.Drawing.Size(135, 23);
             this.AttackBar.TabIndex = 2;
-            this.AttackBar.Click += new System.EventHandler(this.AttackBar_Click);
             // 
             // toolStrip1
             // 
@@ -201,6 +201,8 @@
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.woodcutToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -245,7 +247,6 @@
             this.DefenceBar.Name = "DefenceBar";
             this.DefenceBar.Size = new System.Drawing.Size(135, 23);
             this.DefenceBar.TabIndex = 8;
-            this.DefenceBar.Click += new System.EventHandler(this.DefenceBar_Click);
             // 
             // StrengthBar
             // 
@@ -255,7 +256,6 @@
             this.StrengthBar.Name = "StrengthBar";
             this.StrengthBar.Size = new System.Drawing.Size(135, 23);
             this.StrengthBar.TabIndex = 9;
-            this.StrengthBar.Click += new System.EventHandler(this.StrengthBar_Click);
             // 
             // HealthBar
             // 
@@ -265,7 +265,6 @@
             this.HealthBar.Name = "HealthBar";
             this.HealthBar.Size = new System.Drawing.Size(135, 23);
             this.HealthBar.TabIndex = 10;
-            this.HealthBar.Click += new System.EventHandler(this.HealthBar_Click);
             // 
             // RangedBar
             // 
@@ -275,7 +274,6 @@
             this.RangedBar.Name = "RangedBar";
             this.RangedBar.Size = new System.Drawing.Size(135, 23);
             this.RangedBar.TabIndex = 11;
-            this.RangedBar.Click += new System.EventHandler(this.RangedBar_Click);
             // 
             // pictureBox1
             // 
@@ -295,7 +293,6 @@
             this.PrayerBar.Name = "PrayerBar";
             this.PrayerBar.Size = new System.Drawing.Size(135, 23);
             this.PrayerBar.TabIndex = 13;
-            this.PrayerBar.Click += new System.EventHandler(this.PrayerBar_Click);
             // 
             // MagicBar
             // 
@@ -305,7 +302,6 @@
             this.MagicBar.Name = "MagicBar";
             this.MagicBar.Size = new System.Drawing.Size(135, 23);
             this.MagicBar.TabIndex = 14;
-            this.MagicBar.Click += new System.EventHandler(this.MagicBar_Click);
             // 
             // WoodcuttingBar
             // 
@@ -315,7 +311,6 @@
             this.WoodcuttingBar.Name = "WoodcuttingBar";
             this.WoodcuttingBar.Size = new System.Drawing.Size(135, 23);
             this.WoodcuttingBar.TabIndex = 15;
-            this.WoodcuttingBar.Click += new System.EventHandler(this.WoodcuttingBar_Click);
             // 
             // MiningBar
             // 
@@ -325,7 +320,6 @@
             this.MiningBar.Name = "MiningBar";
             this.MiningBar.Size = new System.Drawing.Size(135, 23);
             this.MiningBar.TabIndex = 21;
-            this.MiningBar.Click += new System.EventHandler(this.MiningBar_Click);
             // 
             // SmithingBar
             // 
@@ -335,7 +329,6 @@
             this.SmithingBar.Name = "SmithingBar";
             this.SmithingBar.Size = new System.Drawing.Size(135, 23);
             this.SmithingBar.TabIndex = 20;
-            this.SmithingBar.Click += new System.EventHandler(this.SmithingBar_Click);
             // 
             // CraftingBar
             // 
@@ -345,7 +338,6 @@
             this.CraftingBar.Name = "CraftingBar";
             this.CraftingBar.Size = new System.Drawing.Size(135, 23);
             this.CraftingBar.TabIndex = 19;
-            this.CraftingBar.Click += new System.EventHandler(this.CraftingBar_Click);
             // 
             // FiremakingBar
             // 
@@ -355,7 +347,6 @@
             this.FiremakingBar.Name = "FiremakingBar";
             this.FiremakingBar.Size = new System.Drawing.Size(135, 23);
             this.FiremakingBar.TabIndex = 18;
-            this.FiremakingBar.Click += new System.EventHandler(this.FiremakingBar_Click);
             // 
             // FishingBar
             // 
@@ -365,7 +356,6 @@
             this.FishingBar.Name = "FishingBar";
             this.FishingBar.Size = new System.Drawing.Size(135, 23);
             this.FishingBar.TabIndex = 17;
-            this.FishingBar.Click += new System.EventHandler(this.FishingBar_Click);
             // 
             // FletchingBar
             // 
@@ -375,7 +365,6 @@
             this.FletchingBar.Name = "FletchingBar";
             this.FletchingBar.Size = new System.Drawing.Size(135, 23);
             this.FletchingBar.TabIndex = 16;
-            this.FletchingBar.Click += new System.EventHandler(this.FletchingBar_Click);
             // 
             // SlayerBar
             // 
@@ -385,7 +374,6 @@
             this.SlayerBar.Name = "SlayerBar";
             this.SlayerBar.Size = new System.Drawing.Size(135, 23);
             this.SlayerBar.TabIndex = 25;
-            this.SlayerBar.Click += new System.EventHandler(this.SlayerBar_Click);
             // 
             // ThievingBar
             // 
@@ -395,7 +383,6 @@
             this.ThievingBar.Name = "ThievingBar";
             this.ThievingBar.Size = new System.Drawing.Size(135, 23);
             this.ThievingBar.TabIndex = 24;
-            this.ThievingBar.Click += new System.EventHandler(this.ThievingBar_Click);
             // 
             // AgilityBar
             // 
@@ -405,7 +392,6 @@
             this.AgilityBar.Name = "AgilityBar";
             this.AgilityBar.Size = new System.Drawing.Size(135, 23);
             this.AgilityBar.TabIndex = 23;
-            this.AgilityBar.Click += new System.EventHandler(this.AgilityBar_Click);
             // 
             // HerbloreBar
             // 
@@ -415,7 +401,6 @@
             this.HerbloreBar.Name = "HerbloreBar";
             this.HerbloreBar.Size = new System.Drawing.Size(135, 23);
             this.HerbloreBar.TabIndex = 22;
-            this.HerbloreBar.Click += new System.EventHandler(this.HerbloreBar_Click);
             // 
             // ConstructionBar
             // 
@@ -425,7 +410,6 @@
             this.ConstructionBar.Name = "ConstructionBar";
             this.ConstructionBar.Size = new System.Drawing.Size(135, 23);
             this.ConstructionBar.TabIndex = 29;
-            this.ConstructionBar.Click += new System.EventHandler(this.ConstructionBar_Click);
             // 
             // HunterBar
             // 
@@ -435,7 +419,6 @@
             this.HunterBar.Name = "HunterBar";
             this.HunterBar.Size = new System.Drawing.Size(135, 23);
             this.HunterBar.TabIndex = 28;
-            this.HunterBar.Click += new System.EventHandler(this.HunterBar_Click);
             // 
             // RunecraftingBar
             // 
@@ -445,7 +428,6 @@
             this.RunecraftingBar.Name = "RunecraftingBar";
             this.RunecraftingBar.Size = new System.Drawing.Size(135, 23);
             this.RunecraftingBar.TabIndex = 27;
-            this.RunecraftingBar.Click += new System.EventHandler(this.RunecraftingBar_Click);
             // 
             // FarmingBar
             // 
@@ -455,7 +437,6 @@
             this.FarmingBar.Name = "FarmingBar";
             this.FarmingBar.Size = new System.Drawing.Size(135, 23);
             this.FarmingBar.TabIndex = 26;
-            this.FarmingBar.Click += new System.EventHandler(this.FarmingBar_Click);
             // 
             // DivinationBar
             // 
@@ -465,7 +446,6 @@
             this.DivinationBar.Name = "DivinationBar";
             this.DivinationBar.Size = new System.Drawing.Size(135, 23);
             this.DivinationBar.TabIndex = 32;
-            this.DivinationBar.Click += new System.EventHandler(this.DivinationBar_Click);
             // 
             // DungeoneeringBar
             // 
@@ -475,7 +455,6 @@
             this.DungeoneeringBar.Name = "DungeoneeringBar";
             this.DungeoneeringBar.Size = new System.Drawing.Size(135, 23);
             this.DungeoneeringBar.TabIndex = 31;
-            this.DungeoneeringBar.Click += new System.EventHandler(this.DungeoneeringBar_Click);
             // 
             // SummoningBar
             // 
@@ -485,7 +464,6 @@
             this.SummoningBar.Name = "SummoningBar";
             this.SummoningBar.Size = new System.Drawing.Size(135, 23);
             this.SummoningBar.TabIndex = 30;
-            this.SummoningBar.Click += new System.EventHandler(this.SummoningBar_Click);
             // 
             // pictureBox2
             // 
@@ -725,7 +703,6 @@
             this.InventorBar.Name = "InventorBar";
             this.InventorBar.Size = new System.Drawing.Size(135, 23);
             this.InventorBar.TabIndex = 56;
-            this.InventorBar.Click += new System.EventHandler(this.InventorBar_Click);
             // 
             // pictureBox23
             // 
@@ -1037,6 +1014,13 @@
             this.DungeoneeringLabel.TabIndex = 85;
             this.DungeoneeringLabel.Text = "0";
             // 
+            // woodcutToolStripMenuItem
+            // 
+            this.woodcutToolStripMenuItem.Name = "woodcutToolStripMenuItem";
+            this.woodcutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.woodcutToolStripMenuItem.Text = "Woodcut";
+            this.woodcutToolStripMenuItem.Click += new System.EventHandler(this.woodcutToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1258,6 +1242,7 @@
         private System.Windows.Forms.Label InventionLabel;
         private System.Windows.Forms.Label DivinationLabel;
         private System.Windows.Forms.Label DungeoneeringLabel;
+        private System.Windows.Forms.ToolStripMenuItem woodcutToolStripMenuItem;
     }
 }
 
