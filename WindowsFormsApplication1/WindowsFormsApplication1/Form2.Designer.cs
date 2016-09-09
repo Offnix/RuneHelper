@@ -39,6 +39,7 @@
             this.NeededLabel = new System.Windows.Forms.Label();
             this.NeededBox = new System.Windows.Forms.TextBox();
             this.BackButton = new System.Windows.Forms.Button();
+            this.CachedName = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CharNameBox
@@ -51,7 +52,7 @@
             // 
             // CharSearchButton
             // 
-            this.CharSearchButton.Location = new System.Drawing.Point(194, 32);
+            this.CharSearchButton.Location = new System.Drawing.Point(175, 31);
             this.CharSearchButton.Name = "CharSearchButton";
             this.CharSearchButton.Size = new System.Drawing.Size(75, 23);
             this.CharSearchButton.TabIndex = 1;
@@ -134,11 +135,22 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // CachedName
+            // 
+            this.CachedName.Location = new System.Drawing.Point(256, 32);
+            this.CachedName.Name = "CachedName";
+            this.CachedName.Size = new System.Drawing.Size(107, 23);
+            this.CachedName.TabIndex = 10;
+            this.CachedName.Text = "Use Saved Name";
+            this.CachedName.UseVisualStyleBackColor = true;
+            this.CachedName.Click += new System.EventHandler(this.CachedName_Click);
+            // 
             // SilverhawkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 415);
+            this.Controls.Add(this.CachedName);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NeededBox);
             this.Controls.Add(this.NeededLabel);
@@ -169,5 +181,6 @@
         private System.Windows.Forms.Label NeededLabel;
         private System.Windows.Forms.TextBox NeededBox;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Button CachedName;
     }
 }

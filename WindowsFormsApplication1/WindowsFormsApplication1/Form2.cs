@@ -91,9 +91,15 @@ namespace WindowsFormsApplication1
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            MainForm Form1 = new MainForm();
-            Form1.Show();
             this.Close();
+        }
+
+        private void CachedName_Click(object sender, EventArgs e)
+        {
+            CharNameBox.Text = MainForm.Username;
+            result = GetPlayerAgilityXP(MainForm.Username);
+            WebReturnBox.Text = result;
+            ShowBoxes();
         }
     }
 } 

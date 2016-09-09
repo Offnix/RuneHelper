@@ -49,7 +49,6 @@ namespace WindowsFormsApplication1
         {
             SilverhawkForm Silverhawk = new SilverhawkForm();
             Silverhawk.Show();
-            this.Hide();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

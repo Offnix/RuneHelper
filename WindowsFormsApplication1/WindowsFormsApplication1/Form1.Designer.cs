@@ -171,10 +171,10 @@
             // AttackBar
             // 
             this.AttackBar.Location = new System.Drawing.Point(42, 194);
+            this.AttackBar.MarqueeAnimationSpeed = 0;
             this.AttackBar.Maximum = 99;
             this.AttackBar.Name = "AttackBar";
             this.AttackBar.Size = new System.Drawing.Size(135, 23);
-            this.AttackBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.AttackBar.TabIndex = 2;
             // 
             // toolStrip1
@@ -238,37 +238,37 @@
             // DefenceBar
             // 
             this.DefenceBar.Location = new System.Drawing.Point(42, 223);
+            this.DefenceBar.MarqueeAnimationSpeed = 0;
             this.DefenceBar.Maximum = 99;
             this.DefenceBar.Name = "DefenceBar";
             this.DefenceBar.Size = new System.Drawing.Size(135, 23);
-            this.DefenceBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.DefenceBar.TabIndex = 8;
             // 
             // StrengthBar
             // 
             this.StrengthBar.Location = new System.Drawing.Point(42, 252);
+            this.StrengthBar.MarqueeAnimationSpeed = 0;
             this.StrengthBar.Maximum = 99;
             this.StrengthBar.Name = "StrengthBar";
             this.StrengthBar.Size = new System.Drawing.Size(135, 23);
-            this.StrengthBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.StrengthBar.TabIndex = 9;
             // 
             // HealthBar
             // 
             this.HealthBar.Location = new System.Drawing.Point(42, 281);
+            this.HealthBar.MarqueeAnimationSpeed = 0;
             this.HealthBar.Maximum = 99;
             this.HealthBar.Name = "HealthBar";
             this.HealthBar.Size = new System.Drawing.Size(135, 23);
-            this.HealthBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.HealthBar.TabIndex = 10;
             // 
             // RangedBar
             // 
             this.RangedBar.Location = new System.Drawing.Point(42, 310);
+            this.RangedBar.MarqueeAnimationSpeed = 0;
             this.RangedBar.Maximum = 99;
             this.RangedBar.Name = "RangedBar";
             this.RangedBar.Size = new System.Drawing.Size(135, 23);
-            this.RangedBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.RangedBar.TabIndex = 11;
             // 
             // pictureBox1
@@ -284,181 +284,181 @@
             // PrayerBar
             // 
             this.PrayerBar.Location = new System.Drawing.Point(42, 339);
+            this.PrayerBar.MarqueeAnimationSpeed = 0;
             this.PrayerBar.Maximum = 99;
             this.PrayerBar.Name = "PrayerBar";
             this.PrayerBar.Size = new System.Drawing.Size(135, 23);
-            this.PrayerBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.PrayerBar.TabIndex = 13;
             // 
             // MagicBar
             // 
             this.MagicBar.Location = new System.Drawing.Point(42, 368);
+            this.MagicBar.MarqueeAnimationSpeed = 0;
             this.MagicBar.Maximum = 99;
             this.MagicBar.Name = "MagicBar";
             this.MagicBar.Size = new System.Drawing.Size(135, 23);
-            this.MagicBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.MagicBar.TabIndex = 14;
             // 
             // WoodcuttingBar
             // 
             this.WoodcuttingBar.Location = new System.Drawing.Point(42, 397);
+            this.WoodcuttingBar.MarqueeAnimationSpeed = 0;
             this.WoodcuttingBar.Maximum = 99;
             this.WoodcuttingBar.Name = "WoodcuttingBar";
             this.WoodcuttingBar.Size = new System.Drawing.Size(135, 23);
-            this.WoodcuttingBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.WoodcuttingBar.TabIndex = 15;
             // 
             // MiningBar
             // 
-            this.MiningBar.Location = new System.Drawing.Point(234, 107);
+            this.MiningBar.Location = new System.Drawing.Point(254, 110);
+            this.MiningBar.MarqueeAnimationSpeed = 0;
             this.MiningBar.Maximum = 99;
             this.MiningBar.Name = "MiningBar";
             this.MiningBar.Size = new System.Drawing.Size(135, 23);
-            this.MiningBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.MiningBar.TabIndex = 21;
             // 
             // SmithingBar
             // 
-            this.SmithingBar.Location = new System.Drawing.Point(234, 78);
+            this.SmithingBar.Location = new System.Drawing.Point(254, 81);
+            this.SmithingBar.MarqueeAnimationSpeed = 0;
             this.SmithingBar.Maximum = 99;
             this.SmithingBar.Name = "SmithingBar";
             this.SmithingBar.Size = new System.Drawing.Size(135, 23);
-            this.SmithingBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.SmithingBar.TabIndex = 20;
             // 
             // CraftingBar
             // 
-            this.CraftingBar.Location = new System.Drawing.Point(234, 49);
+            this.CraftingBar.Location = new System.Drawing.Point(254, 52);
+            this.CraftingBar.MarqueeAnimationSpeed = 0;
             this.CraftingBar.Maximum = 99;
             this.CraftingBar.Name = "CraftingBar";
             this.CraftingBar.Size = new System.Drawing.Size(135, 23);
-            this.CraftingBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.CraftingBar.TabIndex = 19;
             // 
             // FiremakingBar
             // 
             this.FiremakingBar.Location = new System.Drawing.Point(42, 484);
+            this.FiremakingBar.MarqueeAnimationSpeed = 0;
             this.FiremakingBar.Maximum = 99;
             this.FiremakingBar.Name = "FiremakingBar";
             this.FiremakingBar.Size = new System.Drawing.Size(135, 23);
-            this.FiremakingBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.FiremakingBar.TabIndex = 18;
             // 
             // FishingBar
             // 
             this.FishingBar.Location = new System.Drawing.Point(42, 455);
+            this.FishingBar.MarqueeAnimationSpeed = 0;
             this.FishingBar.Maximum = 99;
             this.FishingBar.Name = "FishingBar";
             this.FishingBar.Size = new System.Drawing.Size(135, 23);
-            this.FishingBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.FishingBar.TabIndex = 17;
             // 
             // FletchingBar
             // 
             this.FletchingBar.Location = new System.Drawing.Point(42, 426);
+            this.FletchingBar.MarqueeAnimationSpeed = 0;
             this.FletchingBar.Maximum = 99;
             this.FletchingBar.Name = "FletchingBar";
             this.FletchingBar.Size = new System.Drawing.Size(135, 23);
-            this.FletchingBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.FletchingBar.TabIndex = 16;
             // 
             // SlayerBar
             // 
-            this.SlayerBar.Location = new System.Drawing.Point(234, 223);
+            this.SlayerBar.Location = new System.Drawing.Point(254, 226);
+            this.SlayerBar.MarqueeAnimationSpeed = 0;
             this.SlayerBar.Maximum = 99;
             this.SlayerBar.Name = "SlayerBar";
             this.SlayerBar.Size = new System.Drawing.Size(135, 23);
-            this.SlayerBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.SlayerBar.TabIndex = 25;
             // 
             // ThievingBar
             // 
-            this.ThievingBar.Location = new System.Drawing.Point(234, 194);
+            this.ThievingBar.Location = new System.Drawing.Point(254, 197);
+            this.ThievingBar.MarqueeAnimationSpeed = 0;
             this.ThievingBar.Maximum = 99;
             this.ThievingBar.Name = "ThievingBar";
             this.ThievingBar.Size = new System.Drawing.Size(135, 23);
-            this.ThievingBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.ThievingBar.TabIndex = 24;
             // 
             // AgilityBar
             // 
-            this.AgilityBar.Location = new System.Drawing.Point(234, 165);
+            this.AgilityBar.Location = new System.Drawing.Point(254, 168);
+            this.AgilityBar.MarqueeAnimationSpeed = 0;
             this.AgilityBar.Maximum = 99;
             this.AgilityBar.Name = "AgilityBar";
             this.AgilityBar.Size = new System.Drawing.Size(135, 23);
-            this.AgilityBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.AgilityBar.TabIndex = 23;
             // 
             // HerbloreBar
             // 
-            this.HerbloreBar.Location = new System.Drawing.Point(234, 136);
+            this.HerbloreBar.Location = new System.Drawing.Point(254, 139);
+            this.HerbloreBar.MarqueeAnimationSpeed = 0;
             this.HerbloreBar.Maximum = 99;
             this.HerbloreBar.Name = "HerbloreBar";
             this.HerbloreBar.Size = new System.Drawing.Size(135, 23);
-            this.HerbloreBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.HerbloreBar.TabIndex = 22;
             // 
             // ConstructionBar
             // 
-            this.ConstructionBar.Location = new System.Drawing.Point(234, 339);
+            this.ConstructionBar.Location = new System.Drawing.Point(254, 342);
+            this.ConstructionBar.MarqueeAnimationSpeed = 0;
             this.ConstructionBar.Maximum = 99;
             this.ConstructionBar.Name = "ConstructionBar";
             this.ConstructionBar.Size = new System.Drawing.Size(135, 23);
-            this.ConstructionBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.ConstructionBar.TabIndex = 29;
             // 
             // HunterBar
             // 
-            this.HunterBar.Location = new System.Drawing.Point(234, 310);
+            this.HunterBar.Location = new System.Drawing.Point(254, 313);
+            this.HunterBar.MarqueeAnimationSpeed = 0;
             this.HunterBar.Maximum = 99;
             this.HunterBar.Name = "HunterBar";
             this.HunterBar.Size = new System.Drawing.Size(135, 23);
-            this.HunterBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.HunterBar.TabIndex = 28;
             // 
             // RunecraftingBar
             // 
-            this.RunecraftingBar.Location = new System.Drawing.Point(234, 281);
+            this.RunecraftingBar.Location = new System.Drawing.Point(254, 284);
+            this.RunecraftingBar.MarqueeAnimationSpeed = 0;
             this.RunecraftingBar.Maximum = 99;
             this.RunecraftingBar.Name = "RunecraftingBar";
             this.RunecraftingBar.Size = new System.Drawing.Size(135, 23);
-            this.RunecraftingBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.RunecraftingBar.TabIndex = 27;
             // 
             // FarmingBar
             // 
-            this.FarmingBar.Location = new System.Drawing.Point(234, 252);
+            this.FarmingBar.Location = new System.Drawing.Point(254, 255);
+            this.FarmingBar.MarqueeAnimationSpeed = 0;
             this.FarmingBar.Maximum = 99;
             this.FarmingBar.Name = "FarmingBar";
             this.FarmingBar.Size = new System.Drawing.Size(135, 23);
-            this.FarmingBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.FarmingBar.TabIndex = 26;
             // 
             // DivinationBar
             // 
-            this.DivinationBar.Location = new System.Drawing.Point(234, 426);
+            this.DivinationBar.Location = new System.Drawing.Point(254, 429);
+            this.DivinationBar.MarqueeAnimationSpeed = 0;
             this.DivinationBar.Maximum = 99;
             this.DivinationBar.Name = "DivinationBar";
             this.DivinationBar.Size = new System.Drawing.Size(135, 23);
-            this.DivinationBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.DivinationBar.TabIndex = 32;
             // 
             // DungeoneeringBar
             // 
-            this.DungeoneeringBar.Location = new System.Drawing.Point(234, 397);
+            this.DungeoneeringBar.Location = new System.Drawing.Point(254, 400);
+            this.DungeoneeringBar.MarqueeAnimationSpeed = 0;
             this.DungeoneeringBar.Maximum = 120;
             this.DungeoneeringBar.Name = "DungeoneeringBar";
             this.DungeoneeringBar.Size = new System.Drawing.Size(135, 23);
-            this.DungeoneeringBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.DungeoneeringBar.TabIndex = 31;
             // 
             // SummoningBar
             // 
-            this.SummoningBar.Location = new System.Drawing.Point(234, 368);
+            this.SummoningBar.Location = new System.Drawing.Point(254, 371);
+            this.SummoningBar.MarqueeAnimationSpeed = 0;
             this.SummoningBar.Maximum = 99;
             this.SummoningBar.Name = "SummoningBar";
             this.SummoningBar.Size = new System.Drawing.Size(135, 23);
-            this.SummoningBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.SummoningBar.TabIndex = 30;
             // 
             // pictureBox2
@@ -564,7 +564,7 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(205, 339);
+            this.pictureBox12.Location = new System.Drawing.Point(225, 342);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(23, 23);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -574,7 +574,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(205, 310);
+            this.pictureBox13.Location = new System.Drawing.Point(225, 313);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(23, 23);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -584,7 +584,7 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(205, 281);
+            this.pictureBox14.Location = new System.Drawing.Point(225, 284);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(23, 23);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -594,7 +594,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(205, 252);
+            this.pictureBox15.Location = new System.Drawing.Point(225, 255);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(23, 23);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -604,7 +604,7 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(205, 223);
+            this.pictureBox16.Location = new System.Drawing.Point(225, 226);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(23, 23);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -614,7 +614,7 @@
             // pictureBox17
             // 
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(205, 194);
+            this.pictureBox17.Location = new System.Drawing.Point(225, 197);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(23, 23);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -624,7 +624,7 @@
             // pictureBox18
             // 
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(205, 165);
+            this.pictureBox18.Location = new System.Drawing.Point(225, 168);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(23, 23);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -634,7 +634,7 @@
             // pictureBox19
             // 
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(205, 136);
+            this.pictureBox19.Location = new System.Drawing.Point(225, 139);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(23, 23);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -644,7 +644,7 @@
             // pictureBox20
             // 
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(205, 107);
+            this.pictureBox20.Location = new System.Drawing.Point(225, 110);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(23, 23);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -654,7 +654,7 @@
             // pictureBox21
             // 
             this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(205, 78);
+            this.pictureBox21.Location = new System.Drawing.Point(225, 81);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(23, 23);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -664,7 +664,7 @@
             // pictureBox22
             // 
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(205, 49);
+            this.pictureBox22.Location = new System.Drawing.Point(225, 52);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(23, 23);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -674,7 +674,7 @@
             // pictureBox24
             // 
             this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
-            this.pictureBox24.Location = new System.Drawing.Point(205, 397);
+            this.pictureBox24.Location = new System.Drawing.Point(225, 400);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(23, 23);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -684,7 +684,7 @@
             // pictureBox25
             // 
             this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
-            this.pictureBox25.Location = new System.Drawing.Point(205, 368);
+            this.pictureBox25.Location = new System.Drawing.Point(225, 371);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(23, 23);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -693,17 +693,17 @@
             // 
             // InventorBar
             // 
-            this.InventorBar.Location = new System.Drawing.Point(234, 455);
+            this.InventorBar.Location = new System.Drawing.Point(254, 458);
+            this.InventorBar.MarqueeAnimationSpeed = 0;
             this.InventorBar.Maximum = 120;
             this.InventorBar.Name = "InventorBar";
             this.InventorBar.Size = new System.Drawing.Size(135, 23);
-            this.InventorBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.InventorBar.TabIndex = 56;
             // 
             // pictureBox23
             // 
             this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(205, 455);
+            this.pictureBox23.Location = new System.Drawing.Point(225, 458);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(23, 23);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -713,7 +713,7 @@
             // pictureBox26
             // 
             this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
-            this.pictureBox26.Location = new System.Drawing.Point(205, 426);
+            this.pictureBox26.Location = new System.Drawing.Point(225, 429);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(23, 23);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -864,7 +864,7 @@
             // 
             this.ThievingLabel.AutoSize = true;
             this.ThievingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThievingLabel.Location = new System.Drawing.Point(375, 199);
+            this.ThievingLabel.Location = new System.Drawing.Point(395, 202);
             this.ThievingLabel.Name = "ThievingLabel";
             this.ThievingLabel.Size = new System.Drawing.Size(16, 18);
             this.ThievingLabel.TabIndex = 78;
@@ -874,7 +874,7 @@
             // 
             this.AgilityLabel.AutoSize = true;
             this.AgilityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgilityLabel.Location = new System.Drawing.Point(375, 170);
+            this.AgilityLabel.Location = new System.Drawing.Point(395, 173);
             this.AgilityLabel.Name = "AgilityLabel";
             this.AgilityLabel.Size = new System.Drawing.Size(16, 18);
             this.AgilityLabel.TabIndex = 77;
@@ -884,7 +884,7 @@
             // 
             this.HerbloreLabel.AutoSize = true;
             this.HerbloreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HerbloreLabel.Location = new System.Drawing.Point(375, 141);
+            this.HerbloreLabel.Location = new System.Drawing.Point(395, 144);
             this.HerbloreLabel.Name = "HerbloreLabel";
             this.HerbloreLabel.Size = new System.Drawing.Size(16, 18);
             this.HerbloreLabel.TabIndex = 76;
@@ -894,7 +894,7 @@
             // 
             this.MiningLabel.AutoSize = true;
             this.MiningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiningLabel.Location = new System.Drawing.Point(375, 112);
+            this.MiningLabel.Location = new System.Drawing.Point(395, 115);
             this.MiningLabel.Name = "MiningLabel";
             this.MiningLabel.Size = new System.Drawing.Size(16, 18);
             this.MiningLabel.TabIndex = 75;
@@ -904,7 +904,7 @@
             // 
             this.SmithingLabel.AutoSize = true;
             this.SmithingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SmithingLabel.Location = new System.Drawing.Point(375, 83);
+            this.SmithingLabel.Location = new System.Drawing.Point(395, 86);
             this.SmithingLabel.Name = "SmithingLabel";
             this.SmithingLabel.Size = new System.Drawing.Size(16, 18);
             this.SmithingLabel.TabIndex = 74;
@@ -914,7 +914,7 @@
             // 
             this.CraftingLabel.AutoSize = true;
             this.CraftingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CraftingLabel.Location = new System.Drawing.Point(375, 54);
+            this.CraftingLabel.Location = new System.Drawing.Point(395, 57);
             this.CraftingLabel.Name = "CraftingLabel";
             this.CraftingLabel.Size = new System.Drawing.Size(16, 18);
             this.CraftingLabel.TabIndex = 73;
@@ -924,7 +924,7 @@
             // 
             this.SummoningLabel.AutoSize = true;
             this.SummoningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SummoningLabel.Location = new System.Drawing.Point(375, 373);
+            this.SummoningLabel.Location = new System.Drawing.Point(395, 376);
             this.SummoningLabel.Name = "SummoningLabel";
             this.SummoningLabel.Size = new System.Drawing.Size(16, 18);
             this.SummoningLabel.TabIndex = 84;
@@ -934,7 +934,7 @@
             // 
             this.ConstructionLabel.AutoSize = true;
             this.ConstructionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConstructionLabel.Location = new System.Drawing.Point(375, 344);
+            this.ConstructionLabel.Location = new System.Drawing.Point(395, 347);
             this.ConstructionLabel.Name = "ConstructionLabel";
             this.ConstructionLabel.Size = new System.Drawing.Size(16, 18);
             this.ConstructionLabel.TabIndex = 83;
@@ -944,7 +944,7 @@
             // 
             this.HunterLabel.AutoSize = true;
             this.HunterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HunterLabel.Location = new System.Drawing.Point(375, 315);
+            this.HunterLabel.Location = new System.Drawing.Point(395, 318);
             this.HunterLabel.Name = "HunterLabel";
             this.HunterLabel.Size = new System.Drawing.Size(16, 18);
             this.HunterLabel.TabIndex = 82;
@@ -954,7 +954,7 @@
             // 
             this.RunecraftingLabel.AutoSize = true;
             this.RunecraftingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RunecraftingLabel.Location = new System.Drawing.Point(375, 286);
+            this.RunecraftingLabel.Location = new System.Drawing.Point(395, 289);
             this.RunecraftingLabel.Name = "RunecraftingLabel";
             this.RunecraftingLabel.Size = new System.Drawing.Size(16, 18);
             this.RunecraftingLabel.TabIndex = 81;
@@ -964,7 +964,7 @@
             // 
             this.FarmingLabel.AutoSize = true;
             this.FarmingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FarmingLabel.Location = new System.Drawing.Point(375, 257);
+            this.FarmingLabel.Location = new System.Drawing.Point(395, 260);
             this.FarmingLabel.Name = "FarmingLabel";
             this.FarmingLabel.Size = new System.Drawing.Size(16, 18);
             this.FarmingLabel.TabIndex = 80;
@@ -974,7 +974,7 @@
             // 
             this.SlayerLabel.AutoSize = true;
             this.SlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlayerLabel.Location = new System.Drawing.Point(375, 228);
+            this.SlayerLabel.Location = new System.Drawing.Point(395, 231);
             this.SlayerLabel.Name = "SlayerLabel";
             this.SlayerLabel.Size = new System.Drawing.Size(16, 18);
             this.SlayerLabel.TabIndex = 79;
@@ -984,7 +984,7 @@
             // 
             this.InventionLabel.AutoSize = true;
             this.InventionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InventionLabel.Location = new System.Drawing.Point(375, 460);
+            this.InventionLabel.Location = new System.Drawing.Point(395, 463);
             this.InventionLabel.Name = "InventionLabel";
             this.InventionLabel.Size = new System.Drawing.Size(16, 18);
             this.InventionLabel.TabIndex = 87;
@@ -994,7 +994,7 @@
             // 
             this.DivinationLabel.AutoSize = true;
             this.DivinationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivinationLabel.Location = new System.Drawing.Point(375, 431);
+            this.DivinationLabel.Location = new System.Drawing.Point(395, 434);
             this.DivinationLabel.Name = "DivinationLabel";
             this.DivinationLabel.Size = new System.Drawing.Size(16, 18);
             this.DivinationLabel.TabIndex = 86;
@@ -1004,7 +1004,7 @@
             // 
             this.DungeoneeringLabel.AutoSize = true;
             this.DungeoneeringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DungeoneeringLabel.Location = new System.Drawing.Point(375, 402);
+            this.DungeoneeringLabel.Location = new System.Drawing.Point(395, 405);
             this.DungeoneeringLabel.Name = "DungeoneeringLabel";
             this.DungeoneeringLabel.Size = new System.Drawing.Size(16, 18);
             this.DungeoneeringLabel.TabIndex = 85;
