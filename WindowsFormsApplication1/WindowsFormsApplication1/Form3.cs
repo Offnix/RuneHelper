@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
             API.StreamWriter(UsernameTextBox.Text, @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
             MainForm.Username = UsernameTextBox.Text;
             // to be fixed MainForm.UpdatePage();
-            this.Hide();
+            this.Close();
         }
     }
 }

@@ -92,6 +92,32 @@
             this.AverageLevel = new System.Windows.Forms.Label();
             this.TotalLevelText = new System.Windows.Forms.Label();
             this.TotalLevel = new System.Windows.Forms.Label();
+            this.AttackLabel = new System.Windows.Forms.Label();
+            this.DefenceLabel = new System.Windows.Forms.Label();
+            this.StrengthLabel = new System.Windows.Forms.Label();
+            this.HealthLabel = new System.Windows.Forms.Label();
+            this.RangedLabel = new System.Windows.Forms.Label();
+            this.PrayerLabel = new System.Windows.Forms.Label();
+            this.FiremakingLabel = new System.Windows.Forms.Label();
+            this.FishingLabel = new System.Windows.Forms.Label();
+            this.FletchingLabel = new System.Windows.Forms.Label();
+            this.WoodcuttingLabel = new System.Windows.Forms.Label();
+            this.MagicLabel = new System.Windows.Forms.Label();
+            this.ThievingLabel = new System.Windows.Forms.Label();
+            this.AgilityLabel = new System.Windows.Forms.Label();
+            this.HerbloreLabel = new System.Windows.Forms.Label();
+            this.MiningLabel = new System.Windows.Forms.Label();
+            this.SmithingLabel = new System.Windows.Forms.Label();
+            this.CraftingLabel = new System.Windows.Forms.Label();
+            this.SummoningLabel = new System.Windows.Forms.Label();
+            this.ConstructionLabel = new System.Windows.Forms.Label();
+            this.HunterLabel = new System.Windows.Forms.Label();
+            this.RunecraftingLabel = new System.Windows.Forms.Label();
+            this.FarmingLabel = new System.Windows.Forms.Label();
+            this.SlayerLabel = new System.Windows.Forms.Label();
+            this.InventionLabel = new System.Windows.Forms.Label();
+            this.DivinationLabel = new System.Windows.Forms.Label();
+            this.DungeoneeringLabel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -126,7 +152,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(388, 76);
+            this.label1.Location = new System.Drawing.Point(504, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 0;
@@ -668,7 +694,7 @@
             // InventorBar
             // 
             this.InventorBar.Location = new System.Drawing.Point(234, 455);
-            this.InventorBar.Maximum = 99;
+            this.InventorBar.Maximum = 120;
             this.InventorBar.Name = "InventorBar";
             this.InventorBar.Size = new System.Drawing.Size(135, 23);
             this.InventorBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -698,7 +724,7 @@
             // 
             this.AverageLevel.AutoSize = true;
             this.AverageLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AverageLevel.Location = new System.Drawing.Point(500, 76);
+            this.AverageLevel.Location = new System.Drawing.Point(616, 83);
             this.AverageLevel.Name = "AverageLevel";
             this.AverageLevel.Size = new System.Drawing.Size(16, 18);
             this.AverageLevel.TabIndex = 59;
@@ -708,7 +734,7 @@
             // 
             this.TotalLevelText.AutoSize = true;
             this.TotalLevelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalLevelText.Location = new System.Drawing.Point(388, 54);
+            this.TotalLevelText.Location = new System.Drawing.Point(504, 61);
             this.TotalLevelText.Name = "TotalLevelText";
             this.TotalLevelText.Size = new System.Drawing.Size(79, 18);
             this.TotalLevelText.TabIndex = 60;
@@ -718,17 +744,303 @@
             // 
             this.TotalLevel.AutoSize = true;
             this.TotalLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalLevel.Location = new System.Drawing.Point(470, 54);
+            this.TotalLevel.Location = new System.Drawing.Point(586, 61);
             this.TotalLevel.Name = "TotalLevel";
             this.TotalLevel.Size = new System.Drawing.Size(16, 18);
             this.TotalLevel.TabIndex = 61;
             this.TotalLevel.Text = "0";
+            // 
+            // AttackLabel
+            // 
+            this.AttackLabel.AutoSize = true;
+            this.AttackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttackLabel.Location = new System.Drawing.Point(183, 199);
+            this.AttackLabel.Name = "AttackLabel";
+            this.AttackLabel.Size = new System.Drawing.Size(16, 18);
+            this.AttackLabel.TabIndex = 62;
+            this.AttackLabel.Text = "0";
+            // 
+            // DefenceLabel
+            // 
+            this.DefenceLabel.AutoSize = true;
+            this.DefenceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DefenceLabel.Location = new System.Drawing.Point(183, 228);
+            this.DefenceLabel.Name = "DefenceLabel";
+            this.DefenceLabel.Size = new System.Drawing.Size(16, 18);
+            this.DefenceLabel.TabIndex = 63;
+            this.DefenceLabel.Text = "0";
+            // 
+            // StrengthLabel
+            // 
+            this.StrengthLabel.AutoSize = true;
+            this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StrengthLabel.Location = new System.Drawing.Point(183, 257);
+            this.StrengthLabel.Name = "StrengthLabel";
+            this.StrengthLabel.Size = new System.Drawing.Size(16, 18);
+            this.StrengthLabel.TabIndex = 64;
+            this.StrengthLabel.Text = "0";
+            // 
+            // HealthLabel
+            // 
+            this.HealthLabel.AutoSize = true;
+            this.HealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HealthLabel.Location = new System.Drawing.Point(183, 286);
+            this.HealthLabel.Name = "HealthLabel";
+            this.HealthLabel.Size = new System.Drawing.Size(16, 18);
+            this.HealthLabel.TabIndex = 65;
+            this.HealthLabel.Text = "0";
+            // 
+            // RangedLabel
+            // 
+            this.RangedLabel.AutoSize = true;
+            this.RangedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RangedLabel.Location = new System.Drawing.Point(183, 315);
+            this.RangedLabel.Name = "RangedLabel";
+            this.RangedLabel.Size = new System.Drawing.Size(16, 18);
+            this.RangedLabel.TabIndex = 66;
+            this.RangedLabel.Text = "0";
+            // 
+            // PrayerLabel
+            // 
+            this.PrayerLabel.AutoSize = true;
+            this.PrayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrayerLabel.Location = new System.Drawing.Point(183, 344);
+            this.PrayerLabel.Name = "PrayerLabel";
+            this.PrayerLabel.Size = new System.Drawing.Size(16, 18);
+            this.PrayerLabel.TabIndex = 67;
+            this.PrayerLabel.Text = "0";
+            // 
+            // FiremakingLabel
+            // 
+            this.FiremakingLabel.AutoSize = true;
+            this.FiremakingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FiremakingLabel.Location = new System.Drawing.Point(183, 489);
+            this.FiremakingLabel.Name = "FiremakingLabel";
+            this.FiremakingLabel.Size = new System.Drawing.Size(16, 18);
+            this.FiremakingLabel.TabIndex = 72;
+            this.FiremakingLabel.Text = "0";
+            // 
+            // FishingLabel
+            // 
+            this.FishingLabel.AutoSize = true;
+            this.FishingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FishingLabel.Location = new System.Drawing.Point(183, 460);
+            this.FishingLabel.Name = "FishingLabel";
+            this.FishingLabel.Size = new System.Drawing.Size(16, 18);
+            this.FishingLabel.TabIndex = 71;
+            this.FishingLabel.Text = "0";
+            // 
+            // FletchingLabel
+            // 
+            this.FletchingLabel.AutoSize = true;
+            this.FletchingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FletchingLabel.Location = new System.Drawing.Point(183, 431);
+            this.FletchingLabel.Name = "FletchingLabel";
+            this.FletchingLabel.Size = new System.Drawing.Size(16, 18);
+            this.FletchingLabel.TabIndex = 70;
+            this.FletchingLabel.Text = "0";
+            // 
+            // WoodcuttingLabel
+            // 
+            this.WoodcuttingLabel.AutoSize = true;
+            this.WoodcuttingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WoodcuttingLabel.Location = new System.Drawing.Point(183, 402);
+            this.WoodcuttingLabel.Name = "WoodcuttingLabel";
+            this.WoodcuttingLabel.Size = new System.Drawing.Size(16, 18);
+            this.WoodcuttingLabel.TabIndex = 69;
+            this.WoodcuttingLabel.Text = "0";
+            // 
+            // MagicLabel
+            // 
+            this.MagicLabel.AutoSize = true;
+            this.MagicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MagicLabel.Location = new System.Drawing.Point(183, 373);
+            this.MagicLabel.Name = "MagicLabel";
+            this.MagicLabel.Size = new System.Drawing.Size(16, 18);
+            this.MagicLabel.TabIndex = 68;
+            this.MagicLabel.Text = "0";
+            // 
+            // ThievingLabel
+            // 
+            this.ThievingLabel.AutoSize = true;
+            this.ThievingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThievingLabel.Location = new System.Drawing.Point(375, 199);
+            this.ThievingLabel.Name = "ThievingLabel";
+            this.ThievingLabel.Size = new System.Drawing.Size(16, 18);
+            this.ThievingLabel.TabIndex = 78;
+            this.ThievingLabel.Text = "0";
+            // 
+            // AgilityLabel
+            // 
+            this.AgilityLabel.AutoSize = true;
+            this.AgilityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgilityLabel.Location = new System.Drawing.Point(375, 170);
+            this.AgilityLabel.Name = "AgilityLabel";
+            this.AgilityLabel.Size = new System.Drawing.Size(16, 18);
+            this.AgilityLabel.TabIndex = 77;
+            this.AgilityLabel.Text = "0";
+            // 
+            // HerbloreLabel
+            // 
+            this.HerbloreLabel.AutoSize = true;
+            this.HerbloreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HerbloreLabel.Location = new System.Drawing.Point(375, 141);
+            this.HerbloreLabel.Name = "HerbloreLabel";
+            this.HerbloreLabel.Size = new System.Drawing.Size(16, 18);
+            this.HerbloreLabel.TabIndex = 76;
+            this.HerbloreLabel.Text = "0";
+            // 
+            // MiningLabel
+            // 
+            this.MiningLabel.AutoSize = true;
+            this.MiningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MiningLabel.Location = new System.Drawing.Point(375, 112);
+            this.MiningLabel.Name = "MiningLabel";
+            this.MiningLabel.Size = new System.Drawing.Size(16, 18);
+            this.MiningLabel.TabIndex = 75;
+            this.MiningLabel.Text = "0";
+            // 
+            // SmithingLabel
+            // 
+            this.SmithingLabel.AutoSize = true;
+            this.SmithingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SmithingLabel.Location = new System.Drawing.Point(375, 83);
+            this.SmithingLabel.Name = "SmithingLabel";
+            this.SmithingLabel.Size = new System.Drawing.Size(16, 18);
+            this.SmithingLabel.TabIndex = 74;
+            this.SmithingLabel.Text = "0";
+            // 
+            // CraftingLabel
+            // 
+            this.CraftingLabel.AutoSize = true;
+            this.CraftingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CraftingLabel.Location = new System.Drawing.Point(375, 54);
+            this.CraftingLabel.Name = "CraftingLabel";
+            this.CraftingLabel.Size = new System.Drawing.Size(16, 18);
+            this.CraftingLabel.TabIndex = 73;
+            this.CraftingLabel.Text = "0";
+            // 
+            // SummoningLabel
+            // 
+            this.SummoningLabel.AutoSize = true;
+            this.SummoningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SummoningLabel.Location = new System.Drawing.Point(375, 373);
+            this.SummoningLabel.Name = "SummoningLabel";
+            this.SummoningLabel.Size = new System.Drawing.Size(16, 18);
+            this.SummoningLabel.TabIndex = 84;
+            this.SummoningLabel.Text = "0";
+            // 
+            // ConstructionLabel
+            // 
+            this.ConstructionLabel.AutoSize = true;
+            this.ConstructionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConstructionLabel.Location = new System.Drawing.Point(375, 344);
+            this.ConstructionLabel.Name = "ConstructionLabel";
+            this.ConstructionLabel.Size = new System.Drawing.Size(16, 18);
+            this.ConstructionLabel.TabIndex = 83;
+            this.ConstructionLabel.Text = "0";
+            // 
+            // HunterLabel
+            // 
+            this.HunterLabel.AutoSize = true;
+            this.HunterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HunterLabel.Location = new System.Drawing.Point(375, 315);
+            this.HunterLabel.Name = "HunterLabel";
+            this.HunterLabel.Size = new System.Drawing.Size(16, 18);
+            this.HunterLabel.TabIndex = 82;
+            this.HunterLabel.Text = "0";
+            // 
+            // RunecraftingLabel
+            // 
+            this.RunecraftingLabel.AutoSize = true;
+            this.RunecraftingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RunecraftingLabel.Location = new System.Drawing.Point(375, 286);
+            this.RunecraftingLabel.Name = "RunecraftingLabel";
+            this.RunecraftingLabel.Size = new System.Drawing.Size(16, 18);
+            this.RunecraftingLabel.TabIndex = 81;
+            this.RunecraftingLabel.Text = "0";
+            // 
+            // FarmingLabel
+            // 
+            this.FarmingLabel.AutoSize = true;
+            this.FarmingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FarmingLabel.Location = new System.Drawing.Point(375, 257);
+            this.FarmingLabel.Name = "FarmingLabel";
+            this.FarmingLabel.Size = new System.Drawing.Size(16, 18);
+            this.FarmingLabel.TabIndex = 80;
+            this.FarmingLabel.Text = "0";
+            // 
+            // SlayerLabel
+            // 
+            this.SlayerLabel.AutoSize = true;
+            this.SlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SlayerLabel.Location = new System.Drawing.Point(375, 228);
+            this.SlayerLabel.Name = "SlayerLabel";
+            this.SlayerLabel.Size = new System.Drawing.Size(16, 18);
+            this.SlayerLabel.TabIndex = 79;
+            this.SlayerLabel.Text = "0";
+            // 
+            // InventionLabel
+            // 
+            this.InventionLabel.AutoSize = true;
+            this.InventionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InventionLabel.Location = new System.Drawing.Point(375, 460);
+            this.InventionLabel.Name = "InventionLabel";
+            this.InventionLabel.Size = new System.Drawing.Size(16, 18);
+            this.InventionLabel.TabIndex = 87;
+            this.InventionLabel.Text = "0";
+            // 
+            // DivinationLabel
+            // 
+            this.DivinationLabel.AutoSize = true;
+            this.DivinationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivinationLabel.Location = new System.Drawing.Point(375, 431);
+            this.DivinationLabel.Name = "DivinationLabel";
+            this.DivinationLabel.Size = new System.Drawing.Size(16, 18);
+            this.DivinationLabel.TabIndex = 86;
+            this.DivinationLabel.Text = "0";
+            // 
+            // DungeoneeringLabel
+            // 
+            this.DungeoneeringLabel.AutoSize = true;
+            this.DungeoneeringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DungeoneeringLabel.Location = new System.Drawing.Point(375, 402);
+            this.DungeoneeringLabel.Name = "DungeoneeringLabel";
+            this.DungeoneeringLabel.Size = new System.Drawing.Size(16, 18);
+            this.DungeoneeringLabel.TabIndex = 85;
+            this.DungeoneeringLabel.Text = "0";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 529);
+            this.Controls.Add(this.InventionLabel);
+            this.Controls.Add(this.DivinationLabel);
+            this.Controls.Add(this.DungeoneeringLabel);
+            this.Controls.Add(this.SummoningLabel);
+            this.Controls.Add(this.ConstructionLabel);
+            this.Controls.Add(this.HunterLabel);
+            this.Controls.Add(this.RunecraftingLabel);
+            this.Controls.Add(this.FarmingLabel);
+            this.Controls.Add(this.SlayerLabel);
+            this.Controls.Add(this.ThievingLabel);
+            this.Controls.Add(this.AgilityLabel);
+            this.Controls.Add(this.HerbloreLabel);
+            this.Controls.Add(this.MiningLabel);
+            this.Controls.Add(this.SmithingLabel);
+            this.Controls.Add(this.CraftingLabel);
+            this.Controls.Add(this.FiremakingLabel);
+            this.Controls.Add(this.FishingLabel);
+            this.Controls.Add(this.FletchingLabel);
+            this.Controls.Add(this.WoodcuttingLabel);
+            this.Controls.Add(this.MagicLabel);
+            this.Controls.Add(this.PrayerLabel);
+            this.Controls.Add(this.RangedLabel);
+            this.Controls.Add(this.HealthLabel);
+            this.Controls.Add(this.StrengthLabel);
+            this.Controls.Add(this.DefenceLabel);
+            this.Controls.Add(this.AttackLabel);
             this.Controls.Add(this.TotalLevel);
             this.Controls.Add(this.TotalLevelText);
             this.Controls.Add(this.AverageLevel);
@@ -893,6 +1205,32 @@
         private System.Windows.Forms.Label AverageLevel;
         private System.Windows.Forms.Label TotalLevelText;
         private System.Windows.Forms.Label TotalLevel;
+        private System.Windows.Forms.Label AttackLabel;
+        private System.Windows.Forms.Label DefenceLabel;
+        private System.Windows.Forms.Label StrengthLabel;
+        private System.Windows.Forms.Label HealthLabel;
+        private System.Windows.Forms.Label RangedLabel;
+        private System.Windows.Forms.Label PrayerLabel;
+        private System.Windows.Forms.Label FiremakingLabel;
+        private System.Windows.Forms.Label FishingLabel;
+        private System.Windows.Forms.Label FletchingLabel;
+        private System.Windows.Forms.Label WoodcuttingLabel;
+        private System.Windows.Forms.Label MagicLabel;
+        private System.Windows.Forms.Label ThievingLabel;
+        private System.Windows.Forms.Label AgilityLabel;
+        private System.Windows.Forms.Label HerbloreLabel;
+        private System.Windows.Forms.Label MiningLabel;
+        private System.Windows.Forms.Label SmithingLabel;
+        private System.Windows.Forms.Label CraftingLabel;
+        private System.Windows.Forms.Label SummoningLabel;
+        private System.Windows.Forms.Label ConstructionLabel;
+        private System.Windows.Forms.Label HunterLabel;
+        private System.Windows.Forms.Label RunecraftingLabel;
+        private System.Windows.Forms.Label FarmingLabel;
+        private System.Windows.Forms.Label SlayerLabel;
+        private System.Windows.Forms.Label InventionLabel;
+        private System.Windows.Forms.Label DivinationLabel;
+        private System.Windows.Forms.Label DungeoneeringLabel;
     }
 }
 

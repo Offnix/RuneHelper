@@ -9,14 +9,7 @@ namespace WindowsFormsApplication1
         string result;
         string[] LevelArray;
         string[] AgilArray;
-        double[] LevelXpArray = new double[] { 0, 0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 1833, 2107, 2411, 2746, 3115, 3523, 3973, 4470
-                            , 5018, 5624, 6291, 7028, 7842, 8740, 9730, 10824, 12031, 13363, 14833, 16456, 18247, 20224, 22406, 24815
-                            , 27473, 30408, 33648, 37224, 41171, 45529, 50339, 55649, 61512, 67983, 75127, 83014, 91721, 101333
-                            , 111945, 123660, 136594, 150872, 166636, 184040, 203254, 224466, 247886, 273742, 302228, 333804, 368599
-                            , 407015, 449428, 496254, 547953, 605032, 668051, 737627, 814445, 899257, 992895, 1096278, 1210421, 1336443
-                            , 1475581, 1629200, 1798808, 1986068, 2192818, 2421087, 2673114, 2951373, 3258594, 3597792, 3972294, 4385776
-                            , 4842295, 5346332, 5902831, 6517253, 7195629, 7944614, 8771558, 9684577, 10692629, 11805606, 13034431, 13034431};
-
+        
         double[] FeatherXp = new double[] {0,6.2,6.9,7.7,8.5,9.3,10.4,12.3,12.7,14.9,15.3, 17,18.8,20.5,22.9,25.2,26.1,27.4,28.5,29.8,
                                            31,32.4,33.7,35.2,36.7,38.4,39.9,40.5,41.4,45.3,47.3,49.3,51.4,53.6,55.9,58.3,60.8,63.5,66.2,
                                             69.1,72,75.2,78.4,81.8,85.3,88.9,92.9,97,101.2,105.5,110.1,114.8,120,124.9,130.4,136.2,142.2,
@@ -76,7 +69,7 @@ namespace WindowsFormsApplication1
         private void RunCalculation()
         {
             int CurrentLevel = Convert.ToInt32(AgilArray[1]);
-            double NextLevelXp = LevelXpArray[CurrentLevel + 1];
+            double NextLevelXp = API.LevelXpArray[CurrentLevel + 1];
             double CurrentXp = Convert.ToInt32(AgilArray[2]);
             double difference = NextLevelXp - CurrentXp;
             feathers = feathers + Convert.ToInt32((difference / FeatherXp[CurrentLevel]));
@@ -85,7 +78,7 @@ namespace WindowsFormsApplication1
             int i = CurrentLevel + 1;
             while (i <= (Convert.ToInt32(TargetBox.Text)))
                 {
-                    double xp = LevelXpArray[i + 1] - LevelXpArray[i];
+                    double xp = API.LevelXpArray[i + 1] - API.LevelXpArray[i];
                     int FeathersNeeded =Convert.ToInt32(xp / FeatherXp[i]);
                     feathers = feathers + FeathersNeeded;
                     i++;
