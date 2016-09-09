@@ -11,10 +11,8 @@ E.G.
  
  
 ## Todo List
- - addition of progress bars and basic skeleton of form1 - offnix
- - silverhawk calc - peter
- - Api for level import for all purposes -offnix
- - 
+ - Finish desing for Form1 - peter
+ - create woodcutting calc - offnix
  
 
 ## Idea's And Features that could be added
