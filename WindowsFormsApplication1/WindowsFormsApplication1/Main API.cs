@@ -78,4 +78,21 @@ public static class API
             return 0;
         }       
     }
+
+    public static string[] GetStats(string Name)
+    {
+        try
+        {
+            string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=X";
+            string NewUrl = url.Replace("X", Name);
+            string textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
+            LevelArray = textFromFile.Split('\n');
+            return LevelArray;
+        }
+        catch
+        {
+            MessageBox.Show("Username was not found in the runescape highscores. Or highscores or are offline", "ERROR");
+            return null;
+        }        
+    }
 }

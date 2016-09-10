@@ -64,16 +64,11 @@ namespace RsThing
         {
             try
             {
-                string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=X";
-                string NewUrl = url.Replace("X", Name);
-                string textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
-                LevelArray = textFromFile.Split('\n');
-                WCArray = LevelArray[9].Split(',');
+                LevelArray = API.GetStats(Name);
                 return WCArray[2];
             }
             catch
             {
-                MessageBox.Show("Username was not found in the runescape highscores. Or highscores or are offline", "ERROR");
             }
             return null;
         }
@@ -83,13 +78,8 @@ namespace RsThing
             try
             {
                 double NeededXP;
-
                 int XP = Convert.ToInt32(XPBox.Text) + Convert.ToInt32(BonusBox.Text);
-
-
-                NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;
-
-              
+                NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;              
                 AmountBox.Text = Convert.ToString(Math.Round(NeededXP / WoodCutXpArray[TreeTypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
             }

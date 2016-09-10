@@ -64,10 +64,7 @@ namespace RsThing
         {
             try
             {
-                string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=X";
-                string NewUrl = url.Replace("X", Name);
-                string textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
-                LevelArray = textFromFile.Split('\n');
+                LevelArray = API.GetStats(Name);
                 AgilArray = LevelArray[17].Split(',');
                 return AgilArray[2];
             }
