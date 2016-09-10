@@ -145,8 +145,14 @@ namespace WindowsFormsApplication1
 
         private void miningToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RsThing.Form5 Mining = new RsThing.Form5();
+            RsThing.Form6 Mining = new RsThing.Form6();
             Mining.Show();
+        }
+
+        private void agilityCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RsThing.Form6 Agil = new RsThing.Form6();
+            Agil.Show();
         }
     }
 }

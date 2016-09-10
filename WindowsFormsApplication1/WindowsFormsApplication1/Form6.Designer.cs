@@ -1,6 +1,6 @@
 ﻿namespace RsThing
 {
-    partial class Form5
+    partial class Form6
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.TypeBox = new System.Windows.Forms.CheckedListBox();
             this.AmountBox = new System.Windows.Forms.TextBox();
             this.BackBtn = new System.Windows.Forms.Button();
+            this.LapsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CachedName
@@ -77,9 +78,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Mining XP";
+            this.label1.Text = "Agility XP";
             // 
             // XPBox
             // 
@@ -141,37 +142,29 @@
             this.TypeBox.FormattingEnabled = true;
             this.TypeBox.IntegralHeight = false;
             this.TypeBox.Items.AddRange(new object[] {
-            "Clay / Rune essence / Pure essence",
-            "Copper/ Tin / Blurlite / Daeyalt / Rubium",
-            "Living minerals",
-            "Limestone",
-            "Iron",
-            "Silver",
-            "Coal",
-            "Sandstone",
-            "Gem Rock",
-            "Gold",
-            "Granite",
-            "Mithril",
-            "Adamantite",
-            "Bane ore",
-            "Concentrated coal rocks",
-            "Concentrated gold rocks",
-            "Red sandstone",
-            "Runite",
-            "Seren Stones",
-            "Salty crablet",
-            "Alaea crablet",
-            "Idol crablet\t"});
+            "Burthorpe Agility Course",
+            "Gnome Stronghold Agility Course",
+            "Werewolf Skullball",
+            "Agility Pyramid",
+            "Penguin Agility Course",
+            "Barbarian Outpost Agility Course",
+            "Ape Atoll Agility Course",
+            "Wilderness Agility Course",
+            "Bandos Agility Course",
+            "Werewolf Agility Course",
+            "Hefin Agility Course",
+            "Dorgesh-Kaan Agility Course",
+            "Advanced Gnome Stronghold Agility Course",
+            "Advanced Barbarian Outpost Agility Course"});
             this.TypeBox.Location = new System.Drawing.Point(11, 195);
             this.TypeBox.Name = "TypeBox";
-            this.TypeBox.Size = new System.Drawing.Size(157, 94);
+            this.TypeBox.Size = new System.Drawing.Size(207, 94);
             this.TypeBox.TabIndex = 21;
             this.TypeBox.Visible = false;
             // 
             // AmountBox
             // 
-            this.AmountBox.Location = new System.Drawing.Point(105, 345);
+            this.AmountBox.Location = new System.Drawing.Point(75, 348);
             this.AmountBox.Name = "AmountBox";
             this.AmountBox.Size = new System.Drawing.Size(157, 20);
             this.AmountBox.TabIndex = 22;
@@ -187,11 +180,22 @@
             this.BackBtn.UseVisualStyleBackColor = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
-            // Form5
+            // LapsLabel
+            // 
+            this.LapsLabel.AutoSize = true;
+            this.LapsLabel.Location = new System.Drawing.Point(238, 351);
+            this.LapsLabel.Name = "LapsLabel";
+            this.LapsLabel.Size = new System.Drawing.Size(30, 13);
+            this.LapsLabel.TabIndex = 24;
+            this.LapsLabel.Text = "Laps";
+            this.LapsLabel.Visible = false;
+            // 
+            // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 418);
+            this.Controls.Add(this.LapsLabel);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.AmountBox);
             this.Controls.Add(this.TypeBox);
@@ -206,8 +210,8 @@
             this.Controls.Add(this.CharSearchButton);
             this.Controls.Add(this.CharNameBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form5";
-            this.Text = "Mining Calculator";
+            this.Name = "Form6";
+            this.Text = "Agility Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +232,6 @@
         private System.Windows.Forms.CheckedListBox TypeBox;
         private System.Windows.Forms.TextBox AmountBox;
         private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.Label LapsLabel;
     }
 }
