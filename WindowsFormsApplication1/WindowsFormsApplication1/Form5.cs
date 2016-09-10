@@ -81,6 +81,8 @@ namespace RsThing
 
         private void Calculate()
         {
+            try
+            {
                 double NeededXP;
 
                 int XP = Convert.ToInt32(XPBox.Text) + Convert.ToInt32(BonusBox.Text);
@@ -88,9 +90,15 @@ namespace RsThing
 
                 NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;
 
-              
+
                 AmountBox.Text = Convert.ToString(Math.Round(NeededXP / OreXPArray[TypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
+            }
+            catch
+            {
+                MessageBox.Show("Could not run calculation, please check all fields have been filled with no text", "ERROR");
+            }
+                
             }    
         
 
