@@ -36,8 +36,7 @@ namespace RsThing
             else
             {
                 MessageBox.Show("Target Level Cant be under or same as current level", "ERROR");
-            }
-            
+            }            
         }
 
         private void CachedName_Click(object sender, EventArgs e)
@@ -97,8 +96,7 @@ namespace RsThing
             catch
             {
                 MessageBox.Show("Could not run calculation, please check all fields have been filled with no text", "ERROR");
-            }
-            
+            }         
         }
 
         private void BackBtn_Click(object sender, EventArgs e)

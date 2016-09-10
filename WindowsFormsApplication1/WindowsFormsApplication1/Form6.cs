@@ -36,8 +36,7 @@ namespace RsThing
             else
             {
                 MessageBox.Show("Target Level Cant be under or same as current level", "ERROR");
-            }
-            
+            }           
         }
 
         private void CachedName_Click(object sender, EventArgs e)

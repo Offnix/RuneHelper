@@ -28,7 +28,6 @@ public static class API
         {
             MessageBox.Show("File could not be accessed or doesnt exsist", "ERROR");
         }
-
     }
 
     public static string StreamReader(string FileLocation)
@@ -46,7 +45,6 @@ public static class API
             return "";
         }
     }
-
 
     public static void UpdateLevels()
     {
@@ -78,7 +76,6 @@ public static class API
         {
             MessageBox.Show("Error getting mean", "ERROR");
             return 0;
-        }
-        
+        }       
     }
 }

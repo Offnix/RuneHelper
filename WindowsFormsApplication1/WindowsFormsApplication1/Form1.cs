@@ -11,6 +11,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
         /// <summary>
         /// On form load
         /// </summary>
@@ -60,7 +61,6 @@ namespace WindowsFormsApplication1
             UpdateBars();
         }
 
-
         /// <summary>
         /// Toolbar functions
         /// </summary>
@@ -93,6 +93,7 @@ namespace WindowsFormsApplication1
         /// </summary>
         public void UpdateBars()
         {
+            // find a way to minify this and your a god amongst men
             //progress bars
             AttackBar.Value = Convert.ToInt32(API.LevelArray[5]);
             DefenceBar.Value = Convert.ToInt32(API.LevelArray[7]);
@@ -120,7 +121,6 @@ namespace WindowsFormsApplication1
             DungeoneeringBar.Value = Convert.ToInt32(API.LevelArray[51]);
             DivinationBar.Value = Convert.ToInt32(API.LevelArray[53]);
             InventorBar.Value = Convert.ToInt32(API.LevelArray[55]);
-
             //labels
             AttackLabel.Text = API.LevelArray[5];
             DefenceLabel.Text = API.LevelArray[7];
