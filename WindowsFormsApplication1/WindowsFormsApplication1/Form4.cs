@@ -65,6 +65,7 @@ namespace RsThing
             try
             {
                 LevelArray = API.GetStats(Name);
+                WCArray = LevelArray[15].Split(',');
                 return WCArray[2];
             }
             catch
