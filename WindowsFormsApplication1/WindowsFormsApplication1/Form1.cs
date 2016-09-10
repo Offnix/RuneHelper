@@ -14,24 +14,20 @@ namespace WindowsFormsApplication1
         /// <summary>
         /// On form load
         /// </summary>
-       // on main form finsihed loading
         private void Form1_Load(object sender, EventArgs e)
         {
-            // if files dont exsist.... create them
-            if (Directory.Exists(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing") == false && File.Exists(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt") == false)
+            string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
+            if (Directory.Exists(path) == false && File.Exists(path +@"\Data.txt") == false)
             {
-                //creating of files
                 MessageBox.Show("Data file not found.. creating one now", "File Writer");
-                Directory.CreateDirectory(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing");
-                File.Create(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt").Close();
+                Directory.CreateDirectory(path);
+                File.Create(path + @"\Data.txt").Close();
             }
             else
             {
-                // else if they already exsist and have more than 0 chars in it.. read the file and put it into a -
-                // string array  split by commas
-                if (new FileInfo(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt").Length > 0)
+                if (new FileInfo(path + @"\Data.txt").Length > 0)
                 {
-                    Username = API.StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");                     
+                    Username = API.StreamReader(path + @"\Data.txt");                     
                     ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
                     UsernameLabel.Text = Username;
                     API.UpdateLevels();
@@ -56,6 +52,14 @@ namespace WindowsFormsApplication1
             this.Close();
         }
 
+        private void ReloadStats_Click(object sender, EventArgs e)
+        {
+            ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
+            API.UpdateLevels();
+            UsernameLabel.Text = Username;
+            UpdateBars();
+        }
+
 
         /// <summary>
         /// Toolbar functions
@@ -66,18 +70,27 @@ namespace WindowsFormsApplication1
             Settings.Show();
         }
 
+        private void woodcutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RsThing.Form4 Woodcut = new RsThing.Form4();
+            Woodcut.Show();
+        }
+
+        private void miningToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RsThing.Form6 Mining = new RsThing.Form6();
+            Mining.Show();
+        }
+
+        private void agilityCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RsThing.Form6 Agil = new RsThing.Form6();
+            Agil.Show();
+        }
+
         /// <summary>
         /// Misc code/ functions
         /// </summary>
-        // THIS IS THE ISSUE RIGHT HERE
-        public void UpdatePage()
-        {
-           ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
-            API.UpdateLevels();
-            UsernameLabel.Text = Username;
-            UpdateBars();
-        }
-
         public void UpdateBars()
         {
             //progress bars
@@ -135,24 +148,6 @@ namespace WindowsFormsApplication1
             DungeoneeringLabel.Text = API.LevelArray[51];
             DivinationLabel.Text = API.LevelArray[53];
             InventionLabel.Text = API.LevelArray[55];
-        }
-
-        private void woodcutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RsThing.Form4 Woodcut = new RsThing.Form4();
-            Woodcut.Show();
-        }
-
-        private void miningToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RsThing.Form6 Mining = new RsThing.Form6();
-            Mining.Show();
-        }
-
-        private void agilityCourseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RsThing.Form6 Agil = new RsThing.Form6();
-            Agil.Show();
         }
     }
 }

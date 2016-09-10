@@ -121,6 +121,7 @@
             this.DivinationLabel = new System.Windows.Forms.Label();
             this.DungeoneeringLabel = new System.Windows.Forms.Label();
             this.agilityCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReloadStats = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1039,11 +1040,22 @@
             this.agilityCourseToolStripMenuItem.Text = "Agility Course";
             this.agilityCourseToolStripMenuItem.Click += new System.EventHandler(this.agilityCourseToolStripMenuItem_Click);
             // 
+            // ReloadStats
+            // 
+            this.ReloadStats.Location = new System.Drawing.Point(685, 318);
+            this.ReloadStats.Name = "ReloadStats";
+            this.ReloadStats.Size = new System.Drawing.Size(75, 23);
+            this.ReloadStats.TabIndex = 88;
+            this.ReloadStats.Text = "Reload";
+            this.ReloadStats.UseVisualStyleBackColor = true;
+            this.ReloadStats.Click += new System.EventHandler(this.ReloadStats_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 529);
+            this.Controls.Add(this.ReloadStats);
             this.Controls.Add(this.InventionLabel);
             this.Controls.Add(this.DivinationLabel);
             this.Controls.Add(this.DungeoneeringLabel);
@@ -1263,6 +1275,7 @@
         private System.Windows.Forms.ToolStripMenuItem woodcutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miningToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agilityCourseToolStripMenuItem;
+        private System.Windows.Forms.Button ReloadStats;
     }
 }
 
