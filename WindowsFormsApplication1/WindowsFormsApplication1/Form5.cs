@@ -1,0 +1,103 @@
+﻿using System;
+using System.Windows.Forms;
+using WindowsFormsApplication1;
+
+namespace RsThing
+{
+    public partial class Form5 : Form
+    {
+        public Form5()
+        {
+            InitializeComponent();
+        }
+        string result;
+        string[] MArray;
+        string[] LevelArray;
+
+
+        public static float[] OreXPArray = new float[] {5, 17.5f, 25 , 26.5f, 35, 40, 50, 62.4702f, 40, 65, 60, 80, 95, 90, 50, 65, 70, 125, 296.7f, 445.5f, 692.5f, 5250};
+         /// <summary>
+         /// Forms Buttons
+         /// </summary>
+        private void CharSearchButton_Click(object sender, EventArgs e)
+        {
+            string Name = CharNameBox.Text;
+            string result = GetPlayerMiningXP(Name);
+            XPBox.Text = result;
+            ShowBoxes();
+        }
+
+        private void CalculateBtn_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(MArray[1]) < Convert.ToInt32(TargetBox.Text))
+            {
+                Calculate();
+            }
+            else
+            {
+                MessageBox.Show("Target Level Cant be under or same as current level", "ERROR");
+            }
+            
+        }
+
+        private void CachedName_Click(object sender, EventArgs e)
+        {
+            CharNameBox.Text = MainForm.Username;
+            result = GetPlayerMiningXP(MainForm.Username);
+            XPBox.Text = result;
+            ShowBoxes();
+        }
+
+        /// <summary>
+        /// Functions
+        /// </summary>
+        private void ShowBoxes()
+        {
+            TargetLevelLabel.Visible = true;
+            TargetBox.Visible = true;
+            BonusXPlabel.Visible = true;
+            BonusBox.Visible = true;
+            TypeBox.Visible = true;
+            CalculateBtn.Visible = true;
+        }
+
+        private String GetPlayerMiningXP(string Name)
+        {
+            try
+            {
+                string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=X";
+                string NewUrl = url.Replace("X", Name);
+                string textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
+                LevelArray = textFromFile.Split('\n');
+                MArray = LevelArray[15].Split(',');
+                return MArray[2];
+            }
+            catch
+            {
+                MessageBox.Show("Username was not found in the runescape highscores. Or highscores or are offline", "ERROR");
+            }
+            return null;
+        }
+
+        private void Calculate()
+        {
+                double NeededXP;
+
+                int XP = Convert.ToInt32(XPBox.Text) + Convert.ToInt32(BonusBox.Text);
+
+
+                NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;
+
+              
+                AmountBox.Text = Convert.ToString(Math.Round(NeededXP / OreXPArray[TypeBox.SelectedIndex]));
+                AmountBox.Visible = true;
+            }    
+        
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
+

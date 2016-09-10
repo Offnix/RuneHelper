@@ -142,5 +142,11 @@ namespace WindowsFormsApplication1
             RsThing.Form4 Woodcut = new RsThing.Form4();
             Woodcut.Show();
         }
+
+        private void miningToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RsThing.Form5 Mining = new RsThing.Form5();
+            Mining.Show();
+        }
     }
 }
