@@ -29,7 +29,15 @@ namespace RsThing
 
         private void CalculateBtn_Click(object sender, EventArgs e)
         {
-            Calculate();
+            if (Convert.ToInt32(WCArray[1]) < Convert.ToInt32(TargetBox.Text))
+            {
+                Calculate();
+            }
+            else
+            {
+                MessageBox.Show("Target Level Cant be under or same as current level", "ERROR");
+            }
+            
         }
 
         private void CachedName_Click(object sender, EventArgs e)
@@ -61,7 +69,7 @@ namespace RsThing
                 string NewUrl = url.Replace("X", Name);
                 string textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
                 LevelArray = textFromFile.Split('\n');
-                WCArray = LevelArray[17].Split(',');
+                WCArray = LevelArray[9].Split(',');
                 return WCArray[2];
             }
             catch
@@ -78,17 +86,11 @@ namespace RsThing
                 double NeededXP;
 
                 int XP = Convert.ToInt32(XPBox.Text) + Convert.ToInt32(BonusBox.Text);
-                int Level = Convert.ToInt32(WCArray[1]);
 
-                NeededXP = API.LevelXpArray[Level + 1] - XP;
 
-                int i = Level + 1;
+                NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;
 
-                while (i <= Convert.ToInt32(TargetBox.Text))
-                {
-                    NeededXP = NeededXP + API.LevelXpArray[i];
-                    i++;
-                }
+              
                 AmountBox.Text = Convert.ToString(Math.Round(NeededXP / WoodCutXpArray[TreeTypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
             }

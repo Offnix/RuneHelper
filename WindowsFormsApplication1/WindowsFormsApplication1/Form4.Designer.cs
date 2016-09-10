@@ -139,6 +139,7 @@
             // TreeTypeBox
             // 
             this.TreeTypeBox.FormattingEnabled = true;
+            this.TreeTypeBox.IntegralHeight = false;
             this.TreeTypeBox.Items.AddRange(new object[] {
             "Tree",
             "Oak",
@@ -167,7 +168,7 @@
             // 
             // AmountBox
             // 
-            this.AmountBox.Location = new System.Drawing.Point(95, 354);
+            this.AmountBox.Location = new System.Drawing.Point(75, 346);
             this.AmountBox.Name = "AmountBox";
             this.AmountBox.Size = new System.Drawing.Size(157, 20);
             this.AmountBox.TabIndex = 22;
