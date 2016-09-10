@@ -29,12 +29,8 @@ namespace WindowsFormsApplication1
                 if (new FileInfo(path + @"\Data.txt").Length > 0)
                 {
                     Username = API.StreamReader(path + @"\Data.txt");                     
-                    ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
-                    UsernameLabel.Text = Username;
                     API.UpdateLevels();
-                    UpdateBars();
-                    AverageLevel.Text = API.GetMean().ToString();
-                    TotalLevel.Text = API.LevelArray[1];
+                    ReloadPage();
                 }
             }           
         }
@@ -42,57 +38,62 @@ namespace WindowsFormsApplication1
         /// <summary>
         /// Buttons on form
         /// </summary>
-        private void button1_Click(object sender, EventArgs e)
-        {
-            SilverhawkForm Silverhawk = new SilverhawkForm();
-            Silverhawk.Show();
-        }
-
+ 
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void ReloadStats_Click(object sender, EventArgs e)
-        {
-            ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
-            API.UpdateLevels();
-            UsernameLabel.Text = Username;
-            UpdateBars();
-        }
-
         /// <summary>
         /// Toolbar functions
         /// </summary>
-        private void Settings_Click(object sender, EventArgs e)
+
+        private void OpenSettingsToolStrip_Click(object sender, EventArgs e)
         {
             Form3 Settings = new Form3();
             Settings.Show();
         }
 
-        private void woodcutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ReloadPageToolStrip_Click(object sender, EventArgs e)
+        {
+            ReloadPage();
+        }
+
+        private void WoodcuttingToolStrip_Click(object sender, EventArgs e)
         {
             RsThing.Form4 Woodcut = new RsThing.Form4();
             Woodcut.Show();
         }
 
-        private void miningToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MiningToolStrip_Click(object sender, EventArgs e)
         {
             RsThing.Form6 Mining = new RsThing.Form6();
             Mining.Show();
         }
 
-        private void agilityCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AgilityToolStrip_Click(object sender, EventArgs e)
         {
             RsThing.Form6 Agil = new RsThing.Form6();
             Agil.Show();
         }
 
+        private void silverHawkFeatherToolStrip_Click(object sender, EventArgs e)
+        {
+            SilverhawkForm Silverhawk = new SilverhawkForm();
+            Silverhawk.Show();
+        }
+
         /// <summary>
         /// Misc code/ functions
         /// </summary>
-        public void UpdateBars()
+
+        public void ReloadPage()
         {
+            ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
+            API.UpdateLevels();
+            UsernameLabel.Text = Username;
+            AverageLevel.Text = API.GetMean().ToString();
+            TotalLevel.Text = API.LevelArray[1];
+
             // find a way to minify this and your a god amongst men
             //progress bars
             AttackBar.Value = Convert.ToInt32(API.LevelArray[5]);

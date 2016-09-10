@@ -33,10 +33,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.AttackBar = new System.Windows.Forms.ProgressBar();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.Settings = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.woodcutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.miningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Calculators = new System.Windows.Forms.ToolStripDropDownButton();
+            this.WoodcuttingToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.MiningToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.Agility = new System.Windows.Forms.ToolStripMenuItem();
+            this.AgilityToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.SilverHawkFeatherToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.Settings = new System.Windows.Forms.ToolStripDropDownButton();
+            this.OpenSettingsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReloadPageToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -120,8 +125,6 @@
             this.InventionLabel = new System.Windows.Forms.Label();
             this.DivinationLabel = new System.Windows.Forms.Label();
             this.DungeoneeringLabel = new System.Windows.Forms.Label();
-            this.agilityCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ReloadStats = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -164,13 +167,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(697, 194);
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.TabIndex = 89;
             // 
             // AttackBar
             // 
@@ -185,48 +185,87 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Settings,
-            this.toolStripDropDownButton1});
+            this.Calculators});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(801, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // Calculators
+            // 
+            this.Calculators.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.WoodcuttingToolStrip,
+            this.MiningToolStrip,
+            this.Agility});
+            this.Calculators.Image = ((System.Drawing.Image)(resources.GetObject("Calculators.Image")));
+            this.Calculators.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Calculators.Name = "Calculators";
+            this.Calculators.Size = new System.Drawing.Size(95, 22);
+            this.Calculators.Text = "Calculators";
+            // 
+            // WoodcuttingToolStrip
+            // 
+            this.WoodcuttingToolStrip.Name = "WoodcuttingToolStrip";
+            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(144, 22);
+            this.WoodcuttingToolStrip.Text = "Woodcutting";
+            this.WoodcuttingToolStrip.Click += new System.EventHandler(this.WoodcuttingToolStrip_Click);
+            // 
+            // MiningToolStrip
+            // 
+            this.MiningToolStrip.Name = "MiningToolStrip";
+            this.MiningToolStrip.Size = new System.Drawing.Size(144, 22);
+            this.MiningToolStrip.Text = "Mining";
+            this.MiningToolStrip.Click += new System.EventHandler(this.MiningToolStrip_Click);
+            // 
+            // Agility
+            // 
+            this.Agility.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AgilityToolStrip,
+            this.SilverHawkFeatherToolStrip});
+            this.Agility.Name = "Agility";
+            this.Agility.Size = new System.Drawing.Size(144, 22);
+            this.Agility.Text = "Agility";
+            // 
+            // AgilityToolStrip
+            // 
+            this.AgilityToolStrip.Name = "AgilityToolStrip";
+            this.AgilityToolStrip.Size = new System.Drawing.Size(177, 22);
+            this.AgilityToolStrip.Text = "Agility";
+            this.AgilityToolStrip.Click += new System.EventHandler(this.AgilityToolStrip_Click);
+            // 
+            // SilverHawkFeatherToolStrip
+            // 
+            this.SilverHawkFeatherToolStrip.Name = "SilverHawkFeatherToolStrip";
+            this.SilverHawkFeatherToolStrip.Size = new System.Drawing.Size(177, 22);
+            this.SilverHawkFeatherToolStrip.Text = "Silver Hawk Feather";
+            this.SilverHawkFeatherToolStrip.Click += new System.EventHandler(this.silverHawkFeatherToolStrip_Click);
+            // 
             // Settings
             // 
+            this.Settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OpenSettingsToolStrip,
+            this.ReloadPageToolStrip});
             this.Settings.Image = ((System.Drawing.Image)(resources.GetObject("Settings.Image")));
             this.Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(69, 22);
+            this.Settings.Size = new System.Drawing.Size(78, 22);
             this.Settings.Text = "Settings";
-            this.Settings.Click += new System.EventHandler(this.Settings_Click);
+            this.Settings.ToolTipText = "SettingsToolStrip";
             // 
-            // toolStripDropDownButton1
+            // OpenSettingsToolStrip
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.woodcutToolStripMenuItem,
-            this.miningToolStripMenuItem,
-            this.agilityCourseToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.OpenSettingsToolStrip.Name = "OpenSettingsToolStrip";
+            this.OpenSettingsToolStrip.Size = new System.Drawing.Size(180, 22);
+            this.OpenSettingsToolStrip.Text = "Open Settings Panel";
+            this.OpenSettingsToolStrip.Click += new System.EventHandler(this.OpenSettingsToolStrip_Click);
             // 
-            // woodcutToolStripMenuItem
+            // ReloadPageToolStrip
             // 
-            this.woodcutToolStripMenuItem.Name = "woodcutToolStripMenuItem";
-            this.woodcutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.woodcutToolStripMenuItem.Text = "Woodcut";
-            this.woodcutToolStripMenuItem.Click += new System.EventHandler(this.woodcutToolStripMenuItem_Click);
-            // 
-            // miningToolStripMenuItem
-            // 
-            this.miningToolStripMenuItem.Name = "miningToolStripMenuItem";
-            this.miningToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.miningToolStripMenuItem.Text = "Mining";
-            this.miningToolStripMenuItem.Click += new System.EventHandler(this.miningToolStripMenuItem_Click);
+            this.ReloadPageToolStrip.Name = "ReloadPageToolStrip";
+            this.ReloadPageToolStrip.Size = new System.Drawing.Size(180, 22);
+            this.ReloadPageToolStrip.Text = "Reload Page";
+            this.ReloadPageToolStrip.Click += new System.EventHandler(this.ReloadPageToolStrip_Click);
             // 
             // UsernameLabel
             // 
@@ -1033,29 +1072,11 @@
             this.DungeoneeringLabel.TabIndex = 85;
             this.DungeoneeringLabel.Text = "0";
             // 
-            // agilityCourseToolStripMenuItem
-            // 
-            this.agilityCourseToolStripMenuItem.Name = "agilityCourseToolStripMenuItem";
-            this.agilityCourseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.agilityCourseToolStripMenuItem.Text = "Agility Course";
-            this.agilityCourseToolStripMenuItem.Click += new System.EventHandler(this.agilityCourseToolStripMenuItem_Click);
-            // 
-            // ReloadStats
-            // 
-            this.ReloadStats.Location = new System.Drawing.Point(685, 318);
-            this.ReloadStats.Name = "ReloadStats";
-            this.ReloadStats.Size = new System.Drawing.Size(75, 23);
-            this.ReloadStats.TabIndex = 88;
-            this.ReloadStats.Text = "Reload";
-            this.ReloadStats.UseVisualStyleBackColor = true;
-            this.ReloadStats.Click += new System.EventHandler(this.ReloadStats_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 529);
-            this.Controls.Add(this.ReloadStats);
             this.Controls.Add(this.InventionLabel);
             this.Controls.Add(this.DivinationLabel);
             this.Controls.Add(this.DungeoneeringLabel);
@@ -1187,7 +1208,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar AttackBar;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton Settings;
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.PictureBox ProfilePicture;
         private System.Windows.Forms.Button ExitButton;
@@ -1195,7 +1215,7 @@
         private System.Windows.Forms.ProgressBar StrengthBar;
         private System.Windows.Forms.ProgressBar HealthBar;
         private System.Windows.Forms.ProgressBar RangedBar;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripDropDownButton Calculators;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar PrayerBar;
         private System.Windows.Forms.ProgressBar MagicBar;
@@ -1272,10 +1292,14 @@
         private System.Windows.Forms.Label InventionLabel;
         private System.Windows.Forms.Label DivinationLabel;
         private System.Windows.Forms.Label DungeoneeringLabel;
-        private System.Windows.Forms.ToolStripMenuItem woodcutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem miningToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agilityCourseToolStripMenuItem;
-        private System.Windows.Forms.Button ReloadStats;
+        private System.Windows.Forms.ToolStripMenuItem WoodcuttingToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem MiningToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem Agility;
+        private System.Windows.Forms.ToolStripMenuItem AgilityToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem SilverHawkFeatherToolStrip;
+        private System.Windows.Forms.ToolStripDropDownButton Settings;
+        private System.Windows.Forms.ToolStripMenuItem OpenSettingsToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem ReloadPageToolStrip;
     }
 }
 
