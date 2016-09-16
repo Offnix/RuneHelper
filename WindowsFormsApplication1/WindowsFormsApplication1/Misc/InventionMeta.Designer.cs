@@ -299,8 +299,9 @@
             this.Controls.Add(this.BitingIcon);
             this.Controls.Add(this.AftershockIcon);
             this.Controls.Add(this.InventMetaLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Invention Meta";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AftershockIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BitingIcon)).EndInit();

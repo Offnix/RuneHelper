@@ -42,6 +42,7 @@
             this.Agility = new System.Windows.Forms.ToolStripMenuItem();
             this.AgilityToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.SilverHawkFeatherToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventionPerkMetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -125,7 +126,6 @@
             this.InventionLabel = new System.Windows.Forms.Label();
             this.DivinationLabel = new System.Windows.Forms.Label();
             this.DungeoneeringLabel = new System.Windows.Forms.Label();
-            this.inventionPerkMetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -235,14 +235,14 @@
             // WoodcuttingToolStrip
             // 
             this.WoodcuttingToolStrip.Name = "WoodcuttingToolStrip";
-            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(144, 22);
+            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(180, 22);
             this.WoodcuttingToolStrip.Text = "Woodcutting";
             this.WoodcuttingToolStrip.Click += new System.EventHandler(this.WoodcuttingToolStrip_Click);
             // 
             // MiningToolStrip
             // 
             this.MiningToolStrip.Name = "MiningToolStrip";
-            this.MiningToolStrip.Size = new System.Drawing.Size(144, 22);
+            this.MiningToolStrip.Size = new System.Drawing.Size(180, 22);
             this.MiningToolStrip.Text = "Mining";
             this.MiningToolStrip.Click += new System.EventHandler(this.MiningToolStrip_Click);
             // 
@@ -252,7 +252,7 @@
             this.AgilityToolStrip,
             this.SilverHawkFeatherToolStrip});
             this.Agility.Name = "Agility";
-            this.Agility.Size = new System.Drawing.Size(144, 22);
+            this.Agility.Size = new System.Drawing.Size(180, 22);
             this.Agility.Text = "Agility";
             // 
             // AgilityToolStrip
@@ -268,6 +268,13 @@
             this.SilverHawkFeatherToolStrip.Size = new System.Drawing.Size(177, 22);
             this.SilverHawkFeatherToolStrip.Text = "Silver Hawk Feather";
             this.SilverHawkFeatherToolStrip.Click += new System.EventHandler(this.silverHawkFeatherToolStrip_Click);
+            // 
+            // inventionPerkMetaToolStripMenuItem
+            // 
+            this.inventionPerkMetaToolStripMenuItem.Name = "inventionPerkMetaToolStripMenuItem";
+            this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inventionPerkMetaToolStripMenuItem.Text = "Invention Perk Meta";
+            this.inventionPerkMetaToolStripMenuItem.Click += new System.EventHandler(this.inventionPerkMetaToolStripMenuItem_Click);
             // 
             // UsernameLabel
             // 
@@ -1074,13 +1081,6 @@
             this.DungeoneeringLabel.TabIndex = 85;
             this.DungeoneeringLabel.Text = "0";
             // 
-            // inventionPerkMetaToolStripMenuItem
-            // 
-            this.inventionPerkMetaToolStripMenuItem.Name = "inventionPerkMetaToolStripMenuItem";
-            this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.inventionPerkMetaToolStripMenuItem.Text = "Invention Perk Meta";
-            this.inventionPerkMetaToolStripMenuItem.Click += new System.EventHandler(this.inventionPerkMetaToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1175,7 +1175,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "RsThing";
+            this.Text = "RuneHelper";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

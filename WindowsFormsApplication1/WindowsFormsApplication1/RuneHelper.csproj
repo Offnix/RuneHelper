@@ -76,28 +76,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgilityCalc.cs">
+    <Compile Include="Calculators\AgilityCalc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgilityCalc.Designer.cs">
+    <Compile Include="Calculators\AgilityCalc.Designer.cs">
       <DependentUpon>AgilityCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Misc\InventionMeta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Misc\InventionMeta.Designer.cs">
+      <DependentUpon>InventionMeta.cs</DependentUpon>
     </Compile>
-    <Compile Include="MiningCalc.cs">
+    <Compile Include="Calculators\MiningCalc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MiningCalc.Designer.cs">
+    <Compile Include="Calculators\MiningCalc.Designer.cs">
       <DependentUpon>MiningCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="WoodcuttingCalc.cs">
+    <Compile Include="Calculators\WoodcuttingCalc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WoodcuttingCalc.Designer.cs">
+    <Compile Include="Calculators\WoodcuttingCalc.Designer.cs">
       <DependentUpon>WoodcuttingCalc.cs</DependentUpon>
     </Compile>
     <Compile Include="Main API.cs" />
@@ -107,39 +107,39 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SilverhawkCalc.cs">
+    <Compile Include="Calculators\SilverhawkCalc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SilverhawkCalc.Designer.cs">
+    <Compile Include="Calculators\SilverhawkCalc.Designer.cs">
       <DependentUpon>SilverhawkCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs">
+    <Compile Include="Misc\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings.Designer.cs">
+    <Compile Include="Misc\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Misc\InventionMeta.resx">
+      <DependentUpon>InventionMeta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SilverhawkCalc.resx">
+    <EmbeddedResource Include="Calculators\SilverhawkCalc.resx">
       <DependentUpon>SilverhawkCalc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Settings.resx">
+    <EmbeddedResource Include="Misc\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgilityCalc.resx">
+    <EmbeddedResource Include="Calculators\AgilityCalc.resx">
       <DependentUpon>AgilityCalc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MiningCalc.resx">
+    <EmbeddedResource Include="Calculators\MiningCalc.resx">
       <DependentUpon>MiningCalc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WoodcuttingCalc.resx">
+    <EmbeddedResource Include="Calculators\WoodcuttingCalc.resx">
       <DependentUpon>WoodcuttingCalc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -181,6 +181,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
