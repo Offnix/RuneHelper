@@ -150,5 +150,11 @@ namespace WindowsFormsApplication1
             DivinationLabel.Text = API.LevelArray[53];
             InventionLabel.Text = API.LevelArray[55];
         }
+
+        private void inventionPerkMetaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RuneHelper.Form1 InventionForm = new RuneHelper.Form1();
+            InventionForm.Show();
+        }
     }
 }
