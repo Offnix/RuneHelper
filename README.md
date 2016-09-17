@@ -1,4 +1,4 @@
-# RSThing
+# RuneHelper
 
 ## How to contribute
 if you want to contribute please use a dash and your name if there is a bug/ feature your going too add
