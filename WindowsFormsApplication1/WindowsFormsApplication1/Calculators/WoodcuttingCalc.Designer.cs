@@ -1,6 +1,6 @@
 ﻿namespace RsThing
 {
-    partial class Form4
+    partial class WooducttingCalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WooducttingCalculator));
             this.CachedName = new System.Windows.Forms.Button();
             this.CharSearchButton = new System.Windows.Forms.Button();
             this.CharNameBox = new System.Windows.Forms.TextBox();
@@ -184,7 +184,7 @@
             this.BackBtn.UseVisualStyleBackColor = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
-            // Form4
+            // WooducttingCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -202,8 +202,10 @@
             this.Controls.Add(this.CachedName);
             this.Controls.Add(this.CharSearchButton);
             this.Controls.Add(this.CharNameBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form4";
+            this.MaximizeBox = false;
+            this.Name = "WooducttingCalculator";
             this.Text = "WoodCutting Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();

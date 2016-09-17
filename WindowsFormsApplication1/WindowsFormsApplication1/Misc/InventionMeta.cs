@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RuneHelper
 {
-    public partial class Form1 : Form
+    public partial class InventionMeta : Form
     {
-        public Form1()
+        public InventionMeta()
         {
             InitializeComponent();
         }

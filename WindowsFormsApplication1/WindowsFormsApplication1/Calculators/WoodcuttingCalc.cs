@@ -4,9 +4,9 @@ using WindowsFormsApplication1;
 
 namespace RsThing
 {
-    public partial class Form4 : Form
+    public partial class WooducttingCalculator : Form
     {
-        public Form4()
+        public WooducttingCalculator()
         {
             InitializeComponent();
         }

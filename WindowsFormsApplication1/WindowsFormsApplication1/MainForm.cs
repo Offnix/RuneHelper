@@ -49,7 +49,7 @@ namespace WindowsFormsApplication1
 
         private void OpenSettingsToolStrip_Click(object sender, EventArgs e)
         {
-            Form3 Settings = new Form3();
+            SettingsForm Settings = new SettingsForm();
             Settings.Show();
         }
 
@@ -60,7 +60,7 @@ namespace WindowsFormsApplication1
 
         private void WoodcuttingToolStrip_Click(object sender, EventArgs e)
         {
-            RsThing.Form4 Woodcut = new RsThing.Form4();
+            RsThing.WooducttingCalculator Woodcut = new RsThing.WooducttingCalculator();
             Woodcut.Show();
         }
 
@@ -82,12 +82,19 @@ namespace WindowsFormsApplication1
             Silverhawk.Show();
         }
 
+        private void AboutToolStrip_Click(object sender, EventArgs e)
+        {
+            RuneHelper.About AboutForm = new RuneHelper.About();
+            AboutForm.Show();
+        }
+
         /// <summary>
         /// Misc code/ functions
         /// </summary>
 
         public void ReloadPage()
         {
+            Cursor.Current = Cursors.WaitCursor;
             ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
             API.UpdateLevels();
             UsernameLabel.Text = Username;
@@ -149,11 +156,12 @@ namespace WindowsFormsApplication1
             DungeoneeringLabel.Text = API.LevelArray[51];
             DivinationLabel.Text = API.LevelArray[53];
             InventionLabel.Text = API.LevelArray[55];
+            Cursor.Current = Cursors.Default;
         }
 
         private void inventionPerkMetaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RuneHelper.Form1 InventionForm = new RuneHelper.Form1();
+            RuneHelper.InventionMeta InventionForm = new RuneHelper.InventionMeta();
             InventionForm.Show();
         }
     }

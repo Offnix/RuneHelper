@@ -1,6 +1,6 @@
 ﻿namespace RuneHelper
 {
-    partial class Form1
+    partial class InventionMeta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventionMeta));
             this.InventMetaLabel = new System.Windows.Forms.Label();
             this.AftershockIcon = new System.Windows.Forms.PictureBox();
             this.BitingIcon = new System.Windows.Forms.PictureBox();
@@ -272,7 +272,7 @@
             this.BitingLabel.TabIndex = 21;
             this.BitingLabel.Text = "Biting 2/3";
             // 
-            // Form1
+            // InventionMeta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -299,8 +299,10 @@
             this.Controls.Add(this.BitingIcon);
             this.Controls.Add(this.AftershockIcon);
             this.Controls.Add(this.InventMetaLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.MaximizeBox = false;
+            this.Name = "InventionMeta";
             this.Text = "Invention Meta";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AftershockIcon)).EndInit();

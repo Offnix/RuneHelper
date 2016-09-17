@@ -36,6 +36,7 @@
             this.Settings = new System.Windows.Forms.ToolStripDropDownButton();
             this.OpenSettingsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ReloadPageToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.AboutToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.Calculators = new System.Windows.Forms.ToolStripDropDownButton();
             this.WoodcuttingToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.MiningToolStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -189,7 +190,7 @@
             this.Calculators});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(801, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(810, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -197,13 +198,14 @@
             // 
             this.Settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OpenSettingsToolStrip,
-            this.ReloadPageToolStrip});
+            this.ReloadPageToolStrip,
+            this.AboutToolStrip});
             this.Settings.Image = ((System.Drawing.Image)(resources.GetObject("Settings.Image")));
             this.Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(78, 22);
-            this.Settings.Text = "Settings";
-            this.Settings.ToolTipText = "SettingsToolStrip";
+            this.Settings.Size = new System.Drawing.Size(98, 22);
+            this.Settings.Text = "RuneHelper";
+            this.Settings.ToolTipText = "ApplicationToolStrip";
             // 
             // OpenSettingsToolStrip
             // 
@@ -218,6 +220,13 @@
             this.ReloadPageToolStrip.Size = new System.Drawing.Size(180, 22);
             this.ReloadPageToolStrip.Text = "Reload Page";
             this.ReloadPageToolStrip.Click += new System.EventHandler(this.ReloadPageToolStrip_Click);
+            // 
+            // AboutToolStrip
+            // 
+            this.AboutToolStrip.Name = "AboutToolStrip";
+            this.AboutToolStrip.Size = new System.Drawing.Size(180, 22);
+            this.AboutToolStrip.Text = "About";
+            this.AboutToolStrip.Click += new System.EventHandler(this.AboutToolStrip_Click);
             // 
             // Calculators
             // 
@@ -1085,7 +1094,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 529);
+            this.ClientSize = new System.Drawing.Size(810, 531);
             this.Controls.Add(this.InventionLabel);
             this.Controls.Add(this.DivinationLabel);
             this.Controls.Add(this.DungeoneeringLabel);
@@ -1310,6 +1319,7 @@
         private System.Windows.Forms.ToolStripMenuItem OpenSettingsToolStrip;
         private System.Windows.Forms.ToolStripMenuItem ReloadPageToolStrip;
         private System.Windows.Forms.ToolStripMenuItem inventionPerkMetaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AboutToolStrip;
     }
 }
 

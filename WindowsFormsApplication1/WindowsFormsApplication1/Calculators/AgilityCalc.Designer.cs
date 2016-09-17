@@ -209,7 +209,9 @@
             this.Controls.Add(this.CachedName);
             this.Controls.Add(this.CharSearchButton);
             this.Controls.Add(this.CharNameBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form6";
             this.Text = "Agility Calculator";
             this.ResumeLayout(false);

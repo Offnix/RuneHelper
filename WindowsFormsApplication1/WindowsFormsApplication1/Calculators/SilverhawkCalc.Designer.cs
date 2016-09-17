@@ -185,7 +185,9 @@
             this.Controls.Add(this.WebReturnBox);
             this.Controls.Add(this.CharSearchButton);
             this.Controls.Add(this.CharNameBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "SilverhawkForm";
             this.Text = "SilverHawk Calculator";
             this.ResumeLayout(false);

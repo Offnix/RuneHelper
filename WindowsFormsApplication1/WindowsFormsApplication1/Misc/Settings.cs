@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form3 : Form
+    public partial class SettingsForm : Form
     {
-        public Form3()
+        public SettingsForm()
         {
             InitializeComponent();
         }
