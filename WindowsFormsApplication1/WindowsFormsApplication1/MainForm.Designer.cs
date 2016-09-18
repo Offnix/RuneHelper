@@ -44,6 +44,7 @@
             this.AgilityToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.SilverHawkFeatherToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.inventionPerkMetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FireMakingToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.UsernameLabel = new System.Windows.Forms.Label();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -127,7 +128,8 @@
             this.InventionLabel = new System.Windows.Forms.Label();
             this.DivinationLabel = new System.Windows.Forms.Label();
             this.DungeoneeringLabel = new System.Windows.Forms.Label();
-            this.FireMakingToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.CompareStatsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -192,7 +194,8 @@
             this.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Settings,
-            this.Calculators});
+            this.Calculators,
+            this.toolStripDropDownButton1});
             this.MainToolStrip.Location = new System.Drawing.Point(0, 0);
             this.MainToolStrip.Name = "MainToolStrip";
             this.MainToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -293,10 +296,17 @@
             // inventionPerkMetaToolStripMenuItem
             // 
             this.inventionPerkMetaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventionPerkMetaToolStripMenuItem.Name = "InventionPerkMetaToolStrip";
+            this.inventionPerkMetaToolStripMenuItem.Name = "inventionPerkMetaToolStripMenuItem";
             this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
             this.inventionPerkMetaToolStripMenuItem.Text = "Invention Perk Meta";
             this.inventionPerkMetaToolStripMenuItem.Click += new System.EventHandler(this.InventionPerkMetaToolStrip_Click);
+            // 
+            // FireMakingToolStrip
+            // 
+            this.FireMakingToolStrip.Name = "FireMakingToolStrip";
+            this.FireMakingToolStrip.Size = new System.Drawing.Size(207, 24);
+            this.FireMakingToolStrip.Text = "FireMaking";
+            this.FireMakingToolStrip.Click += new System.EventHandler(this.FireMakingToolStrip_Click);
             // 
             // UsernameLabel
             // 
@@ -1160,12 +1170,23 @@
             this.DungeoneeringLabel.TabIndex = 85;
             this.DungeoneeringLabel.Text = "0";
             // 
-            // FireMakingToolStrip
+            // toolStripDropDownButton1
             // 
-            this.FireMakingToolStrip.Name = "FireMakingToolStrip";
-            this.FireMakingToolStrip.Size = new System.Drawing.Size(207, 24);
-            this.FireMakingToolStrip.Text = "FireMaking";
-            this.FireMakingToolStrip.Click += new System.EventHandler(this.FireMakingToolStrip_Click);
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CompareStatsToolStrip});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 32);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // CompareStatsToolStrip
+            // 
+            this.CompareStatsToolStrip.Name = "CompareStatsToolStrip";
+            this.CompareStatsToolStrip.Size = new System.Drawing.Size(152, 22);
+            this.CompareStatsToolStrip.Text = "Compare Stats";
+            this.CompareStatsToolStrip.Click += new System.EventHandler(this.CompareStatsToolStrip_Click);
             // 
             // MainForm
             // 
@@ -1400,6 +1421,8 @@
         private System.Windows.Forms.ToolStripMenuItem inventionPerkMetaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutToolStrip;
         private System.Windows.Forms.ToolStripMenuItem FireMakingToolStrip;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem CompareStatsToolStrip;
     }
 }
 

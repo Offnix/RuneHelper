@@ -5,8 +5,6 @@ using WindowsFormsApplication1;
 
 public static class API
 {
-    public static string[] LevelArray;    
-
     public static double[] LevelXpArray = new double[] { 0, 0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 1584, 1833, 2107, 2411, 2746, 3115, 3523, 3973, 4470
                             , 5018, 5624, 6291, 7028, 7842, 8740, 9730, 10824, 12031, 13363, 14833, 16456, 18247, 20224, 22406, 24815
                             , 27473, 30408, 33648, 37224, 41171, 45529, 50339, 55649, 61512, 67983, 75127, 83014, 91721, 101333
@@ -45,20 +43,22 @@ public static class API
         }
     }
 
-    public static void UpdateLevels()
+    public static string[] UpdateLevels(String Username)
     {
         try
         {
-            string RawExp = (new System.Net.WebClient()).DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + MainForm.Username);
-            LevelArray = RawExp.Split(',');
+            string RawExp = (new System.Net.WebClient()).DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + Username);
+            return RawExp.Split(',');
         }
         catch
         {
             MessageBox.Show("ERROR: Username was not found in the runescape  highscores or highscores or are offline", "RuneHelper");
         }
+        return null;
     }
 
-    public static int GetMean()
+
+    public static int GetMean(String[] LevelArray)
     {
         int counter = 5;
         int total = 0;
@@ -79,6 +79,7 @@ public static class API
 
     public static string[] GetStats(string Name)
     {
+        string[] LevelArray;
         try
         {
             string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=X";
