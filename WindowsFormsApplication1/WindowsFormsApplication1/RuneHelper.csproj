@@ -76,6 +76,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculators\FireMakingCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculators\FireMakingCalc.Designer.cs">
+      <DependentUpon>FireMakingCalc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Misc\About.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Calculators\FireMakingCalc.resx">
+      <DependentUpon>FireMakingCalc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Misc\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>

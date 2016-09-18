@@ -127,6 +127,7 @@
             this.InventionLabel = new System.Windows.Forms.Label();
             this.DivinationLabel = new System.Windows.Forms.Label();
             this.DungeoneeringLabel = new System.Windows.Forms.Label();
+            this.FireMakingToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -240,7 +241,8 @@
             this.WoodcuttingToolStrip,
             this.MiningToolStrip,
             this.Agility,
-            this.inventionPerkMetaToolStripMenuItem});
+            this.inventionPerkMetaToolStripMenuItem,
+            this.FireMakingToolStrip});
             this.Calculators.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Calculators.Image = ((System.Drawing.Image)(resources.GetObject("Calculators.Image")));
             this.Calculators.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -291,10 +293,10 @@
             // inventionPerkMetaToolStripMenuItem
             // 
             this.inventionPerkMetaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventionPerkMetaToolStripMenuItem.Name = "inventionPerkMetaToolStripMenuItem";
+            this.inventionPerkMetaToolStripMenuItem.Name = "InventionPerkMetaToolStrip";
             this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
             this.inventionPerkMetaToolStripMenuItem.Text = "Invention Perk Meta";
-            this.inventionPerkMetaToolStripMenuItem.Click += new System.EventHandler(this.inventionPerkMetaToolStripMenuItem_Click);
+            this.inventionPerkMetaToolStripMenuItem.Click += new System.EventHandler(this.InventionPerkMetaToolStrip_Click);
             // 
             // UsernameLabel
             // 
@@ -1158,6 +1160,13 @@
             this.DungeoneeringLabel.TabIndex = 85;
             this.DungeoneeringLabel.Text = "0";
             // 
+            // FireMakingToolStrip
+            // 
+            this.FireMakingToolStrip.Name = "FireMakingToolStrip";
+            this.FireMakingToolStrip.Size = new System.Drawing.Size(207, 24);
+            this.FireMakingToolStrip.Text = "FireMaking";
+            this.FireMakingToolStrip.Click += new System.EventHandler(this.FireMakingToolStrip_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1390,6 +1399,7 @@
         private System.Windows.Forms.ToolStripMenuItem ReloadPageToolStrip;
         private System.Windows.Forms.ToolStripMenuItem inventionPerkMetaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem FireMakingToolStrip;
     }
 }
 

@@ -88,6 +88,18 @@ namespace WindowsFormsApplication1
             AboutForm.Show();
         }
 
+        private void FireMakingToolStrip_Click(object sender, EventArgs e)
+        {
+            RsThing.FireMakingCalc FireMaking = new RsThing.FireMakingCalc();
+            FireMaking.Show();
+        }
+
+        private void InventionPerkMetaToolStrip_Click(object sender, EventArgs e)
+        {
+            RuneHelper.InventionMeta InventionForm = new RuneHelper.InventionMeta();
+            InventionForm.Show();
+        }
+
         /// <summary>
         /// Misc code/ functions
         /// </summary>
@@ -170,14 +182,7 @@ namespace WindowsFormsApplication1
             }
             catch
             {
-            }
-            
-        }
-
-        private void inventionPerkMetaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RuneHelper.InventionMeta InventionForm = new RuneHelper.InventionMeta();
-            InventionForm.Show();
+            }   
         }
     }
 }

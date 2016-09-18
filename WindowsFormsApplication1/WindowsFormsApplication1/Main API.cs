@@ -25,7 +25,7 @@ public static class API
         }
         catch
         {
-            MessageBox.Show("File could not be accessed or doesnt exsist", "ERROR");
+            MessageBox.Show("ERROR: File could not be accessed or doesnt exsist", "RuneHelper");
         }
     }
 
@@ -40,7 +40,7 @@ public static class API
         }
         catch
         {
-            MessageBox.Show("File could not be accessed or doesnt exsist", "ERROR");
+            MessageBox.Show("ERROR: File could not be accessed or doesnt exsist", "RuneHelper");
             return "";
         }
     }
@@ -54,7 +54,7 @@ public static class API
         }
         catch
         {
-            MessageBox.Show("Username was not found in the runescape highscores or highscores or are offline", "ERROR");
+            MessageBox.Show("ERROR: Username was not found in the runescape  highscores or highscores or are offline", "RuneHelper");
         }
     }
 
@@ -73,7 +73,6 @@ public static class API
         }
         catch
         {
-            MessageBox.Show("Error getting mean", "ERROR");
             return 0;
         }       
     }
@@ -90,7 +89,7 @@ public static class API
         }
         catch
         {
-            MessageBox.Show("Username was not found in the runescape highscores. Or highscores or are offline", "ERROR");
+            MessageBox.Show("ERROR: Username was not found in the runescape highscores. Or highscores or are offline", "RuneHelper");
             return null;
         }        
     }
