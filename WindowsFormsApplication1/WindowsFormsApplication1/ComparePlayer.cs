@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1;
 
@@ -22,6 +15,25 @@ namespace RuneHelper
 
         private void Compare_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ProfileBox1.Load("http://services.runescape.com/m=avatar-rs/" + PLayerInput1.Text + "/chat.gif");
+            }
+            catch
+            {
+                ProfileBox1.Load("http://services.runescape.com/m=avatar-rs/default_chat.png?");
+            }
+
+            try
+            {
+                ProfileBox2.Load("http://services.runescape.com/m=avatar-rs/" + PlayerInput2.Text + "/chat.gif");
+            }
+            catch
+            {
+                ProfileBox2.Load("http://services.runescape.com/m=avatar-rs/default_chat.png?");
+            }
+
+
             try
             {
                 LevelArray = API.UpdateLevels(PLayerInput1.Text);
@@ -143,6 +155,11 @@ namespace RuneHelper
         private void CachedName_Click(object sender, EventArgs e)
         {
             PLayerInput1.Text = MainForm.Username;
+        }
+
+        private void OpenStats_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?category_type=-1&user1="+ PLayerInput1.Text.Replace(" ","+")+"&user2=" + PlayerInput2.Text.Replace(" ", "+"));
         }
     }
 }

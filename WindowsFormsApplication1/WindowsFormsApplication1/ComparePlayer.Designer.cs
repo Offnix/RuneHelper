@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComparePlayer));
             this.InventionLabel = new System.Windows.Forms.Label();
             this.DivinationLabel = new System.Windows.Forms.Label();
@@ -191,6 +192,10 @@
             this.Compare = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.ProfileBox2 = new System.Windows.Forms.PictureBox();
+            this.ProfileBox1 = new System.Windows.Forms.PictureBox();
+            this.ComparePlayerMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OpenStats = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
@@ -243,6 +248,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfileBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfileBox1)).BeginInit();
+            this.ComparePlayerMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // InventionLabel
@@ -1056,7 +1064,7 @@
             this.InventionLabel2.AutoSize = true;
             this.InventionLabel2.BackColor = System.Drawing.Color.Transparent;
             this.InventionLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InventionLabel2.Location = new System.Drawing.Point(516, 566);
+            this.InventionLabel2.Location = new System.Drawing.Point(519, 562);
             this.InventionLabel2.Name = "InventionLabel2";
             this.InventionLabel2.Size = new System.Drawing.Size(16, 18);
             this.InventionLabel2.TabIndex = 243;
@@ -1067,7 +1075,7 @@
             this.DivinationLabel2.AutoSize = true;
             this.DivinationLabel2.BackColor = System.Drawing.Color.Transparent;
             this.DivinationLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivinationLabel2.Location = new System.Drawing.Point(516, 537);
+            this.DivinationLabel2.Location = new System.Drawing.Point(519, 533);
             this.DivinationLabel2.Name = "DivinationLabel2";
             this.DivinationLabel2.Size = new System.Drawing.Size(16, 18);
             this.DivinationLabel2.TabIndex = 242;
@@ -1078,7 +1086,7 @@
             this.DungeoneeringLabel2.AutoSize = true;
             this.DungeoneeringLabel2.BackColor = System.Drawing.Color.Transparent;
             this.DungeoneeringLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DungeoneeringLabel2.Location = new System.Drawing.Point(516, 508);
+            this.DungeoneeringLabel2.Location = new System.Drawing.Point(519, 504);
             this.DungeoneeringLabel2.Name = "DungeoneeringLabel2";
             this.DungeoneeringLabel2.Size = new System.Drawing.Size(16, 18);
             this.DungeoneeringLabel2.TabIndex = 241;
@@ -1089,7 +1097,7 @@
             this.SummoningLabel2.AutoSize = true;
             this.SummoningLabel2.BackColor = System.Drawing.Color.Transparent;
             this.SummoningLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SummoningLabel2.Location = new System.Drawing.Point(516, 479);
+            this.SummoningLabel2.Location = new System.Drawing.Point(519, 475);
             this.SummoningLabel2.Name = "SummoningLabel2";
             this.SummoningLabel2.Size = new System.Drawing.Size(16, 18);
             this.SummoningLabel2.TabIndex = 240;
@@ -1100,7 +1108,7 @@
             this.ContructionLabel2.AutoSize = true;
             this.ContructionLabel2.BackColor = System.Drawing.Color.Transparent;
             this.ContructionLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContructionLabel2.Location = new System.Drawing.Point(516, 450);
+            this.ContructionLabel2.Location = new System.Drawing.Point(519, 446);
             this.ContructionLabel2.Name = "ContructionLabel2";
             this.ContructionLabel2.Size = new System.Drawing.Size(16, 18);
             this.ContructionLabel2.TabIndex = 239;
@@ -1111,7 +1119,7 @@
             this.HunterLabel2.AutoSize = true;
             this.HunterLabel2.BackColor = System.Drawing.Color.Transparent;
             this.HunterLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HunterLabel2.Location = new System.Drawing.Point(516, 421);
+            this.HunterLabel2.Location = new System.Drawing.Point(519, 417);
             this.HunterLabel2.Name = "HunterLabel2";
             this.HunterLabel2.Size = new System.Drawing.Size(16, 18);
             this.HunterLabel2.TabIndex = 238;
@@ -1122,7 +1130,7 @@
             this.RunecraftingLabel2.AutoSize = true;
             this.RunecraftingLabel2.BackColor = System.Drawing.Color.Transparent;
             this.RunecraftingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RunecraftingLabel2.Location = new System.Drawing.Point(516, 392);
+            this.RunecraftingLabel2.Location = new System.Drawing.Point(519, 388);
             this.RunecraftingLabel2.Name = "RunecraftingLabel2";
             this.RunecraftingLabel2.Size = new System.Drawing.Size(16, 18);
             this.RunecraftingLabel2.TabIndex = 237;
@@ -1133,7 +1141,7 @@
             this.FarmingLabel2.AutoSize = true;
             this.FarmingLabel2.BackColor = System.Drawing.Color.Transparent;
             this.FarmingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FarmingLabel2.Location = new System.Drawing.Point(516, 363);
+            this.FarmingLabel2.Location = new System.Drawing.Point(519, 359);
             this.FarmingLabel2.Name = "FarmingLabel2";
             this.FarmingLabel2.Size = new System.Drawing.Size(16, 18);
             this.FarmingLabel2.TabIndex = 236;
@@ -1144,7 +1152,7 @@
             this.SlayerLabel2.AutoSize = true;
             this.SlayerLabel2.BackColor = System.Drawing.Color.Transparent;
             this.SlayerLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlayerLabel2.Location = new System.Drawing.Point(516, 334);
+            this.SlayerLabel2.Location = new System.Drawing.Point(519, 330);
             this.SlayerLabel2.Name = "SlayerLabel2";
             this.SlayerLabel2.Size = new System.Drawing.Size(16, 18);
             this.SlayerLabel2.TabIndex = 235;
@@ -1155,7 +1163,7 @@
             this.ThievingLabel2.AutoSize = true;
             this.ThievingLabel2.BackColor = System.Drawing.Color.Transparent;
             this.ThievingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThievingLabel2.Location = new System.Drawing.Point(516, 305);
+            this.ThievingLabel2.Location = new System.Drawing.Point(519, 301);
             this.ThievingLabel2.Name = "ThievingLabel2";
             this.ThievingLabel2.Size = new System.Drawing.Size(16, 18);
             this.ThievingLabel2.TabIndex = 234;
@@ -1166,7 +1174,7 @@
             this.AgilityLabel2.AutoSize = true;
             this.AgilityLabel2.BackColor = System.Drawing.Color.Transparent;
             this.AgilityLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgilityLabel2.Location = new System.Drawing.Point(516, 272);
+            this.AgilityLabel2.Location = new System.Drawing.Point(519, 268);
             this.AgilityLabel2.Name = "AgilityLabel2";
             this.AgilityLabel2.Size = new System.Drawing.Size(16, 18);
             this.AgilityLabel2.TabIndex = 233;
@@ -1177,7 +1185,7 @@
             this.HerbloreLabel2.AutoSize = true;
             this.HerbloreLabel2.BackColor = System.Drawing.Color.Transparent;
             this.HerbloreLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HerbloreLabel2.Location = new System.Drawing.Point(392, 566);
+            this.HerbloreLabel2.Location = new System.Drawing.Point(396, 569);
             this.HerbloreLabel2.Name = "HerbloreLabel2";
             this.HerbloreLabel2.Size = new System.Drawing.Size(16, 18);
             this.HerbloreLabel2.TabIndex = 232;
@@ -1188,7 +1196,7 @@
             this.MiningLabel2.AutoSize = true;
             this.MiningLabel2.BackColor = System.Drawing.Color.Transparent;
             this.MiningLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiningLabel2.Location = new System.Drawing.Point(392, 535);
+            this.MiningLabel2.Location = new System.Drawing.Point(396, 538);
             this.MiningLabel2.Name = "MiningLabel2";
             this.MiningLabel2.Size = new System.Drawing.Size(16, 18);
             this.MiningLabel2.TabIndex = 231;
@@ -1199,7 +1207,7 @@
             this.SmithingLabel2.AutoSize = true;
             this.SmithingLabel2.BackColor = System.Drawing.Color.Transparent;
             this.SmithingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SmithingLabel2.Location = new System.Drawing.Point(392, 503);
+            this.SmithingLabel2.Location = new System.Drawing.Point(396, 506);
             this.SmithingLabel2.Name = "SmithingLabel2";
             this.SmithingLabel2.Size = new System.Drawing.Size(16, 18);
             this.SmithingLabel2.TabIndex = 230;
@@ -1210,7 +1218,7 @@
             this.CraftingLabel2.AutoSize = true;
             this.CraftingLabel2.BackColor = System.Drawing.Color.Transparent;
             this.CraftingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CraftingLabel2.Location = new System.Drawing.Point(392, 474);
+            this.CraftingLabel2.Location = new System.Drawing.Point(396, 477);
             this.CraftingLabel2.Name = "CraftingLabel2";
             this.CraftingLabel2.Size = new System.Drawing.Size(16, 18);
             this.CraftingLabel2.TabIndex = 229;
@@ -1221,7 +1229,7 @@
             this.FiremakingLabel2.AutoSize = true;
             this.FiremakingLabel2.BackColor = System.Drawing.Color.Transparent;
             this.FiremakingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FiremakingLabel2.Location = new System.Drawing.Point(392, 451);
+            this.FiremakingLabel2.Location = new System.Drawing.Point(396, 454);
             this.FiremakingLabel2.Name = "FiremakingLabel2";
             this.FiremakingLabel2.Size = new System.Drawing.Size(16, 18);
             this.FiremakingLabel2.TabIndex = 228;
@@ -1232,7 +1240,7 @@
             this.FishingLabel2.AutoSize = true;
             this.FishingLabel2.BackColor = System.Drawing.Color.Transparent;
             this.FishingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FishingLabel2.Location = new System.Drawing.Point(392, 422);
+            this.FishingLabel2.Location = new System.Drawing.Point(396, 425);
             this.FishingLabel2.Name = "FishingLabel2";
             this.FishingLabel2.Size = new System.Drawing.Size(16, 18);
             this.FishingLabel2.TabIndex = 227;
@@ -1243,7 +1251,7 @@
             this.FletchingLabel2.AutoSize = true;
             this.FletchingLabel2.BackColor = System.Drawing.Color.Transparent;
             this.FletchingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FletchingLabel2.Location = new System.Drawing.Point(392, 393);
+            this.FletchingLabel2.Location = new System.Drawing.Point(396, 396);
             this.FletchingLabel2.Name = "FletchingLabel2";
             this.FletchingLabel2.Size = new System.Drawing.Size(16, 18);
             this.FletchingLabel2.TabIndex = 226;
@@ -1254,7 +1262,7 @@
             this.WoodcuttingLabel2.AutoSize = true;
             this.WoodcuttingLabel2.BackColor = System.Drawing.Color.Transparent;
             this.WoodcuttingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WoodcuttingLabel2.Location = new System.Drawing.Point(392, 364);
+            this.WoodcuttingLabel2.Location = new System.Drawing.Point(396, 367);
             this.WoodcuttingLabel2.Name = "WoodcuttingLabel2";
             this.WoodcuttingLabel2.Size = new System.Drawing.Size(16, 18);
             this.WoodcuttingLabel2.TabIndex = 225;
@@ -1265,7 +1273,7 @@
             this.MagicLabel2.AutoSize = true;
             this.MagicLabel2.BackColor = System.Drawing.Color.Transparent;
             this.MagicLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MagicLabel2.Location = new System.Drawing.Point(392, 335);
+            this.MagicLabel2.Location = new System.Drawing.Point(396, 338);
             this.MagicLabel2.Name = "MagicLabel2";
             this.MagicLabel2.Size = new System.Drawing.Size(16, 18);
             this.MagicLabel2.TabIndex = 224;
@@ -1276,7 +1284,7 @@
             this.PrayerLabel2.AutoSize = true;
             this.PrayerLabel2.BackColor = System.Drawing.Color.Transparent;
             this.PrayerLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrayerLabel2.Location = new System.Drawing.Point(392, 306);
+            this.PrayerLabel2.Location = new System.Drawing.Point(396, 309);
             this.PrayerLabel2.Name = "PrayerLabel2";
             this.PrayerLabel2.Size = new System.Drawing.Size(16, 18);
             this.PrayerLabel2.TabIndex = 223;
@@ -1287,7 +1295,7 @@
             this.RangedLabel2.AutoSize = true;
             this.RangedLabel2.BackColor = System.Drawing.Color.Transparent;
             this.RangedLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangedLabel2.Location = new System.Drawing.Point(392, 277);
+            this.RangedLabel2.Location = new System.Drawing.Point(396, 280);
             this.RangedLabel2.Name = "RangedLabel2";
             this.RangedLabel2.Size = new System.Drawing.Size(16, 18);
             this.RangedLabel2.TabIndex = 222;
@@ -1298,7 +1306,7 @@
             this.HealthLabel2.AutoSize = true;
             this.HealthLabel2.BackColor = System.Drawing.Color.Transparent;
             this.HealthLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HealthLabel2.Location = new System.Drawing.Point(392, 248);
+            this.HealthLabel2.Location = new System.Drawing.Point(396, 251);
             this.HealthLabel2.Name = "HealthLabel2";
             this.HealthLabel2.Size = new System.Drawing.Size(16, 18);
             this.HealthLabel2.TabIndex = 221;
@@ -1309,7 +1317,7 @@
             this.StrengthLabel2.AutoSize = true;
             this.StrengthLabel2.BackColor = System.Drawing.Color.Transparent;
             this.StrengthLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StrengthLabel2.Location = new System.Drawing.Point(392, 219);
+            this.StrengthLabel2.Location = new System.Drawing.Point(396, 222);
             this.StrengthLabel2.Name = "StrengthLabel2";
             this.StrengthLabel2.Size = new System.Drawing.Size(16, 18);
             this.StrengthLabel2.TabIndex = 220;
@@ -1320,7 +1328,7 @@
             this.DefenceLabel2.AutoSize = true;
             this.DefenceLabel2.BackColor = System.Drawing.Color.Transparent;
             this.DefenceLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DefenceLabel2.Location = new System.Drawing.Point(392, 190);
+            this.DefenceLabel2.Location = new System.Drawing.Point(396, 193);
             this.DefenceLabel2.Name = "DefenceLabel2";
             this.DefenceLabel2.Size = new System.Drawing.Size(16, 18);
             this.DefenceLabel2.TabIndex = 219;
@@ -1331,7 +1339,7 @@
             this.AttackLabel2.AutoSize = true;
             this.AttackLabel2.BackColor = System.Drawing.Color.Transparent;
             this.AttackLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttackLabel2.Location = new System.Drawing.Point(392, 155);
+            this.AttackLabel2.Location = new System.Drawing.Point(396, 164);
             this.AttackLabel2.Name = "AttackLabel2";
             this.AttackLabel2.Size = new System.Drawing.Size(16, 18);
             this.AttackLabel2.TabIndex = 218;
@@ -1341,7 +1349,7 @@
             // 
             this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(414, 561);
+            this.pictureBox27.Location = new System.Drawing.Point(417, 557);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(23, 23);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1352,7 +1360,7 @@
             // 
             this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox28.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox28.Image")));
-            this.pictureBox28.Location = new System.Drawing.Point(414, 532);
+            this.pictureBox28.Location = new System.Drawing.Point(417, 528);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(23, 23);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1361,7 +1369,7 @@
             // 
             // InventorBar2
             // 
-            this.InventorBar2.Location = new System.Drawing.Point(443, 561);
+            this.InventorBar2.Location = new System.Drawing.Point(446, 557);
             this.InventorBar2.MarqueeAnimationSpeed = 0;
             this.InventorBar2.Maximum = 120;
             this.InventorBar2.Name = "InventorBar2";
@@ -1372,7 +1380,7 @@
             // 
             this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(414, 503);
+            this.pictureBox29.Location = new System.Drawing.Point(417, 499);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(23, 23);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1383,7 +1391,7 @@
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
-            this.pictureBox30.Location = new System.Drawing.Point(414, 474);
+            this.pictureBox30.Location = new System.Drawing.Point(417, 470);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(23, 23);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1394,7 +1402,7 @@
             // 
             this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox31.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox31.Image")));
-            this.pictureBox31.Location = new System.Drawing.Point(414, 445);
+            this.pictureBox31.Location = new System.Drawing.Point(417, 441);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(23, 23);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1405,7 +1413,7 @@
             // 
             this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox32.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox32.Image")));
-            this.pictureBox32.Location = new System.Drawing.Point(414, 419);
+            this.pictureBox32.Location = new System.Drawing.Point(417, 415);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(23, 23);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1416,7 +1424,7 @@
             // 
             this.pictureBox33.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox33.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox33.Image")));
-            this.pictureBox33.Location = new System.Drawing.Point(414, 387);
+            this.pictureBox33.Location = new System.Drawing.Point(417, 383);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(23, 23);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1427,7 +1435,7 @@
             // 
             this.pictureBox34.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
-            this.pictureBox34.Location = new System.Drawing.Point(414, 358);
+            this.pictureBox34.Location = new System.Drawing.Point(417, 354);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(23, 23);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1438,7 +1446,7 @@
             // 
             this.pictureBox35.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox35.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox35.Image")));
-            this.pictureBox35.Location = new System.Drawing.Point(414, 329);
+            this.pictureBox35.Location = new System.Drawing.Point(417, 325);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(23, 23);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1449,7 +1457,7 @@
             // 
             this.pictureBox36.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox36.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox36.Image")));
-            this.pictureBox36.Location = new System.Drawing.Point(414, 300);
+            this.pictureBox36.Location = new System.Drawing.Point(417, 296);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(23, 23);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1460,7 +1468,7 @@
             // 
             this.pictureBox37.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox37.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox37.Image")));
-            this.pictureBox37.Location = new System.Drawing.Point(414, 271);
+            this.pictureBox37.Location = new System.Drawing.Point(417, 267);
             this.pictureBox37.Name = "pictureBox37";
             this.pictureBox37.Size = new System.Drawing.Size(23, 23);
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1471,7 +1479,7 @@
             // 
             this.pictureBox38.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox38.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox38.Image")));
-            this.pictureBox38.Location = new System.Drawing.Point(290, 565);
+            this.pictureBox38.Location = new System.Drawing.Point(294, 568);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(23, 23);
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1482,7 +1490,7 @@
             // 
             this.pictureBox39.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox39.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox39.Image")));
-            this.pictureBox39.Location = new System.Drawing.Point(290, 535);
+            this.pictureBox39.Location = new System.Drawing.Point(294, 538);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(23, 23);
             this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1493,7 +1501,7 @@
             // 
             this.pictureBox40.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox40.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox40.Image")));
-            this.pictureBox40.Location = new System.Drawing.Point(290, 503);
+            this.pictureBox40.Location = new System.Drawing.Point(294, 506);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(23, 23);
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1504,7 +1512,7 @@
             // 
             this.pictureBox41.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox41.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox41.Image")));
-            this.pictureBox41.Location = new System.Drawing.Point(290, 474);
+            this.pictureBox41.Location = new System.Drawing.Point(294, 477);
             this.pictureBox41.Name = "pictureBox41";
             this.pictureBox41.Size = new System.Drawing.Size(23, 23);
             this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1515,7 +1523,7 @@
             // 
             this.pictureBox42.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox42.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox42.Image")));
-            this.pictureBox42.Location = new System.Drawing.Point(290, 446);
+            this.pictureBox42.Location = new System.Drawing.Point(294, 449);
             this.pictureBox42.Name = "pictureBox42";
             this.pictureBox42.Size = new System.Drawing.Size(23, 23);
             this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1526,7 +1534,7 @@
             // 
             this.pictureBox43.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox43.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox43.Image")));
-            this.pictureBox43.Location = new System.Drawing.Point(290, 417);
+            this.pictureBox43.Location = new System.Drawing.Point(294, 420);
             this.pictureBox43.Name = "pictureBox43";
             this.pictureBox43.Size = new System.Drawing.Size(23, 23);
             this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1537,7 +1545,7 @@
             // 
             this.pictureBox44.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox44.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox44.Image")));
-            this.pictureBox44.Location = new System.Drawing.Point(290, 388);
+            this.pictureBox44.Location = new System.Drawing.Point(294, 391);
             this.pictureBox44.Name = "pictureBox44";
             this.pictureBox44.Size = new System.Drawing.Size(23, 23);
             this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1548,7 +1556,7 @@
             // 
             this.pictureBox45.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox45.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox45.Image")));
-            this.pictureBox45.Location = new System.Drawing.Point(290, 359);
+            this.pictureBox45.Location = new System.Drawing.Point(294, 362);
             this.pictureBox45.Name = "pictureBox45";
             this.pictureBox45.Size = new System.Drawing.Size(23, 23);
             this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1559,7 +1567,7 @@
             // 
             this.pictureBox46.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox46.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox46.Image")));
-            this.pictureBox46.Location = new System.Drawing.Point(290, 330);
+            this.pictureBox46.Location = new System.Drawing.Point(294, 333);
             this.pictureBox46.Name = "pictureBox46";
             this.pictureBox46.Size = new System.Drawing.Size(23, 23);
             this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1570,7 +1578,7 @@
             // 
             this.pictureBox47.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox47.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox47.Image")));
-            this.pictureBox47.Location = new System.Drawing.Point(290, 301);
+            this.pictureBox47.Location = new System.Drawing.Point(294, 304);
             this.pictureBox47.Name = "pictureBox47";
             this.pictureBox47.Size = new System.Drawing.Size(23, 23);
             this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1581,7 +1589,7 @@
             // 
             this.pictureBox48.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox48.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox48.Image")));
-            this.pictureBox48.Location = new System.Drawing.Point(290, 272);
+            this.pictureBox48.Location = new System.Drawing.Point(294, 275);
             this.pictureBox48.Name = "pictureBox48";
             this.pictureBox48.Size = new System.Drawing.Size(23, 23);
             this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1592,7 +1600,7 @@
             // 
             this.pictureBox49.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox49.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox49.Image")));
-            this.pictureBox49.Location = new System.Drawing.Point(290, 243);
+            this.pictureBox49.Location = new System.Drawing.Point(294, 246);
             this.pictureBox49.Name = "pictureBox49";
             this.pictureBox49.Size = new System.Drawing.Size(23, 23);
             this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1603,7 +1611,7 @@
             // 
             this.pictureBox50.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox50.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox50.Image")));
-            this.pictureBox50.Location = new System.Drawing.Point(290, 214);
+            this.pictureBox50.Location = new System.Drawing.Point(294, 217);
             this.pictureBox50.Name = "pictureBox50";
             this.pictureBox50.Size = new System.Drawing.Size(23, 23);
             this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1614,7 +1622,7 @@
             // 
             this.pictureBox51.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox51.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox51.Image")));
-            this.pictureBox51.Location = new System.Drawing.Point(290, 185);
+            this.pictureBox51.Location = new System.Drawing.Point(294, 188);
             this.pictureBox51.Name = "pictureBox51";
             this.pictureBox51.Size = new System.Drawing.Size(23, 23);
             this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1623,7 +1631,7 @@
             // 
             // DivinationBar2
             // 
-            this.DivinationBar2.Location = new System.Drawing.Point(443, 532);
+            this.DivinationBar2.Location = new System.Drawing.Point(446, 528);
             this.DivinationBar2.MarqueeAnimationSpeed = 0;
             this.DivinationBar2.Maximum = 99;
             this.DivinationBar2.Name = "DivinationBar2";
@@ -1632,7 +1640,7 @@
             // 
             // DungeoneeringBar2
             // 
-            this.DungeoneeringBar2.Location = new System.Drawing.Point(443, 503);
+            this.DungeoneeringBar2.Location = new System.Drawing.Point(446, 499);
             this.DungeoneeringBar2.MarqueeAnimationSpeed = 0;
             this.DungeoneeringBar2.Maximum = 120;
             this.DungeoneeringBar2.Name = "DungeoneeringBar2";
@@ -1641,7 +1649,7 @@
             // 
             // SummoningBar2
             // 
-            this.SummoningBar2.Location = new System.Drawing.Point(443, 474);
+            this.SummoningBar2.Location = new System.Drawing.Point(446, 470);
             this.SummoningBar2.MarqueeAnimationSpeed = 0;
             this.SummoningBar2.Maximum = 99;
             this.SummoningBar2.Name = "SummoningBar2";
@@ -1650,7 +1658,7 @@
             // 
             // ConstructionBar2
             // 
-            this.ConstructionBar2.Location = new System.Drawing.Point(443, 445);
+            this.ConstructionBar2.Location = new System.Drawing.Point(446, 441);
             this.ConstructionBar2.MarqueeAnimationSpeed = 0;
             this.ConstructionBar2.Maximum = 99;
             this.ConstructionBar2.Name = "ConstructionBar2";
@@ -1659,7 +1667,7 @@
             // 
             // HunterBar2
             // 
-            this.HunterBar2.Location = new System.Drawing.Point(443, 416);
+            this.HunterBar2.Location = new System.Drawing.Point(446, 412);
             this.HunterBar2.MarqueeAnimationSpeed = 0;
             this.HunterBar2.Maximum = 99;
             this.HunterBar2.Name = "HunterBar2";
@@ -1668,7 +1676,7 @@
             // 
             // RunecraftingBar2
             // 
-            this.RunecraftingBar2.Location = new System.Drawing.Point(443, 387);
+            this.RunecraftingBar2.Location = new System.Drawing.Point(446, 383);
             this.RunecraftingBar2.MarqueeAnimationSpeed = 0;
             this.RunecraftingBar2.Maximum = 99;
             this.RunecraftingBar2.Name = "RunecraftingBar2";
@@ -1677,7 +1685,7 @@
             // 
             // FarmingBar2
             // 
-            this.FarmingBar2.Location = new System.Drawing.Point(443, 358);
+            this.FarmingBar2.Location = new System.Drawing.Point(446, 354);
             this.FarmingBar2.MarqueeAnimationSpeed = 0;
             this.FarmingBar2.Maximum = 99;
             this.FarmingBar2.Name = "FarmingBar2";
@@ -1686,7 +1694,7 @@
             // 
             // SlayerBar2
             // 
-            this.SlayerBar2.Location = new System.Drawing.Point(443, 329);
+            this.SlayerBar2.Location = new System.Drawing.Point(446, 325);
             this.SlayerBar2.MarqueeAnimationSpeed = 0;
             this.SlayerBar2.Maximum = 99;
             this.SlayerBar2.Name = "SlayerBar2";
@@ -1695,7 +1703,7 @@
             // 
             // ThievingBar2
             // 
-            this.ThievingBar2.Location = new System.Drawing.Point(443, 300);
+            this.ThievingBar2.Location = new System.Drawing.Point(446, 296);
             this.ThievingBar2.MarqueeAnimationSpeed = 0;
             this.ThievingBar2.Maximum = 99;
             this.ThievingBar2.Name = "ThievingBar2";
@@ -1704,7 +1712,7 @@
             // 
             // AgilityBar2
             // 
-            this.AgilityBar2.Location = new System.Drawing.Point(443, 271);
+            this.AgilityBar2.Location = new System.Drawing.Point(446, 267);
             this.AgilityBar2.MarqueeAnimationSpeed = 0;
             this.AgilityBar2.Maximum = 99;
             this.AgilityBar2.Name = "AgilityBar2";
@@ -1713,7 +1721,7 @@
             // 
             // HerbloreBar2
             // 
-            this.HerbloreBar2.Location = new System.Drawing.Point(319, 565);
+            this.HerbloreBar2.Location = new System.Drawing.Point(323, 568);
             this.HerbloreBar2.MarqueeAnimationSpeed = 0;
             this.HerbloreBar2.Maximum = 99;
             this.HerbloreBar2.Name = "HerbloreBar2";
@@ -1722,7 +1730,7 @@
             // 
             // MiningBar2
             // 
-            this.MiningBar2.Location = new System.Drawing.Point(319, 535);
+            this.MiningBar2.Location = new System.Drawing.Point(323, 538);
             this.MiningBar2.MarqueeAnimationSpeed = 0;
             this.MiningBar2.Maximum = 99;
             this.MiningBar2.Name = "MiningBar2";
@@ -1731,7 +1739,7 @@
             // 
             // SmithingBar2
             // 
-            this.SmithingBar2.Location = new System.Drawing.Point(319, 503);
+            this.SmithingBar2.Location = new System.Drawing.Point(323, 506);
             this.SmithingBar2.MarqueeAnimationSpeed = 0;
             this.SmithingBar2.Maximum = 99;
             this.SmithingBar2.Name = "SmithingBar2";
@@ -1740,7 +1748,7 @@
             // 
             // CraftingBar2
             // 
-            this.CraftingBar2.Location = new System.Drawing.Point(319, 474);
+            this.CraftingBar2.Location = new System.Drawing.Point(323, 477);
             this.CraftingBar2.MarqueeAnimationSpeed = 0;
             this.CraftingBar2.Maximum = 99;
             this.CraftingBar2.Name = "CraftingBar2";
@@ -1749,7 +1757,7 @@
             // 
             // FiremakingBar2
             // 
-            this.FiremakingBar2.Location = new System.Drawing.Point(319, 446);
+            this.FiremakingBar2.Location = new System.Drawing.Point(323, 449);
             this.FiremakingBar2.MarqueeAnimationSpeed = 0;
             this.FiremakingBar2.Maximum = 99;
             this.FiremakingBar2.Name = "FiremakingBar2";
@@ -1758,7 +1766,7 @@
             // 
             // FishingBar2
             // 
-            this.FishingBar2.Location = new System.Drawing.Point(319, 417);
+            this.FishingBar2.Location = new System.Drawing.Point(323, 420);
             this.FishingBar2.MarqueeAnimationSpeed = 0;
             this.FishingBar2.Maximum = 99;
             this.FishingBar2.Name = "FishingBar2";
@@ -1767,7 +1775,7 @@
             // 
             // FletchingBar2
             // 
-            this.FletchingBar2.Location = new System.Drawing.Point(319, 388);
+            this.FletchingBar2.Location = new System.Drawing.Point(323, 391);
             this.FletchingBar2.MarqueeAnimationSpeed = 0;
             this.FletchingBar2.Maximum = 99;
             this.FletchingBar2.Name = "FletchingBar2";
@@ -1776,7 +1784,7 @@
             // 
             // WoodcuttingBar2
             // 
-            this.WoodcuttingBar2.Location = new System.Drawing.Point(319, 359);
+            this.WoodcuttingBar2.Location = new System.Drawing.Point(323, 362);
             this.WoodcuttingBar2.MarqueeAnimationSpeed = 0;
             this.WoodcuttingBar2.Maximum = 99;
             this.WoodcuttingBar2.Name = "WoodcuttingBar2";
@@ -1785,7 +1793,7 @@
             // 
             // MagicBar2
             // 
-            this.MagicBar2.Location = new System.Drawing.Point(319, 330);
+            this.MagicBar2.Location = new System.Drawing.Point(323, 333);
             this.MagicBar2.MarqueeAnimationSpeed = 0;
             this.MagicBar2.Maximum = 99;
             this.MagicBar2.Name = "MagicBar2";
@@ -1794,7 +1802,7 @@
             // 
             // PrayerBar2
             // 
-            this.PrayerBar2.Location = new System.Drawing.Point(319, 301);
+            this.PrayerBar2.Location = new System.Drawing.Point(323, 304);
             this.PrayerBar2.MarqueeAnimationSpeed = 0;
             this.PrayerBar2.Maximum = 99;
             this.PrayerBar2.Name = "PrayerBar2";
@@ -1805,7 +1813,7 @@
             // 
             this.pictureBox52.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox52.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox52.Image")));
-            this.pictureBox52.Location = new System.Drawing.Point(290, 150);
+            this.pictureBox52.Location = new System.Drawing.Point(294, 159);
             this.pictureBox52.Name = "pictureBox52";
             this.pictureBox52.Size = new System.Drawing.Size(23, 23);
             this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1814,7 +1822,7 @@
             // 
             // RangedBar2
             // 
-            this.RangedBar2.Location = new System.Drawing.Point(319, 272);
+            this.RangedBar2.Location = new System.Drawing.Point(323, 275);
             this.RangedBar2.MarqueeAnimationSpeed = 0;
             this.RangedBar2.Maximum = 99;
             this.RangedBar2.Name = "RangedBar2";
@@ -1823,7 +1831,7 @@
             // 
             // HealthBar2
             // 
-            this.HealthBar2.Location = new System.Drawing.Point(319, 243);
+            this.HealthBar2.Location = new System.Drawing.Point(323, 246);
             this.HealthBar2.MarqueeAnimationSpeed = 0;
             this.HealthBar2.Maximum = 99;
             this.HealthBar2.Name = "HealthBar2";
@@ -1832,7 +1840,7 @@
             // 
             // StrengthBar2
             // 
-            this.StrengthBar2.Location = new System.Drawing.Point(319, 214);
+            this.StrengthBar2.Location = new System.Drawing.Point(323, 217);
             this.StrengthBar2.MarqueeAnimationSpeed = 0;
             this.StrengthBar2.Maximum = 99;
             this.StrengthBar2.Name = "StrengthBar2";
@@ -1841,7 +1849,7 @@
             // 
             // DefenceBar2
             // 
-            this.DefenceBar2.Location = new System.Drawing.Point(319, 185);
+            this.DefenceBar2.Location = new System.Drawing.Point(323, 188);
             this.DefenceBar2.MarqueeAnimationSpeed = 0;
             this.DefenceBar2.Maximum = 99;
             this.DefenceBar2.Name = "DefenceBar2";
@@ -1850,7 +1858,7 @@
             // 
             // AttackBar2
             // 
-            this.AttackBar2.Location = new System.Drawing.Point(319, 150);
+            this.AttackBar2.Location = new System.Drawing.Point(323, 159);
             this.AttackBar2.MarqueeAnimationSpeed = 0;
             this.AttackBar2.Maximum = 99;
             this.AttackBar2.Name = "AttackBar2";
@@ -1866,14 +1874,14 @@
             // 
             // PlayerInput2
             // 
-            this.PlayerInput2.Location = new System.Drawing.Point(427, 27);
+            this.PlayerInput2.Location = new System.Drawing.Point(431, 25);
             this.PlayerInput2.Name = "PlayerInput2";
             this.PlayerInput2.Size = new System.Drawing.Size(118, 20);
             this.PlayerInput2.TabIndex = 245;
             // 
             // CachedName
             // 
-            this.CachedName.Location = new System.Drawing.Point(150, 26);
+            this.CachedName.Location = new System.Drawing.Point(147, 22);
             this.CachedName.Name = "CachedName";
             this.CachedName.Size = new System.Drawing.Size(110, 23);
             this.CachedName.TabIndex = 246;
@@ -1883,7 +1891,7 @@
             // 
             // Compare
             // 
-            this.Compare.Location = new System.Drawing.Point(266, 24);
+            this.Compare.Location = new System.Drawing.Point(263, 21);
             this.Compare.Name = "Compare";
             this.Compare.Size = new System.Drawing.Size(110, 23);
             this.Compare.TabIndex = 247;
@@ -1903,17 +1911,52 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(424, 9);
+            this.label28.Location = new System.Drawing.Point(428, 7);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(76, 13);
             this.label28.TabIndex = 249;
             this.label28.Text = "Player 2 Name";
+            // 
+            // ProfileBox2
+            // 
+            this.ProfileBox2.Location = new System.Drawing.Point(413, 115);
+            this.ProfileBox2.Name = "ProfileBox2";
+            this.ProfileBox2.Size = new System.Drawing.Size(141, 140);
+            this.ProfileBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ProfileBox2.TabIndex = 250;
+            this.ProfileBox2.TabStop = false;
+            // 
+            // ProfileBox1
+            // 
+            this.ProfileBox1.Location = new System.Drawing.Point(0, 108);
+            this.ProfileBox1.Name = "ProfileBox1";
+            this.ProfileBox1.Size = new System.Drawing.Size(135, 147);
+            this.ProfileBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ProfileBox1.TabIndex = 251;
+            this.ProfileBox1.TabStop = false;
+            // 
+            // ComparePlayerMenu
+            // 
+            this.ComparePlayerMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OpenStats});
+            this.ComparePlayerMenu.Name = "ComparePlayerMenu";
+            this.ComparePlayerMenu.Size = new System.Drawing.Size(234, 26);
+            // 
+            // OpenStats
+            // 
+            this.OpenStats.Name = "OpenStats";
+            this.OpenStats.Size = new System.Drawing.Size(233, 22);
+            this.OpenStats.Text = "Open in runescape highscores";
+            this.OpenStats.Click += new System.EventHandler(this.OpenStats_Click);
             // 
             // ComparePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 595);
+            this.ContextMenuStrip = this.ComparePlayerMenu;
+            this.Controls.Add(this.ProfileBox1);
+            this.Controls.Add(this.ProfileBox2);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.Compare);
@@ -2131,6 +2174,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfileBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfileBox1)).EndInit();
+            this.ComparePlayerMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2300,5 +2346,9 @@
         private System.Windows.Forms.Button Compare;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.PictureBox ProfileBox2;
+        private System.Windows.Forms.PictureBox ProfileBox1;
+        private System.Windows.Forms.ContextMenuStrip ComparePlayerMenu;
+        private System.Windows.Forms.ToolStripMenuItem OpenStats;
     }
 }

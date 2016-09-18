@@ -116,7 +116,7 @@ namespace WindowsFormsApplication1
             Cursor.Current = Cursors.WaitCursor;
             try
             {
-                ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");
+                ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");              
             }
             catch
             {
@@ -190,6 +190,11 @@ namespace WindowsFormsApplication1
             catch
             {
             }   
+        }
+
+        private void OpenStats_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + Username.Replace(" ","+"));
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -130,6 +131,8 @@
             this.DungeoneeringLabel = new System.Windows.Forms.Label();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.CompareStatsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.MainFormMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.OpenStats = new System.Windows.Forms.ToolStripMenuItem();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -158,6 +161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            this.MainFormMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -1188,12 +1192,27 @@
             this.CompareStatsToolStrip.Text = "Compare Stats";
             this.CompareStatsToolStrip.Click += new System.EventHandler(this.CompareStatsToolStrip_Click);
             // 
+            // MainFormMenu
+            // 
+            this.MainFormMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OpenStats});
+            this.MainFormMenu.Name = "MainFormMenu";
+            this.MainFormMenu.Size = new System.Drawing.Size(234, 26);
+            // 
+            // OpenStats
+            // 
+            this.OpenStats.Name = "OpenStats";
+            this.OpenStats.Size = new System.Drawing.Size(233, 22);
+            this.OpenStats.Text = "Open in runescape highscores";
+            this.OpenStats.Click += new System.EventHandler(this.OpenStats_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(810, 531);
+            this.ContextMenuStrip = this.MainFormMenu;
             this.Controls.Add(this.InventionLabel);
             this.Controls.Add(this.DivinationLabel);
             this.Controls.Add(this.DungeoneeringLabel);
@@ -1315,6 +1334,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            this.MainFormMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1423,6 +1443,8 @@
         private System.Windows.Forms.ToolStripMenuItem FireMakingToolStrip;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem CompareStatsToolStrip;
+        private System.Windows.Forms.ContextMenuStrip MainFormMenu;
+        private System.Windows.Forms.ToolStripMenuItem OpenStats;
     }
 }
 
