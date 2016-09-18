@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.AttackBar = new System.Windows.Forms.ProgressBar();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.MainToolStrip = new System.Windows.Forms.ToolStrip();
             this.Settings = new System.Windows.Forms.ToolStripDropDownButton();
             this.OpenSettingsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.ReloadPageToolStrip = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,7 +127,7 @@
             this.InventionLabel = new System.Windows.Forms.Label();
             this.DivinationLabel = new System.Windows.Forms.Label();
             this.DungeoneeringLabel = new System.Windows.Forms.Label();
-            this.toolStrip1.SuspendLayout();
+            this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -160,6 +160,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(504, 83);
             this.label1.Name = "label1";
@@ -183,16 +184,20 @@
             this.AttackBar.Size = new System.Drawing.Size(135, 23);
             this.AttackBar.TabIndex = 2;
             // 
-            // toolStrip1
+            // MainToolStrip
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MainToolStrip.AutoSize = false;
+            this.MainToolStrip.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Settings,
             this.Calculators});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(810, 25);
-            this.toolStrip1.TabIndex = 3;
-            this.toolStrip1.Text = "toolStrip1";
+            this.MainToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.MainToolStrip.Name = "MainToolStrip";
+            this.MainToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.MainToolStrip.Size = new System.Drawing.Size(810, 35);
+            this.MainToolStrip.TabIndex = 3;
+            this.MainToolStrip.Text = "Main Tool Strip";
             // 
             // Settings
             // 
@@ -200,31 +205,32 @@
             this.OpenSettingsToolStrip,
             this.ReloadPageToolStrip,
             this.AboutToolStrip});
+            this.Settings.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Settings.Image = ((System.Drawing.Image)(resources.GetObject("Settings.Image")));
             this.Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(98, 22);
+            this.Settings.Size = new System.Drawing.Size(114, 32);
             this.Settings.Text = "RuneHelper";
             this.Settings.ToolTipText = "ApplicationToolStrip";
             // 
             // OpenSettingsToolStrip
             // 
             this.OpenSettingsToolStrip.Name = "OpenSettingsToolStrip";
-            this.OpenSettingsToolStrip.Size = new System.Drawing.Size(180, 22);
+            this.OpenSettingsToolStrip.Size = new System.Drawing.Size(209, 24);
             this.OpenSettingsToolStrip.Text = "Open Settings Panel";
             this.OpenSettingsToolStrip.Click += new System.EventHandler(this.OpenSettingsToolStrip_Click);
             // 
             // ReloadPageToolStrip
             // 
             this.ReloadPageToolStrip.Name = "ReloadPageToolStrip";
-            this.ReloadPageToolStrip.Size = new System.Drawing.Size(180, 22);
+            this.ReloadPageToolStrip.Size = new System.Drawing.Size(209, 24);
             this.ReloadPageToolStrip.Text = "Reload Page";
             this.ReloadPageToolStrip.Click += new System.EventHandler(this.ReloadPageToolStrip_Click);
             // 
             // AboutToolStrip
             // 
             this.AboutToolStrip.Name = "AboutToolStrip";
-            this.AboutToolStrip.Size = new System.Drawing.Size(180, 22);
+            this.AboutToolStrip.Size = new System.Drawing.Size(209, 24);
             this.AboutToolStrip.Text = "About";
             this.AboutToolStrip.Click += new System.EventHandler(this.AboutToolStrip_Click);
             // 
@@ -235,23 +241,26 @@
             this.MiningToolStrip,
             this.Agility,
             this.inventionPerkMetaToolStripMenuItem});
+            this.Calculators.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Calculators.Image = ((System.Drawing.Image)(resources.GetObject("Calculators.Image")));
             this.Calculators.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Calculators.Name = "Calculators";
-            this.Calculators.Size = new System.Drawing.Size(95, 22);
+            this.Calculators.Size = new System.Drawing.Size(109, 32);
             this.Calculators.Text = "Calculators";
             // 
             // WoodcuttingToolStrip
             // 
+            this.WoodcuttingToolStrip.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WoodcuttingToolStrip.Name = "WoodcuttingToolStrip";
-            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(180, 22);
+            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(207, 24);
             this.WoodcuttingToolStrip.Text = "Woodcutting";
             this.WoodcuttingToolStrip.Click += new System.EventHandler(this.WoodcuttingToolStrip_Click);
             // 
             // MiningToolStrip
             // 
+            this.MiningToolStrip.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiningToolStrip.Name = "MiningToolStrip";
-            this.MiningToolStrip.Size = new System.Drawing.Size(180, 22);
+            this.MiningToolStrip.Size = new System.Drawing.Size(207, 24);
             this.MiningToolStrip.Text = "Mining";
             this.MiningToolStrip.Click += new System.EventHandler(this.MiningToolStrip_Click);
             // 
@@ -260,28 +269,30 @@
             this.Agility.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AgilityToolStrip,
             this.SilverHawkFeatherToolStrip});
+            this.Agility.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Agility.Name = "Agility";
-            this.Agility.Size = new System.Drawing.Size(180, 22);
+            this.Agility.Size = new System.Drawing.Size(207, 24);
             this.Agility.Text = "Agility";
             // 
             // AgilityToolStrip
             // 
             this.AgilityToolStrip.Name = "AgilityToolStrip";
-            this.AgilityToolStrip.Size = new System.Drawing.Size(177, 22);
+            this.AgilityToolStrip.Size = new System.Drawing.Size(204, 24);
             this.AgilityToolStrip.Text = "Agility";
             this.AgilityToolStrip.Click += new System.EventHandler(this.AgilityToolStrip_Click);
             // 
             // SilverHawkFeatherToolStrip
             // 
             this.SilverHawkFeatherToolStrip.Name = "SilverHawkFeatherToolStrip";
-            this.SilverHawkFeatherToolStrip.Size = new System.Drawing.Size(177, 22);
+            this.SilverHawkFeatherToolStrip.Size = new System.Drawing.Size(204, 24);
             this.SilverHawkFeatherToolStrip.Text = "Silver Hawk Feather";
             this.SilverHawkFeatherToolStrip.Click += new System.EventHandler(this.silverHawkFeatherToolStrip_Click);
             // 
             // inventionPerkMetaToolStripMenuItem
             // 
+            this.inventionPerkMetaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventionPerkMetaToolStripMenuItem.Name = "inventionPerkMetaToolStripMenuItem";
-            this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(207, 24);
             this.inventionPerkMetaToolStripMenuItem.Text = "Invention Perk Meta";
             this.inventionPerkMetaToolStripMenuItem.Click += new System.EventHandler(this.inventionPerkMetaToolStripMenuItem_Click);
             // 
@@ -290,7 +301,7 @@
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.Location = new System.Drawing.Point(59, 160);
+            this.UsernameLabel.Location = new System.Drawing.Point(59, 169);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(83, 20);
             this.UsernameLabel.TabIndex = 5;
@@ -298,7 +309,8 @@
             // 
             // ProfilePicture
             // 
-            this.ProfilePicture.Location = new System.Drawing.Point(42, 47);
+            this.ProfilePicture.BackColor = System.Drawing.Color.Transparent;
+            this.ProfilePicture.Location = new System.Drawing.Point(42, 56);
             this.ProfilePicture.Name = "ProfilePicture";
             this.ProfilePicture.Size = new System.Drawing.Size(123, 110);
             this.ProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -307,6 +319,7 @@
             // 
             // ExitButton
             // 
+            this.ExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ExitButton.Location = new System.Drawing.Point(721, 503);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(80, 23);
@@ -317,7 +330,7 @@
             // 
             // DefenceBar
             // 
-            this.DefenceBar.Location = new System.Drawing.Point(42, 223);
+            this.DefenceBar.Location = new System.Drawing.Point(42, 229);
             this.DefenceBar.MarqueeAnimationSpeed = 0;
             this.DefenceBar.Maximum = 99;
             this.DefenceBar.Name = "DefenceBar";
@@ -326,7 +339,7 @@
             // 
             // StrengthBar
             // 
-            this.StrengthBar.Location = new System.Drawing.Point(42, 252);
+            this.StrengthBar.Location = new System.Drawing.Point(42, 258);
             this.StrengthBar.MarqueeAnimationSpeed = 0;
             this.StrengthBar.Maximum = 99;
             this.StrengthBar.Name = "StrengthBar";
@@ -335,7 +348,7 @@
             // 
             // HealthBar
             // 
-            this.HealthBar.Location = new System.Drawing.Point(42, 281);
+            this.HealthBar.Location = new System.Drawing.Point(42, 287);
             this.HealthBar.MarqueeAnimationSpeed = 0;
             this.HealthBar.Maximum = 99;
             this.HealthBar.Name = "HealthBar";
@@ -344,7 +357,7 @@
             // 
             // RangedBar
             // 
-            this.RangedBar.Location = new System.Drawing.Point(42, 310);
+            this.RangedBar.Location = new System.Drawing.Point(42, 316);
             this.RangedBar.MarqueeAnimationSpeed = 0;
             this.RangedBar.Maximum = 99;
             this.RangedBar.Name = "RangedBar";
@@ -353,6 +366,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(13, 194);
             this.pictureBox1.Name = "pictureBox1";
@@ -363,7 +377,7 @@
             // 
             // PrayerBar
             // 
-            this.PrayerBar.Location = new System.Drawing.Point(42, 339);
+            this.PrayerBar.Location = new System.Drawing.Point(42, 345);
             this.PrayerBar.MarqueeAnimationSpeed = 0;
             this.PrayerBar.Maximum = 99;
             this.PrayerBar.Name = "PrayerBar";
@@ -372,7 +386,7 @@
             // 
             // MagicBar
             // 
-            this.MagicBar.Location = new System.Drawing.Point(42, 368);
+            this.MagicBar.Location = new System.Drawing.Point(42, 374);
             this.MagicBar.MarqueeAnimationSpeed = 0;
             this.MagicBar.Maximum = 99;
             this.MagicBar.Name = "MagicBar";
@@ -381,7 +395,7 @@
             // 
             // WoodcuttingBar
             // 
-            this.WoodcuttingBar.Location = new System.Drawing.Point(42, 397);
+            this.WoodcuttingBar.Location = new System.Drawing.Point(42, 403);
             this.WoodcuttingBar.MarqueeAnimationSpeed = 0;
             this.WoodcuttingBar.Maximum = 99;
             this.WoodcuttingBar.Name = "WoodcuttingBar";
@@ -390,7 +404,7 @@
             // 
             // MiningBar
             // 
-            this.MiningBar.Location = new System.Drawing.Point(254, 134);
+            this.MiningBar.Location = new System.Drawing.Point(254, 141);
             this.MiningBar.MarqueeAnimationSpeed = 0;
             this.MiningBar.Maximum = 99;
             this.MiningBar.Name = "MiningBar";
@@ -399,7 +413,7 @@
             // 
             // SmithingBar
             // 
-            this.SmithingBar.Location = new System.Drawing.Point(254, 105);
+            this.SmithingBar.Location = new System.Drawing.Point(254, 112);
             this.SmithingBar.MarqueeAnimationSpeed = 0;
             this.SmithingBar.Maximum = 99;
             this.SmithingBar.Name = "SmithingBar";
@@ -408,7 +422,7 @@
             // 
             // CraftingBar
             // 
-            this.CraftingBar.Location = new System.Drawing.Point(254, 76);
+            this.CraftingBar.Location = new System.Drawing.Point(254, 83);
             this.CraftingBar.MarqueeAnimationSpeed = 0;
             this.CraftingBar.Maximum = 99;
             this.CraftingBar.Name = "CraftingBar";
@@ -417,7 +431,7 @@
             // 
             // FiremakingBar
             // 
-            this.FiremakingBar.Location = new System.Drawing.Point(42, 484);
+            this.FiremakingBar.Location = new System.Drawing.Point(42, 490);
             this.FiremakingBar.MarqueeAnimationSpeed = 0;
             this.FiremakingBar.Maximum = 99;
             this.FiremakingBar.Name = "FiremakingBar";
@@ -426,7 +440,7 @@
             // 
             // FishingBar
             // 
-            this.FishingBar.Location = new System.Drawing.Point(42, 455);
+            this.FishingBar.Location = new System.Drawing.Point(42, 461);
             this.FishingBar.MarqueeAnimationSpeed = 0;
             this.FishingBar.Maximum = 99;
             this.FishingBar.Name = "FishingBar";
@@ -435,7 +449,7 @@
             // 
             // FletchingBar
             // 
-            this.FletchingBar.Location = new System.Drawing.Point(42, 426);
+            this.FletchingBar.Location = new System.Drawing.Point(42, 432);
             this.FletchingBar.MarqueeAnimationSpeed = 0;
             this.FletchingBar.Maximum = 99;
             this.FletchingBar.Name = "FletchingBar";
@@ -444,7 +458,7 @@
             // 
             // SlayerBar
             // 
-            this.SlayerBar.Location = new System.Drawing.Point(254, 252);
+            this.SlayerBar.Location = new System.Drawing.Point(254, 258);
             this.SlayerBar.MarqueeAnimationSpeed = 0;
             this.SlayerBar.Maximum = 99;
             this.SlayerBar.Name = "SlayerBar";
@@ -453,7 +467,7 @@
             // 
             // ThievingBar
             // 
-            this.ThievingBar.Location = new System.Drawing.Point(254, 223);
+            this.ThievingBar.Location = new System.Drawing.Point(254, 229);
             this.ThievingBar.MarqueeAnimationSpeed = 0;
             this.ThievingBar.Maximum = 99;
             this.ThievingBar.Name = "ThievingBar";
@@ -462,7 +476,7 @@
             // 
             // AgilityBar
             // 
-            this.AgilityBar.Location = new System.Drawing.Point(254, 194);
+            this.AgilityBar.Location = new System.Drawing.Point(254, 200);
             this.AgilityBar.MarqueeAnimationSpeed = 0;
             this.AgilityBar.Maximum = 99;
             this.AgilityBar.Name = "AgilityBar";
@@ -471,7 +485,7 @@
             // 
             // HerbloreBar
             // 
-            this.HerbloreBar.Location = new System.Drawing.Point(254, 165);
+            this.HerbloreBar.Location = new System.Drawing.Point(254, 171);
             this.HerbloreBar.MarqueeAnimationSpeed = 0;
             this.HerbloreBar.Maximum = 99;
             this.HerbloreBar.Name = "HerbloreBar";
@@ -480,7 +494,7 @@
             // 
             // ConstructionBar
             // 
-            this.ConstructionBar.Location = new System.Drawing.Point(254, 368);
+            this.ConstructionBar.Location = new System.Drawing.Point(254, 374);
             this.ConstructionBar.MarqueeAnimationSpeed = 0;
             this.ConstructionBar.Maximum = 99;
             this.ConstructionBar.Name = "ConstructionBar";
@@ -489,7 +503,7 @@
             // 
             // HunterBar
             // 
-            this.HunterBar.Location = new System.Drawing.Point(254, 339);
+            this.HunterBar.Location = new System.Drawing.Point(254, 345);
             this.HunterBar.MarqueeAnimationSpeed = 0;
             this.HunterBar.Maximum = 99;
             this.HunterBar.Name = "HunterBar";
@@ -498,7 +512,7 @@
             // 
             // RunecraftingBar
             // 
-            this.RunecraftingBar.Location = new System.Drawing.Point(254, 310);
+            this.RunecraftingBar.Location = new System.Drawing.Point(254, 316);
             this.RunecraftingBar.MarqueeAnimationSpeed = 0;
             this.RunecraftingBar.Maximum = 99;
             this.RunecraftingBar.Name = "RunecraftingBar";
@@ -507,7 +521,7 @@
             // 
             // FarmingBar
             // 
-            this.FarmingBar.Location = new System.Drawing.Point(254, 281);
+            this.FarmingBar.Location = new System.Drawing.Point(254, 287);
             this.FarmingBar.MarqueeAnimationSpeed = 0;
             this.FarmingBar.Maximum = 99;
             this.FarmingBar.Name = "FarmingBar";
@@ -516,7 +530,7 @@
             // 
             // DivinationBar
             // 
-            this.DivinationBar.Location = new System.Drawing.Point(254, 455);
+            this.DivinationBar.Location = new System.Drawing.Point(254, 461);
             this.DivinationBar.MarqueeAnimationSpeed = 0;
             this.DivinationBar.Maximum = 99;
             this.DivinationBar.Name = "DivinationBar";
@@ -525,7 +539,7 @@
             // 
             // DungeoneeringBar
             // 
-            this.DungeoneeringBar.Location = new System.Drawing.Point(254, 426);
+            this.DungeoneeringBar.Location = new System.Drawing.Point(254, 432);
             this.DungeoneeringBar.MarqueeAnimationSpeed = 0;
             this.DungeoneeringBar.Maximum = 120;
             this.DungeoneeringBar.Name = "DungeoneeringBar";
@@ -534,7 +548,7 @@
             // 
             // SummoningBar
             // 
-            this.SummoningBar.Location = new System.Drawing.Point(254, 397);
+            this.SummoningBar.Location = new System.Drawing.Point(254, 403);
             this.SummoningBar.MarqueeAnimationSpeed = 0;
             this.SummoningBar.Maximum = 99;
             this.SummoningBar.Name = "SummoningBar";
@@ -543,8 +557,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(13, 223);
+            this.pictureBox2.Location = new System.Drawing.Point(13, 229);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(23, 23);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -553,8 +568,9 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(13, 252);
+            this.pictureBox3.Location = new System.Drawing.Point(13, 258);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(23, 23);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -563,8 +579,9 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(13, 281);
+            this.pictureBox4.Location = new System.Drawing.Point(13, 287);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(23, 23);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -573,8 +590,9 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(13, 310);
+            this.pictureBox5.Location = new System.Drawing.Point(13, 316);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(23, 23);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -583,8 +601,9 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(13, 339);
+            this.pictureBox6.Location = new System.Drawing.Point(13, 345);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(23, 23);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -593,8 +612,9 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(13, 368);
+            this.pictureBox7.Location = new System.Drawing.Point(13, 374);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(23, 23);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -603,8 +623,9 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(13, 397);
+            this.pictureBox8.Location = new System.Drawing.Point(13, 403);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(23, 23);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -613,8 +634,9 @@
             // 
             // pictureBox9
             // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(13, 484);
+            this.pictureBox9.Location = new System.Drawing.Point(13, 490);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(23, 23);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -623,8 +645,9 @@
             // 
             // pictureBox10
             // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(13, 455);
+            this.pictureBox10.Location = new System.Drawing.Point(13, 461);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(23, 23);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -633,8 +656,9 @@
             // 
             // pictureBox11
             // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(13, 426);
+            this.pictureBox11.Location = new System.Drawing.Point(13, 432);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(23, 23);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -643,8 +667,9 @@
             // 
             // pictureBox12
             // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(225, 368);
+            this.pictureBox12.Location = new System.Drawing.Point(225, 374);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(23, 23);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -653,8 +678,9 @@
             // 
             // pictureBox13
             // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(225, 342);
+            this.pictureBox13.Location = new System.Drawing.Point(225, 348);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(23, 23);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -663,8 +689,9 @@
             // 
             // pictureBox14
             // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(225, 310);
+            this.pictureBox14.Location = new System.Drawing.Point(225, 316);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(23, 23);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -673,8 +700,9 @@
             // 
             // pictureBox15
             // 
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(225, 281);
+            this.pictureBox15.Location = new System.Drawing.Point(225, 287);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(23, 23);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -683,8 +711,9 @@
             // 
             // pictureBox16
             // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(225, 252);
+            this.pictureBox16.Location = new System.Drawing.Point(225, 258);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(23, 23);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -693,8 +722,9 @@
             // 
             // pictureBox17
             // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(225, 223);
+            this.pictureBox17.Location = new System.Drawing.Point(225, 229);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(23, 23);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -703,8 +733,9 @@
             // 
             // pictureBox18
             // 
+            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(225, 194);
+            this.pictureBox18.Location = new System.Drawing.Point(225, 200);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(23, 23);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -713,8 +744,9 @@
             // 
             // pictureBox19
             // 
+            this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(225, 165);
+            this.pictureBox19.Location = new System.Drawing.Point(225, 171);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(23, 23);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -723,8 +755,9 @@
             // 
             // pictureBox20
             // 
+            this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(225, 134);
+            this.pictureBox20.Location = new System.Drawing.Point(225, 141);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(23, 23);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -733,8 +766,9 @@
             // 
             // pictureBox21
             // 
+            this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(225, 105);
+            this.pictureBox21.Location = new System.Drawing.Point(225, 112);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(23, 23);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -743,8 +777,9 @@
             // 
             // pictureBox22
             // 
+            this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(225, 76);
+            this.pictureBox22.Location = new System.Drawing.Point(225, 83);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(23, 23);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -753,8 +788,9 @@
             // 
             // pictureBox24
             // 
+            this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
-            this.pictureBox24.Location = new System.Drawing.Point(225, 426);
+            this.pictureBox24.Location = new System.Drawing.Point(225, 432);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(23, 23);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -763,8 +799,9 @@
             // 
             // pictureBox25
             // 
+            this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
-            this.pictureBox25.Location = new System.Drawing.Point(225, 397);
+            this.pictureBox25.Location = new System.Drawing.Point(225, 403);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(23, 23);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -773,7 +810,7 @@
             // 
             // InventorBar
             // 
-            this.InventorBar.Location = new System.Drawing.Point(254, 484);
+            this.InventorBar.Location = new System.Drawing.Point(254, 490);
             this.InventorBar.MarqueeAnimationSpeed = 0;
             this.InventorBar.Maximum = 120;
             this.InventorBar.Name = "InventorBar";
@@ -782,8 +819,9 @@
             // 
             // pictureBox23
             // 
+            this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(225, 484);
+            this.pictureBox23.Location = new System.Drawing.Point(225, 490);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(23, 23);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -792,8 +830,9 @@
             // 
             // pictureBox26
             // 
+            this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
-            this.pictureBox26.Location = new System.Drawing.Point(225, 455);
+            this.pictureBox26.Location = new System.Drawing.Point(225, 461);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(23, 23);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -803,6 +842,7 @@
             // AverageLevel
             // 
             this.AverageLevel.AutoSize = true;
+            this.AverageLevel.BackColor = System.Drawing.Color.Transparent;
             this.AverageLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AverageLevel.Location = new System.Drawing.Point(616, 83);
             this.AverageLevel.Name = "AverageLevel";
@@ -813,6 +853,7 @@
             // TotalLevelText
             // 
             this.TotalLevelText.AutoSize = true;
+            this.TotalLevelText.BackColor = System.Drawing.Color.Transparent;
             this.TotalLevelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalLevelText.Location = new System.Drawing.Point(504, 61);
             this.TotalLevelText.Name = "TotalLevelText";
@@ -823,6 +864,7 @@
             // TotalLevel
             // 
             this.TotalLevel.AutoSize = true;
+            this.TotalLevel.BackColor = System.Drawing.Color.Transparent;
             this.TotalLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalLevel.Location = new System.Drawing.Point(586, 61);
             this.TotalLevel.Name = "TotalLevel";
@@ -833,6 +875,7 @@
             // AttackLabel
             // 
             this.AttackLabel.AutoSize = true;
+            this.AttackLabel.BackColor = System.Drawing.Color.Transparent;
             this.AttackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AttackLabel.Location = new System.Drawing.Point(183, 199);
             this.AttackLabel.Name = "AttackLabel";
@@ -843,8 +886,9 @@
             // DefenceLabel
             // 
             this.DefenceLabel.AutoSize = true;
+            this.DefenceLabel.BackColor = System.Drawing.Color.Transparent;
             this.DefenceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DefenceLabel.Location = new System.Drawing.Point(183, 228);
+            this.DefenceLabel.Location = new System.Drawing.Point(183, 234);
             this.DefenceLabel.Name = "DefenceLabel";
             this.DefenceLabel.Size = new System.Drawing.Size(16, 18);
             this.DefenceLabel.TabIndex = 63;
@@ -853,8 +897,9 @@
             // StrengthLabel
             // 
             this.StrengthLabel.AutoSize = true;
+            this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
             this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StrengthLabel.Location = new System.Drawing.Point(183, 257);
+            this.StrengthLabel.Location = new System.Drawing.Point(183, 263);
             this.StrengthLabel.Name = "StrengthLabel";
             this.StrengthLabel.Size = new System.Drawing.Size(16, 18);
             this.StrengthLabel.TabIndex = 64;
@@ -863,8 +908,9 @@
             // HealthLabel
             // 
             this.HealthLabel.AutoSize = true;
+            this.HealthLabel.BackColor = System.Drawing.Color.Transparent;
             this.HealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HealthLabel.Location = new System.Drawing.Point(183, 286);
+            this.HealthLabel.Location = new System.Drawing.Point(183, 292);
             this.HealthLabel.Name = "HealthLabel";
             this.HealthLabel.Size = new System.Drawing.Size(16, 18);
             this.HealthLabel.TabIndex = 65;
@@ -873,8 +919,9 @@
             // RangedLabel
             // 
             this.RangedLabel.AutoSize = true;
+            this.RangedLabel.BackColor = System.Drawing.Color.Transparent;
             this.RangedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangedLabel.Location = new System.Drawing.Point(183, 315);
+            this.RangedLabel.Location = new System.Drawing.Point(183, 321);
             this.RangedLabel.Name = "RangedLabel";
             this.RangedLabel.Size = new System.Drawing.Size(16, 18);
             this.RangedLabel.TabIndex = 66;
@@ -883,8 +930,9 @@
             // PrayerLabel
             // 
             this.PrayerLabel.AutoSize = true;
+            this.PrayerLabel.BackColor = System.Drawing.Color.Transparent;
             this.PrayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrayerLabel.Location = new System.Drawing.Point(183, 344);
+            this.PrayerLabel.Location = new System.Drawing.Point(183, 350);
             this.PrayerLabel.Name = "PrayerLabel";
             this.PrayerLabel.Size = new System.Drawing.Size(16, 18);
             this.PrayerLabel.TabIndex = 67;
@@ -893,8 +941,9 @@
             // FiremakingLabel
             // 
             this.FiremakingLabel.AutoSize = true;
+            this.FiremakingLabel.BackColor = System.Drawing.Color.Transparent;
             this.FiremakingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FiremakingLabel.Location = new System.Drawing.Point(183, 489);
+            this.FiremakingLabel.Location = new System.Drawing.Point(183, 495);
             this.FiremakingLabel.Name = "FiremakingLabel";
             this.FiremakingLabel.Size = new System.Drawing.Size(16, 18);
             this.FiremakingLabel.TabIndex = 72;
@@ -903,8 +952,9 @@
             // FishingLabel
             // 
             this.FishingLabel.AutoSize = true;
+            this.FishingLabel.BackColor = System.Drawing.Color.Transparent;
             this.FishingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FishingLabel.Location = new System.Drawing.Point(183, 460);
+            this.FishingLabel.Location = new System.Drawing.Point(183, 466);
             this.FishingLabel.Name = "FishingLabel";
             this.FishingLabel.Size = new System.Drawing.Size(16, 18);
             this.FishingLabel.TabIndex = 71;
@@ -913,8 +963,9 @@
             // FletchingLabel
             // 
             this.FletchingLabel.AutoSize = true;
+            this.FletchingLabel.BackColor = System.Drawing.Color.Transparent;
             this.FletchingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FletchingLabel.Location = new System.Drawing.Point(183, 431);
+            this.FletchingLabel.Location = new System.Drawing.Point(183, 437);
             this.FletchingLabel.Name = "FletchingLabel";
             this.FletchingLabel.Size = new System.Drawing.Size(16, 18);
             this.FletchingLabel.TabIndex = 70;
@@ -923,8 +974,9 @@
             // WoodcuttingLabel
             // 
             this.WoodcuttingLabel.AutoSize = true;
+            this.WoodcuttingLabel.BackColor = System.Drawing.Color.Transparent;
             this.WoodcuttingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WoodcuttingLabel.Location = new System.Drawing.Point(183, 402);
+            this.WoodcuttingLabel.Location = new System.Drawing.Point(183, 408);
             this.WoodcuttingLabel.Name = "WoodcuttingLabel";
             this.WoodcuttingLabel.Size = new System.Drawing.Size(16, 18);
             this.WoodcuttingLabel.TabIndex = 69;
@@ -933,8 +985,9 @@
             // MagicLabel
             // 
             this.MagicLabel.AutoSize = true;
+            this.MagicLabel.BackColor = System.Drawing.Color.Transparent;
             this.MagicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MagicLabel.Location = new System.Drawing.Point(183, 373);
+            this.MagicLabel.Location = new System.Drawing.Point(183, 379);
             this.MagicLabel.Name = "MagicLabel";
             this.MagicLabel.Size = new System.Drawing.Size(16, 18);
             this.MagicLabel.TabIndex = 68;
@@ -943,8 +996,9 @@
             // ThievingLabel
             // 
             this.ThievingLabel.AutoSize = true;
+            this.ThievingLabel.BackColor = System.Drawing.Color.Transparent;
             this.ThievingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThievingLabel.Location = new System.Drawing.Point(395, 228);
+            this.ThievingLabel.Location = new System.Drawing.Point(395, 234);
             this.ThievingLabel.Name = "ThievingLabel";
             this.ThievingLabel.Size = new System.Drawing.Size(16, 18);
             this.ThievingLabel.TabIndex = 78;
@@ -953,8 +1007,9 @@
             // AgilityLabel
             // 
             this.AgilityLabel.AutoSize = true;
+            this.AgilityLabel.BackColor = System.Drawing.Color.Transparent;
             this.AgilityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgilityLabel.Location = new System.Drawing.Point(395, 199);
+            this.AgilityLabel.Location = new System.Drawing.Point(395, 201);
             this.AgilityLabel.Name = "AgilityLabel";
             this.AgilityLabel.Size = new System.Drawing.Size(16, 18);
             this.AgilityLabel.TabIndex = 77;
@@ -963,8 +1018,9 @@
             // HerbloreLabel
             // 
             this.HerbloreLabel.AutoSize = true;
+            this.HerbloreLabel.BackColor = System.Drawing.Color.Transparent;
             this.HerbloreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HerbloreLabel.Location = new System.Drawing.Point(395, 170);
+            this.HerbloreLabel.Location = new System.Drawing.Point(395, 172);
             this.HerbloreLabel.Name = "HerbloreLabel";
             this.HerbloreLabel.Size = new System.Drawing.Size(16, 18);
             this.HerbloreLabel.TabIndex = 76;
@@ -973,8 +1029,9 @@
             // MiningLabel
             // 
             this.MiningLabel.AutoSize = true;
+            this.MiningLabel.BackColor = System.Drawing.Color.Transparent;
             this.MiningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiningLabel.Location = new System.Drawing.Point(395, 139);
+            this.MiningLabel.Location = new System.Drawing.Point(395, 141);
             this.MiningLabel.Name = "MiningLabel";
             this.MiningLabel.Size = new System.Drawing.Size(16, 18);
             this.MiningLabel.TabIndex = 75;
@@ -983,8 +1040,9 @@
             // SmithingLabel
             // 
             this.SmithingLabel.AutoSize = true;
+            this.SmithingLabel.BackColor = System.Drawing.Color.Transparent;
             this.SmithingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SmithingLabel.Location = new System.Drawing.Point(395, 110);
+            this.SmithingLabel.Location = new System.Drawing.Point(395, 112);
             this.SmithingLabel.Name = "SmithingLabel";
             this.SmithingLabel.Size = new System.Drawing.Size(16, 18);
             this.SmithingLabel.TabIndex = 74;
@@ -993,8 +1051,9 @@
             // CraftingLabel
             // 
             this.CraftingLabel.AutoSize = true;
+            this.CraftingLabel.BackColor = System.Drawing.Color.Transparent;
             this.CraftingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CraftingLabel.Location = new System.Drawing.Point(395, 81);
+            this.CraftingLabel.Location = new System.Drawing.Point(395, 83);
             this.CraftingLabel.Name = "CraftingLabel";
             this.CraftingLabel.Size = new System.Drawing.Size(16, 18);
             this.CraftingLabel.TabIndex = 73;
@@ -1003,8 +1062,9 @@
             // SummoningLabel
             // 
             this.SummoningLabel.AutoSize = true;
+            this.SummoningLabel.BackColor = System.Drawing.Color.Transparent;
             this.SummoningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SummoningLabel.Location = new System.Drawing.Point(395, 402);
+            this.SummoningLabel.Location = new System.Drawing.Point(395, 408);
             this.SummoningLabel.Name = "SummoningLabel";
             this.SummoningLabel.Size = new System.Drawing.Size(16, 18);
             this.SummoningLabel.TabIndex = 84;
@@ -1013,8 +1073,9 @@
             // ConstructionLabel
             // 
             this.ConstructionLabel.AutoSize = true;
+            this.ConstructionLabel.BackColor = System.Drawing.Color.Transparent;
             this.ConstructionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConstructionLabel.Location = new System.Drawing.Point(395, 373);
+            this.ConstructionLabel.Location = new System.Drawing.Point(395, 379);
             this.ConstructionLabel.Name = "ConstructionLabel";
             this.ConstructionLabel.Size = new System.Drawing.Size(16, 18);
             this.ConstructionLabel.TabIndex = 83;
@@ -1023,8 +1084,9 @@
             // HunterLabel
             // 
             this.HunterLabel.AutoSize = true;
+            this.HunterLabel.BackColor = System.Drawing.Color.Transparent;
             this.HunterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HunterLabel.Location = new System.Drawing.Point(395, 344);
+            this.HunterLabel.Location = new System.Drawing.Point(395, 350);
             this.HunterLabel.Name = "HunterLabel";
             this.HunterLabel.Size = new System.Drawing.Size(16, 18);
             this.HunterLabel.TabIndex = 82;
@@ -1033,8 +1095,9 @@
             // RunecraftingLabel
             // 
             this.RunecraftingLabel.AutoSize = true;
+            this.RunecraftingLabel.BackColor = System.Drawing.Color.Transparent;
             this.RunecraftingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RunecraftingLabel.Location = new System.Drawing.Point(395, 315);
+            this.RunecraftingLabel.Location = new System.Drawing.Point(395, 321);
             this.RunecraftingLabel.Name = "RunecraftingLabel";
             this.RunecraftingLabel.Size = new System.Drawing.Size(16, 18);
             this.RunecraftingLabel.TabIndex = 81;
@@ -1043,8 +1106,9 @@
             // FarmingLabel
             // 
             this.FarmingLabel.AutoSize = true;
+            this.FarmingLabel.BackColor = System.Drawing.Color.Transparent;
             this.FarmingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FarmingLabel.Location = new System.Drawing.Point(395, 286);
+            this.FarmingLabel.Location = new System.Drawing.Point(395, 292);
             this.FarmingLabel.Name = "FarmingLabel";
             this.FarmingLabel.Size = new System.Drawing.Size(16, 18);
             this.FarmingLabel.TabIndex = 80;
@@ -1053,8 +1117,9 @@
             // SlayerLabel
             // 
             this.SlayerLabel.AutoSize = true;
+            this.SlayerLabel.BackColor = System.Drawing.Color.Transparent;
             this.SlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlayerLabel.Location = new System.Drawing.Point(395, 257);
+            this.SlayerLabel.Location = new System.Drawing.Point(395, 263);
             this.SlayerLabel.Name = "SlayerLabel";
             this.SlayerLabel.Size = new System.Drawing.Size(16, 18);
             this.SlayerLabel.TabIndex = 79;
@@ -1063,8 +1128,9 @@
             // InventionLabel
             // 
             this.InventionLabel.AutoSize = true;
+            this.InventionLabel.BackColor = System.Drawing.Color.Transparent;
             this.InventionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InventionLabel.Location = new System.Drawing.Point(395, 489);
+            this.InventionLabel.Location = new System.Drawing.Point(395, 495);
             this.InventionLabel.Name = "InventionLabel";
             this.InventionLabel.Size = new System.Drawing.Size(16, 18);
             this.InventionLabel.TabIndex = 87;
@@ -1073,8 +1139,9 @@
             // DivinationLabel
             // 
             this.DivinationLabel.AutoSize = true;
+            this.DivinationLabel.BackColor = System.Drawing.Color.Transparent;
             this.DivinationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivinationLabel.Location = new System.Drawing.Point(395, 460);
+            this.DivinationLabel.Location = new System.Drawing.Point(395, 466);
             this.DivinationLabel.Name = "DivinationLabel";
             this.DivinationLabel.Size = new System.Drawing.Size(16, 18);
             this.DivinationLabel.TabIndex = 86;
@@ -1083,8 +1150,9 @@
             // DungeoneeringLabel
             // 
             this.DungeoneeringLabel.AutoSize = true;
+            this.DungeoneeringLabel.BackColor = System.Drawing.Color.Transparent;
             this.DungeoneeringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DungeoneeringLabel.Location = new System.Drawing.Point(395, 431);
+            this.DungeoneeringLabel.Location = new System.Drawing.Point(395, 437);
             this.DungeoneeringLabel.Name = "DungeoneeringLabel";
             this.DungeoneeringLabel.Size = new System.Drawing.Size(16, 18);
             this.DungeoneeringLabel.TabIndex = 85;
@@ -1092,8 +1160,9 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(810, 531);
             this.Controls.Add(this.InventionLabel);
             this.Controls.Add(this.DivinationLabel);
@@ -1178,16 +1247,17 @@
             this.Controls.Add(this.DefenceBar);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ProfilePicture);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.MainToolStrip);
             this.Controls.Add(this.AttackBar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(826, 570);
             this.Name = "MainForm";
             this.Text = "RuneHelper";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.MainToolStrip.ResumeLayout(false);
+            this.MainToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1225,7 +1295,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar AttackBar;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip MainToolStrip;
         private System.Windows.Forms.Label UsernameLabel;
         private System.Windows.Forms.PictureBox ProfilePicture;
         private System.Windows.Forms.Button ExitButton;
