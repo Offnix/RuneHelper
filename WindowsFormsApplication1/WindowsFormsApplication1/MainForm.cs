@@ -21,9 +21,10 @@ namespace WindowsFormsApplication1
             string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
             if (Directory.Exists(path) == false && File.Exists(path +@"\Data.txt") == false)
             {
-                MessageBox.Show("Data file not found.. creating one now", "File Writer");
                 Directory.CreateDirectory(path);
                 File.Create(path + @"\Data.txt").Close();
+                RuneHelper.Calculators.Welcome Welcome = new RuneHelper.Calculators.Welcome();
+                Welcome.Show();
             }
             else
             {

@@ -33,7 +33,6 @@ namespace RuneHelper
                 ProfileBox2.Load("http://services.runescape.com/m=avatar-rs/default_chat.png?");
             }
 
-
             try
             {
                 LevelArray = API.UpdateLevels(PLayerInput1.Text);
