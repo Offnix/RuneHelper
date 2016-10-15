@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 using RuneHelper;
+using MetroFramework.Forms;
 
 namespace RsThing
 {
-    public partial class WooducttingCalculator : Form
+    public partial class WooducttingCalculator : MetroForm
     {
         public WooducttingCalculator()
         {
