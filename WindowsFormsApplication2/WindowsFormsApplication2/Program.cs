@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RuneHelper
+namespace WindowsFormsApplication2
 {
     static class Program
     {
@@ -13,9 +16,7 @@ namespace RuneHelper
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            RuneHelper.Calculators.Welcome Welcome = new RuneHelper.Calculators.Welcome();
-            Welcome.Show();
-            Application.Run();
+            Application.Run(new Form1());
         }
     }
 }

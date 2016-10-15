@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace RuneHelper
 {
-    public partial class About : Form
+    public partial class About : MetroForm
     {
         public About()
         {

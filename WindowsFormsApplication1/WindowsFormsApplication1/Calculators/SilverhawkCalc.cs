@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
-namespace WindowsFormsApplication1
+namespace RuneHelper
 {
-    public partial class SilverhawkForm : Form
+    public partial class SilverhawkForm : MetroForm
     {
         int feathers = 0;
         string result;

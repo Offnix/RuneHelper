@@ -1,10 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
-namespace WindowsFormsApplication1
+namespace RuneHelper
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MetroForm
     {
         public static string Username;
         public static string[] LevelArray;
@@ -196,6 +197,26 @@ namespace WindowsFormsApplication1
         private void OpenStats_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + Username.Replace(" ","+"));
+        }
+
+        private void TotalLevelText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TotalLevel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AverageLevel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

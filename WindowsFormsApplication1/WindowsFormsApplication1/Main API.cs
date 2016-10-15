@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-using WindowsFormsApplication1;
+using RuneHelper;
 
 public static class API
 {

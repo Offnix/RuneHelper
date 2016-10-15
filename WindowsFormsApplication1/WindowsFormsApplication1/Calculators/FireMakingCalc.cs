@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using WindowsFormsApplication1;
+using RuneHelper;
+using MetroFramework.Forms;
 
 namespace RsThing
 {
-    public partial class FireMakingCalc : Form
+    public partial class FireMakingCalc : MetroForm
     {
         public FireMakingCalc()
         {
@@ -14,7 +15,7 @@ namespace RsThing
         string[] WCArray;
         string[] LevelArray;
 
-        public static float[] FireMakeXpArray = new float[] {40 ,60 ,90 ,105 ,125 ,135 ,157.5f ,171 ,202.5f ,303.8f ,435};
+        public static float[] FireMakeXpArray = new float[] {25 ,37.5f ,67.5f ,105 ,125 ,135 ,157.5f ,171 ,202.5f ,303.8f ,435};
          /// <summary>
          /// Forms Buttons
          /// </summary>

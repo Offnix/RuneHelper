@@ -1,9 +1,10 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using MetroFramework.Forms;
+using System;
 
-namespace WindowsFormsApplication1
+
+namespace RuneHelper
 {
-    public partial class SettingsForm : Form
+    public partial class SettingsForm : MetroForm
     {
         public SettingsForm()
         {

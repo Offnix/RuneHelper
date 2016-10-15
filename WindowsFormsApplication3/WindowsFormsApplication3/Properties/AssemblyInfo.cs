@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RuneHelper")]
-[assembly: AssemblyDescription("A simple lightweight tool for calculating, comparing and checking Runescape Stats")]
+[assembly: AssemblyTitle("WindowsFormsApplication3")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RuneHelper")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCompany("Queensland Government")]
+[assembly: AssemblyProduct("WindowsFormsApplication3")]
+[assembly: AssemblyCopyright("Copyright © Queensland Government 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c986f7ae-ea8e-4fd6-8ba9-4f4b9bef3fb1")]
+[assembly: Guid("2f06a233-4953-4ab0-8727-b9b3cda518aa")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using WindowsFormsApplication1;
+using RuneHelper;
+using MetroFramework.Forms;
 
 namespace RsThing
 {
-    public partial class Form6 : Form
+    public partial class Form6 : MetroForm
     {
         public Form6()
         {

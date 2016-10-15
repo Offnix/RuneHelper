@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventionMeta));
-            this.InventMetaLabel = new System.Windows.Forms.Label();
             this.AftershockIcon = new System.Windows.Forms.PictureBox();
             this.BitingIcon = new System.Windows.Forms.PictureBox();
             this.CracklingIcon = new System.Windows.Forms.PictureBox();
@@ -59,21 +58,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.PreciseIcon)).BeginInit();
             this.SuspendLayout();
             // 
-            // InventMetaLabel
-            // 
-            this.InventMetaLabel.AutoSize = true;
-            this.InventMetaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InventMetaLabel.Location = new System.Drawing.Point(72, 9);
-            this.InventMetaLabel.Name = "InventMetaLabel";
-            this.InventMetaLabel.Size = new System.Drawing.Size(214, 25);
-            this.InventMetaLabel.TabIndex = 0;
-            this.InventMetaLabel.Text = "Invention Perk META";
-            // 
             // AftershockIcon
             // 
             this.AftershockIcon.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.AftershockIcon.Image = ((System.Drawing.Image)(resources.GetObject("AftershockIcon.Image")));
-            this.AftershockIcon.Location = new System.Drawing.Point(113, 96);
+            this.AftershockIcon.Location = new System.Drawing.Point(113, 115);
             this.AftershockIcon.Name = "AftershockIcon";
             this.AftershockIcon.Size = new System.Drawing.Size(32, 32);
             this.AftershockIcon.TabIndex = 1;
@@ -84,7 +73,7 @@
             // 
             this.BitingIcon.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BitingIcon.Image = ((System.Drawing.Image)(resources.GetObject("BitingIcon.Image")));
-            this.BitingIcon.Location = new System.Drawing.Point(112, 341);
+            this.BitingIcon.Location = new System.Drawing.Point(112, 360);
             this.BitingIcon.Name = "BitingIcon";
             this.BitingIcon.Size = new System.Drawing.Size(32, 32);
             this.BitingIcon.TabIndex = 2;
@@ -95,7 +84,7 @@
             // 
             this.CracklingIcon.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.CracklingIcon.Image = ((System.Drawing.Image)(resources.GetObject("CracklingIcon.Image")));
-            this.CracklingIcon.Location = new System.Drawing.Point(113, 218);
+            this.CracklingIcon.Location = new System.Drawing.Point(113, 237);
             this.CracklingIcon.Name = "CracklingIcon";
             this.CracklingIcon.Size = new System.Drawing.Size(32, 32);
             this.CracklingIcon.TabIndex = 3;
@@ -105,7 +94,7 @@
             // EnhDevoIcon
             // 
             this.EnhDevoIcon.Image = ((System.Drawing.Image)(resources.GetObject("EnhDevoIcon.Image")));
-            this.EnhDevoIcon.Location = new System.Drawing.Point(222, 341);
+            this.EnhDevoIcon.Location = new System.Drawing.Point(222, 360);
             this.EnhDevoIcon.Name = "EnhDevoIcon";
             this.EnhDevoIcon.Size = new System.Drawing.Size(32, 32);
             this.EnhDevoIcon.TabIndex = 4;
@@ -116,7 +105,7 @@
             // 
             this.ImpatientIcon.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ImpatientIcon.Image = ((System.Drawing.Image)(resources.GetObject("ImpatientIcon.Image")));
-            this.ImpatientIcon.Location = new System.Drawing.Point(223, 218);
+            this.ImpatientIcon.Location = new System.Drawing.Point(223, 237);
             this.ImpatientIcon.Name = "ImpatientIcon";
             this.ImpatientIcon.Size = new System.Drawing.Size(32, 32);
             this.ImpatientIcon.TabIndex = 5;
@@ -127,7 +116,7 @@
             // 
             this.PreciseIcon.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PreciseIcon.Image = ((System.Drawing.Image)(resources.GetObject("PreciseIcon.Image")));
-            this.PreciseIcon.Location = new System.Drawing.Point(223, 96);
+            this.PreciseIcon.Location = new System.Drawing.Point(223, 115);
             this.PreciseIcon.Name = "PreciseIcon";
             this.PreciseIcon.Size = new System.Drawing.Size(32, 32);
             this.PreciseIcon.TabIndex = 6;
@@ -138,7 +127,7 @@
             // 
             this.WeaponLabel.AutoSize = true;
             this.WeaponLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeaponLabel.Location = new System.Drawing.Point(24, 43);
+            this.WeaponLabel.Location = new System.Drawing.Point(24, 62);
             this.WeaponLabel.Name = "WeaponLabel";
             this.WeaponLabel.Size = new System.Drawing.Size(73, 20);
             this.WeaponLabel.TabIndex = 7;
@@ -147,7 +136,7 @@
             // WeapSlot1Label
             // 
             this.WeapSlot1Label.AutoSize = true;
-            this.WeapSlot1Label.Location = new System.Drawing.Point(74, 80);
+            this.WeapSlot1Label.Location = new System.Drawing.Point(74, 99);
             this.WeapSlot1Label.Name = "WeapSlot1Label";
             this.WeapSlot1Label.Size = new System.Drawing.Size(97, 13);
             this.WeapSlot1Label.TabIndex = 8;
@@ -156,7 +145,7 @@
             // AfterShockLabel
             // 
             this.AfterShockLabel.AutoSize = true;
-            this.AfterShockLabel.Location = new System.Drawing.Point(95, 131);
+            this.AfterShockLabel.Location = new System.Drawing.Point(95, 150);
             this.AfterShockLabel.Name = "AfterShockLabel";
             this.AfterShockLabel.Size = new System.Drawing.Size(67, 13);
             this.AfterShockLabel.TabIndex = 9;
@@ -165,7 +154,7 @@
             // WeapSlot2Label
             // 
             this.WeapSlot2Label.AutoSize = true;
-            this.WeapSlot2Label.Location = new System.Drawing.Point(198, 80);
+            this.WeapSlot2Label.Location = new System.Drawing.Point(198, 99);
             this.WeapSlot2Label.Name = "WeapSlot2Label";
             this.WeapSlot2Label.Size = new System.Drawing.Size(88, 13);
             this.WeapSlot2Label.TabIndex = 10;
@@ -174,7 +163,7 @@
             // PreciseLabel
             // 
             this.PreciseLabel.AutoSize = true;
-            this.PreciseLabel.Location = new System.Drawing.Point(220, 131);
+            this.PreciseLabel.Location = new System.Drawing.Point(220, 150);
             this.PreciseLabel.Name = "PreciseLabel";
             this.PreciseLabel.Size = new System.Drawing.Size(51, 13);
             this.PreciseLabel.TabIndex = 11;
@@ -184,7 +173,7 @@
             // 
             this.ChestArmourLabel.AutoSize = true;
             this.ChestArmourLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChestArmourLabel.Location = new System.Drawing.Point(24, 162);
+            this.ChestArmourLabel.Location = new System.Drawing.Point(24, 181);
             this.ChestArmourLabel.Name = "ChestArmourLabel";
             this.ChestArmourLabel.Size = new System.Drawing.Size(111, 20);
             this.ChestArmourLabel.TabIndex = 12;
@@ -193,7 +182,7 @@
             // ChestSlot1Label
             // 
             this.ChestSlot1Label.AutoSize = true;
-            this.ChestSlot1Label.Location = new System.Drawing.Point(110, 202);
+            this.ChestSlot1Label.Location = new System.Drawing.Point(110, 221);
             this.ChestSlot1Label.Name = "ChestSlot1Label";
             this.ChestSlot1Label.Size = new System.Drawing.Size(34, 13);
             this.ChestSlot1Label.TabIndex = 13;
@@ -202,7 +191,7 @@
             // ChestSlot2Label
             // 
             this.ChestSlot2Label.AutoSize = true;
-            this.ChestSlot2Label.Location = new System.Drawing.Point(220, 202);
+            this.ChestSlot2Label.Location = new System.Drawing.Point(220, 221);
             this.ChestSlot2Label.Name = "ChestSlot2Label";
             this.ChestSlot2Label.Size = new System.Drawing.Size(34, 13);
             this.ChestSlot2Label.TabIndex = 14;
@@ -211,7 +200,7 @@
             // CracklingLabel
             // 
             this.CracklingLabel.AutoSize = true;
-            this.CracklingLabel.Location = new System.Drawing.Point(102, 257);
+            this.CracklingLabel.Location = new System.Drawing.Point(102, 276);
             this.CracklingLabel.Name = "CracklingLabel";
             this.CracklingLabel.Size = new System.Drawing.Size(60, 13);
             this.CracklingLabel.TabIndex = 15;
@@ -220,7 +209,7 @@
             // Impatient3Label
             // 
             this.Impatient3Label.AutoSize = true;
-            this.Impatient3Label.Location = new System.Drawing.Point(212, 257);
+            this.Impatient3Label.Location = new System.Drawing.Point(212, 276);
             this.Impatient3Label.Name = "Impatient3Label";
             this.Impatient3Label.Size = new System.Drawing.Size(59, 13);
             this.Impatient3Label.TabIndex = 16;
@@ -230,7 +219,7 @@
             // 
             this.LegArmourLabel.AutoSize = true;
             this.LegArmourLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LegArmourLabel.Location = new System.Drawing.Point(25, 284);
+            this.LegArmourLabel.Location = new System.Drawing.Point(25, 303);
             this.LegArmourLabel.Name = "LegArmourLabel";
             this.LegArmourLabel.Size = new System.Drawing.Size(96, 20);
             this.LegArmourLabel.TabIndex = 17;
@@ -239,7 +228,7 @@
             // LegSlot1Label
             // 
             this.LegSlot1Label.AutoSize = true;
-            this.LegSlot1Label.Location = new System.Drawing.Point(113, 325);
+            this.LegSlot1Label.Location = new System.Drawing.Point(113, 344);
             this.LegSlot1Label.Name = "LegSlot1Label";
             this.LegSlot1Label.Size = new System.Drawing.Size(34, 13);
             this.LegSlot1Label.TabIndex = 18;
@@ -248,7 +237,7 @@
             // LegSlot2Label
             // 
             this.LegSlot2Label.AutoSize = true;
-            this.LegSlot2Label.Location = new System.Drawing.Point(218, 325);
+            this.LegSlot2Label.Location = new System.Drawing.Point(218, 344);
             this.LegSlot2Label.Name = "LegSlot2Label";
             this.LegSlot2Label.Size = new System.Drawing.Size(34, 13);
             this.LegSlot2Label.TabIndex = 19;
@@ -257,7 +246,7 @@
             // EnhDevoLabel
             // 
             this.EnhDevoLabel.AutoSize = true;
-            this.EnhDevoLabel.Location = new System.Drawing.Point(177, 376);
+            this.EnhDevoLabel.Location = new System.Drawing.Point(177, 395);
             this.EnhDevoLabel.Name = "EnhDevoLabel";
             this.EnhDevoLabel.Size = new System.Drawing.Size(109, 13);
             this.EnhDevoLabel.TabIndex = 20;
@@ -266,7 +255,7 @@
             // BitingLabel
             // 
             this.BitingLabel.AutoSize = true;
-            this.BitingLabel.Location = new System.Drawing.Point(102, 376);
+            this.BitingLabel.Location = new System.Drawing.Point(102, 395);
             this.BitingLabel.Name = "BitingLabel";
             this.BitingLabel.Size = new System.Drawing.Size(53, 13);
             this.BitingLabel.TabIndex = 21;
@@ -298,8 +287,6 @@
             this.Controls.Add(this.CracklingIcon);
             this.Controls.Add(this.BitingIcon);
             this.Controls.Add(this.AftershockIcon);
-            this.Controls.Add(this.InventMetaLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "InventionMeta";
@@ -317,8 +304,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label InventMetaLabel;
         private System.Windows.Forms.PictureBox AftershockIcon;
         private System.Windows.Forms.PictureBox BitingIcon;
         private System.Windows.Forms.PictureBox CracklingIcon;
