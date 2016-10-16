@@ -13,6 +13,13 @@ namespace RuneHelper
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Override for exit buttton.
+        /// </summary>
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
 
         /// <summary>
         /// On form load
@@ -44,7 +51,7 @@ namespace RuneHelper
  
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
         /// <summary>
         /// Toolbar functions
@@ -197,26 +204,6 @@ namespace RuneHelper
         private void OpenStats_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + Username.Replace(" ","+"));
-        }
-
-        private void TotalLevelText_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TotalLevel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AverageLevel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

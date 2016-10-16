@@ -172,7 +172,6 @@
             this.label1.Size = new System.Drawing.Size(91, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Average Level";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AttackBar
             // 
@@ -326,7 +325,7 @@
             // 
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.UsernameLabel.Location = new System.Drawing.Point(58, 213);
+            this.UsernameLabel.Location = new System.Drawing.Point(50, 213);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(68, 19);
             this.UsernameLabel.TabIndex = 5;
@@ -873,7 +872,6 @@
             this.AverageLevel.Size = new System.Drawing.Size(16, 19);
             this.AverageLevel.TabIndex = 59;
             this.AverageLevel.Text = "0";
-            this.AverageLevel.Click += new System.EventHandler(this.AverageLevel_Click);
             // 
             // TotalLevelText
             // 
@@ -884,7 +882,6 @@
             this.TotalLevelText.Size = new System.Drawing.Size(71, 19);
             this.TotalLevelText.TabIndex = 60;
             this.TotalLevelText.Text = "Total Level";
-            this.TotalLevelText.Click += new System.EventHandler(this.TotalLevelText_Click);
             // 
             // TotalLevel
             // 
@@ -895,7 +892,6 @@
             this.TotalLevel.Size = new System.Drawing.Size(16, 19);
             this.TotalLevel.TabIndex = 61;
             this.TotalLevel.Text = "0";
-            this.TotalLevel.Click += new System.EventHandler(this.TotalLevel_Click);
             // 
             // AttackLabel
             // 
