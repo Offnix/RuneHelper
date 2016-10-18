@@ -103,16 +103,16 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <Compile Include="ComparePlayer.cs">
+    <Compile Include="Other Forms\ComparePlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComparePlayer.Designer.cs">
+    <Compile Include="Other Forms\ComparePlayer.Designer.cs">
       <DependentUpon>ComparePlayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Misc\About.cs">
+    <Compile Include="Other Forms\About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Misc\About.Designer.cs">
+    <Compile Include="Other Forms\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
     <Compile Include="Calculators\AgilityCalc.cs">
@@ -121,10 +121,10 @@
     <Compile Include="Calculators\AgilityCalc.Designer.cs">
       <DependentUpon>AgilityCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Misc\InventionMeta.cs">
+    <Compile Include="Other Forms\InventionMeta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Misc\InventionMeta.Designer.cs">
+    <Compile Include="Other Forms\InventionMeta.Designer.cs">
       <DependentUpon>InventionMeta.cs</DependentUpon>
     </Compile>
     <Compile Include="Calculators\MiningCalc.cs">
@@ -139,7 +139,7 @@
     <Compile Include="Calculators\WoodcuttingCalc.Designer.cs">
       <DependentUpon>WoodcuttingCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main API.cs" />
+    <Compile Include="Misc\Main API.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,10 +152,10 @@
     <Compile Include="Calculators\SilverhawkCalc.Designer.cs">
       <DependentUpon>SilverhawkCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Misc\Settings.cs">
+    <Compile Include="Other Forms\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Misc\Settings.Designer.cs">
+    <Compile Include="Other Forms\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -166,13 +166,13 @@
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComparePlayer.resx">
+    <EmbeddedResource Include="Other Forms\ComparePlayer.resx">
       <DependentUpon>ComparePlayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Misc\About.resx">
+    <EmbeddedResource Include="Other Forms\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Misc\InventionMeta.resx">
+    <EmbeddedResource Include="Other Forms\InventionMeta.resx">
       <DependentUpon>InventionMeta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -181,7 +181,7 @@
     <EmbeddedResource Include="Calculators\SilverhawkCalc.resx">
       <DependentUpon>SilverhawkCalc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Misc\Settings.resx">
+    <EmbeddedResource Include="Other Forms\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calculators\AgilityCalc.resx">

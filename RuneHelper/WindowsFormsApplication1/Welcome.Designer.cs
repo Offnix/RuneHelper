@@ -84,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 197);
+            this.ClientSize = new System.Drawing.Size(393, 204);
             this.Controls.Add(this.ConfirmInput);
             this.Controls.Add(this.UsernameInput);
             this.Controls.Add(this.label4);
@@ -92,6 +92,7 @@
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Welcome";
+            this.Resizable = false;
             this.Text = "Welcome";
             this.Load += new System.EventHandler(this.Welcome_Load);
             this.ResumeLayout(false);

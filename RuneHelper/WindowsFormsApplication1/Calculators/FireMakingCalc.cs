@@ -16,9 +16,8 @@ namespace RsThing
         string[] LevelArray;
 
         public static float[] FireMakeXpArray = new float[] {25 ,37.5f ,67.5f ,105 ,125 ,135 ,157.5f ,171 ,202.5f ,303.8f ,435};
-         /// <summary>
-         /// Forms Buttons
-         /// </summary>
+
+        #region Form Buttons
         private void CharSearchButton_Click(object sender, EventArgs e)
         {
             string Name = CharNameBox.Text;
@@ -47,9 +46,13 @@ namespace RsThing
             ShowBoxes();
         }
 
-        /// <summary>
-        /// Functions
-        /// </summary>
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region Functions
         private void ShowBoxes()
         {
             TargetLevelLabel.Visible = true;
@@ -89,11 +92,7 @@ namespace RsThing
                 MessageBox.Show("Could not run calculation, please check all fields have been filled with no text", "ERROR");
             }         
         }
-
-        private void BackBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        #endregion
     }
 }
 

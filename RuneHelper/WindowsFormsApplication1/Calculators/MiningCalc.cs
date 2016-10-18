@@ -17,9 +17,8 @@ namespace RsThing
 
 
         public static float[] OreXPArray = new float[] {5, 17.5f, 25 , 26.5f, 35, 40, 50, 62.4702f, 40, 65, 60, 80, 95, 90, 50, 65, 70, 125, 296.7f, 445.5f, 692.5f, 5250};
-         /// <summary>
-         /// Forms Buttons
-         /// </summary>
+
+        #region Form Buttons
         private void CharSearchButton_Click(object sender, EventArgs e)
         {
             string Name = CharNameBox.Text;
@@ -48,9 +47,13 @@ namespace RsThing
             ShowBoxes();
         }
 
-        /// <summary>
-        /// Functions
-        /// </summary>
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        #endregion
+
+        #region Functions
         private void ShowBoxes()
         {
             TargetLevelLabel.Visible = true;
@@ -95,13 +98,8 @@ namespace RsThing
             {
                 MessageBox.Show("Could not run calculation, please check all fields have been filled with no text", "ERROR");
             }                
-            }    
-        
-
-        private void BackBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+            }
+        #endregion
     }
 }
 

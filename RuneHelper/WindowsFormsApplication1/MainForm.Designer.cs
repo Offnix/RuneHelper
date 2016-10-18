@@ -130,8 +130,11 @@
             this.InventionLabel = new MetroFramework.Controls.MetroLabel();
             this.DivinationLabel = new MetroFramework.Controls.MetroLabel();
             this.DungeoneeringLabel = new MetroFramework.Controls.MetroLabel();
-            this.MainFormMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MainFormMenu = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.OpenStats = new System.Windows.Forms.ToolStripMenuItem();
+            this.TabControl = new MetroFramework.Controls.MetroTabControl();
+            this.ExtraStats = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -161,13 +164,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.MainFormMenu.SuspendLayout();
+            this.TabControl.SuspendLayout();
+            this.ExtraStats.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(418, 149);
+            this.label1.Location = new System.Drawing.Point(3, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 19);
             this.label1.TabIndex = 0;
@@ -317,7 +322,7 @@
             // CompareStatsToolStrip
             // 
             this.CompareStatsToolStrip.Name = "CompareStatsToolStrip";
-            this.CompareStatsToolStrip.Size = new System.Drawing.Size(151, 22);
+            this.CompareStatsToolStrip.Size = new System.Drawing.Size(152, 22);
             this.CompareStatsToolStrip.Text = "Compare Stats";
             this.CompareStatsToolStrip.Click += new System.EventHandler(this.CompareStatsToolStrip_Click);
             // 
@@ -334,7 +339,7 @@
             // ProfilePicture
             // 
             this.ProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.ProfilePicture.Location = new System.Drawing.Point(23, 100);
+            this.ProfilePicture.Location = new System.Drawing.Point(32, 100);
             this.ProfilePicture.Name = "ProfilePicture";
             this.ProfilePicture.Size = new System.Drawing.Size(123, 110);
             this.ProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -344,7 +349,7 @@
             // ExitButton
             // 
             this.ExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitButton.Location = new System.Drawing.Point(705, 522);
+            this.ExitButton.Location = new System.Drawing.Point(722, 534);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(98, 35);
             this.ExitButton.TabIndex = 7;
@@ -867,7 +872,7 @@
             // 
             this.AverageLevel.AutoSize = true;
             this.AverageLevel.BackColor = System.Drawing.Color.Transparent;
-            this.AverageLevel.Location = new System.Drawing.Point(508, 149);
+            this.AverageLevel.Location = new System.Drawing.Point(93, 49);
             this.AverageLevel.Name = "AverageLevel";
             this.AverageLevel.Size = new System.Drawing.Size(16, 19);
             this.AverageLevel.TabIndex = 59;
@@ -877,7 +882,7 @@
             // 
             this.TotalLevelText.AutoSize = true;
             this.TotalLevelText.BackColor = System.Drawing.Color.Transparent;
-            this.TotalLevelText.Location = new System.Drawing.Point(418, 127);
+            this.TotalLevelText.Location = new System.Drawing.Point(3, 18);
             this.TotalLevelText.Name = "TotalLevelText";
             this.TotalLevelText.Size = new System.Drawing.Size(71, 19);
             this.TotalLevelText.TabIndex = 60;
@@ -887,7 +892,7 @@
             // 
             this.TotalLevel.AutoSize = true;
             this.TotalLevel.BackColor = System.Drawing.Color.Transparent;
-            this.TotalLevel.Location = new System.Drawing.Point(508, 127);
+            this.TotalLevel.Location = new System.Drawing.Point(93, 18);
             this.TotalLevel.Name = "TotalLevel";
             this.TotalLevel.Size = new System.Drawing.Size(16, 19);
             this.TotalLevel.TabIndex = 61;
@@ -1167,12 +1172,56 @@
             this.OpenStats.Text = "Open in runescape highscores";
             this.OpenStats.Click += new System.EventHandler(this.OpenStats_Click);
             // 
+            // TabControl
+            // 
+            this.TabControl.Controls.Add(this.ExtraStats);
+            this.TabControl.Controls.Add(this.metroTabPage1);
+            this.TabControl.Location = new System.Drawing.Point(435, 100);
+            this.TabControl.Name = "TabControl";
+            this.TabControl.SelectedIndex = 0;
+            this.TabControl.Size = new System.Drawing.Size(368, 429);
+            this.TabControl.TabIndex = 88;
+            this.TabControl.UseSelectable = true;
+            // 
+            // ExtraStats
+            // 
+            this.ExtraStats.Controls.Add(this.label1);
+            this.ExtraStats.Controls.Add(this.AverageLevel);
+            this.ExtraStats.Controls.Add(this.TotalLevelText);
+            this.ExtraStats.Controls.Add(this.TotalLevel);
+            this.ExtraStats.HorizontalScrollbarBarColor = true;
+            this.ExtraStats.HorizontalScrollbarHighlightOnWheel = false;
+            this.ExtraStats.HorizontalScrollbarSize = 10;
+            this.ExtraStats.Location = new System.Drawing.Point(4, 38);
+            this.ExtraStats.Name = "ExtraStats";
+            this.ExtraStats.Size = new System.Drawing.Size(360, 387);
+            this.ExtraStats.TabIndex = 0;
+            this.ExtraStats.Text = "Extra Stats";
+            this.ExtraStats.VerticalScrollbarBarColor = true;
+            this.ExtraStats.VerticalScrollbarHighlightOnWheel = false;
+            this.ExtraStats.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(360, 387);
+            this.metroTabPage1.TabIndex = 1;
+            this.metroTabPage1.Text = "To be added";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(826, 570);
             this.ContextMenuStrip = this.MainFormMenu;
+            this.Controls.Add(this.TabControl);
             this.Controls.Add(this.InventionLabel);
             this.Controls.Add(this.DivinationLabel);
             this.Controls.Add(this.DungeoneeringLabel);
@@ -1199,9 +1248,6 @@
             this.Controls.Add(this.StrengthLabel);
             this.Controls.Add(this.DefenceLabel);
             this.Controls.Add(this.AttackLabel);
-            this.Controls.Add(this.TotalLevel);
-            this.Controls.Add(this.TotalLevelText);
-            this.Controls.Add(this.AverageLevel);
             this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox26);
             this.Controls.Add(this.InventorBar);
@@ -1258,7 +1304,6 @@
             this.Controls.Add(this.ProfilePicture);
             this.Controls.Add(this.MainToolStrip);
             this.Controls.Add(this.AttackBar);
-            this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(826, 570);
             this.Name = "MainForm";
@@ -1295,6 +1340,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.MainFormMenu.ResumeLayout(false);
+            this.TabControl.ResumeLayout(false);
+            this.ExtraStats.ResumeLayout(false);
+            this.ExtraStats.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1401,9 +1449,12 @@
         private System.Windows.Forms.ToolStripMenuItem FireMakingToolStrip;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem CompareStatsToolStrip;
-        private System.Windows.Forms.ContextMenuStrip MainFormMenu;
+        private MetroFramework.Controls.MetroContextMenu MainFormMenu;
         private System.Windows.Forms.ToolStripMenuItem OpenStats;
         private MetroFramework.Controls.MetroButton ExitButton;
+        private MetroFramework.Controls.MetroTabControl TabControl;
+        private MetroFramework.Controls.MetroTabPage ExtraStats;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
     }
 }
 

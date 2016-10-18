@@ -10,17 +10,14 @@ namespace RuneHelper
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// on Form Load
-        /// </summary>
+        #region Form Load
         private void Form3_Load(object sender, EventArgs e)
         {
             UsernameTextBox.Text = MainForm.Username;
         }
+        #endregion
 
-        /// <summary>
-        /// Form Buttons and functions
-        /// </summary>
+        #region Form Buttons
         private void button1_Click(object sender, EventArgs e)
         {
             API.StreamWriter(UsernameTextBox.Text, @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
@@ -28,5 +25,6 @@ namespace RuneHelper
             // to be fixed MainForm.UpdatePage();
             this.Close();
         }
+        #endregion
     }
 }

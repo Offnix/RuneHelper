@@ -11,6 +11,7 @@ namespace RuneHelper.Calculators
             InitializeComponent();
         }
 
+        #region Load Function
         private void Welcome_Load(object sender, EventArgs e)
         {
             string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
@@ -28,7 +29,9 @@ namespace RuneHelper.Calculators
                 File.Create(path + @"\Data.txt").Close();
             }
            }
+        #endregion
 
+        #region Form Buttons
         private void ConfirmInput_Click(object sender, EventArgs e)
         {
             API.StreamWriter(UsernameInput.Text, @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
@@ -36,5 +39,6 @@ namespace RuneHelper.Calculators
             Mainform.Show();
             this.Close();
         }
+        #endregion
     }
 }

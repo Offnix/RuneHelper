@@ -9,21 +9,13 @@ namespace RuneHelper
     {
         public static string Username;
         public static string[] LevelArray;
+
         public MainForm()
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// Override for exit buttton.
-        /// </summary>
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        /// <summary>
-        /// On form load
-        /// </summary>
+  
+        #region Open and close Functions
         private void Form1_Load(object sender, EventArgs e)
         {
             string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
@@ -45,18 +37,20 @@ namespace RuneHelper
             }           
         }
 
-        /// <summary>
-        /// Buttons on form
-        /// </summary>
- 
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+        #endregion
+
+        #region Form Buttons
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        /// <summary>
-        /// Toolbar functions
-        /// </summary>
+        #endregion
 
+        #region Toolbar Buttons
         private void OpenSettingsToolStrip_Click(object sender, EventArgs e)
         {
             SettingsForm Settings = new SettingsForm();
@@ -115,11 +109,9 @@ namespace RuneHelper
             RuneHelper.ComparePlayer Compare = new RuneHelper.ComparePlayer();
             Compare.Show();
         }
+        #endregion
 
-        /// <summary>
-        /// Misc code/ functions
-        /// </summary>
-
+        #region Functions
         public void ReloadPage()
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -200,10 +192,13 @@ namespace RuneHelper
             {
             }   
         }
+        #endregion
 
+        #region Context Menu
         private void OpenStats_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + Username.Replace(" ","+"));
         }
+        #endregion
     }
 }
