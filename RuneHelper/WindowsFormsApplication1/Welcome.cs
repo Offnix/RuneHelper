@@ -1,6 +1,6 @@
 ﻿using System;
 using MetroFramework.Forms;
-using System.IO;
+using System.Windows.Forms;
 
 namespace RuneHelper.Calculators
 {
@@ -11,30 +11,31 @@ namespace RuneHelper.Calculators
             InitializeComponent();
         }
 
-        #region Load Function
+        #region Load And Close Function
         private void Welcome_Load(object sender, EventArgs e)
         {
-            string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
-
-            if (Directory.Exists(path) == true && File.Exists(path + @"\Data.txt") == true)
+            if(API.CheckFileIntegrity() == true)
             {
-                RuneHelper.MainForm Mainform = new RuneHelper.MainForm();
-                Mainform.Show();
+
+            }
+
+            if (API.CheckFileIntegrity() == true)
+            {
+                MainForm Main = new MainForm();
+                Main.Show();
                 this.Close();
-            }
+            }   
+        }
 
-            if (Directory.Exists(path) == false && File.Exists(path + @"\Data.txt") == false)
-            {
-                Directory.CreateDirectory(path);
-                File.Create(path + @"\Data.txt").Close();
-            }
-           }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+        }
         #endregion
 
-        #region Form Buttons
+        #region Form Controls
         private void ConfirmInput_Click(object sender, EventArgs e)
         {
-            API.StreamWriter(UsernameInput.Text, @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
+            API.StreamWriter(UsernameInput.Text+",1", @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
             RuneHelper.MainForm Mainform = new RuneHelper.MainForm();
             Mainform.Show();
             this.Close();

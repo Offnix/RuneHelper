@@ -41,8 +41,8 @@ namespace RsThing
 
         private void CachedName_Click(object sender, EventArgs e)
         {
-            CharNameBox.Text = MainForm.Username;
-            result = GetPlayerWoodcuttingXP(MainForm.Username);
+            CharNameBox.Text = MainForm.SaveData[0];
+            result = GetPlayerWoodcuttingXP(MainForm.SaveData[0]);
             XPBox.Text = result;
             ShowBoxes();
         }

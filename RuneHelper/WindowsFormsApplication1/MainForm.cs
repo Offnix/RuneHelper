@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
@@ -7,34 +6,19 @@ namespace RuneHelper
 {
     public partial class MainForm : MetroForm
     {
-        public static string Username;
-        public static string[] LevelArray;
-
         public MainForm()
         {
             InitializeComponent();
         }
-  
+
+        public static string[] SaveData;
+        public static string[] LevelArray;
+
         #region Open and close Functions
         private void Form1_Load(object sender, EventArgs e)
         {
-            string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
-            if (Directory.Exists(path) == false && File.Exists(path +@"\Data.txt") == false)
-            {
-                Directory.CreateDirectory(path);
-                File.Create(path + @"\Data.txt").Close();
-                RuneHelper.Calculators.Welcome Welcome = new RuneHelper.Calculators.Welcome();
-                Welcome.Show();
-            }
-            else
-            {
-                if (new FileInfo(path + @"\Data.txt").Length > 0)
-                {
-                    Username = API.StreamReader(path + @"\Data.txt");                     
-                     LevelArray = API.UpdateLevels(Username);
-                    ReloadPage();
-                }
-            }           
+            SaveData = API.StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt").Split(',');
+            ReloadPage();       
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -43,7 +27,7 @@ namespace RuneHelper
         }
         #endregion
 
-        #region Form Buttons
+        #region Form Controls
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -115,9 +99,19 @@ namespace RuneHelper
         public void ReloadPage()
         {
             Cursor.Current = Cursors.WaitCursor;
+
+            if(SaveData[1] == "1")
+            {
+                this.Theme = MetroFramework.MetroThemeStyle.Light;
+            }
+            if (SaveData[1] == "2")
+            {
+                this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            }
+
             try
             {
-                ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif");              
+                ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + SaveData[0] + "/chat.gif");              
             }
             catch
             {
@@ -126,8 +120,8 @@ namespace RuneHelper
             
             try
             {
-                LevelArray = API.UpdateLevels(Username);
-                UsernameLabel.Text = Username;
+                LevelArray = API.UpdateLevels(SaveData[0]);
+                UsernameLabel.Text = SaveData[0];
                 AverageLevel.Text =  API.GetMean(LevelArray).ToString();
                 TotalLevel.Text =  LevelArray[1];
 
@@ -197,7 +191,7 @@ namespace RuneHelper
         #region Context Menu
         private void OpenStats_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + Username.Replace(" ","+"));
+            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + SaveData[0].Replace(" ","+"));
         }
         #endregion
     }

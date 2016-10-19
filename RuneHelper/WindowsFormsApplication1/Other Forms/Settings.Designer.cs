@@ -35,7 +35,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(23, 112);
+            this.button1.Location = new System.Drawing.Point(21, 184);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 23);
             this.button1.TabIndex = 0;
@@ -84,7 +84,7 @@
             // 
             // SettingsForm
             // 
-            this.ClientSize = new System.Drawing.Size(319, 169);
+            this.ClientSize = new System.Drawing.Size(404, 226);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.button1);

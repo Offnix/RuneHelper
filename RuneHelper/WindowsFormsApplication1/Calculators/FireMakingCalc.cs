@@ -40,8 +40,8 @@ namespace RsThing
 
         private void CachedName_Click(object sender, EventArgs e)
         {
-            CharNameBox.Text = MainForm.Username;
-            result = GetPlayerFireMakingXP(MainForm.Username);
+            CharNameBox.Text = MainForm.SaveData[0];
+            result = GetPlayerFireMakingXP(MainForm.SaveData[0]);
             XPBox.Text = result;
             ShowBoxes();
         }

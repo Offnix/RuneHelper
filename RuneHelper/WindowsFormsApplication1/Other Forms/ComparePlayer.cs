@@ -153,7 +153,7 @@ namespace RuneHelper
         }
         private void CachedName_Click(object sender, EventArgs e)
         {
-            PLayerInput1.Text = MainForm.Username;
+            PLayerInput1.Text = MainForm.SaveData[0];
         }
 
         private void OpenStats_Click(object sender, EventArgs e)

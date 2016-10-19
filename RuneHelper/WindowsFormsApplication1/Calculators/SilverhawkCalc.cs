@@ -45,8 +45,8 @@ namespace RuneHelper
 
         private void CachedName_Click(object sender, EventArgs e)
         {
-            CharNameBox.Text = MainForm.Username;
-            result = GetPlayerAgilityXP(MainForm.Username);
+            CharNameBox.Text = MainForm.SaveData[0];
+            result = GetPlayerAgilityXP(MainForm.SaveData[0]);
             WebReturnBox.Text = result;
             ShowBoxes();
         }

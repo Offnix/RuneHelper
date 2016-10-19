@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-using RuneHelper;
 
 public static class API
 {
@@ -94,4 +93,22 @@ public static class API
             return null;
         }        
     }
-}
+
+    public static bool CheckFileIntegrity()
+    {
+        string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
+
+        if (Directory.Exists(path) == false)
+        {
+            Directory.CreateDirectory(path);
+        }
+
+        if (File.Exists(path + @"\Data.txt") == false)
+        {
+            File.Create(path + @"\Data.txt").Close();
+            StreamWriter(" ,", path + @"\Data.txt");
+            return true;
+        }
+        return false;
+        }
+    }
