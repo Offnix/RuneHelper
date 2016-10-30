@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using RuneHelper;
 using MetroFramework.Forms;
 
-namespace RsThing
+namespace RuneHelper
 {
     public partial class FireMakingCalc : MetroForm
     {

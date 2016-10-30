@@ -111,4 +111,11 @@ public static class API
         }
         return false;
         }
+
+    public static string GetLevelPercentage(decimal TotalLevel)
+    {
+        decimal percentage;
+        percentage = Math.Round(TotalLevel / 2715m,2);
+        return Convert.ToInt32(percentage * 100).ToString();
+    }
     }

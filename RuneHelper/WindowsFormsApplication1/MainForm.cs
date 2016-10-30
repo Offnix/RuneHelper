@@ -34,7 +34,7 @@ namespace RuneHelper
         }
         #endregion
 
-        #region Toolbar Buttons
+        #region Toolbar Controls
         private void OpenSettingsToolStrip_Click(object sender, EventArgs e)
         {
             SettingsForm Settings = new SettingsForm();
@@ -48,19 +48,19 @@ namespace RuneHelper
 
         private void WoodcuttingToolStrip_Click(object sender, EventArgs e)
         {
-            RsThing.WooducttingCalculator Woodcut = new RsThing.WooducttingCalculator();
+            WooducttingCalculator Woodcut = new WooducttingCalculator();
             Woodcut.Show();
         }
 
         private void MiningToolStrip_Click(object sender, EventArgs e)
         {
-            RsThing.Form6 Mining = new RsThing.Form6();
+            MiningCalc Mining = new MiningCalc();
             Mining.Show();
         }
 
         private void AgilityToolStrip_Click(object sender, EventArgs e)
         {
-            RsThing.Form6 Agil = new RsThing.Form6();
+            AgilityCalc Agil = new AgilityCalc();
             Agil.Show();
         }
 
@@ -78,7 +78,7 @@ namespace RuneHelper
 
         private void FireMakingToolStrip_Click(object sender, EventArgs e)
         {
-            RsThing.FireMakingCalc FireMaking = new RsThing.FireMakingCalc();
+            FireMakingCalc FireMaking = new FireMakingCalc();
             FireMaking.Show();
         }
 
@@ -95,19 +95,17 @@ namespace RuneHelper
         }
         #endregion
 
+        #region Context Menu
+        private void OpenStats_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + SaveData[0].Replace(" ","+"));
+        }
+        #endregion
+
         #region Functions
         public void ReloadPage()
         {
             Cursor.Current = Cursors.WaitCursor;
-
-            if(SaveData[1] == "1")
-            {
-                this.Theme = MetroFramework.MetroThemeStyle.Light;
-            }
-            if (SaveData[1] == "2")
-            {
-                this.Theme = MetroFramework.MetroThemeStyle.Dark;
-            }
 
             try
             {
@@ -124,6 +122,7 @@ namespace RuneHelper
                 UsernameLabel.Text = SaveData[0];
                 AverageLevel.Text =  API.GetMean(LevelArray).ToString();
                 TotalLevel.Text =  LevelArray[1];
+                PercentageLabel.Text = API.GetLevelPercentage(Convert.ToInt32(LevelArray[1])) + "%";
 
                 // find a way to minify this and your a god amongst men
                 //progress bars
@@ -186,13 +185,6 @@ namespace RuneHelper
             {
             }   
         }
-        #endregion
-
-        #region Context Menu
-        private void OpenStats_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + SaveData[0].Replace(" ","+"));
-        }
-        #endregion
+        #endregion 
     }
 }

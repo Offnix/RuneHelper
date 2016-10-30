@@ -3,11 +3,11 @@ using System.Windows.Forms;
 using RuneHelper;
 using MetroFramework.Forms;
 
-namespace RsThing
+namespace RuneHelper
 {
-    public partial class Form5 : MetroForm
+    public partial class MiningCalc : MetroForm
     {
-        public Form5()
+        public MiningCalc()
         {
             InitializeComponent();
         }

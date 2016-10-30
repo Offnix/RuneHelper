@@ -1,4 +1,4 @@
-﻿namespace RsThing
+﻿namespace RuneHelper
 {
     partial class FireMakingCalc
     {

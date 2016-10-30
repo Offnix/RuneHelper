@@ -1,6 +1,6 @@
-﻿namespace RsThing
+﻿namespace RuneHelper
 {
-    partial class Form5
+    partial class MiningCalc
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MiningCalc));
             this.CachedName = new MetroFramework.Controls.MetroButton();
             this.CharSearchButton = new MetroFramework.Controls.MetroButton();
             this.CharNameBox = new MetroFramework.Controls.MetroTextBox();

@@ -45,7 +45,7 @@
             this.SilverHawkFeatherToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.inventionPerkMetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FireMakingToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.OtherToolStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.CompareStatsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.UsernameLabel = new MetroFramework.Controls.MetroLabel();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
@@ -134,6 +134,8 @@
             this.OpenStats = new System.Windows.Forms.ToolStripMenuItem();
             this.TabControl = new MetroFramework.Controls.MetroTabControl();
             this.ExtraStats = new MetroFramework.Controls.MetroTabPage();
+            this.PercentageLabel = new MetroFramework.Controls.MetroLabel();
+            this.Percentage = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
@@ -195,10 +197,9 @@
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Settings,
             this.Calculators,
-            this.toolStripDropDownButton1});
+            this.OtherToolStrip});
             this.MainToolStrip.Location = new System.Drawing.Point(20, 60);
             this.MainToolStrip.Name = "MainToolStrip";
-            this.MainToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.MainToolStrip.Size = new System.Drawing.Size(786, 35);
             this.MainToolStrip.TabIndex = 3;
             this.MainToolStrip.Text = "Main Tool Strip";
@@ -209,32 +210,32 @@
             this.OpenSettingsToolStrip,
             this.ReloadPageToolStrip,
             this.AboutToolStrip});
-            this.Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Settings.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.Settings.Image = ((System.Drawing.Image)(resources.GetObject("Settings.Image")));
             this.Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(115, 32);
+            this.Settings.Size = new System.Drawing.Size(112, 32);
             this.Settings.Text = "RuneHelper";
             this.Settings.ToolTipText = "ApplicationToolStrip";
             // 
             // OpenSettingsToolStrip
             // 
             this.OpenSettingsToolStrip.Name = "OpenSettingsToolStrip";
-            this.OpenSettingsToolStrip.Size = new System.Drawing.Size(210, 22);
+            this.OpenSettingsToolStrip.Size = new System.Drawing.Size(203, 24);
             this.OpenSettingsToolStrip.Text = "Open Settings Panel";
             this.OpenSettingsToolStrip.Click += new System.EventHandler(this.OpenSettingsToolStrip_Click);
             // 
             // ReloadPageToolStrip
             // 
             this.ReloadPageToolStrip.Name = "ReloadPageToolStrip";
-            this.ReloadPageToolStrip.Size = new System.Drawing.Size(210, 22);
+            this.ReloadPageToolStrip.Size = new System.Drawing.Size(203, 24);
             this.ReloadPageToolStrip.Text = "Reload Page";
             this.ReloadPageToolStrip.Click += new System.EventHandler(this.ReloadPageToolStrip_Click);
             // 
             // AboutToolStrip
             // 
             this.AboutToolStrip.Name = "AboutToolStrip";
-            this.AboutToolStrip.Size = new System.Drawing.Size(210, 22);
+            this.AboutToolStrip.Size = new System.Drawing.Size(203, 24);
             this.AboutToolStrip.Text = "About";
             this.AboutToolStrip.Click += new System.EventHandler(this.AboutToolStrip_Click);
             // 
@@ -246,26 +247,26 @@
             this.Agility,
             this.inventionPerkMetaToolStripMenuItem,
             this.FireMakingToolStrip});
-            this.Calculators.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calculators.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.Calculators.Image = ((System.Drawing.Image)(resources.GetObject("Calculators.Image")));
             this.Calculators.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Calculators.Name = "Calculators";
-            this.Calculators.Size = new System.Drawing.Size(112, 32);
+            this.Calculators.Size = new System.Drawing.Size(105, 32);
             this.Calculators.Text = "Calculators";
             // 
             // WoodcuttingToolStrip
             // 
-            this.WoodcuttingToolStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WoodcuttingToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.WoodcuttingToolStrip.Name = "WoodcuttingToolStrip";
-            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(206, 22);
+            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(202, 24);
             this.WoodcuttingToolStrip.Text = "Woodcutting";
             this.WoodcuttingToolStrip.Click += new System.EventHandler(this.WoodcuttingToolStrip_Click);
             // 
             // MiningToolStrip
             // 
-            this.MiningToolStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MiningToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.MiningToolStrip.Name = "MiningToolStrip";
-            this.MiningToolStrip.Size = new System.Drawing.Size(206, 22);
+            this.MiningToolStrip.Size = new System.Drawing.Size(202, 24);
             this.MiningToolStrip.Text = "Mining";
             this.MiningToolStrip.Click += new System.EventHandler(this.MiningToolStrip_Click);
             // 
@@ -274,55 +275,56 @@
             this.Agility.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AgilityToolStrip,
             this.SilverHawkFeatherToolStrip});
-            this.Agility.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Agility.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.Agility.Name = "Agility";
-            this.Agility.Size = new System.Drawing.Size(206, 22);
+            this.Agility.Size = new System.Drawing.Size(202, 24);
             this.Agility.Text = "Agility";
             // 
             // AgilityToolStrip
             // 
             this.AgilityToolStrip.Name = "AgilityToolStrip";
-            this.AgilityToolStrip.Size = new System.Drawing.Size(208, 22);
+            this.AgilityToolStrip.Size = new System.Drawing.Size(200, 24);
             this.AgilityToolStrip.Text = "Agility";
             this.AgilityToolStrip.Click += new System.EventHandler(this.AgilityToolStrip_Click);
             // 
             // SilverHawkFeatherToolStrip
             // 
             this.SilverHawkFeatherToolStrip.Name = "SilverHawkFeatherToolStrip";
-            this.SilverHawkFeatherToolStrip.Size = new System.Drawing.Size(208, 22);
+            this.SilverHawkFeatherToolStrip.Size = new System.Drawing.Size(200, 24);
             this.SilverHawkFeatherToolStrip.Text = "Silver Hawk Feather";
             this.SilverHawkFeatherToolStrip.Click += new System.EventHandler(this.silverHawkFeatherToolStrip_Click);
             // 
             // inventionPerkMetaToolStripMenuItem
             // 
-            this.inventionPerkMetaToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inventionPerkMetaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.inventionPerkMetaToolStripMenuItem.Name = "inventionPerkMetaToolStripMenuItem";
-            this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
             this.inventionPerkMetaToolStripMenuItem.Text = "Invention Perk Meta";
             this.inventionPerkMetaToolStripMenuItem.Click += new System.EventHandler(this.InventionPerkMetaToolStrip_Click);
             // 
             // FireMakingToolStrip
             // 
+            this.FireMakingToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.FireMakingToolStrip.Name = "FireMakingToolStrip";
-            this.FireMakingToolStrip.Size = new System.Drawing.Size(206, 22);
+            this.FireMakingToolStrip.Size = new System.Drawing.Size(202, 24);
             this.FireMakingToolStrip.Text = "FireMaking";
             this.FireMakingToolStrip.Click += new System.EventHandler(this.FireMakingToolStrip_Click);
             // 
-            // toolStripDropDownButton1
+            // OtherToolStrip
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OtherToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CompareStatsToolStrip});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 32);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            this.OtherToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
+            this.OtherToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("OtherToolStrip.Image")));
+            this.OtherToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.OtherToolStrip.Name = "OtherToolStrip";
+            this.OtherToolStrip.Size = new System.Drawing.Size(122, 32);
+            this.OtherToolStrip.Text = "Other Utilities";
             // 
             // CompareStatsToolStrip
             // 
             this.CompareStatsToolStrip.Name = "CompareStatsToolStrip";
-            this.CompareStatsToolStrip.Size = new System.Drawing.Size(152, 22);
+            this.CompareStatsToolStrip.Size = new System.Drawing.Size(167, 24);
             this.CompareStatsToolStrip.Text = "Compare Stats";
             this.CompareStatsToolStrip.Click += new System.EventHandler(this.CompareStatsToolStrip_Click);
             // 
@@ -1185,6 +1187,8 @@
             // 
             // ExtraStats
             // 
+            this.ExtraStats.Controls.Add(this.PercentageLabel);
+            this.ExtraStats.Controls.Add(this.Percentage);
             this.ExtraStats.Controls.Add(this.label1);
             this.ExtraStats.Controls.Add(this.AverageLevel);
             this.ExtraStats.Controls.Add(this.TotalLevelText);
@@ -1200,6 +1204,26 @@
             this.ExtraStats.VerticalScrollbarBarColor = true;
             this.ExtraStats.VerticalScrollbarHighlightOnWheel = false;
             this.ExtraStats.VerticalScrollbarSize = 10;
+            // 
+            // PercentageLabel
+            // 
+            this.PercentageLabel.AutoSize = true;
+            this.PercentageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PercentageLabel.Location = new System.Drawing.Point(93, 81);
+            this.PercentageLabel.Name = "PercentageLabel";
+            this.PercentageLabel.Size = new System.Drawing.Size(16, 19);
+            this.PercentageLabel.TabIndex = 63;
+            this.PercentageLabel.Text = "0";
+            // 
+            // Percentage
+            // 
+            this.Percentage.AutoSize = true;
+            this.Percentage.BackColor = System.Drawing.Color.Transparent;
+            this.Percentage.Location = new System.Drawing.Point(0, 81);
+            this.Percentage.Name = "Percentage";
+            this.Percentage.Size = new System.Drawing.Size(75, 19);
+            this.Percentage.TabIndex = 62;
+            this.Percentage.Text = "Percentage";
             // 
             // metroTabPage1
             // 
@@ -1219,6 +1243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(826, 570);
             this.ContextMenuStrip = this.MainFormMenu;
             this.Controls.Add(this.TabControl);
@@ -1447,7 +1472,7 @@
         private System.Windows.Forms.ToolStripMenuItem inventionPerkMetaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutToolStrip;
         private System.Windows.Forms.ToolStripMenuItem FireMakingToolStrip;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripDropDownButton OtherToolStrip;
         private System.Windows.Forms.ToolStripMenuItem CompareStatsToolStrip;
         private MetroFramework.Controls.MetroContextMenu MainFormMenu;
         private System.Windows.Forms.ToolStripMenuItem OpenStats;
@@ -1455,6 +1480,8 @@
         private MetroFramework.Controls.MetroTabControl TabControl;
         private MetroFramework.Controls.MetroTabPage ExtraStats;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroLabel PercentageLabel;
+        private MetroFramework.Controls.MetroLabel Percentage;
     }
 }
 

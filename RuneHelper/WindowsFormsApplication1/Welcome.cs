@@ -2,7 +2,7 @@
 using MetroFramework.Forms;
 using System.Windows.Forms;
 
-namespace RuneHelper.Calculators
+namespace RuneHelper
 {
     public partial class Welcome : MetroForm
     {
@@ -14,12 +14,7 @@ namespace RuneHelper.Calculators
         #region Load And Close Function
         private void Welcome_Load(object sender, EventArgs e)
         {
-            if(API.CheckFileIntegrity() == true)
-            {
-
-            }
-
-            if (API.CheckFileIntegrity() == true)
+            if (API.CheckFileIntegrity() == false)
             {
                 MainForm Main = new MainForm();
                 Main.Show();

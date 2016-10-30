@@ -13,7 +13,7 @@ namespace RuneHelper
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            RuneHelper.Calculators.Welcome Welcome = new RuneHelper.Calculators.Welcome();
+            Welcome Welcome = new Welcome();
             Welcome.Show();
             Application.Run();
         }

@@ -1,6 +1,6 @@
-﻿namespace RsThing
+﻿namespace RuneHelper
 {
-    partial class Form6
+    partial class AgilityCalc
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgilityCalc));
             this.CachedName = new MetroFramework.Controls.MetroButton();
             this.CharSearchButton = new MetroFramework.Controls.MetroButton();
             this.CharNameBox = new MetroFramework.Controls.MetroTextBox();
