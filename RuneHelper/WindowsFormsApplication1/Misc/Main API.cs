@@ -118,4 +118,27 @@ public static class API
         percentage = Math.Round(TotalLevel / 2715m,2);
         return Convert.ToInt32(percentage * 100).ToString();
     }
+
+    // seemed more effective to make the calc do more of the work
+    public static int GetCombatLvl(string[] LevelArray)
+    {
+        int Attack = Convert.ToInt32(LevelArray[3]);
+        int Strength = Convert.ToInt32(LevelArray[5]);
+        int Defence = Convert.ToInt32(LevelArray[7]);
+        int Ranged = Convert.ToInt32(LevelArray[11]);
+        int Magic = Convert.ToInt32(LevelArray[17]);
+        int Hp = Convert.ToInt32(LevelArray[9]);
+        int Prayer = Convert.ToInt32(LevelArray[13]);
+        int Summoning = Convert.ToInt32(LevelArray[49]);
+
+        double Melee = Attack + Strength;
+        double Range = Math.Floor(2.0 * Ranged);
+        double Mage = Math.Floor(2.0 * Magic);
+        double High = Math.Max(Math.Max(Melee, Mage), Range);
+
+        double cmb = Math.Floor(1.3 * High) + Defence + Hp + Math.Floor(Prayer / 2.0) + Math.Floor(Summoning / 2.0);
+        return Convert.ToInt32(Math.Floor(cmb / 4.0));
     }
+}
+
+

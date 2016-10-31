@@ -134,9 +134,14 @@
             this.OpenStats = new System.Windows.Forms.ToolStripMenuItem();
             this.TabControl = new MetroFramework.Controls.MetroTabControl();
             this.ExtraStats = new MetroFramework.Controls.MetroTabPage();
+            this.CombatLevel = new MetroFramework.Controls.MetroLabel();
+            this.CombatLevelLabel = new MetroFramework.Controls.MetroLabel();
             this.PercentageLabel = new MetroFramework.Controls.MetroLabel();
             this.Percentage = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.CookingLabel = new MetroFramework.Controls.MetroLabel();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.CookingBar = new MetroFramework.Controls.MetroProgressBar();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -168,6 +173,7 @@
             this.MainFormMenu.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.ExtraStats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -426,7 +432,7 @@
             // 
             // WoodcuttingBar
             // 
-            this.WoodcuttingBar.Location = new System.Drawing.Point(41, 447);
+            this.WoodcuttingBar.Location = new System.Drawing.Point(41, 477);
             this.WoodcuttingBar.MarqueeAnimationSpeed = 0;
             this.WoodcuttingBar.Maximum = 99;
             this.WoodcuttingBar.Name = "WoodcuttingBar";
@@ -462,7 +468,7 @@
             // 
             // FiremakingBar
             // 
-            this.FiremakingBar.Location = new System.Drawing.Point(41, 534);
+            this.FiremakingBar.Location = new System.Drawing.Point(253, 98);
             this.FiremakingBar.MarqueeAnimationSpeed = 0;
             this.FiremakingBar.Maximum = 99;
             this.FiremakingBar.Name = "FiremakingBar";
@@ -471,7 +477,7 @@
             // 
             // FishingBar
             // 
-            this.FishingBar.Location = new System.Drawing.Point(41, 505);
+            this.FishingBar.Location = new System.Drawing.Point(41, 535);
             this.FishingBar.MarqueeAnimationSpeed = 0;
             this.FishingBar.Maximum = 99;
             this.FishingBar.Name = "FishingBar";
@@ -480,7 +486,7 @@
             // 
             // FletchingBar
             // 
-            this.FletchingBar.Location = new System.Drawing.Point(41, 476);
+            this.FletchingBar.Location = new System.Drawing.Point(41, 506);
             this.FletchingBar.MarqueeAnimationSpeed = 0;
             this.FletchingBar.Maximum = 99;
             this.FletchingBar.Name = "FletchingBar";
@@ -656,7 +662,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(12, 447);
+            this.pictureBox8.Location = new System.Drawing.Point(12, 477);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(23, 23);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -667,7 +673,7 @@
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(12, 534);
+            this.pictureBox9.Location = new System.Drawing.Point(224, 98);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(23, 23);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -678,7 +684,7 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(12, 505);
+            this.pictureBox10.Location = new System.Drawing.Point(12, 535);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(23, 23);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -689,7 +695,7 @@
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(12, 476);
+            this.pictureBox11.Location = new System.Drawing.Point(12, 506);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(23, 23);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -964,7 +970,7 @@
             // 
             this.FiremakingLabel.AutoSize = true;
             this.FiremakingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FiremakingLabel.Location = new System.Drawing.Point(182, 539);
+            this.FiremakingLabel.Location = new System.Drawing.Point(394, 103);
             this.FiremakingLabel.Name = "FiremakingLabel";
             this.FiremakingLabel.Size = new System.Drawing.Size(16, 19);
             this.FiremakingLabel.TabIndex = 72;
@@ -974,7 +980,7 @@
             // 
             this.FishingLabel.AutoSize = true;
             this.FishingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FishingLabel.Location = new System.Drawing.Point(182, 510);
+            this.FishingLabel.Location = new System.Drawing.Point(182, 540);
             this.FishingLabel.Name = "FishingLabel";
             this.FishingLabel.Size = new System.Drawing.Size(16, 19);
             this.FishingLabel.TabIndex = 71;
@@ -984,7 +990,7 @@
             // 
             this.FletchingLabel.AutoSize = true;
             this.FletchingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FletchingLabel.Location = new System.Drawing.Point(182, 481);
+            this.FletchingLabel.Location = new System.Drawing.Point(182, 511);
             this.FletchingLabel.Name = "FletchingLabel";
             this.FletchingLabel.Size = new System.Drawing.Size(16, 19);
             this.FletchingLabel.TabIndex = 70;
@@ -994,7 +1000,7 @@
             // 
             this.WoodcuttingLabel.AutoSize = true;
             this.WoodcuttingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.WoodcuttingLabel.Location = new System.Drawing.Point(182, 452);
+            this.WoodcuttingLabel.Location = new System.Drawing.Point(182, 482);
             this.WoodcuttingLabel.Name = "WoodcuttingLabel";
             this.WoodcuttingLabel.Size = new System.Drawing.Size(16, 19);
             this.WoodcuttingLabel.TabIndex = 69;
@@ -1187,6 +1193,8 @@
             // 
             // ExtraStats
             // 
+            this.ExtraStats.Controls.Add(this.CombatLevel);
+            this.ExtraStats.Controls.Add(this.CombatLevelLabel);
             this.ExtraStats.Controls.Add(this.PercentageLabel);
             this.ExtraStats.Controls.Add(this.Percentage);
             this.ExtraStats.Controls.Add(this.label1);
@@ -1204,6 +1212,26 @@
             this.ExtraStats.VerticalScrollbarBarColor = true;
             this.ExtraStats.VerticalScrollbarHighlightOnWheel = false;
             this.ExtraStats.VerticalScrollbarSize = 10;
+            // 
+            // CombatLevel
+            // 
+            this.CombatLevel.AutoSize = true;
+            this.CombatLevel.BackColor = System.Drawing.Color.Transparent;
+            this.CombatLevel.Location = new System.Drawing.Point(93, 107);
+            this.CombatLevel.Name = "CombatLevel";
+            this.CombatLevel.Size = new System.Drawing.Size(16, 19);
+            this.CombatLevel.TabIndex = 65;
+            this.CombatLevel.Text = "0";
+            // 
+            // CombatLevelLabel
+            // 
+            this.CombatLevelLabel.AutoSize = true;
+            this.CombatLevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CombatLevelLabel.Location = new System.Drawing.Point(0, 107);
+            this.CombatLevelLabel.Name = "CombatLevelLabel";
+            this.CombatLevelLabel.Size = new System.Drawing.Size(90, 19);
+            this.CombatLevelLabel.TabIndex = 64;
+            this.CombatLevelLabel.Text = "Combat Level";
             // 
             // PercentageLabel
             // 
@@ -1239,6 +1267,36 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
+            // CookingLabel
+            // 
+            this.CookingLabel.AutoSize = true;
+            this.CookingLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CookingLabel.Location = new System.Drawing.Point(182, 452);
+            this.CookingLabel.Name = "CookingLabel";
+            this.CookingLabel.Size = new System.Drawing.Size(16, 19);
+            this.CookingLabel.TabIndex = 91;
+            this.CookingLabel.Text = "0";
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
+            this.pictureBox27.Location = new System.Drawing.Point(12, 447);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox27.TabIndex = 90;
+            this.pictureBox27.TabStop = false;
+            // 
+            // CookingBar
+            // 
+            this.CookingBar.Location = new System.Drawing.Point(41, 447);
+            this.CookingBar.MarqueeAnimationSpeed = 0;
+            this.CookingBar.Maximum = 99;
+            this.CookingBar.Name = "CookingBar";
+            this.CookingBar.Size = new System.Drawing.Size(135, 23);
+            this.CookingBar.TabIndex = 89;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1246,9 +1304,12 @@
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(826, 570);
             this.ContextMenuStrip = this.MainFormMenu;
+            this.Controls.Add(this.CookingLabel);
             this.Controls.Add(this.TabControl);
+            this.Controls.Add(this.pictureBox27);
             this.Controls.Add(this.InventionLabel);
             this.Controls.Add(this.DivinationLabel);
+            this.Controls.Add(this.CookingBar);
             this.Controls.Add(this.DungeoneeringLabel);
             this.Controls.Add(this.SummoningLabel);
             this.Controls.Add(this.ConstructionLabel);
@@ -1258,11 +1319,13 @@
             this.Controls.Add(this.SlayerLabel);
             this.Controls.Add(this.ThievingLabel);
             this.Controls.Add(this.AgilityLabel);
+            this.Controls.Add(this.FiremakingBar);
+            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.HerbloreLabel);
+            this.Controls.Add(this.FiremakingLabel);
             this.Controls.Add(this.MiningLabel);
             this.Controls.Add(this.SmithingLabel);
             this.Controls.Add(this.CraftingLabel);
-            this.Controls.Add(this.FiremakingLabel);
             this.Controls.Add(this.FishingLabel);
             this.Controls.Add(this.FletchingLabel);
             this.Controls.Add(this.WoodcuttingLabel);
@@ -1290,7 +1353,6 @@
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox22);
-            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox8);
@@ -1314,7 +1376,6 @@
             this.Controls.Add(this.MiningBar);
             this.Controls.Add(this.SmithingBar);
             this.Controls.Add(this.CraftingBar);
-            this.Controls.Add(this.FiremakingBar);
             this.Controls.Add(this.FishingBar);
             this.Controls.Add(this.FletchingBar);
             this.Controls.Add(this.WoodcuttingBar);
@@ -1368,6 +1429,7 @@
             this.TabControl.ResumeLayout(false);
             this.ExtraStats.ResumeLayout(false);
             this.ExtraStats.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1482,6 +1544,11 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroLabel PercentageLabel;
         private MetroFramework.Controls.MetroLabel Percentage;
+        private MetroFramework.Controls.MetroLabel CombatLevel;
+        private MetroFramework.Controls.MetroLabel CombatLevelLabel;
+        private MetroFramework.Controls.MetroLabel CookingLabel;
+        private System.Windows.Forms.PictureBox pictureBox27;
+        private MetroFramework.Controls.MetroProgressBar CookingBar;
     }
 }
 

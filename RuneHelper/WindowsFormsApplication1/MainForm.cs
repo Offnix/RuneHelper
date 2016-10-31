@@ -123,16 +123,18 @@ namespace RuneHelper
                 AverageLevel.Text =  API.GetMean(LevelArray).ToString();
                 TotalLevel.Text =  LevelArray[1];
                 PercentageLabel.Text = API.GetLevelPercentage(Convert.ToInt32(LevelArray[1])) + "%";
+                CombatLevel.Text = API.GetCombatLvl(LevelArray).ToString();
 
                 // find a way to minify this and your a god amongst men
                 //progress bars
-                AttackBar.Value = Convert.ToInt32(LevelArray[5]);
-                DefenceBar.Value = Convert.ToInt32(LevelArray[7]);
-                StrengthBar.Value = Convert.ToInt32(LevelArray[9]);
-                HealthBar.Value = Convert.ToInt32(LevelArray[11]);
-                RangedBar.Value = Convert.ToInt32(LevelArray[13]);
-                PrayerBar.Value = Convert.ToInt32(LevelArray[15]);
-                MagicBar.Value = Convert.ToInt32(LevelArray[17]);
+                AttackBar.Value = Convert.ToInt32(LevelArray[3]);
+                DefenceBar.Value = Convert.ToInt32(LevelArray[5]);
+                StrengthBar.Value = Convert.ToInt32(LevelArray[7]);
+                HealthBar.Value = Convert.ToInt32(LevelArray[9]);
+                RangedBar.Value = Convert.ToInt32(LevelArray[11]);
+                PrayerBar.Value = Convert.ToInt32(LevelArray[13]);
+                MagicBar.Value = Convert.ToInt32(LevelArray[15]);
+                CookingBar.Value = Convert.ToInt32(LevelArray[17]);
                 WoodcuttingBar.Value = Convert.ToInt32(LevelArray[19]);
                 FletchingBar.Value = Convert.ToInt32(LevelArray[21]);
                 FishingBar.Value = Convert.ToInt32(LevelArray[23]);
@@ -153,13 +155,14 @@ namespace RuneHelper
                 DivinationBar.Value = Convert.ToInt32(LevelArray[53]);
                 InventorBar.Value = Convert.ToInt32(LevelArray[55]);
                 //labels
-                AttackLabel.Text = LevelArray[5];
-                DefenceLabel.Text = LevelArray[7];
-                StrengthLabel.Text = LevelArray[9];
-                HealthLabel.Text = LevelArray[11];
-                RangedLabel.Text = LevelArray[13];
-                PrayerLabel.Text = LevelArray[15];
-                MagicLabel.Text = LevelArray[17];
+                AttackLabel.Text = LevelArray[3];
+                DefenceLabel.Text = LevelArray[5];
+                StrengthLabel.Text = LevelArray[7];
+                HealthLabel.Text = LevelArray[9];
+                RangedLabel.Text = LevelArray[11];
+                PrayerLabel.Text = LevelArray[13];
+                MagicLabel.Text = LevelArray[15];
+                CookingLabel.Text = LevelArray[17];
                 WoodcuttingLabel.Text = LevelArray[19];
                 FletchingLabel.Text = LevelArray[21];
                 FishingLabel.Text = LevelArray[23];
@@ -185,6 +188,11 @@ namespace RuneHelper
             {
             }   
         }
-        #endregion 
+
+        private void ToInt32(string v)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }
