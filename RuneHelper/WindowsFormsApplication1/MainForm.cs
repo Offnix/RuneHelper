@@ -11,7 +11,7 @@ namespace RuneHelper
             InitializeComponent();
         }
 
-        public static string[] SaveData;
+        public static string[] SaveData = new string[33];
         public static string[] LevelArray;
 
         #region Open and close Functions
@@ -28,8 +28,14 @@ namespace RuneHelper
         #endregion
 
         #region Form Controls
+        private void GraphUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateGraph();
+        }
+
         private void ExitButton_Click(object sender, EventArgs e)
         {
+            API.StreamWriter(string.Join(",",SaveData), @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
             Application.Exit();
         }
         #endregion
@@ -106,7 +112,7 @@ namespace RuneHelper
         public void ReloadPage()
         {
             Cursor.Current = Cursors.WaitCursor;
-
+            XPTracker.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             try
             {
                 ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + SaveData[0] + "/chat.gif");              
@@ -118,12 +124,14 @@ namespace RuneHelper
             
             try
             {
+
                 LevelArray = API.UpdateLevels(SaveData[0]);
                 UsernameLabel.Text = SaveData[0];
                 AverageLevel.Text =  API.GetMean(LevelArray).ToString();
                 TotalLevel.Text =  LevelArray[1];
                 PercentageLabel.Text = API.GetLevelPercentage(Convert.ToInt32(LevelArray[1])) + "%";
                 CombatLevel.Text = API.GetCombatLvl(LevelArray).ToString();
+                UpdateGraph();
 
                 // find a way to minify this and your a god amongst men
                 //progress bars
@@ -186,12 +194,36 @@ namespace RuneHelper
             }
             catch
             {
+
             }   
         }
 
-        private void ToInt32(string v)
+        public void UpdateGraph()
         {
-            throw new NotImplementedException();
+            int count = 2;
+            string[] arraysplit = LevelArray[2].Split('\n');
+            SaveData[DateTime.Now.Day + 1] = arraysplit[0];
+
+            if(DateTime.Now.Month != Convert.ToInt32(SaveData[1]))
+            {
+                SaveData[1] = DateTime.Now.Month.ToString();
+                while(count < SaveData.Length)
+                {
+                    SaveData[count] = "0";
+                    count++;
+                }
+            }
+            count = 2;
+            while(count < SaveData.Length)
+            {
+                if (string.IsNullOrEmpty(SaveData[count]) == false || SaveData[count] != "0")
+                {
+                    XPTracker.Series[0].Points.AddXY(count, Convert.ToInt32(SaveData[count]));
+                }
+                count++;
+            }
+
+
         }
         #endregion
     }

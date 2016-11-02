@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new MetroFramework.Controls.MetroLabel();
             this.AttackBar = new MetroFramework.Controls.MetroProgressBar();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
@@ -139,6 +142,9 @@
             this.PercentageLabel = new MetroFramework.Controls.MetroLabel();
             this.Percentage = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.XptrackerLabel = new MetroFramework.Controls.MetroLabel();
+            this.GraphUpdate = new MetroFramework.Controls.MetroButton();
+            this.XPTracker = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.CookingLabel = new MetroFramework.Controls.MetroLabel();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.CookingBar = new MetroFramework.Controls.MetroProgressBar();
@@ -173,6 +179,8 @@
             this.MainFormMenu.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.ExtraStats.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.XPTracker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,7 +188,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(3, 49);
+            this.label1.Location = new System.Drawing.Point(3, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 19);
             this.label1.TabIndex = 0;
@@ -188,7 +196,7 @@
             // 
             // AttackBar
             // 
-            this.AttackBar.Location = new System.Drawing.Point(41, 238);
+            this.AttackBar.Location = new System.Drawing.Point(41, 244);
             this.AttackBar.MarqueeAnimationSpeed = 0;
             this.AttackBar.Maximum = 99;
             this.AttackBar.Name = "AttackBar";
@@ -206,7 +214,7 @@
             this.OtherToolStrip});
             this.MainToolStrip.Location = new System.Drawing.Point(20, 60);
             this.MainToolStrip.Name = "MainToolStrip";
-            this.MainToolStrip.Size = new System.Drawing.Size(786, 35);
+            this.MainToolStrip.Size = new System.Drawing.Size(810, 35);
             this.MainToolStrip.TabIndex = 3;
             this.MainToolStrip.Text = "Main Tool Strip";
             // 
@@ -338,7 +346,7 @@
             // 
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.UsernameLabel.Location = new System.Drawing.Point(50, 213);
+            this.UsernameLabel.Location = new System.Drawing.Point(57, 213);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(68, 19);
             this.UsernameLabel.TabIndex = 5;
@@ -357,7 +365,7 @@
             // ExitButton
             // 
             this.ExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitButton.Location = new System.Drawing.Point(722, 534);
+            this.ExitButton.Location = new System.Drawing.Point(748, 544);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(98, 35);
             this.ExitButton.TabIndex = 7;
@@ -405,7 +413,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 238);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 244);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(23, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -880,7 +888,7 @@
             // 
             this.AverageLevel.AutoSize = true;
             this.AverageLevel.BackColor = System.Drawing.Color.Transparent;
-            this.AverageLevel.Location = new System.Drawing.Point(93, 49);
+            this.AverageLevel.Location = new System.Drawing.Point(93, 59);
             this.AverageLevel.Name = "AverageLevel";
             this.AverageLevel.Size = new System.Drawing.Size(16, 19);
             this.AverageLevel.TabIndex = 59;
@@ -910,7 +918,7 @@
             // 
             this.AttackLabel.AutoSize = true;
             this.AttackLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AttackLabel.Location = new System.Drawing.Point(182, 243);
+            this.AttackLabel.Location = new System.Drawing.Point(182, 249);
             this.AttackLabel.Name = "AttackLabel";
             this.AttackLabel.Size = new System.Drawing.Size(16, 19);
             this.AttackLabel.TabIndex = 62;
@@ -1186,8 +1194,8 @@
             this.TabControl.Controls.Add(this.metroTabPage1);
             this.TabControl.Location = new System.Drawing.Point(435, 100);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(368, 429);
+            this.TabControl.SelectedIndex = 1;
+            this.TabControl.Size = new System.Drawing.Size(411, 438);
             this.TabControl.TabIndex = 88;
             this.TabControl.UseSelectable = true;
             // 
@@ -1206,7 +1214,7 @@
             this.ExtraStats.HorizontalScrollbarSize = 10;
             this.ExtraStats.Location = new System.Drawing.Point(4, 38);
             this.ExtraStats.Name = "ExtraStats";
-            this.ExtraStats.Size = new System.Drawing.Size(360, 387);
+            this.ExtraStats.Size = new System.Drawing.Size(403, 396);
             this.ExtraStats.TabIndex = 0;
             this.ExtraStats.Text = "Extra Stats";
             this.ExtraStats.VerticalScrollbarBarColor = true;
@@ -1217,7 +1225,7 @@
             // 
             this.CombatLevel.AutoSize = true;
             this.CombatLevel.BackColor = System.Drawing.Color.Transparent;
-            this.CombatLevel.Location = new System.Drawing.Point(93, 107);
+            this.CombatLevel.Location = new System.Drawing.Point(93, 39);
             this.CombatLevel.Name = "CombatLevel";
             this.CombatLevel.Size = new System.Drawing.Size(16, 19);
             this.CombatLevel.TabIndex = 65;
@@ -1227,7 +1235,7 @@
             // 
             this.CombatLevelLabel.AutoSize = true;
             this.CombatLevelLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CombatLevelLabel.Location = new System.Drawing.Point(0, 107);
+            this.CombatLevelLabel.Location = new System.Drawing.Point(3, 39);
             this.CombatLevelLabel.Name = "CombatLevelLabel";
             this.CombatLevelLabel.Size = new System.Drawing.Size(90, 19);
             this.CombatLevelLabel.TabIndex = 64;
@@ -1237,7 +1245,7 @@
             // 
             this.PercentageLabel.AutoSize = true;
             this.PercentageLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PercentageLabel.Location = new System.Drawing.Point(93, 81);
+            this.PercentageLabel.Location = new System.Drawing.Point(146, 81);
             this.PercentageLabel.Name = "PercentageLabel";
             this.PercentageLabel.Size = new System.Drawing.Size(16, 19);
             this.PercentageLabel.TabIndex = 63;
@@ -1247,25 +1255,65 @@
             // 
             this.Percentage.AutoSize = true;
             this.Percentage.BackColor = System.Drawing.Color.Transparent;
-            this.Percentage.Location = new System.Drawing.Point(0, 81);
+            this.Percentage.Location = new System.Drawing.Point(3, 81);
             this.Percentage.Name = "Percentage";
-            this.Percentage.Size = new System.Drawing.Size(75, 19);
+            this.Percentage.Size = new System.Drawing.Size(137, 19);
             this.Percentage.TabIndex = 62;
-            this.Percentage.Text = "Percentage";
+            this.Percentage.Text = "Percentage Complete";
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.XptrackerLabel);
+            this.metroTabPage1.Controls.Add(this.GraphUpdate);
+            this.metroTabPage1.Controls.Add(this.XPTracker);
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(360, 387);
+            this.metroTabPage1.Size = new System.Drawing.Size(403, 396);
             this.metroTabPage1.TabIndex = 1;
-            this.metroTabPage1.Text = "To be added";
+            this.metroTabPage1.Text = "Monthly XP";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // XptrackerLabel
+            // 
+            this.XptrackerLabel.AutoSize = true;
+            this.XptrackerLabel.Location = new System.Drawing.Point(25, 17);
+            this.XptrackerLabel.Name = "XptrackerLabel";
+            this.XptrackerLabel.Size = new System.Drawing.Size(128, 19);
+            this.XptrackerLabel.TabIndex = 4;
+            this.XptrackerLabel.Text = "Monthly Exp Tracker";
+            // 
+            // GraphUpdate
+            // 
+            this.GraphUpdate.Location = new System.Drawing.Point(25, 309);
+            this.GraphUpdate.Name = "GraphUpdate";
+            this.GraphUpdate.Size = new System.Drawing.Size(115, 23);
+            this.GraphUpdate.TabIndex = 3;
+            this.GraphUpdate.Text = "Update Graph";
+            this.GraphUpdate.UseSelectable = true;
+            this.GraphUpdate.Click += new System.EventHandler(this.GraphUpdate_Click);
+            // 
+            // XPTracker
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.XPTracker.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.XPTracker.Legends.Add(legend2);
+            this.XPTracker.Location = new System.Drawing.Point(-4, 39);
+            this.XPTracker.Name = "XPTracker";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.XPTracker.Series.Add(series2);
+            this.XPTracker.Size = new System.Drawing.Size(411, 271);
+            this.XPTracker.TabIndex = 2;
+            this.XPTracker.Text = "MonthlyXP";
             // 
             // CookingLabel
             // 
@@ -1302,7 +1350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(826, 570);
+            this.ClientSize = new System.Drawing.Size(850, 583);
             this.ContextMenuStrip = this.MainFormMenu;
             this.Controls.Add(this.CookingLabel);
             this.Controls.Add(this.TabControl);
@@ -1429,6 +1477,9 @@
             this.TabControl.ResumeLayout(false);
             this.ExtraStats.ResumeLayout(false);
             this.ExtraStats.PerformLayout();
+            this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.XPTracker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1549,6 +1600,9 @@
         private MetroFramework.Controls.MetroLabel CookingLabel;
         private System.Windows.Forms.PictureBox pictureBox27;
         private MetroFramework.Controls.MetroProgressBar CookingBar;
+        private System.Windows.Forms.DataVisualization.Charting.Chart XPTracker;
+        private MetroFramework.Controls.MetroButton GraphUpdate;
+        private MetroFramework.Controls.MetroLabel XptrackerLabel;
     }
 }
 

@@ -119,9 +119,8 @@ public static class API
         return Convert.ToInt32(percentage * 100).ToString();
     }
 
-    // seemed more effective to make the calc do more of the work
     public static int GetCombatLvl(string[] LevelArray)
-    {
+    {      
         int Attack = Convert.ToInt32(LevelArray[3]);
         int Strength = Convert.ToInt32(LevelArray[5]);
         int Defence = Convert.ToInt32(LevelArray[7]);
