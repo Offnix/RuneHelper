@@ -251,8 +251,9 @@ namespace RuneHelper
             count = 2;
             while(count < SaveData.Length)
             {
-                if (string.IsNullOrEmpty(SaveData[count]) == false || SaveData[count] != "0")
+                if (string.IsNullOrEmpty(SaveData[count]) == false && SaveData[count] != "0")
                 {
+                    Console.WriteLine(SaveData[count]);
                     XPTracker.Series[0].Points.AddXY(count, Convert.ToInt32(SaveData[count]));
                 }
                 count++;
