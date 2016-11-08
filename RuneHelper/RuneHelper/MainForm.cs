@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using System.Linq;
 
 namespace RuneHelper
 {
@@ -41,63 +42,92 @@ namespace RuneHelper
         #endregion
 
         #region Toolbar Controls
-        private void OpenSettingsToolStrip_Click(object sender, EventArgs e)
-        {
-            SettingsForm Settings = new SettingsForm();
-            Settings.Show();
-        }
-
+        
         private void ReloadPageToolStrip_Click(object sender, EventArgs e)
         {
             ReloadPage();
         }
 
+        private void OpenSettingsToolStrip_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<SettingsForm>().Any())
+            {
+                SettingsForm Settings = new SettingsForm();
+                Settings.Show();
+            }
+        }
+
         private void WoodcuttingToolStrip_Click(object sender, EventArgs e)
         {
-            WooducttingCalculator Woodcut = new WooducttingCalculator();
-            Woodcut.Show();
+            if (!Application.OpenForms.OfType<WooducttingCalculator>().Any())
+            {
+                WooducttingCalculator Woodcut = new WooducttingCalculator();
+                Woodcut.Show();
+            }
         }
 
         private void MiningToolStrip_Click(object sender, EventArgs e)
         {
-            MiningCalc Mining = new MiningCalc();
-            Mining.Show();
+            if (!Application.OpenForms.OfType<MiningCalc>().Any())
+            {
+                MiningCalc Mining = new MiningCalc();
+                Mining.Show();
+            }
         }
 
         private void AgilityToolStrip_Click(object sender, EventArgs e)
         {
-            AgilityCalc Agil = new AgilityCalc();
-            Agil.Show();
+            if (!Application.OpenForms.OfType<AgilityCalc>().Any())
+            {
+                AgilityCalc Agil = new AgilityCalc();
+                Agil.Show();
+            }
         }
 
         private void silverHawkFeatherToolStrip_Click(object sender, EventArgs e)
         {
-            SilverhawkForm Silverhawk = new SilverhawkForm();
-            Silverhawk.Show();
+            if (!Application.OpenForms.OfType<SilverhawkForm>().Any())
+            {
+                SilverhawkForm Silverhawk = new SilverhawkForm();
+                Silverhawk.Show();
+            }
         }
 
         private void AboutToolStrip_Click(object sender, EventArgs e)
         {
-            RuneHelper.About AboutForm = new RuneHelper.About();
-            AboutForm.Show();
+            if (!Application.OpenForms.OfType<About>().Any())
+            {
+                About AboutForm = new About();
+                AboutForm.Show();
+            }
         }
 
         private void FireMakingToolStrip_Click(object sender, EventArgs e)
         {
-            FireMakingCalc FireMaking = new FireMakingCalc();
-            FireMaking.Show();
+            if (!Application.OpenForms.OfType<FireMakingCalc>().Any())
+            {
+                FireMakingCalc FireMaking = new FireMakingCalc();
+                FireMaking.Show();
+            }
         }
 
         private void InventionPerkMetaToolStrip_Click(object sender, EventArgs e)
         {
-            RuneHelper.InventionMeta InventionForm = new RuneHelper.InventionMeta();
-            InventionForm.Show();
+            if (!Application.OpenForms.OfType<InventionMeta>().Any())
+            {
+                InventionMeta InventionForm = new InventionMeta();
+                InventionForm.Show();
+            }
         }
 
         private void CompareStatsToolStrip_Click(object sender, EventArgs e)
         {
-            RuneHelper.ComparePlayer Compare = new RuneHelper.ComparePlayer();
-            Compare.Show();
+            if (!Application.OpenForms.OfType<ComparePlayer>().Any())
+            {
+                ComparePlayer Compare = new ComparePlayer();
+                Compare.Show();
+            }
+            
         }
         #endregion
 
@@ -200,6 +230,11 @@ namespace RuneHelper
 
         public void UpdateGraph()
         {
+            foreach (var series in XPTracker.Series)
+            {
+                series.Points.Clear();
+            }
+
             int count = 2;
             string[] arraysplit = LevelArray[2].Split('\n');
             SaveData[DateTime.Now.Day + 1] = arraysplit[0];
@@ -222,8 +257,6 @@ namespace RuneHelper
                 }
                 count++;
             }
-
-
         }
         #endregion
     }

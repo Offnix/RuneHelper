@@ -1,6 +1,6 @@
-﻿using MetroFramework.Forms;
+﻿using MetroFramework;
+using MetroFramework.Forms;
 using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace RuneHelper
@@ -27,5 +27,20 @@ namespace RuneHelper
             this.Close();
         }
         #endregion
+
+        private void DeleteXP_Click(object sender, EventArgs e)
+        {
+            
+            if(MetroMessageBox.Show(this, "Clicking ok will delete all cached data stored over this last month. Are you sure? ", "Delete saved XP data", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                int count = 2;
+
+                while (count < MainForm.SaveData.Length)
+                {
+                    MainForm.SaveData[count] = "0";
+                    count++;
+                }
+            }
+        }
     }
 }
