@@ -235,7 +235,7 @@ namespace RuneHelper
                 series.Points.Clear();
             }
 
-            int count = 2;
+            int count = 3;
             string[] arraysplit = LevelArray[2].Split('\n');
             SaveData[DateTime.Now.Day + 1] = arraysplit[0];
 
@@ -248,7 +248,7 @@ namespace RuneHelper
                     count++;
                 }
             }
-            count = 2;
+            count = 3;
             while(count < SaveData.Length)
             {
                 if (string.IsNullOrEmpty(SaveData[count]) == false && SaveData[count] != "0")

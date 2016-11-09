@@ -26,14 +26,13 @@ namespace RuneHelper
             MainForm.SaveData[0] = UsernameTextBox.Text;
             this.Close();
         }
-        #endregion
 
         private void DeleteXP_Click(object sender, EventArgs e)
         {
-            
-            if(MetroMessageBox.Show(this, "Clicking ok will delete all cached data stored over this last month. Are you sure? ", "Delete saved XP data", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+
+            if (MetroMessageBox.Show(this, "Clicking ok will delete all cached data stored over this last month. Are you sure? ", "Delete saved XP data", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                int count = 2;
+                int count = 3;
 
                 while (count < MainForm.SaveData.Length)
                 {
@@ -42,5 +41,7 @@ namespace RuneHelper
                 }
             }
         }
+        #endregion
+
     }
 }
