@@ -16,9 +16,9 @@ public static class API
     {
         try
         {
-        StreamWriter writer = new StreamWriter(FileLocation);
-        writer.Write(WriteText);
-        writer.Close();
+            StreamWriter writer = new StreamWriter(FileLocation);
+            writer.Write(WriteText);
+            writer.Close();
         }
         catch
         {
@@ -56,7 +56,6 @@ public static class API
         return null;
     }
 
-
     public static int GetMean(String[] LevelArray)
     {
         int counter = 5;
@@ -73,7 +72,7 @@ public static class API
         catch
         {
             return 0;
-        }       
+        }
     }
 
     public static string[] GetStats(string Name)
@@ -91,7 +90,7 @@ public static class API
         {
             MessageBox.Show("ERROR: Username was not found in the runescape highscores. Or highscores or are offline", "RuneHelper");
             return null;
-        }        
+        }
     }
 
     public static bool CheckFileIntegrity()
@@ -110,17 +109,17 @@ public static class API
             return true;
         }
         return false;
-        }
+    }
 
     public static string GetLevelPercentage(decimal TotalLevel)
     {
         decimal percentage;
-        percentage = Math.Round(TotalLevel / 2715m,2);
+        percentage = Math.Round(TotalLevel / 2715m, 2);
         return Convert.ToInt32(percentage * 100).ToString();
     }
 
     public static int GetCombatLvl(string[] LevelArray)
-    {      
+    {
         int Attack = Convert.ToInt32(LevelArray[3]);
         int Strength = Convert.ToInt32(LevelArray[5]);
         int Defence = Convert.ToInt32(LevelArray[7]);
@@ -139,5 +138,3 @@ public static class API
         return Convert.ToInt32(Math.Floor(cmb / 4.0));
     }
 }
-
-

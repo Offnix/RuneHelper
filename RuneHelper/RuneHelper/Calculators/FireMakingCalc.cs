@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
 namespace RuneHelper
 {
@@ -10,13 +10,15 @@ namespace RuneHelper
         {
             InitializeComponent();
         }
-        string result;
-        string[] WCArray;
-        string[] LevelArray;
 
-        public static float[] FireMakeXpArray = new float[] {25 ,37.5f ,67.5f ,105 ,125 ,135 ,157.5f ,171 ,202.5f ,303.8f ,435};
+        private string result;
+        private string[] WCArray;
+        private string[] LevelArray;
+
+        public static float[] FireMakeXpArray = new float[] { 25, 37.5f, 67.5f, 105, 125, 135, 157.5f, 171, 202.5f, 303.8f, 435 };
 
         #region Form Buttons
+
         private void CharSearchButton_Click(object sender, EventArgs e)
         {
             string Name = CharNameBox.Text;
@@ -34,7 +36,7 @@ namespace RuneHelper
             else
             {
                 MessageBox.Show("Target Level Cant be under or same as current level", "ERROR");
-            }            
+            }
         }
 
         private void CachedName_Click(object sender, EventArgs e)
@@ -49,9 +51,11 @@ namespace RuneHelper
         {
             this.Close();
         }
-        #endregion
+
+        #endregion Form Buttons
 
         #region Functions
+
         private void ShowBoxes()
         {
             TargetLevelLabel.Visible = true;
@@ -82,16 +86,16 @@ namespace RuneHelper
             {
                 double NeededXP;
                 int XP = Convert.ToInt32(XPBox.Text) + Convert.ToInt32(BonusBox.Text);
-                NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;              
+                NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;
                 AmountBox.Text = Convert.ToString(Math.Round(NeededXP / FireMakeXpArray[TreeTypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
             }
             catch
             {
                 MessageBox.Show("Could not run calculation, please check all fields have been filled with no text", "ERROR");
-            }         
+            }
         }
-        #endregion
+
+        #endregion Functions
     }
 }
-

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
-using MetroFramework.Forms;
+﻿using MetroFramework.Forms;
+using System;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace RuneHelper
 {
@@ -16,19 +16,22 @@ namespace RuneHelper
         public static string[] LevelArray;
 
         #region Open and close Functions
+
         private void Form1_Load(object sender, EventArgs e)
         {
             SaveData = API.StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt").Split(',');
-            ReloadPage();       
+            ReloadPage();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Application.Exit();
         }
-        #endregion
+
+        #endregion Open and close Functions
 
         #region Form Controls
+
         private void GraphUpdate_Click(object sender, EventArgs e)
         {
             UpdateGraph();
@@ -36,13 +39,14 @@ namespace RuneHelper
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            API.StreamWriter(string.Join(",",SaveData), @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
+            API.StreamWriter(string.Join(",", SaveData), @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
             Application.Exit();
         }
-        #endregion
+
+        #endregion Form Controls
 
         #region Toolbar Controls
-        
+
         private void ReloadPageToolStrip_Click(object sender, EventArgs e)
         {
             ReloadPage();
@@ -127,38 +131,40 @@ namespace RuneHelper
                 ComparePlayer Compare = new ComparePlayer();
                 Compare.Show();
             }
-            
         }
-        #endregion
+
+        #endregion Toolbar Controls
 
         #region Context Menu
+
         private void OpenStats_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + SaveData[0].Replace(" ","+"));
+            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + SaveData[0].Replace(" ", "+"));
         }
-        #endregion
+
+        #endregion Context Menu
 
         #region Functions
+
         public void ReloadPage()
         {
             Cursor.Current = Cursors.WaitCursor;
             XPTracker.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             try
             {
-                ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + SaveData[0] + "/chat.gif");              
+                ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + SaveData[0] + "/chat.gif");
             }
             catch
             {
                 ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/default_chat.png?");
             }
-            
+
             try
             {
-
                 LevelArray = API.UpdateLevels(SaveData[0]);
                 UsernameLabel.Text = SaveData[0];
-                AverageLevel.Text =  API.GetMean(LevelArray).ToString();
-                TotalLevel.Text =  LevelArray[1];
+                AverageLevel.Text = API.GetMean(LevelArray).ToString();
+                TotalLevel.Text = LevelArray[1];
                 PercentageLabel.Text = API.GetLevelPercentage(Convert.ToInt32(LevelArray[1])) + "%";
                 CombatLevel.Text = API.GetCombatLvl(LevelArray).ToString();
                 UpdateGraph();
@@ -224,8 +230,7 @@ namespace RuneHelper
             }
             catch
             {
-
-            }   
+            }
         }
 
         public void UpdateGraph()
@@ -239,26 +244,26 @@ namespace RuneHelper
             string[] arraysplit = LevelArray[2].Split('\n');
             SaveData[DateTime.Now.Day + 1] = arraysplit[0];
 
-            if(DateTime.Now.Month != Convert.ToInt32(SaveData[1]))
+            if (DateTime.Now.Month != Convert.ToInt32(SaveData[1]))
             {
                 SaveData[1] = DateTime.Now.Month.ToString();
-                while(count < SaveData.Length)
+                while (count < SaveData.Length)
                 {
                     SaveData[count] = "0";
                     count++;
                 }
             }
             count = 3;
-            while(count < SaveData.Length)
+            while (count < SaveData.Length)
             {
                 if (string.IsNullOrEmpty(SaveData[count]) == false && SaveData[count] != "0")
                 {
-                    Console.WriteLine(SaveData[count]);
                     XPTracker.Series[0].Points.AddXY(count, Convert.ToInt32(SaveData[count]));
                 }
                 count++;
             }
         }
-        #endregion
+
+        #endregion Functions
     }
 }

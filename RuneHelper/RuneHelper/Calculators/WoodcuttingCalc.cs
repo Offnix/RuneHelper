@@ -1,7 +1,6 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Windows.Forms;
-using RuneHelper;
-using MetroFramework.Forms;
 
 namespace RuneHelper
 {
@@ -12,13 +11,14 @@ namespace RuneHelper
             InitializeComponent();
         }
 
-        string result;
-        string[] WCArray;
-        string[] LevelArray;
+        private string result;
+        private string[] WCArray;
+        private string[] LevelArray;
 
         public static float[] WoodCutXpArray = new float[] { 25, 37.5f, 67.5f, 85, 100, 82.5f, 357.7f, 125, 140.2f, 165, 332.5f, 175, 250, 275, 320, 325, 120, 434.5f, 655.5f };
 
         #region Form Buttons
+
         private void CharSearchButton_Click(object sender, EventArgs e)
         {
             string Name = CharNameBox.Text;
@@ -36,7 +36,7 @@ namespace RuneHelper
             else
             {
                 MessageBox.Show("Target Level Cant be under or same as current level", "ERROR");
-            }            
+            }
         }
 
         private void CachedName_Click(object sender, EventArgs e)
@@ -51,9 +51,11 @@ namespace RuneHelper
         {
             this.Close();
         }
-        #endregion
+
+        #endregion Form Buttons
 
         #region Functions
+
         private void ShowBoxes()
         {
             TargetLevelLabel.Visible = true;
@@ -84,16 +86,16 @@ namespace RuneHelper
             {
                 double NeededXP;
                 int XP = Convert.ToInt32(XPBox.Text) + Convert.ToInt32(BonusBox.Text);
-                NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;              
+                NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;
                 AmountBox.Text = Convert.ToString(Math.Round(NeededXP / WoodCutXpArray[TreeTypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
             }
             catch
             {
                 MessageBox.Show("Could not run calculation, please check all fields have been filled with no text", "ERROR");
-            }         
+            }
         }
-        #endregion
+
+        #endregion Functions
     }
 }
-

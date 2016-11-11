@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
 namespace RuneHelper
 {
@@ -13,7 +13,6 @@ namespace RuneHelper
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void AftershockIcon_Click(object sender, EventArgs e)

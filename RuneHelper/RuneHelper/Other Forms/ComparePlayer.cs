@@ -7,6 +7,7 @@ namespace RuneHelper
     {
         public string[] LevelArray;
         public string[] LevelArray2;
+
         public ComparePlayer()
         {
             InitializeComponent();
@@ -150,6 +151,7 @@ namespace RuneHelper
             {
             }
         }
+
         private void CachedName_Click(object sender, EventArgs e)
         {
             PLayerInput1.Text = MainForm.SaveData[0];
@@ -157,7 +159,7 @@ namespace RuneHelper
 
         private void OpenStats_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?category_type=-1&user1="+ PLayerInput1.Text.Replace(" ","+")+"&user2=" + PlayerInput2.Text.Replace(" ", "+"));
+            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?category_type=-1&user1=" + PLayerInput1.Text.Replace(" ", "+") + "&user2=" + PlayerInput2.Text.Replace(" ", "+"));
         }
     }
 }

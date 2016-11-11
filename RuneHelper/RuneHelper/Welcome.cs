@@ -1,5 +1,5 @@
-﻿using System;
-using MetroFramework.Forms;
+﻿using MetroFramework.Forms;
+using System;
 using System.Windows.Forms;
 
 namespace RuneHelper
@@ -12,6 +12,7 @@ namespace RuneHelper
         }
 
         #region Load And Close Function
+
         private void Welcome_Load(object sender, EventArgs e)
         {
             if (API.CheckFileIntegrity() == false)
@@ -19,22 +20,25 @@ namespace RuneHelper
                 MainForm Main = new MainForm();
                 Main.Show();
                 this.Close();
-            }   
+            }
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
         }
-        #endregion
+
+        #endregion Load And Close Function
 
         #region Form Controls
+
         private void ConfirmInput_Click(object sender, EventArgs e)
         {
-            API.StreamWriter(UsernameInput.Text+","+DateTime.Now.Month, @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
+            API.StreamWriter(UsernameInput.Text + "," + DateTime.Now.Month, @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
             RuneHelper.MainForm Mainform = new RuneHelper.MainForm();
             Mainform.Show();
             this.Close();
         }
-        #endregion
+
+        #endregion Form Controls
     }
 }

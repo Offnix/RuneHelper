@@ -1,7 +1,6 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Windows.Forms;
-using RuneHelper;
-using MetroFramework.Forms;
 
 namespace RuneHelper
 {
@@ -11,14 +10,15 @@ namespace RuneHelper
         {
             InitializeComponent();
         }
-        string result;
-        string[] AgilArray;
-        string[] LevelArray;
 
+        private string result;
+        private string[] AgilArray;
+        private string[] LevelArray;
 
-        public static float[] CourseXPArray = new float[] { 79.5f, 86.5f, 750, 1014, 775, 139.5f, 580, 571.5f, 380, 540, 704, 880, 1056, 1184, 1328, 2375, 725, 740.7f};
+        public static float[] CourseXPArray = new float[] { 79.5f, 86.5f, 750, 1014, 775, 139.5f, 580, 571.5f, 380, 540, 704, 880, 1056, 1184, 1328, 2375, 725, 740.7f };
 
         #region Form Buttons
+
         private void CharSearchButton_Click(object sender, EventArgs e)
         {
             string Name = CharNameBox.Text;
@@ -36,7 +36,7 @@ namespace RuneHelper
             else
             {
                 MessageBox.Show("Target Level Cant be under or same as current level", "ERROR");
-            }           
+            }
         }
 
         private void CachedName_Click(object sender, EventArgs e)
@@ -51,9 +51,11 @@ namespace RuneHelper
         {
             this.Close();
         }
-        #endregion
+
+        #endregion Form Buttons
 
         #region Functions
+
         private void ShowBoxes()
         {
             TargetLevelLabel.Visible = true;
@@ -87,9 +89,7 @@ namespace RuneHelper
 
                 int XP = Convert.ToInt32(XPBox.Text) + Convert.ToInt32(BonusBox.Text);
 
-
                 NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;
-
 
                 AmountBox.Text = Convert.ToString(Math.Round(NeededXP / CourseXPArray[TypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
@@ -99,9 +99,8 @@ namespace RuneHelper
             {
                 MessageBox.Show("Could not run calculation, please check all fields have been filled with no text", "ERROR");
             }
-                
-            }
-        #endregion
+        }
+
+        #endregion Functions
     }
 }
-

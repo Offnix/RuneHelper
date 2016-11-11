@@ -1,7 +1,6 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Windows.Forms;
-using RuneHelper;
-using MetroFramework.Forms;
 
 namespace RuneHelper
 {
@@ -11,14 +10,15 @@ namespace RuneHelper
         {
             InitializeComponent();
         }
-        string result;
-        string[] MArray;
-        string[] LevelArray;
 
+        private string result;
+        private string[] MArray;
+        private string[] LevelArray;
 
-        public static float[] OreXPArray = new float[] {5, 17.5f, 25 , 26.5f, 35, 40, 50, 62.4702f, 40, 65, 60, 80, 95, 90, 50, 65, 70, 125, 296.7f, 445.5f, 692.5f, 5250};
+        public static float[] OreXPArray = new float[] { 5, 17.5f, 25, 26.5f, 35, 40, 50, 62.4702f, 40, 65, 60, 80, 95, 90, 50, 65, 70, 125, 296.7f, 445.5f, 692.5f, 5250 };
 
         #region Form Buttons
+
         private void CharSearchButton_Click(object sender, EventArgs e)
         {
             string Name = CharNameBox.Text;
@@ -36,7 +36,7 @@ namespace RuneHelper
             else
             {
                 MessageBox.Show("Target Level Cant be under or same as current level", "ERROR");
-            }           
+            }
         }
 
         private void CachedName_Click(object sender, EventArgs e)
@@ -51,9 +51,11 @@ namespace RuneHelper
         {
             this.Close();
         }
-        #endregion
+
+        #endregion Form Buttons
 
         #region Functions
+
         private void ShowBoxes()
         {
             TargetLevelLabel.Visible = true;
@@ -87,9 +89,7 @@ namespace RuneHelper
 
                 int XP = Convert.ToInt32(XPBox.Text) + Convert.ToInt32(BonusBox.Text);
 
-
                 NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;
-
 
                 AmountBox.Text = Convert.ToString(Math.Round(NeededXP / OreXPArray[TypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
@@ -97,9 +97,9 @@ namespace RuneHelper
             catch
             {
                 MessageBox.Show("Could not run calculation, please check all fields have been filled with no text", "ERROR");
-            }                
             }
-        #endregion
+        }
+
+        #endregion Functions
     }
 }
-
