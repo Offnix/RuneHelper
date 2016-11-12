@@ -84,14 +84,14 @@ namespace RuneHelper
         {
             try
             {
-                int CurrentLevel = Convert.ToInt32(AgilArray[1]);
+                int CurrentLevel = API.IntParse(AgilArray[1]);
                 double NextLevelXp = API.LevelXpArray[CurrentLevel + 1];
-                double CurrentXp = Convert.ToInt32(AgilArray[2]) + Convert.ToInt32(BonusXP.Text);
+                double CurrentXp = API.IntParse(AgilArray[2]) + API.IntParse(BonusXP.Text);
                 double difference = NextLevelXp - CurrentXp;
                 feathers = feathers + Convert.ToInt32((difference / FeatherXp[CurrentLevel]));
 
                 int i = CurrentLevel + 1;
-                while (i <= (Convert.ToInt32(TargetBox.Text)))
+                while (i <= (API.IntParse(TargetBox.Text)))
                 {
                     double xp = API.LevelXpArray[i + 1] - API.LevelXpArray[i];
                     int FeathersNeeded = Convert.ToInt32(xp / FeatherXp[i]);

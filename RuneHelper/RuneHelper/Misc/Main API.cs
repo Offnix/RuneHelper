@@ -64,7 +64,7 @@ public static class API
         {
             while (i != 55)
             {
-                total = total + Convert.ToInt32(LevelArray[i]);
+                total = total + API.IntParse(LevelArray[i]);
                 i = i + 2;
             }
             return total / 27;
@@ -80,7 +80,7 @@ public static class API
         string[] LevelArray;
         try
         {
-            string textFromFile = (new System.Net.WebClient()).DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player="+Name);
+            string textFromFile = (new System.Net.WebClient()).DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + Name);
             LevelArray = textFromFile.Split('\n');
             return LevelArray;
         }
@@ -93,7 +93,7 @@ public static class API
 
     public static bool CheckFileIntegrity()
     {
-       string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
+        string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
 
         if (Directory.Exists(path) == false)
         {
@@ -118,14 +118,14 @@ public static class API
 
     public static int GetCombatLvl(string[] LevelArray)
     {
-        int Attack = Convert.ToInt32(LevelArray[3]);
-        int Strength = Convert.ToInt32(LevelArray[5]);
-        int Defence = Convert.ToInt32(LevelArray[7]);
-        int Ranged = Convert.ToInt32(LevelArray[11]);
-        int Magic = Convert.ToInt32(LevelArray[17]);
-        int Hp = Convert.ToInt32(LevelArray[9]);
-        int Prayer = Convert.ToInt32(LevelArray[13]);
-        int Summoning = Convert.ToInt32(LevelArray[49]);
+        int Attack = IntParse(LevelArray[3]);
+        int Strength = IntParse(LevelArray[5]);
+        int Defence = IntParse(LevelArray[7]);
+        int Ranged = IntParse(LevelArray[11]);
+        int Magic = IntParse(LevelArray[17]);
+        int Hp = IntParse(LevelArray[9]);
+        int Prayer = IntParse(LevelArray[13]);
+        int Summoning = IntParse(LevelArray[49]);
 
         double Melee = Attack + Strength;
         double Range = Math.Floor(2.0 * Ranged);
@@ -134,5 +134,16 @@ public static class API
 
         double cmb = Math.Floor(1.3 * High) + Defence + Hp + Math.Floor(Prayer / 2.0) + Math.Floor(Summoning / 2.0);
         return Convert.ToInt32(Math.Floor(cmb / 4.0));
+    }
+
+    public static int IntParse(string value)
+    {
+        // An optimized int parse method.
+        int result = 0;
+        for (int i = 0; i < value.Length; i++)
+        {
+            result = 10 * result + (value[i] - 48);
+        }
+        return result;
     }
 }

@@ -29,7 +29,7 @@ namespace RuneHelper
 
         private void CalculateBtn_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(WCArray[1]) < Convert.ToInt32(TargetBox.Text))
+            if (API.IntParse(WCArray[1]) < API.IntParse(TargetBox.Text))
             {
                 Calculate();
             }
@@ -85,8 +85,8 @@ namespace RuneHelper
             try
             {
                 double NeededXP;
-                int XP = Convert.ToInt32(XPBox.Text) + Convert.ToInt32(BonusBox.Text);
-                NeededXP = API.LevelXpArray[Convert.ToInt32(TargetBox.Text)] - XP;
+                int XP = API.IntParse(XPBox.Text) + API.IntParse(BonusBox.Text);
+                NeededXP = API.LevelXpArray[API.IntParse(TargetBox.Text)] - XP;
                 AmountBox.Text = Convert.ToString(Math.Round(NeededXP / FireMakeXpArray[TreeTypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
             }

@@ -167,39 +167,39 @@ namespace RuneHelper
                 UsernameLabel.Text = SaveData[0];
                 AverageLevel.Text = API.GetMean(LevelArray).ToString();
                 TotalLevel.Text = LevelArray[1];
-                PercentageLabel.Text = API.GetLevelPercentage(Convert.ToInt32(LevelArray[1])) + "%";
+                PercentageLabel.Text = API.GetLevelPercentage(API.IntParse(LevelArray[1])) + "%";
                 CombatLevel.Text = API.GetCombatLvl(LevelArray).ToString();
                 UpdateGraph();
 
                 // find a way to minify this and your a god amongst men
                 //progress bars
-                AttackBar.Value = Convert.ToInt32(LevelArray[3]);
-                DefenceBar.Value = Convert.ToInt32(LevelArray[5]);
-                StrengthBar.Value = Convert.ToInt32(LevelArray[7]);
-                HealthBar.Value = Convert.ToInt32(LevelArray[9]);
-                RangedBar.Value = Convert.ToInt32(LevelArray[11]);
-                PrayerBar.Value = Convert.ToInt32(LevelArray[13]);
-                MagicBar.Value = Convert.ToInt32(LevelArray[15]);
-                CookingBar.Value = Convert.ToInt32(LevelArray[17]);
-                WoodcuttingBar.Value = Convert.ToInt32(LevelArray[19]);
-                FletchingBar.Value = Convert.ToInt32(LevelArray[21]);
-                FishingBar.Value = Convert.ToInt32(LevelArray[23]);
-                FiremakingBar.Value = Convert.ToInt32(LevelArray[25]);
-                CraftingBar.Value = Convert.ToInt32(LevelArray[27]);
-                SmithingBar.Value = Convert.ToInt32(LevelArray[29]);
-                MiningBar.Value = Convert.ToInt32(LevelArray[31]);
-                HerbloreBar.Value = Convert.ToInt32(LevelArray[33]);
-                AgilityBar.Value = Convert.ToInt32(LevelArray[35]);
-                ThievingBar.Value = Convert.ToInt32(LevelArray[37]);
-                SlayerBar.Value = Convert.ToInt32(LevelArray[39]);
-                FarmingBar.Value = Convert.ToInt32(LevelArray[41]);
-                RunecraftingBar.Value = Convert.ToInt32(LevelArray[43]);
-                HunterBar.Value = Convert.ToInt32(LevelArray[45]);
-                ConstructionBar.Value = Convert.ToInt32(LevelArray[47]);
-                SummoningBar.Value = Convert.ToInt32(LevelArray[49]);
-                DungeoneeringBar.Value = Convert.ToInt32(LevelArray[51]);
-                DivinationBar.Value = Convert.ToInt32(LevelArray[53]);
-                InventorBar.Value = Convert.ToInt32(LevelArray[55]);
+                AttackBar.Value = API.IntParse(LevelArray[3]);
+                DefenceBar.Value = API.IntParse(LevelArray[5]);
+                StrengthBar.Value = API.IntParse(LevelArray[7]);
+                HealthBar.Value = API.IntParse(LevelArray[9]);
+                RangedBar.Value = API.IntParse(LevelArray[11]);
+                PrayerBar.Value = API.IntParse(LevelArray[13]);
+                MagicBar.Value = API.IntParse(LevelArray[15]);
+                CookingBar.Value = API.IntParse(LevelArray[17]);
+                WoodcuttingBar.Value = API.IntParse(LevelArray[19]);
+                FletchingBar.Value = API.IntParse(LevelArray[21]);
+                FishingBar.Value = API.IntParse(LevelArray[23]);
+                FiremakingBar.Value = API.IntParse(LevelArray[25]);
+                CraftingBar.Value = API.IntParse(LevelArray[27]);
+                SmithingBar.Value = API.IntParse(LevelArray[29]);
+                MiningBar.Value = API.IntParse(LevelArray[31]);
+                HerbloreBar.Value = API.IntParse(LevelArray[33]);
+                AgilityBar.Value = API.IntParse(LevelArray[35]);
+                ThievingBar.Value = API.IntParse(LevelArray[37]);
+                SlayerBar.Value = API.IntParse(LevelArray[39]);
+                FarmingBar.Value = API.IntParse(LevelArray[41]);
+                RunecraftingBar.Value = API.IntParse(LevelArray[43]);
+                HunterBar.Value = API.IntParse(LevelArray[45]);
+                ConstructionBar.Value = API.IntParse(LevelArray[47]);
+                SummoningBar.Value = API.IntParse(LevelArray[49]);
+                DungeoneeringBar.Value = API.IntParse(LevelArray[51]);
+                DivinationBar.Value = API.IntParse(LevelArray[53]);
+                InventorBar.Value = API.IntParse(LevelArray[55]);
                 //labels
                 AttackLabel.Text = LevelArray[3];
                 DefenceLabel.Text = LevelArray[5];
@@ -246,7 +246,7 @@ namespace RuneHelper
             string[] arraysplit = LevelArray[2].Split('\n');
             SaveData[DateTime.Now.Day + 1] = arraysplit[0];
 
-            if (DateTime.Now.Month != Convert.ToInt32(SaveData[1]))
+            if (DateTime.Now.Month != API.IntParse(SaveData[1]))
             {
                 SaveData[1] = DateTime.Now.Month.ToString();
                 while (i < SaveData.Length)
@@ -260,7 +260,7 @@ namespace RuneHelper
             {
                 if (string.IsNullOrEmpty(SaveData[i]) == false && SaveData[i] != "0")
                 {
-                    XPTracker.Series[0].Points.AddXY(i, Convert.ToInt32(SaveData[i]));
+                    XPTracker.Series[0].Points.AddXY(i, API.IntParse(SaveData[i]));
                 }
                 i++;
             }

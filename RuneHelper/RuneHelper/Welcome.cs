@@ -13,7 +13,9 @@ namespace RuneHelper
 
         #region Load And Close Function
 
-        protected override void OnFormClosing(FormClosingEventArgs e) {}
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+        }
 
         #endregion Load And Close Function
 
