@@ -92,7 +92,7 @@ namespace RuneHelper
             }
             catch
             {
-                MessageBox.Show("Could not run calculation, please check all fields have been filled with no text", "ERROR");
+                MessageBox.Show("Could not run calculation, please check all fields have been filled correctly", "ERROR");
             }
         }
 

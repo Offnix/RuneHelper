@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new MetroFramework.Controls.MetroLabel();
             this.AttackBar = new MetroFramework.Controls.MetroProgressBar();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
@@ -207,6 +207,7 @@
             // 
             this.MainToolStrip.AutoSize = false;
             this.MainToolStrip.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MainToolStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Settings,
@@ -220,15 +221,15 @@
             // 
             // Settings
             // 
+            this.Settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.Settings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OpenSettingsToolStrip,
             this.ReloadPageToolStrip,
             this.AboutToolStrip});
             this.Settings.Font = new System.Drawing.Font("Segoe UI Light", 11F);
-            this.Settings.Image = ((System.Drawing.Image)(resources.GetObject("Settings.Image")));
             this.Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(112, 32);
+            this.Settings.Size = new System.Drawing.Size(96, 32);
             this.Settings.Text = "RuneHelper";
             this.Settings.ToolTipText = "ApplicationToolStrip";
             // 
@@ -255,6 +256,7 @@
             // 
             // Calculators
             // 
+            this.Calculators.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.Calculators.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.WoodcuttingToolStrip,
             this.MiningToolStrip,
@@ -262,10 +264,9 @@
             this.inventionPerkMetaToolStripMenuItem,
             this.FireMakingToolStrip});
             this.Calculators.Font = new System.Drawing.Font("Segoe UI Light", 11F);
-            this.Calculators.Image = ((System.Drawing.Image)(resources.GetObject("Calculators.Image")));
             this.Calculators.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Calculators.Name = "Calculators";
-            this.Calculators.Size = new System.Drawing.Size(105, 32);
+            this.Calculators.Size = new System.Drawing.Size(89, 32);
             this.Calculators.Text = "Calculators";
             // 
             // WoodcuttingToolStrip
@@ -326,13 +327,13 @@
             // 
             // OtherToolStrip
             // 
+            this.OtherToolStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.OtherToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CompareStatsToolStrip});
             this.OtherToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
-            this.OtherToolStrip.Image = ((System.Drawing.Image)(resources.GetObject("OtherToolStrip.Image")));
             this.OtherToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.OtherToolStrip.Name = "OtherToolStrip";
-            this.OtherToolStrip.Size = new System.Drawing.Size(122, 32);
+            this.OtherToolStrip.Size = new System.Drawing.Size(106, 32);
             this.OtherToolStrip.Text = "Other Utilities";
             // 
             // CompareStatsToolStrip
@@ -1214,7 +1215,7 @@
             this.ExtraStats.HorizontalScrollbarSize = 10;
             this.ExtraStats.Location = new System.Drawing.Point(4, 38);
             this.ExtraStats.Name = "ExtraStats";
-            this.ExtraStats.Size = new System.Drawing.Size(449, 372);
+            this.ExtraStats.Size = new System.Drawing.Size(449, 383);
             this.ExtraStats.TabIndex = 0;
             this.ExtraStats.Text = "Extra Stats";
             this.ExtraStats.VerticalScrollbarBarColor = true;
@@ -1299,19 +1300,19 @@
             // 
             // XPTracker
             // 
-            chartArea1.Name = "ChartArea1";
-            this.XPTracker.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.XPTracker.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.XPTracker.ChartAreas.Add(chartArea3);
+            legend3.Enabled = false;
+            legend3.Name = "Legend1";
+            this.XPTracker.Legends.Add(legend3);
             this.XPTracker.Location = new System.Drawing.Point(-4, 39);
             this.XPTracker.Name = "XPTracker";
             this.XPTracker.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.XPTracker.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.XPTracker.Series.Add(series3);
             this.XPTracker.Size = new System.Drawing.Size(457, 271);
             this.XPTracker.TabIndex = 2;
             this.XPTracker.Text = "MonthlyXP";

@@ -58,14 +58,14 @@ public static class API
 
     public static int GetMean(String[] LevelArray)
     {
-        int counter = 5;
+        int i = 3;
         int total = 0;
         try
         {
-            while (counter != 55)
+            while (i != 55)
             {
-                total = total + Convert.ToInt32(LevelArray[counter]);
-                counter = counter + 2;
+                total = total + Convert.ToInt32(LevelArray[i]);
+                i = i + 2;
             }
             return total / 27;
         }
@@ -80,9 +80,7 @@ public static class API
         string[] LevelArray;
         try
         {
-            string url = "http://services.runescape.com/m=hiscore/index_lite.ws?player=X";
-            string NewUrl = url.Replace("X", Name);
-            string textFromFile = (new System.Net.WebClient()).DownloadString(NewUrl);
+            string textFromFile = (new System.Net.WebClient()).DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player="+Name);
             LevelArray = textFromFile.Split('\n');
             return LevelArray;
         }
@@ -95,7 +93,7 @@ public static class API
 
     public static bool CheckFileIntegrity()
     {
-        string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
+       string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
 
         if (Directory.Exists(path) == false)
         {

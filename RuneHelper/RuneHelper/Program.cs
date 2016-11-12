@@ -13,8 +13,17 @@ namespace RuneHelper
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Welcome Welcome = new Welcome();
-            Welcome.Show();
+
+            if (API.CheckFileIntegrity() == false)
+            {
+                MainForm M = new MainForm();
+                M.Show();
+            }
+            else
+            {
+                Welcome W = new Welcome();
+                W.Show();
+            }
             Application.Run();
         }
     }

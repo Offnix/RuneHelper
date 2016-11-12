@@ -89,7 +89,6 @@ namespace RuneHelper
                 double CurrentXp = Convert.ToInt32(AgilArray[2]) + Convert.ToInt32(BonusXP.Text);
                 double difference = NextLevelXp - CurrentXp;
                 feathers = feathers + Convert.ToInt32((difference / FeatherXp[CurrentLevel]));
-                //First section Gets all the needed Values Sorted out, then gets the initial Feather count to the Next level
 
                 int i = CurrentLevel + 1;
                 while (i <= (Convert.ToInt32(TargetBox.Text)))
@@ -108,7 +107,7 @@ namespace RuneHelper
             }
             catch
             {
-                MessageBox.Show("Could not run calculation, please check all fields have been filled with no text", "ERROR");
+                MessageBox.Show("Could not run calculation, please check all fields have been filled in correctly", "ERROR");
             }
 
             #endregion Functions

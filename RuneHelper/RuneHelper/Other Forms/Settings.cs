@@ -35,12 +35,12 @@ namespace RuneHelper
         {
             if (MetroMessageBox.Show(this, "Clicking ok will delete all cached data stored over this last month. Are you sure? ", "Delete saved XP data", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                int count = 3;
+                int i = 3;
 
-                while (count < MainForm.SaveData.Length)
+                while (i < MainForm.SaveData.Length)
                 {
-                    MainForm.SaveData[count] = "0";
-                    count++;
+                    MainForm.SaveData[i] = "0";
+                    i++;
                 }
             }
         }

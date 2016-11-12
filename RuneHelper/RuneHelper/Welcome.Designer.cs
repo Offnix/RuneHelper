@@ -94,7 +94,6 @@
             this.Name = "Welcome";
             this.Resizable = false;
             this.Text = "Welcome";
-            this.Load += new System.EventHandler(this.Welcome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

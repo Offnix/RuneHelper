@@ -1,6 +1,7 @@
 ﻿using MetroFramework.Forms;
 using System;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace RuneHelper
@@ -139,7 +140,8 @@ namespace RuneHelper
 
         private void OpenStats_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + SaveData[0].Replace(" ", "+"));
+            StringBuilder b = new StringBuilder(SaveData[0]);
+            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + b.Replace(" ", "+"));
         }
 
         #endregion Context Menu
@@ -240,27 +242,27 @@ namespace RuneHelper
                 series.Points.Clear();
             }
 
-            int count = 3;
+            int i = 3;
             string[] arraysplit = LevelArray[2].Split('\n');
             SaveData[DateTime.Now.Day + 1] = arraysplit[0];
 
             if (DateTime.Now.Month != Convert.ToInt32(SaveData[1]))
             {
                 SaveData[1] = DateTime.Now.Month.ToString();
-                while (count < SaveData.Length)
+                while (i < SaveData.Length)
                 {
-                    SaveData[count] = "0";
-                    count++;
+                    SaveData[i] = "0";
+                    i++;
                 }
             }
-            count = 3;
-            while (count < SaveData.Length)
+            i = 3;
+            while (i < SaveData.Length)
             {
-                if (string.IsNullOrEmpty(SaveData[count]) == false && SaveData[count] != "0")
+                if (string.IsNullOrEmpty(SaveData[i]) == false && SaveData[i] != "0")
                 {
-                    XPTracker.Series[0].Points.AddXY(count, Convert.ToInt32(SaveData[count]));
+                    XPTracker.Series[0].Points.AddXY(i, Convert.ToInt32(SaveData[i]));
                 }
-                count++;
+                i++;
             }
         }
 
