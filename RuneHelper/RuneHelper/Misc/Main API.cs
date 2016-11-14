@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Net;
 using System.Windows.Forms;
 
 public static class API
@@ -46,7 +47,9 @@ public static class API
     {
         try
         {
-            string RawExp = (new System.Net.WebClient()).DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + Username);
+            WebClient Download = new WebClient();
+            Download.Proxy = null;
+            string RawExp = (Download.DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + Username));
             return RawExp.Split(',');
         }
         catch
@@ -80,7 +83,9 @@ public static class API
         string[] LevelArray;
         try
         {
-            string textFromFile = (new System.Net.WebClient()).DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + Name);
+            WebClient Download = new WebClient();
+            Download.Proxy = null;
+            string textFromFile = (Download.DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + Name));
             LevelArray = textFromFile.Split('\n');
             return LevelArray;
         }
@@ -138,12 +143,16 @@ public static class API
 
     public static int IntParse(string value)
     {
-        // An optimized int parse method.
         int result = 0;
         for (int i = 0; i < value.Length; i++)
         {
             result = 10 * result + (value[i] - 48);
         }
         return result;
+    }
+
+    public static void UpdateImage(string Username)
+    {
+        new System.Net.WebClient().DownloadFile("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif", @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Profile.gif");
     }
 }

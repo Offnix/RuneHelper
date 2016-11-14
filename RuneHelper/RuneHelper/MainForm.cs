@@ -1,5 +1,6 @@
 ﻿using MetroFramework.Forms;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -8,6 +9,7 @@ namespace RuneHelper
 {
     public partial class MainForm : MetroForm
     {
+      
         public MainForm()
         {
             InitializeComponent();
@@ -151,16 +153,16 @@ namespace RuneHelper
         public void ReloadPage()
         {
             Cursor.Current = Cursors.WaitCursor;
-            XPTracker.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             try
             {
-                ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/" + SaveData[0] + "/chat.gif");
+               ProfilePicture.Load(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Profile.gif");
             }
             catch
             {
-                ProfilePicture.Load("http://services.runescape.com/m=avatar-rs/default_chat.png?");
+                API.UpdateImage(SaveData[0]);
+                ProfilePicture.Load(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Profile.gif");
             }
-
+            
             try
             {
                 LevelArray = API.UpdateLevels(SaveData[0]);

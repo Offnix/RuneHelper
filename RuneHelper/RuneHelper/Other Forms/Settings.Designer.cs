@@ -32,6 +32,7 @@
             this.UsernameTextBox = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new MetroFramework.Controls.MetroLabel();
             this.DeleteXP = new MetroFramework.Controls.MetroButton();
+            this.DeleteImage = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // button1
@@ -85,7 +86,7 @@
             // 
             // DeleteXP
             // 
-            this.DeleteXP.Location = new System.Drawing.Point(23, 124);
+            this.DeleteXP.Location = new System.Drawing.Point(23, 112);
             this.DeleteXP.Name = "DeleteXP";
             this.DeleteXP.Size = new System.Drawing.Size(117, 23);
             this.DeleteXP.TabIndex = 3;
@@ -93,10 +94,21 @@
             this.DeleteXP.UseSelectable = true;
             this.DeleteXP.Click += new System.EventHandler(this.DeleteXP_Click);
             // 
+            // DeleteImage
+            // 
+            this.DeleteImage.Location = new System.Drawing.Point(23, 141);
+            this.DeleteImage.Name = "DeleteImage";
+            this.DeleteImage.Size = new System.Drawing.Size(171, 23);
+            this.DeleteImage.TabIndex = 4;
+            this.DeleteImage.Text = "Delete Cached Profile Image";
+            this.DeleteImage.UseSelectable = true;
+            this.DeleteImage.Click += new System.EventHandler(this.DeleteImage_Click);
+            // 
             // SettingsForm
             // 
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(419, 220);
+            this.Controls.Add(this.DeleteImage);
             this.Controls.Add(this.DeleteXP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UsernameTextBox);
@@ -117,5 +129,6 @@
         private MetroFramework.Controls.MetroTextBox UsernameTextBox;
         private MetroFramework.Controls.MetroLabel label1;
         private MetroFramework.Controls.MetroButton DeleteXP;
+        private MetroFramework.Controls.MetroButton DeleteImage;
     }
 }

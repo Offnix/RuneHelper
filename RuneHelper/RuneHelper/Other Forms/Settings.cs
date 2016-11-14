@@ -1,6 +1,7 @@
 ﻿using MetroFramework;
 using MetroFramework.Forms;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace RuneHelper
@@ -28,6 +29,7 @@ namespace RuneHelper
             MainForm.SaveData[0] = UsernameTextBox.Text;
             API.StreamWriter(string.Join(",", MainForm.SaveData), @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
             MainForm.SaveData[0] = UsernameTextBox.Text;
+            (Application.OpenForms["Mainform"] as MainForm).ReloadPage();
             this.Close();
         }
 
@@ -35,14 +37,13 @@ namespace RuneHelper
         {
             if (MetroMessageBox.Show(this, "Clicking ok will delete all cached data stored over this last month. Are you sure? ", "Delete saved XP data", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                int i = 3;
-
-                while (i < MainForm.SaveData.Length)
-                {
-                    MainForm.SaveData[i] = "0";
-                    i++;
-                }
+                MainForm.SaveData[2] = "13";
             }
+        }
+
+        private void DeleteImage_Click(object sender, EventArgs e)
+        {
+            File.Delete(@"C: \Users\" + Environment.UserName + @"\AppData\Local\RsThing\Profile.gif");
         }
 
         #endregion Form Controls
