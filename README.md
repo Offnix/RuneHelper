@@ -16,5 +16,5 @@ when seen task manager.This usage of ram is nothing compared to how much an indi
 
 ## So is there a release version yet?
 Sadly no, but one day soon there will be! this program has alot of potential and capabilities we havent explored yet.
-And of currently we do not see there is enough features to gain a stable base of users. But hopefully that is in the near future. But you can surely look at our preview [Imgur](http://i.imgur.com/5aeFAXX.png) (Updated 14/11/2016)
+And of currently we do not see there is enough features to gain a stable base of users. But hopefully that is in the near future. But you can surely look at our preview <a href="http://imgur.com/5aeFAXX"><img src="http://i.imgur.com/5aeFAXX.png" title="source: imgur.com" /></a> (Updated 14/11/2016)
 
