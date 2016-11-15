@@ -11,11 +11,10 @@ Making it less data intensive and easier to use. Such capabilities like calculat
 websites but are no where near as centralized.
 
 ## So is this heavy intensive on hardware?
-In a short answer, No. We pride ourselves how less intensive this program really is. Though there are peaks of around 30mb
-usage of ram that is nothing compared to how much an individual web-browser tab can take up. 
+In a short answer, No. We pride ourselves how less intensive this program really is. You can expect an average usage of 14 mb when
+when seen task manager.This usage of ram is nothing compared to how much an individual web-browser tab can take up. 
 
 ## So is there a release version yet?
 Sadly no, but one day soon there will be! this program has alot of potential and capabilities we havent explored yet.
-And of currently we do not see there is enough features to gain a stable base of users. But hopefully that is in the near future.
-
+And of currently we do not see there is enough features to gain a stable base of users. But hopefully that is in the near future. But you can surely look at our preview <a href="http://imgur.com/5aeFAXX"><img src="http://i.imgur.com/5aeFAXX.png" title="source: imgur.com" /></a> (Updated 14/11/2016)
 
