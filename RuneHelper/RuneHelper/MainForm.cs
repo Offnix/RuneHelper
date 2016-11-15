@@ -1,6 +1,6 @@
 ﻿using MetroFramework.Forms;
 using System;
-using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -9,7 +9,6 @@ namespace RuneHelper
 {
     public partial class MainForm : MetroForm
     {
-      
         public MainForm()
         {
             InitializeComponent();
@@ -20,14 +19,15 @@ namespace RuneHelper
 
         #region Open and close Functions
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            SaveData = API.StreamReader(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt").Split(',');
+            SaveData = API.StreamReader(@"Data.txt").Split(',');
             ReloadPage();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
+            API.StreamWriter(string.Join(",", SaveData), @"Data.txt");
             Application.Exit();
         }
 
@@ -42,7 +42,7 @@ namespace RuneHelper
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            API.StreamWriter(string.Join(",", SaveData), @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
+            API.StreamWriter(string.Join(",", SaveData), @"Data.txt");
             Application.Exit();
         }
 
@@ -155,18 +155,26 @@ namespace RuneHelper
             Cursor.Current = Cursors.WaitCursor;
             try
             {
-               ProfilePicture.Load(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Profile.gif");
+                ProfilePicture.Load(@"Profile.gif");
             }
             catch
             {
-                API.UpdateImage(SaveData[0]);
-                ProfilePicture.Load(@"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Profile.gif");
+                if(File.Exists(@"Profile.gif") == true)
+                {
+                    File.Delete("@Profile.gif");
+                }
+                else
+                {
+                    API.UpdateImage(SaveData[0]);
+                    ProfilePicture.Load(@"Profile.gif");
+                }
+                
             }
-            
+
             try
             {
-                LevelArray = API.UpdateLevels(SaveData[0]);
                 UsernameLabel.Text = SaveData[0];
+                LevelArray = API.UpdateLevels(SaveData[0]);
                 AverageLevel.Text = API.GetMean(LevelArray).ToString();
                 TotalLevel.Text = LevelArray[1];
                 PercentageLabel.Text = API.GetLevelPercentage(API.IntParse(LevelArray[1])) + "%";
@@ -243,31 +251,34 @@ namespace RuneHelper
             {
                 series.Points.Clear();
             }
-
-            int i = 3;
-            string[] arraysplit = LevelArray[2].Split('\n');
-            SaveData[DateTime.Now.Day + 1] = arraysplit[0];
-
-            if (DateTime.Now.Month != API.IntParse(SaveData[1]))
+            try
             {
-                SaveData[1] = DateTime.Now.Month.ToString();
+                int i = 3;
+                string[] arraysplit = LevelArray[2].Split('\n');
+                SaveData[DateTime.Now.Day + 3] = arraysplit[0];
+
+                if (DateTime.Now.Month != API.IntParse(SaveData[1]))
+                {
+                    SaveData[1] = DateTime.Now.Month.ToString();
+                    while (i < SaveData.Length)
+                    {
+                        SaveData[i] = "0";
+                        i++;
+                    }
+                }
+                i = 3;
                 while (i < SaveData.Length)
                 {
-                    SaveData[i] = "0";
+                    if (string.IsNullOrEmpty(SaveData[i]) == false && SaveData[i] != "0")
+                    {
+                        XPTracker.Series[0].Points.AddXY(i - 3, API.IntParse(SaveData[i]));
+                    }
                     i++;
                 }
             }
-            i = 3;
-            while (i < SaveData.Length)
-            {
-                if (string.IsNullOrEmpty(SaveData[i]) == false && SaveData[i] != "0")
-                {
-                    XPTracker.Series[0].Points.AddXY(i, API.IntParse(SaveData[i]));
-                }
-                i++;
-            }
+            catch { }
         }
-
-        #endregion Functions
     }
+
+    #endregion Functions
 }

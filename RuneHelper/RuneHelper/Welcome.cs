@@ -23,7 +23,7 @@ namespace RuneHelper
 
         private void ConfirmInput_Click(object sender, EventArgs e)
         {
-            API.StreamWriter(UsernameInput.Text + "," + DateTime.Now.Month, @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
+            API.StreamWriter(UsernameInput.Text + "," + DateTime.Now.Month+",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,", @"Data.txt");
             MainForm Mainform = new MainForm();
             Mainform.Show();
             this.Close();

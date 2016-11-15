@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new MetroFramework.Controls.MetroButton();
+            this.Exit = new MetroFramework.Controls.MetroButton();
             this.UsernameTextBox = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new MetroFramework.Controls.MetroLabel();
             this.DeleteXP = new MetroFramework.Controls.MetroButton();
             this.DeleteImage = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // button1
+            // Exit
             // 
-            this.button1.Location = new System.Drawing.Point(23, 188);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Save And Exit";
-            this.button1.UseSelectable = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Exit.Location = new System.Drawing.Point(23, 188);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(113, 23);
+            this.Exit.TabIndex = 0;
+            this.Exit.Text = "Save And Exit";
+            this.Exit.UseSelectable = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // UsernameTextBox
             // 
@@ -112,7 +112,7 @@
             this.Controls.Add(this.DeleteXP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UsernameTextBox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Exit);
             this.MaximizeBox = false;
             this.Name = "SettingsForm";
             this.Resizable = false;
@@ -125,7 +125,7 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton button1;
+        private MetroFramework.Controls.MetroButton Exit;
         private MetroFramework.Controls.MetroTextBox UsernameTextBox;
         private MetroFramework.Controls.MetroLabel label1;
         private MetroFramework.Controls.MetroButton DeleteXP;

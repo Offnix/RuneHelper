@@ -13,6 +13,7 @@ public static class API
                             , 1475581, 1629200, 1798808, 1986068, 2192818, 2421087, 2673114, 2951373, 3258594, 3597792, 3972294, 4385776
                             , 4842295, 5346332, 5902831, 6517253, 7195629, 7944614, 8771558, 9684577, 10692629, 11805606, 13034431, 13034431};
 
+    #region IO Functions
     public static void StreamWriter(string WriteText, string FileLocation)
     {
         try
@@ -43,6 +44,18 @@ public static class API
         }
     }
 
+    public static bool CheckFileIntegrity()
+    {
+        if (File.Exists(@"Data.txt") == false)
+        {
+            File.Create(@"Data.txt").Close();
+            return true;
+        }
+        return false;
+    }
+    #endregion
+
+    #region Webclient Functions
     public static string[] UpdateLevels(String Username)
     {
         try
@@ -50,6 +63,7 @@ public static class API
             WebClient Download = new WebClient();
             Download.Proxy = null;
             string RawExp = (Download.DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + Username));
+            Download.Dispose();
             return RawExp.Split(',');
         }
         catch
@@ -87,6 +101,7 @@ public static class API
             Download.Proxy = null;
             string textFromFile = (Download.DownloadString("http://services.runescape.com/m=hiscore/index_lite.ws?player=" + Name));
             LevelArray = textFromFile.Split('\n');
+            Download.Dispose();
             return LevelArray;
         }
         catch
@@ -96,24 +111,16 @@ public static class API
         }
     }
 
-    public static bool CheckFileIntegrity()
+    public static void UpdateImage(string Username)
     {
-        string path = @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing";
-
-        if (Directory.Exists(path) == false)
-        {
-            Directory.CreateDirectory(path);
-        }
-
-        if (File.Exists(path + @"\Data.txt") == false)
-        {
-            File.Create(path + @"\Data.txt").Close();
-            StreamWriter(" ,", path + @"\Data.txt");
-            return true;
-        }
-        return false;
+        WebClient Download = new WebClient();
+        Download.Proxy = null;
+        Download.DownloadFile("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif", @"Profile.gif");
+        Download.Dispose();
     }
+    #endregion
 
+    #region Calculator Functions
     public static string GetLevelPercentage(decimal TotalLevel)
     {
         decimal percentage;
@@ -150,9 +157,6 @@ public static class API
         }
         return result;
     }
+    #endregion
 
-    public static void UpdateImage(string Username)
-    {
-        new System.Net.WebClient().DownloadFile("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif", @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Profile.gif");
-    }
 }

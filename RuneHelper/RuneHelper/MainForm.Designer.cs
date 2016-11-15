@@ -1445,7 +1445,7 @@
             this.Name = "MainForm";
             this.Resizable = false;
             this.Text = "RuneHelper";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.MainToolStrip.ResumeLayout(false);
             this.MainToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();

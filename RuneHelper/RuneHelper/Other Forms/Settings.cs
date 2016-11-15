@@ -24,7 +24,7 @@ namespace RuneHelper
 
         #region Form Controls
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {
             MainForm.SaveData[0] = UsernameTextBox.Text;
             API.StreamWriter(string.Join(",", MainForm.SaveData), @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
@@ -43,7 +43,7 @@ namespace RuneHelper
 
         private void DeleteImage_Click(object sender, EventArgs e)
         {
-            File.Delete(@"C: \Users\" + Environment.UserName + @"\AppData\Local\RsThing\Profile.gif");
+            File.Delete(@"Profile.gif");
         }
 
         #endregion Form Controls
