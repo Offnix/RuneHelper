@@ -1,8 +1,10 @@
 ﻿using MetroFramework.Forms;
 using System;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace RuneHelper
@@ -12,6 +14,7 @@ namespace RuneHelper
         public MainForm()
         {
             InitializeComponent();
+            ClockRefresh.DoWork += new DoWorkEventHandler(ClockRefresh_DoWork);
         }
 
         public static string[] SaveData = new string[33];
@@ -22,6 +25,7 @@ namespace RuneHelper
         private void MainForm_Load(object sender, EventArgs e)
         {
             SaveData = API.StreamReader(@"Data.txt").Split(',');
+            ClockRefresh.RunWorkerAsync();
             ReloadPage();
         }
 
@@ -278,7 +282,21 @@ namespace RuneHelper
             }
             catch { }
         }
-    }
 
-    #endregion Functions
+        private void ClockRefresh_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while(true)
+            {
+                Console.WriteLine("I made it this far");
+                Time.Invoke((MethodInvoker)(() =>
+                {
+                    Time.Text = DateTime.Now.ToString("HH:mm:ss tt");
+
+                }));
+                Thread.Sleep(60000);
+            }
+            
+        }
+        #endregion Functions
+    }
 }
