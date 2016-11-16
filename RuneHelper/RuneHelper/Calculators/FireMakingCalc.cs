@@ -17,6 +17,25 @@ namespace RuneHelper
 
         public static float[] FireMakeXpArray = new float[] { 25, 37.5f, 67.5f, 105, 125, 135, 157.5f, 171, 202.5f, 303.8f, 435 };
 
+        #region Load And Close Functions
+
+        private void FireMakingCalc_Load(object sender, EventArgs e)
+        {
+            if (MainForm.SaveData[1] == "light")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+                this.Theme = StyleManager.Theme;
+            }
+
+            if (MainForm.SaveData[1] == "dark")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+                this.Theme = StyleManager.Theme;
+            }
+        }
+
+        #endregion Load And Close Functions
+
         #region Form Buttons
 
         private void CharSearchButton_Click(object sender, EventArgs e)

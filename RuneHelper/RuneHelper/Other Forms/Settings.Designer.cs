@@ -28,16 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Exit = new MetroFramework.Controls.MetroButton();
             this.UsernameTextBox = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new MetroFramework.Controls.MetroLabel();
             this.DeleteXP = new MetroFramework.Controls.MetroButton();
             this.DeleteImage = new MetroFramework.Controls.MetroButton();
+            this.Light = new MetroFramework.Controls.MetroTile();
+            this.Dark = new MetroFramework.Controls.MetroTile();
+            this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.Red = new MetroFramework.Controls.MetroTile();
+            this.Blue = new MetroFramework.Controls.MetroTile();
+            this.Green = new MetroFramework.Controls.MetroTile();
+            this.Orange = new MetroFramework.Controls.MetroTile();
+            this.ColourLabel = new MetroFramework.Controls.MetroLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(23, 188);
+            this.Exit.Location = new System.Drawing.Point(12, 219);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(113, 23);
             this.Exit.TabIndex = 0;
@@ -104,10 +114,97 @@
             this.DeleteImage.UseSelectable = true;
             this.DeleteImage.Click += new System.EventHandler(this.DeleteImage_Click);
             // 
+            // Light
+            // 
+            this.Light.ActiveControl = null;
+            this.Light.Location = new System.Drawing.Point(342, 86);
+            this.Light.Name = "Light";
+            this.Light.Size = new System.Drawing.Size(101, 73);
+            this.Light.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Light.TabIndex = 5;
+            this.Light.Text = "Light Theme";
+            this.Light.UseSelectable = true;
+            this.Light.Click += new System.EventHandler(this.Light_Click);
+            // 
+            // Dark
+            // 
+            this.Dark.ActiveControl = null;
+            this.Dark.Location = new System.Drawing.Point(342, 165);
+            this.Dark.Name = "Dark";
+            this.Dark.Size = new System.Drawing.Size(101, 77);
+            this.Dark.Style = MetroFramework.MetroColorStyle.Black;
+            this.Dark.TabIndex = 6;
+            this.Dark.Text = "Dark Theme";
+            this.Dark.UseSelectable = true;
+            this.Dark.Click += new System.EventHandler(this.Dark_Click);
+            // 
+            // StyleManager
+            // 
+            this.StyleManager.Owner = this;
+            // 
+            // Red
+            // 
+            this.Red.ActiveControl = null;
+            this.Red.Location = new System.Drawing.Point(342, 57);
+            this.Red.Name = "Red";
+            this.Red.Size = new System.Drawing.Size(21, 23);
+            this.Red.Style = MetroFramework.MetroColorStyle.Red;
+            this.Red.TabIndex = 7;
+            this.Red.UseSelectable = true;
+            this.Red.Click += new System.EventHandler(this.Red_Click);
+            // 
+            // Blue
+            // 
+            this.Blue.ActiveControl = null;
+            this.Blue.Location = new System.Drawing.Point(369, 57);
+            this.Blue.Name = "Blue";
+            this.Blue.Size = new System.Drawing.Size(21, 23);
+            this.Blue.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Blue.TabIndex = 9;
+            this.Blue.UseSelectable = true;
+            // 
+            // Green
+            // 
+            this.Green.ActiveControl = null;
+            this.Green.Location = new System.Drawing.Point(396, 57);
+            this.Green.Name = "Green";
+            this.Green.Size = new System.Drawing.Size(21, 23);
+            this.Green.Style = MetroFramework.MetroColorStyle.Green;
+            this.Green.TabIndex = 10;
+            this.Green.UseSelectable = true;
+            this.Green.Click += new System.EventHandler(this.Green_Click);
+            // 
+            // Orange
+            // 
+            this.Orange.ActiveControl = null;
+            this.Orange.Location = new System.Drawing.Point(422, 57);
+            this.Orange.Name = "Orange";
+            this.Orange.Size = new System.Drawing.Size(21, 23);
+            this.Orange.Style = MetroFramework.MetroColorStyle.Orange;
+            this.Orange.TabIndex = 11;
+            this.Orange.UseSelectable = true;
+            this.Orange.Click += new System.EventHandler(this.Orange_Click);
+            // 
+            // ColourLabel
+            // 
+            this.ColourLabel.AutoSize = true;
+            this.ColourLabel.Location = new System.Drawing.Point(312, 26);
+            this.ColourLabel.Name = "ColourLabel";
+            this.ColourLabel.Size = new System.Drawing.Size(131, 19);
+            this.ColourLabel.TabIndex = 12;
+            this.ColourLabel.Text = "Themes And Colours";
+            // 
             // SettingsForm
             // 
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(419, 220);
+            this.ClientSize = new System.Drawing.Size(448, 254);
+            this.Controls.Add(this.ColourLabel);
+            this.Controls.Add(this.Orange);
+            this.Controls.Add(this.Green);
+            this.Controls.Add(this.Blue);
+            this.Controls.Add(this.Red);
+            this.Controls.Add(this.Dark);
+            this.Controls.Add(this.Light);
             this.Controls.Add(this.DeleteImage);
             this.Controls.Add(this.DeleteXP);
             this.Controls.Add(this.label1);
@@ -118,6 +215,7 @@
             this.Resizable = false;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.Form3_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +228,13 @@
         private MetroFramework.Controls.MetroLabel label1;
         private MetroFramework.Controls.MetroButton DeleteXP;
         private MetroFramework.Controls.MetroButton DeleteImage;
+        private MetroFramework.Controls.MetroTile Light;
+        private MetroFramework.Controls.MetroTile Dark;
+        private new MetroFramework.Components.MetroStyleManager StyleManager;
+        private MetroFramework.Controls.MetroTile Red;
+        private MetroFramework.Controls.MetroTile Orange;
+        private MetroFramework.Controls.MetroTile Green;
+        private MetroFramework.Controls.MetroTile Blue;
+        private MetroFramework.Controls.MetroLabel ColourLabel;
     }
 }

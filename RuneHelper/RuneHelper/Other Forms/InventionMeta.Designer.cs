@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventionMeta));
             this.AftershockIcon = new System.Windows.Forms.PictureBox();
             this.BitingIcon = new System.Windows.Forms.PictureBox();
@@ -50,12 +51,14 @@
             this.LegSlot2Label = new System.Windows.Forms.Label();
             this.EnhDevoLabel = new System.Windows.Forms.Label();
             this.BitingLabel = new System.Windows.Forms.Label();
+            this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.AftershockIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BitingIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CracklingIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnhDevoIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImpatientIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreciseIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // AftershockIcon
@@ -261,6 +264,10 @@
             this.BitingLabel.TabIndex = 21;
             this.BitingLabel.Text = "Biting 2/3";
             // 
+            // StyleManager
+            // 
+            this.StyleManager.Owner = this;
+            // 
             // InventionMeta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +305,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EnhDevoIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImpatientIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreciseIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,5 +333,6 @@
         private System.Windows.Forms.Label LegSlot2Label;
         private System.Windows.Forms.Label EnhDevoLabel;
         private System.Windows.Forms.Label BitingLabel;
+        private new MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }

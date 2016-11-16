@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WooducttingCalculator));
             this.CachedName = new MetroFramework.Controls.MetroButton();
             this.CharSearchButton = new MetroFramework.Controls.MetroButton();
             this.CharNameBox = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new MetroFramework.Controls.MetroLabel();
-            this.XPBox = new System.Windows.Forms.TextBox();
+            this.XPBox = new MetroFramework.Controls.MetroTextBox();
             this.TargetLevelLabel = new MetroFramework.Controls.MetroLabel();
             this.BonusXPlabel = new MetroFramework.Controls.MetroLabel();
             this.TargetBox = new MetroFramework.Controls.MetroTextBox();
@@ -42,6 +43,8 @@
             this.TreeTypeBox = new MetroFramework.Controls.MetroComboBox();
             this.AmountBox = new MetroFramework.Controls.MetroTextBox();
             this.BackBtn = new MetroFramework.Controls.MetroButton();
+            this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // CachedName
@@ -278,6 +281,10 @@
             this.BackBtn.UseSelectable = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
+            // StyleManager
+            // 
+            this.StyleManager.Owner = this;
+            // 
             // WooducttingCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,6 +307,8 @@
             this.MaximizeBox = false;
             this.Name = "WooducttingCalculator";
             this.Text = "WoodCutting Calculator";
+            this.Load += new System.EventHandler(this.WooducttingCalculator_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,6 +328,7 @@
         private MetroFramework.Controls.MetroComboBox TreeTypeBox;
         private MetroFramework.Controls.MetroTextBox AmountBox;
         private MetroFramework.Controls.MetroButton BackBtn;
-        private System.Windows.Forms.TextBox XPBox;
+        private MetroFramework.Controls.MetroTextBox XPBox;
+        private new MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }

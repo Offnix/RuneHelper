@@ -17,6 +17,25 @@ namespace RuneHelper
 
         public static float[] OreXPArray = new float[] { 5, 17.5f, 25, 26.5f, 35, 40, 50, 62.4702f, 40, 65, 60, 80, 95, 90, 50, 65, 70, 125, 296.7f, 445.5f, 692.5f, 5250 };
 
+        #region Load And Close Functions
+
+        private void MiningCalc_Load(object sender, EventArgs e)
+        {
+            if (MainForm.SaveData[1] == "light")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+                this.Theme = StyleManager.Theme;
+            }
+
+            if (MainForm.SaveData[1] == "dark")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+                this.Theme = StyleManager.Theme;
+            }
+        }
+
+        #endregion Load And Close Functions
+
         #region Form Buttons
 
         private void CharSearchButton_Click(object sender, EventArgs e)

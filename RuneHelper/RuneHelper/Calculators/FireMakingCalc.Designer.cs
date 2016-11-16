@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FireMakingCalc));
             this.CachedName = new MetroFramework.Controls.MetroButton();
             this.CharSearchButton = new MetroFramework.Controls.MetroButton();
@@ -42,6 +43,8 @@
             this.AmountBox = new MetroFramework.Controls.MetroTextBox();
             this.BackBtn = new MetroFramework.Controls.MetroButton();
             this.TreeTypeBox = new MetroFramework.Controls.MetroComboBox();
+            this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // CachedName
@@ -294,6 +297,10 @@
             this.TreeTypeBox.TabIndex = 24;
             this.TreeTypeBox.UseSelectable = true;
             // 
+            // StyleManager
+            // 
+            this.StyleManager.Owner = this;
+            // 
             // FireMakingCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,6 +323,7 @@
             this.MaximizeBox = false;
             this.Name = "FireMakingCalc";
             this.Text = "FireMaking Calculator";
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,5 +344,6 @@
         private MetroFramework.Controls.MetroTextBox AmountBox;
         private MetroFramework.Controls.MetroButton BackBtn;
         private MetroFramework.Controls.MetroComboBox TreeTypeBox;
+        private new MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }

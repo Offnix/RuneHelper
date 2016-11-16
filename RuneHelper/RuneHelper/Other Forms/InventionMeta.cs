@@ -11,9 +11,26 @@ namespace RuneHelper
             InitializeComponent();
         }
 
+        #region Load And Close Functions
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (MainForm.SaveData[1] == "light")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+                this.Theme = StyleManager.Theme;
+            }
+
+            if (MainForm.SaveData[1] == "dark")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+                this.Theme = StyleManager.Theme;
+            }
         }
+
+        #endregion Load And Close Functions
+
+        #region Form Controls
 
         private void AftershockIcon_Click(object sender, EventArgs e)
         {
@@ -44,5 +61,7 @@ namespace RuneHelper
         {
             MessageBox.Show("4.5% chance per rank on being hit that protection prayers will work at 100% (or 75% in PvP) for 3 seconds. This does not stack with devoted.\nRequires 5 Faceted Components, gathered by disassembling Crystal Weaponry or flasks.");
         }
+
+        #endregion Form Controls
     }
 }

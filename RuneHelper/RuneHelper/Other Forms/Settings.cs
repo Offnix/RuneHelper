@@ -18,6 +18,18 @@ namespace RuneHelper
         private void Form3_Load(object sender, EventArgs e)
         {
             UsernameTextBox.Text = MainForm.SaveData[0];
+
+            if (MainForm.SaveData[1] == "light")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+                this.Theme = StyleManager.Theme;
+            }
+
+            if (MainForm.SaveData[1] == "dark")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+                this.Theme = StyleManager.Theme;
+            }
         }
 
         #endregion Form Load
@@ -26,8 +38,6 @@ namespace RuneHelper
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[0] = UsernameTextBox.Text;
-            API.StreamWriter(string.Join(",", MainForm.SaveData), @"C:\Users\" + Environment.UserName + @"\AppData\Local\RsThing\Data.txt");
             MainForm.SaveData[0] = UsernameTextBox.Text;
             (Application.OpenForms["Mainform"] as MainForm).ReloadPage();
             this.Close();
@@ -44,6 +54,36 @@ namespace RuneHelper
         private void DeleteImage_Click(object sender, EventArgs e)
         {
             File.Delete(@"Profile.gif");
+        }
+
+        private void Light_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[1] = "light";
+        }
+
+        private void Dark_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[1] = "dark";
+        }
+
+        private void Red_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[2] = "red";
+        }
+
+        private void Default_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[2] = "blue";
+        }
+
+        private void Green_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[2] = "green";
+        }
+
+        private void Orange_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[2] = "orange";
         }
 
         #endregion Form Controls

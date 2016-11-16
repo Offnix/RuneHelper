@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MiningCalc));
             this.CachedName = new MetroFramework.Controls.MetroButton();
             this.CharSearchButton = new MetroFramework.Controls.MetroButton();
@@ -42,6 +43,8 @@
             this.TypeBox = new MetroFramework.Controls.MetroComboBox();
             this.AmountBox = new MetroFramework.Controls.MetroTextBox();
             this.BackBtn = new MetroFramework.Controls.MetroButton();
+            this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // CachedName
@@ -304,7 +307,11 @@
             this.BackBtn.UseSelectable = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
-            // Form5
+            // StyleManager
+            // 
+            this.StyleManager.Owner = this;
+            // 
+            // MiningCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -324,8 +331,10 @@
             this.Controls.Add(this.CharNameBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form5";
+            this.Name = "MiningCalc";
             this.Text = "Mining Calculator";
+            this.Load += new System.EventHandler(this.MiningCalc_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,5 +355,6 @@
         private MetroFramework.Controls.MetroComboBox TypeBox;
         private MetroFramework.Controls.MetroTextBox AmountBox;
         private MetroFramework.Controls.MetroButton BackBtn;
+        private new MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }

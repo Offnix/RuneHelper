@@ -1,6 +1,7 @@
 ﻿using MetroFramework.Forms;
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,19 +12,21 @@ namespace RuneHelper
 {
     public partial class MainForm : MetroForm
     {
+        public static string[] LevelArray;
+
+        public static string[] SaveData = new string[35];
+
         public MainForm()
         {
             InitializeComponent();
             ClockRefresh.DoWork += new DoWorkEventHandler(ClockRefresh_DoWork);
         }
 
-        public static string[] SaveData = new string[33];
-        public static string[] LevelArray;
-
         #region Open and close Functions
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            MainToolStrip.Renderer = new CustomToolStripProfessionalRenderer();
             SaveData = API.StreamReader(@"Data.txt").Split(',');
             ClockRefresh.RunWorkerAsync();
             ReloadPage();
@@ -39,50 +42,27 @@ namespace RuneHelper
 
         #region Form Controls
 
-        private void GraphUpdate_Click(object sender, EventArgs e)
-        {
-            UpdateGraph();
-        }
-
         private void ExitButton_Click(object sender, EventArgs e)
         {
             API.StreamWriter(string.Join(",", SaveData), @"Data.txt");
             Application.Exit();
         }
 
+        private void GraphUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateGraph();
+        }
+
         #endregion Form Controls
 
         #region Toolbar Controls
 
-        private void ReloadPageToolStrip_Click(object sender, EventArgs e)
+        private void AboutToolStrip_Click(object sender, EventArgs e)
         {
-            ReloadPage();
-        }
-
-        private void OpenSettingsToolStrip_Click(object sender, EventArgs e)
-        {
-            if (!Application.OpenForms.OfType<SettingsForm>().Any())
+            if (!Application.OpenForms.OfType<About>().Any())
             {
-                SettingsForm Settings = new SettingsForm();
-                Settings.Show();
-            }
-        }
-
-        private void WoodcuttingToolStrip_Click(object sender, EventArgs e)
-        {
-            if (!Application.OpenForms.OfType<WooducttingCalculator>().Any())
-            {
-                WooducttingCalculator Woodcut = new WooducttingCalculator();
-                Woodcut.Show();
-            }
-        }
-
-        private void MiningToolStrip_Click(object sender, EventArgs e)
-        {
-            if (!Application.OpenForms.OfType<MiningCalc>().Any())
-            {
-                MiningCalc Mining = new MiningCalc();
-                Mining.Show();
+                About AboutForm = new About();
+                AboutForm.Show();
             }
         }
 
@@ -95,21 +75,12 @@ namespace RuneHelper
             }
         }
 
-        private void silverHawkFeatherToolStrip_Click(object sender, EventArgs e)
+        private void CompareStatsToolStrip_Click(object sender, EventArgs e)
         {
-            if (!Application.OpenForms.OfType<SilverhawkForm>().Any())
+            if (!Application.OpenForms.OfType<ComparePlayer>().Any())
             {
-                SilverhawkForm Silverhawk = new SilverhawkForm();
-                Silverhawk.Show();
-            }
-        }
-
-        private void AboutToolStrip_Click(object sender, EventArgs e)
-        {
-            if (!Application.OpenForms.OfType<About>().Any())
-            {
-                About AboutForm = new About();
-                AboutForm.Show();
+                ComparePlayer Compare = new ComparePlayer();
+                Compare.Show();
             }
         }
 
@@ -131,18 +102,55 @@ namespace RuneHelper
             }
         }
 
-        private void CompareStatsToolStrip_Click(object sender, EventArgs e)
+        private void MiningToolStrip_Click(object sender, EventArgs e)
         {
-            if (!Application.OpenForms.OfType<ComparePlayer>().Any())
+            if (!Application.OpenForms.OfType<MiningCalc>().Any())
             {
-                ComparePlayer Compare = new ComparePlayer();
-                Compare.Show();
+                MiningCalc Mining = new MiningCalc();
+                Mining.Show();
+            }
+        }
+
+        private void OpenSettingsToolStrip_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<SettingsForm>().Any())
+            {
+                SettingsForm Settings = new SettingsForm();
+                Settings.Show();
+            }
+        }
+
+        private void ReloadPageToolStrip_Click(object sender, EventArgs e)
+        {
+            ReloadPage();
+        }
+
+        private void silverHawkFeatherToolStrip_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<SilverhawkForm>().Any())
+            {
+                SilverhawkForm Silverhawk = new SilverhawkForm();
+                Silverhawk.Show();
+            }
+        }
+
+        private void WoodcuttingToolStrip_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<WooducttingCalculator>().Any())
+            {
+                WooducttingCalculator Woodcut = new WooducttingCalculator();
+                Woodcut.Show();
             }
         }
 
         #endregion Toolbar Controls
 
         #region Context Menu
+
+        private void bUUUGSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Peterburnett/RSThing/issues");
+        }
 
         private void OpenStats_Click(object sender, EventArgs e)
         {
@@ -157,13 +165,42 @@ namespace RuneHelper
         public void ReloadPage()
         {
             Cursor.Current = Cursors.WaitCursor;
+
+            if (SaveData[1] == "light")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+                StyleExtender.Theme = MetroFramework.MetroThemeStyle.Light;
+                this.Theme = StyleManager.Theme;
+                XPTracker.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.Black;
+                XPTracker.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Black;
+                XPTracker.ChartAreas["ChartArea1"].AxisX.LabelStyle.ForeColor = Color.Black;
+                XPTracker.ChartAreas["ChartArea1"].AxisY.LabelStyle.ForeColor = Color.Black;
+                XPTracker.ChartAreas[0].AxisX.LineColor = Color.Black;
+                XPTracker.ChartAreas[0].AxisY.LineColor = Color.Black;
+            }
+
+            if (SaveData[1] == "dark")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+                StyleExtender.Theme = MetroFramework.MetroThemeStyle.Dark;
+                this.Theme = StyleManager.Theme;
+                XPTracker.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.White;
+                XPTracker.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.White;
+                XPTracker.ChartAreas["ChartArea1"].AxisX.LabelStyle.ForeColor = Color.White;
+                XPTracker.ChartAreas["ChartArea1"].AxisY.LabelStyle.ForeColor = Color.White;
+                XPTracker.ChartAreas[0].AxisX.LineColor = Color.White;
+                XPTracker.ChartAreas[0].AxisY.LineColor = Color.White;
+            }
+
+            StyleManager.Style = API.GetColour(SaveData[2]);
+
             try
             {
                 ProfilePicture.Load(@"Profile.gif");
             }
             catch
             {
-                if(File.Exists(@"Profile.gif") == true)
+                if (File.Exists(@"Profile.gif") == true)
                 {
                     File.Delete("@Profile.gif");
                 }
@@ -172,7 +209,6 @@ namespace RuneHelper
                     API.UpdateImage(SaveData[0]);
                     ProfilePicture.Load(@"Profile.gif");
                 }
-                
             }
 
             try
@@ -243,6 +279,7 @@ namespace RuneHelper
                 DivinationLabel.Text = LevelArray[53];
                 InventionLabel.Text = LevelArray[55];
                 Cursor.Current = Cursors.Default;
+                this.Refresh();
             }
             catch
             {
@@ -257,20 +294,20 @@ namespace RuneHelper
             }
             try
             {
-                int i = 3;
+                int i = 4;
                 string[] arraysplit = LevelArray[2].Split('\n');
-                SaveData[DateTime.Now.Day + 3] = arraysplit[0];
+                SaveData[DateTime.Now.Day + 4] = arraysplit[0];
 
-                if (DateTime.Now.Month != API.IntParse(SaveData[1]))
+                if (DateTime.Now.Month != API.IntParse(SaveData[3]))
                 {
-                    SaveData[1] = DateTime.Now.Month.ToString();
+                    SaveData[3] = DateTime.Now.Month.ToString();
                     while (i < SaveData.Length)
                     {
                         SaveData[i] = "0";
                         i++;
                     }
                 }
-                i = 3;
+                i = 4;
                 while (i < SaveData.Length)
                 {
                     if (string.IsNullOrEmpty(SaveData[i]) == false && SaveData[i] != "0")
@@ -285,15 +322,16 @@ namespace RuneHelper
 
         private void ClockRefresh_DoWork(object sender, DoWorkEventArgs e)
         {
-            while(true)
+            while (true)
             {
                 MainToolStrip.Invoke((MethodInvoker)(() =>
                 {
                     Time.Text = DateTime.UtcNow.ToString("HH:mm:ss tt");
                 }));
                 Thread.Sleep(1000);
-            }           
+            }
         }
+
         #endregion Functions
     }
 }

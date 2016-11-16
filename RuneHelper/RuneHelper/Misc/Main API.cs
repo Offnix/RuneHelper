@@ -14,6 +14,7 @@ public static class API
                             , 4842295, 5346332, 5902831, 6517253, 7195629, 7944614, 8771558, 9684577, 10692629, 11805606, 13034431, 13034431};
 
     #region IO Functions
+
     public static void StreamWriter(string WriteText, string FileLocation)
     {
         try
@@ -53,9 +54,11 @@ public static class API
         }
         return false;
     }
-    #endregion
+
+    #endregion IO Functions
 
     #region Webclient Functions
+
     public static string[] UpdateLevels(String Username)
     {
         try
@@ -118,9 +121,11 @@ public static class API
         Download.DownloadFile("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif", @"Profile.gif");
         Download.Dispose();
     }
-    #endregion
+
+    #endregion Webclient Functions
 
     #region Calculator Functions
+
     public static string GetLevelPercentage(decimal TotalLevel)
     {
         decimal percentage;
@@ -157,6 +162,40 @@ public static class API
         }
         return result;
     }
-    #endregion
 
+    #endregion Calculator Functions
+
+    #region Style Functions
+
+    public static MetroFramework.MetroColorStyle GetColour(string Colour)
+    {
+        switch (Colour)
+        {
+            case "red":
+                return MetroFramework.MetroColorStyle.Red;
+
+            case "blue":
+                return MetroFramework.MetroColorStyle.Blue;
+
+            case "green":
+                return MetroFramework.MetroColorStyle.Green;
+
+            case "orange":
+                return MetroFramework.MetroColorStyle.Orange;
+        }
+        return MetroFramework.MetroColorStyle.Default;
+    }
+
+    #endregion Style Functions
 }
+
+#region Designer Functions
+
+public class CustomToolStripProfessionalRenderer : ToolStripProfessionalRenderer
+{
+    protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
+    {
+    }
+}
+
+#endregion Designer Functions

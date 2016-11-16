@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SilverhawkForm));
             this.CharNameBox = new MetroFramework.Controls.MetroTextBox();
             this.CharSearchButton = new MetroFramework.Controls.MetroButton();
@@ -42,6 +43,8 @@
             this.CachedName = new MetroFramework.Controls.MetroButton();
             this.BonusXP = new MetroFramework.Controls.MetroTextBox();
             this.EnterBonusXP = new MetroFramework.Controls.MetroLabel();
+            this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // CharNameBox
@@ -283,6 +286,10 @@
             this.EnterBonusXP.Text = "Enter Bonus XP";
             this.EnterBonusXP.Visible = false;
             // 
+            // StyleManager
+            // 
+            this.StyleManager.Owner = this;
+            // 
             // SilverhawkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,6 +312,8 @@
             this.MaximizeBox = false;
             this.Name = "SilverhawkForm";
             this.Text = "SilverHawk Calculator";
+            this.Load += new System.EventHandler(this.SilverhawkForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,5 +334,6 @@
         private MetroFramework.Controls.MetroButton CachedName;
         private MetroFramework.Controls.MetroTextBox BonusXP;
         private MetroFramework.Controls.MetroLabel EnterBonusXP;
+        private new MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }

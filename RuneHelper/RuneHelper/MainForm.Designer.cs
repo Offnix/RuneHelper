@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new MetroFramework.Controls.MetroLabel();
             this.AttackBar = new MetroFramework.Controls.MetroProgressBar();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
@@ -50,6 +50,8 @@
             this.FireMakingToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.OtherToolStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.CompareStatsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.TimeLabel = new System.Windows.Forms.ToolStripLabel();
+            this.Time = new System.Windows.Forms.ToolStripLabel();
             this.UsernameLabel = new MetroFramework.Controls.MetroLabel();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
             this.ExitButton = new MetroFramework.Controls.MetroButton();
@@ -135,6 +137,7 @@
             this.DungeoneeringLabel = new MetroFramework.Controls.MetroLabel();
             this.MainFormMenu = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.OpenStats = new System.Windows.Forms.ToolStripMenuItem();
+            this.bUUUGSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TabControl = new MetroFramework.Controls.MetroTabControl();
             this.ExtraStats = new MetroFramework.Controls.MetroTabPage();
             this.CombatLevel = new MetroFramework.Controls.MetroLabel();
@@ -149,8 +152,8 @@
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.CookingBar = new MetroFramework.Controls.MetroProgressBar();
             this.ClockRefresh = new System.ComponentModel.BackgroundWorker();
-            this.Time = new System.Windows.Forms.ToolStripLabel();
-            this.TimeLabel = new System.Windows.Forms.ToolStripLabel();
+            this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -185,6 +188,7 @@
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.XPTracker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -208,9 +212,10 @@
             // 
             // MainToolStrip
             // 
-            this.MainToolStrip.AutoSize = false;
-            this.MainToolStrip.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.StyleExtender.SetApplyMetroTheme(this.MainToolStrip, true);
+            this.MainToolStrip.BackColor = System.Drawing.Color.White;
             this.MainToolStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MainToolStrip.GripMargin = new System.Windows.Forms.Padding(0);
             this.MainToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Settings,
@@ -220,7 +225,9 @@
             this.Time});
             this.MainToolStrip.Location = new System.Drawing.Point(20, 60);
             this.MainToolStrip.Name = "MainToolStrip";
-            this.MainToolStrip.Size = new System.Drawing.Size(909, 35);
+            this.MainToolStrip.Padding = new System.Windows.Forms.Padding(0);
+            this.MainToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.MainToolStrip.Size = new System.Drawing.Size(909, 27);
             this.MainToolStrip.TabIndex = 3;
             this.MainToolStrip.Text = "Main Tool Strip";
             // 
@@ -234,7 +241,7 @@
             this.Settings.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(96, 32);
+            this.Settings.Size = new System.Drawing.Size(96, 24);
             this.Settings.Text = "RuneHelper";
             this.Settings.ToolTipText = "ApplicationToolStrip";
             // 
@@ -271,7 +278,7 @@
             this.Calculators.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.Calculators.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Calculators.Name = "Calculators";
-            this.Calculators.Size = new System.Drawing.Size(89, 32);
+            this.Calculators.Size = new System.Drawing.Size(89, 24);
             this.Calculators.Text = "Calculators";
             // 
             // WoodcuttingToolStrip
@@ -338,7 +345,7 @@
             this.OtherToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.OtherToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.OtherToolStrip.Name = "OtherToolStrip";
-            this.OtherToolStrip.Size = new System.Drawing.Size(106, 32);
+            this.OtherToolStrip.Size = new System.Drawing.Size(106, 24);
             this.OtherToolStrip.Text = "Other Utilities";
             // 
             // CompareStatsToolStrip
@@ -347,6 +354,20 @@
             this.CompareStatsToolStrip.Size = new System.Drawing.Size(167, 24);
             this.CompareStatsToolStrip.Text = "Compare Stats";
             this.CompareStatsToolStrip.Click += new System.EventHandler(this.CompareStatsToolStrip_Click);
+            // 
+            // TimeLabel
+            // 
+            this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Light", 11F);
+            this.TimeLabel.Name = "TimeLabel";
+            this.TimeLabel.Size = new System.Drawing.Size(97, 24);
+            this.TimeLabel.Text = " In game time:";
+            // 
+            // Time
+            // 
+            this.Time.Font = new System.Drawing.Font("Segoe UI Light", 11F);
+            this.Time.Name = "Time";
+            this.Time.Size = new System.Drawing.Size(88, 24);
+            this.Time.Text = "00:00:00 AM";
             // 
             // UsernameLabel
             // 
@@ -1182,10 +1203,13 @@
             // 
             // MainFormMenu
             // 
+            this.MainFormMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.MainFormMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.MainFormMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.OpenStats});
+            this.OpenStats,
+            this.bUUUGSToolStripMenuItem});
             this.MainFormMenu.Name = "MainFormMenu";
-            this.MainFormMenu.Size = new System.Drawing.Size(234, 26);
+            this.MainFormMenu.Size = new System.Drawing.Size(234, 48);
             // 
             // OpenStats
             // 
@@ -1194,13 +1218,20 @@
             this.OpenStats.Text = "Open in runescape highscores";
             this.OpenStats.Click += new System.EventHandler(this.OpenStats_Click);
             // 
+            // bUUUGSToolStripMenuItem
+            // 
+            this.bUUUGSToolStripMenuItem.Name = "bUUUGSToolStripMenuItem";
+            this.bUUUGSToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.bUUUGSToolStripMenuItem.Text = "BUUUGS";
+            this.bUUUGSToolStripMenuItem.Click += new System.EventHandler(this.bUUUGSToolStripMenuItem_Click);
+            // 
             // TabControl
             // 
             this.TabControl.Controls.Add(this.ExtraStats);
             this.TabControl.Controls.Add(this.metroTabPage1);
             this.TabControl.Location = new System.Drawing.Point(472, 100);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 0;
+            this.TabControl.SelectedIndex = 1;
             this.TabControl.Size = new System.Drawing.Size(457, 425);
             this.TabControl.TabIndex = 88;
             this.TabControl.UseSelectable = true;
@@ -1305,19 +1336,25 @@
             // 
             // XPTracker
             // 
-            chartArea3.Name = "ChartArea1";
-            this.XPTracker.ChartAreas.Add(chartArea3);
-            legend3.Enabled = false;
-            legend3.Name = "Legend1";
-            this.XPTracker.Legends.Add(legend3);
+            this.StyleExtender.SetApplyMetroTheme(this.XPTracker, true);
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea1.BorderColor = System.Drawing.Color.White;
+            chartArea1.Name = "ChartArea1";
+            this.XPTracker.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.Name = "Legend1";
+            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            this.XPTracker.Legends.Add(legend1);
             this.XPTracker.Location = new System.Drawing.Point(-4, 39);
             this.XPTracker.Name = "XPTracker";
-            this.XPTracker.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.XPTracker.Series.Add(series3);
+            this.XPTracker.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.XPTracker.Series.Add(series1);
             this.XPTracker.Size = new System.Drawing.Size(457, 271);
             this.XPTracker.TabIndex = 2;
             this.XPTracker.Text = "MonthlyXP";
@@ -1352,19 +1389,10 @@
             this.CookingBar.Size = new System.Drawing.Size(157, 23);
             this.CookingBar.TabIndex = 89;
             // 
-            // Time
+            // StyleManager
             // 
-            this.Time.Font = new System.Drawing.Font("Segoe UI Light", 11F);
-            this.Time.Name = "Time";
-            this.Time.Size = new System.Drawing.Size(88, 32);
-            this.Time.Text = "00:00:00 AM";
-            // 
-            // TimeLabel
-            // 
-            this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Light", 11F);
-            this.TimeLabel.Name = "TimeLabel";
-            this.TimeLabel.Size = new System.Drawing.Size(97, 32);
-            this.TimeLabel.Text = " In game time:";
+            this.StyleManager.Owner = this;
+            this.StyleManager.Style = MetroFramework.MetroColorStyle.Orange;
             // 
             // MainForm
             // 
@@ -1502,6 +1530,7 @@
             this.metroTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.XPTracker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1627,6 +1656,9 @@
         private System.ComponentModel.BackgroundWorker ClockRefresh;
         private System.Windows.Forms.ToolStripLabel Time;
         private System.Windows.Forms.ToolStripLabel TimeLabel;
+        private new MetroFramework.Components.MetroStyleManager StyleManager;
+        private MetroFramework.Components.MetroStyleExtender StyleExtender;
+        private System.Windows.Forms.ToolStripMenuItem bUUUGSToolStripMenuItem;
     }
 }
 

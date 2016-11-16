@@ -23,6 +23,25 @@ namespace RuneHelper
                                             294.6,308.2,321.3,333.9,349.5,364.6,379.2,398,416.6,434.7,452.1,476.2,491.8,503.3,537.5,559.2,592.2,
                                             612.1,645.1,661.4,692.8,723.6,753.2,806.4,834.7,860.2,860.2};
 
+        #region Load And Close Functions
+
+        private void SilverhawkForm_Load(object sender, EventArgs e)
+        {
+            if (MainForm.SaveData[1] == "light")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+                this.Theme = StyleManager.Theme;
+            }
+
+            if (MainForm.SaveData[1] == "dark")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+                this.Theme = StyleManager.Theme;
+            }
+        }
+
+        #endregion Load And Close Functions
+
         #region Form Buttons
 
         private void CharSearchButton_Click(object sender, EventArgs e)

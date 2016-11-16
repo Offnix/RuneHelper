@@ -17,6 +17,25 @@ namespace RuneHelper
 
         public static float[] CourseXPArray = new float[] { 79.5f, 86.5f, 750, 1014, 775, 139.5f, 580, 571.5f, 380, 540, 704, 880, 1056, 1184, 1328, 2375, 725, 740.7f };
 
+        #region Load And Close Functions
+
+        private void AglilityCalc_Load(object sender, EventArgs e)
+        {
+            if (MainForm.SaveData[1] == "light")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+                this.Theme = StyleManager.Theme;
+            }
+
+            if (MainForm.SaveData[1] == "dark")
+            {
+                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
+                this.Theme = StyleManager.Theme;
+            }
+        }
+
+        #endregion Load And Close Functions
+
         #region Form Buttons
 
         private void CharSearchButton_Click(object sender, EventArgs e)
