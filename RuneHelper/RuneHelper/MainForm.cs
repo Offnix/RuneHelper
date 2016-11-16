@@ -287,15 +287,12 @@ namespace RuneHelper
         {
             while(true)
             {
-                Console.WriteLine("I made it this far");
-                Time.Invoke((MethodInvoker)(() =>
+                MainToolStrip.Invoke((MethodInvoker)(() =>
                 {
-                    Time.Text = DateTime.Now.ToString("HH:mm:ss tt");
-
+                    Time.Text = DateTime.UtcNow.ToString("HH:mm:ss tt");
                 }));
-                Thread.Sleep(60000);
-            }
-            
+                Thread.Sleep(1000);
+            }           
         }
         #endregion Functions
     }

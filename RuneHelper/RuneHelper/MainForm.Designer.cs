@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new MetroFramework.Controls.MetroLabel();
             this.AttackBar = new MetroFramework.Controls.MetroProgressBar();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
@@ -148,9 +148,9 @@
             this.CookingLabel = new MetroFramework.Controls.MetroLabel();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.CookingBar = new MetroFramework.Controls.MetroProgressBar();
-            this.RunescapeTime = new MetroFramework.Controls.MetroLabel();
-            this.Time = new MetroFramework.Controls.MetroLabel();
             this.ClockRefresh = new System.ComponentModel.BackgroundWorker();
+            this.Time = new System.Windows.Forms.ToolStripLabel();
+            this.TimeLabel = new System.Windows.Forms.ToolStripLabel();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -215,7 +215,9 @@
             this.MainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Settings,
             this.Calculators,
-            this.OtherToolStrip});
+            this.OtherToolStrip,
+            this.TimeLabel,
+            this.Time});
             this.MainToolStrip.Location = new System.Drawing.Point(20, 60);
             this.MainToolStrip.Name = "MainToolStrip";
             this.MainToolStrip.Size = new System.Drawing.Size(909, 35);
@@ -1205,8 +1207,6 @@
             // 
             // ExtraStats
             // 
-            this.ExtraStats.Controls.Add(this.Time);
-            this.ExtraStats.Controls.Add(this.RunescapeTime);
             this.ExtraStats.Controls.Add(this.CombatLevel);
             this.ExtraStats.Controls.Add(this.CombatLevelLabel);
             this.ExtraStats.Controls.Add(this.PercentageLabel);
@@ -1305,19 +1305,19 @@
             // 
             // XPTracker
             // 
-            chartArea1.Name = "ChartArea1";
-            this.XPTracker.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.XPTracker.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.XPTracker.ChartAreas.Add(chartArea3);
+            legend3.Enabled = false;
+            legend3.Name = "Legend1";
+            this.XPTracker.Legends.Add(legend3);
             this.XPTracker.Location = new System.Drawing.Point(-4, 39);
             this.XPTracker.Name = "XPTracker";
             this.XPTracker.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.XPTracker.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.XPTracker.Series.Add(series3);
             this.XPTracker.Size = new System.Drawing.Size(457, 271);
             this.XPTracker.TabIndex = 2;
             this.XPTracker.Text = "MonthlyXP";
@@ -1352,25 +1352,19 @@
             this.CookingBar.Size = new System.Drawing.Size(157, 23);
             this.CookingBar.TabIndex = 89;
             // 
-            // RunescapeTime
-            // 
-            this.RunescapeTime.AutoSize = true;
-            this.RunescapeTime.BackColor = System.Drawing.Color.Transparent;
-            this.RunescapeTime.Location = new System.Drawing.Point(3, 110);
-            this.RunescapeTime.Name = "RunescapeTime";
-            this.RunescapeTime.Size = new System.Drawing.Size(91, 19);
-            this.RunescapeTime.TabIndex = 66;
-            this.RunescapeTime.Text = "In Game Time";
-            // 
             // Time
             // 
-            this.Time.AutoSize = true;
-            this.Time.BackColor = System.Drawing.Color.Transparent;
-            this.Time.Location = new System.Drawing.Point(96, 110);
+            this.Time.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.Time.Name = "Time";
-            this.Time.Size = new System.Drawing.Size(16, 19);
-            this.Time.TabIndex = 67;
-            this.Time.Text = "0";
+            this.Time.Size = new System.Drawing.Size(88, 32);
+            this.Time.Text = "00:00:00 AM";
+            // 
+            // TimeLabel
+            // 
+            this.TimeLabel.Font = new System.Drawing.Font("Segoe UI Light", 11F);
+            this.TimeLabel.Name = "TimeLabel";
+            this.TimeLabel.Size = new System.Drawing.Size(97, 32);
+            this.TimeLabel.Text = " In game time:";
             // 
             // MainForm
             // 
@@ -1630,9 +1624,9 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart XPTracker;
         private MetroFramework.Controls.MetroButton GraphUpdate;
         private MetroFramework.Controls.MetroLabel XptrackerLabel;
-        private MetroFramework.Controls.MetroLabel Time;
-        private MetroFramework.Controls.MetroLabel RunescapeTime;
         private System.ComponentModel.BackgroundWorker ClockRefresh;
+        private System.Windows.Forms.ToolStripLabel Time;
+        private System.Windows.Forms.ToolStripLabel TimeLabel;
     }
 }
 
