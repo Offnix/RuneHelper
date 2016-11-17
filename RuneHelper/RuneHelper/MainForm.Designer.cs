@@ -1222,8 +1222,8 @@
             // 
             this.bUUUGSToolStripMenuItem.Name = "bUUUGSToolStripMenuItem";
             this.bUUUGSToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.bUUUGSToolStripMenuItem.Text = "BUUUGS";
-            this.bUUUGSToolStripMenuItem.Click += new System.EventHandler(this.bUUUGSToolStripMenuItem_Click);
+            this.bUUUGSToolStripMenuItem.Text = "Bugs and issues";
+            this.bUUUGSToolStripMenuItem.Click += new System.EventHandler(this.BugsAndIssuesToolStripMenuItem_Click);
             // 
             // TabControl
             // 

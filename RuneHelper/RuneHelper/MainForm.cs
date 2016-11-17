@@ -1,6 +1,7 @@
 ﻿using MetroFramework.Forms;
 using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace RuneHelper
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
+            ClockRefresh.Dispose();
             API.StreamWriter(string.Join(",", SaveData), @"Data.txt");
             Application.Exit();
         }
@@ -44,6 +46,7 @@ namespace RuneHelper
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
+            ClockRefresh.Dispose();
             API.StreamWriter(string.Join(",", SaveData), @"Data.txt");
             Application.Exit();
         }
@@ -147,7 +150,7 @@ namespace RuneHelper
 
         #region Context Menu
 
-        private void bUUUGSToolStripMenuItem_Click(object sender, EventArgs e)
+        private void BugsAndIssuesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Peterburnett/RSThing/issues");
         }
@@ -164,6 +167,7 @@ namespace RuneHelper
 
         public void ReloadPage()
         {
+            var s1 = Stopwatch.StartNew();
             Cursor.Current = Cursors.WaitCursor;
 
             if (SaveData[1] == "light")
@@ -194,20 +198,21 @@ namespace RuneHelper
 
             StyleManager.Style = API.GetColour(SaveData[2]);
 
+            string FileName = SaveData[0] + ".gif";
             try
             {
-                ProfilePicture.Load(@"Profile.gif");
+                ProfilePicture.Load(FileName);
             }
             catch
             {
-                if (File.Exists(@"Profile.gif") == true)
+                if (File.Exists(FileName) == true)
                 {
-                    File.Delete("@Profile.gif");
+                    File.Delete(FileName);
                 }
                 else
                 {
                     API.UpdateImage(SaveData[0]);
-                    ProfilePicture.Load(@"Profile.gif");
+                    ProfilePicture.Load(FileName);
                 }
             }
 
@@ -280,6 +285,8 @@ namespace RuneHelper
                 InventionLabel.Text = LevelArray[55];
                 Cursor.Current = Cursors.Default;
                 this.Refresh();
+                s1.Stop();
+                Console.WriteLine(s1.ElapsedMilliseconds);
             }
             catch
             {
@@ -288,25 +295,30 @@ namespace RuneHelper
 
         public void UpdateGraph()
         {
+            // this is used for changing the placement of the month savedata in the array.. for when the savedata gets extended
+            int MonthSetting = 3;
+
             foreach (var series in XPTracker.Series)
             {
                 series.Points.Clear();
             }
+
             try
             {
-                int i = 4;
+                int i = MonthSetting + 1;
                 string[] arraysplit = LevelArray[2].Split('\n');
-                SaveData[DateTime.Now.Day + 4] = arraysplit[0];
+                SaveData[DateTime.Now.Day + i] = arraysplit[0];
 
-                if (DateTime.Now.Month != API.IntParse(SaveData[3]))
+                if (DateTime.Now.Month != API.IntParse(SaveData[MonthSetting]))
                 {
-                    SaveData[3] = DateTime.Now.Month.ToString();
+                    SaveData[MonthSetting] = DateTime.Now.Month.ToString();
                     while (i < SaveData.Length)
                     {
                         SaveData[i] = "0";
                         i++;
                     }
                 }
+
                 i = 4;
                 while (i < SaveData.Length)
                 {

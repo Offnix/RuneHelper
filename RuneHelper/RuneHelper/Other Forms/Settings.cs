@@ -47,13 +47,13 @@ namespace RuneHelper
         {
             if (MetroMessageBox.Show(this, "Clicking ok will delete all cached data stored over this last month. Are you sure? ", "Delete saved XP data", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                MainForm.SaveData[2] = "13";
+                MainForm.SaveData[3] = "13";
             }
         }
 
         private void DeleteImage_Click(object sender, EventArgs e)
         {
-            File.Delete(@"Profile.gif");
+            //File.Delete(@"Profile.gif");
         }
 
         private void Light_Click(object sender, EventArgs e)
@@ -86,6 +86,33 @@ namespace RuneHelper
             MainForm.SaveData[2] = "orange";
         }
 
+        private void Pink_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[2] = "pink";
+        }
+
+        private void Silver_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[2] = "silver";
+        }
+
+        private void Purple_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[2] = "purple";
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[2] = "brown";
+        }
+
+        private void Blue_Click(object sender, EventArgs e)
+        {
+            MainForm.SaveData[2] = "blue";
+        }
+
         #endregion Form Controls
+
+
     }
 }

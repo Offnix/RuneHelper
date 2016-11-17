@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.Exit = new MetroFramework.Controls.MetroButton();
             this.UsernameTextBox = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new MetroFramework.Controls.MetroLabel();
@@ -42,6 +43,10 @@
             this.Green = new MetroFramework.Controls.MetroTile();
             this.Orange = new MetroFramework.Controls.MetroTile();
             this.ColourLabel = new MetroFramework.Controls.MetroLabel();
+            this.Pink = new MetroFramework.Controls.MetroTile();
+            this.Silver = new MetroFramework.Controls.MetroTile();
+            this.Purple = new MetroFramework.Controls.MetroTile();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,9 +122,9 @@
             // Light
             // 
             this.Light.ActiveControl = null;
-            this.Light.Location = new System.Drawing.Point(342, 86);
+            this.Light.Location = new System.Drawing.Point(342, 116);
             this.Light.Name = "Light";
-            this.Light.Size = new System.Drawing.Size(101, 73);
+            this.Light.Size = new System.Drawing.Size(101, 60);
             this.Light.Style = MetroFramework.MetroColorStyle.Silver;
             this.Light.TabIndex = 5;
             this.Light.Text = "Light Theme";
@@ -129,9 +134,9 @@
             // Dark
             // 
             this.Dark.ActiveControl = null;
-            this.Dark.Location = new System.Drawing.Point(342, 165);
+            this.Dark.Location = new System.Drawing.Point(342, 182);
             this.Dark.Name = "Dark";
-            this.Dark.Size = new System.Drawing.Size(101, 77);
+            this.Dark.Size = new System.Drawing.Size(101, 60);
             this.Dark.Style = MetroFramework.MetroColorStyle.Black;
             this.Dark.TabIndex = 6;
             this.Dark.Text = "Dark Theme";
@@ -145,7 +150,7 @@
             // Red
             // 
             this.Red.ActiveControl = null;
-            this.Red.Location = new System.Drawing.Point(342, 57);
+            this.Red.Location = new System.Drawing.Point(341, 89);
             this.Red.Name = "Red";
             this.Red.Size = new System.Drawing.Size(21, 23);
             this.Red.Style = MetroFramework.MetroColorStyle.Red;
@@ -156,17 +161,18 @@
             // Blue
             // 
             this.Blue.ActiveControl = null;
-            this.Blue.Location = new System.Drawing.Point(369, 57);
+            this.Blue.Location = new System.Drawing.Point(368, 89);
             this.Blue.Name = "Blue";
             this.Blue.Size = new System.Drawing.Size(21, 23);
             this.Blue.Style = MetroFramework.MetroColorStyle.Blue;
             this.Blue.TabIndex = 9;
             this.Blue.UseSelectable = true;
+            this.Blue.Click += new System.EventHandler(this.Blue_Click);
             // 
             // Green
             // 
             this.Green.ActiveControl = null;
-            this.Green.Location = new System.Drawing.Point(396, 57);
+            this.Green.Location = new System.Drawing.Point(395, 89);
             this.Green.Name = "Green";
             this.Green.Size = new System.Drawing.Size(21, 23);
             this.Green.Style = MetroFramework.MetroColorStyle.Green;
@@ -177,7 +183,7 @@
             // Orange
             // 
             this.Orange.ActiveControl = null;
-            this.Orange.Location = new System.Drawing.Point(422, 57);
+            this.Orange.Location = new System.Drawing.Point(421, 89);
             this.Orange.Name = "Orange";
             this.Orange.Size = new System.Drawing.Size(21, 23);
             this.Orange.Style = MetroFramework.MetroColorStyle.Orange;
@@ -188,16 +194,65 @@
             // ColourLabel
             // 
             this.ColourLabel.AutoSize = true;
-            this.ColourLabel.Location = new System.Drawing.Point(312, 26);
+            this.ColourLabel.Location = new System.Drawing.Point(311, 23);
             this.ColourLabel.Name = "ColourLabel";
             this.ColourLabel.Size = new System.Drawing.Size(131, 19);
             this.ColourLabel.TabIndex = 12;
             this.ColourLabel.Text = "Themes And Colours";
             // 
+            // Pink
+            // 
+            this.Pink.ActiveControl = null;
+            this.Pink.Location = new System.Drawing.Point(369, 60);
+            this.Pink.Name = "Pink";
+            this.Pink.Size = new System.Drawing.Size(21, 23);
+            this.Pink.Style = MetroFramework.MetroColorStyle.Pink;
+            this.Pink.TabIndex = 13;
+            this.Pink.UseSelectable = true;
+            this.Pink.Click += new System.EventHandler(this.Pink_Click);
+            // 
+            // Silver
+            // 
+            this.Silver.ActiveControl = null;
+            this.Silver.Location = new System.Drawing.Point(341, 60);
+            this.Silver.Name = "Silver";
+            this.Silver.Size = new System.Drawing.Size(21, 23);
+            this.Silver.Style = MetroFramework.MetroColorStyle.Silver;
+            this.Silver.TabIndex = 14;
+            this.Silver.UseSelectable = true;
+            this.Silver.Click += new System.EventHandler(this.Silver_Click);
+            // 
+            // Purple
+            // 
+            this.Purple.ActiveControl = null;
+            this.Purple.Location = new System.Drawing.Point(396, 60);
+            this.Purple.Name = "Purple";
+            this.Purple.Size = new System.Drawing.Size(20, 23);
+            this.Purple.Style = MetroFramework.MetroColorStyle.Purple;
+            this.Purple.TabIndex = 15;
+            this.Purple.UseSelectable = true;
+            this.Purple.Click += new System.EventHandler(this.Purple_Click);
+            // 
+            // metroTile1
+            // 
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(421, 60);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(21, 23);
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Brown;
+            this.metroTile1.TabIndex = 16;
+            this.metroTile1.Text = "metroTile1";
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.Click += new System.EventHandler(this.metroTile1_Click);
+            // 
             // SettingsForm
             // 
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(448, 254);
+            this.Controls.Add(this.metroTile1);
+            this.Controls.Add(this.Purple);
+            this.Controls.Add(this.Silver);
+            this.Controls.Add(this.Pink);
             this.Controls.Add(this.ColourLabel);
             this.Controls.Add(this.Orange);
             this.Controls.Add(this.Green);
@@ -210,6 +265,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.Exit);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SettingsForm";
             this.Resizable = false;
@@ -236,5 +292,9 @@
         private MetroFramework.Controls.MetroTile Green;
         private MetroFramework.Controls.MetroTile Blue;
         private MetroFramework.Controls.MetroLabel ColourLabel;
+        private MetroFramework.Controls.MetroTile Pink;
+        private MetroFramework.Controls.MetroTile Silver;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile Purple;
     }
 }

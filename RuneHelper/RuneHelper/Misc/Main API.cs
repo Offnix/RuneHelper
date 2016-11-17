@@ -76,25 +76,6 @@ public static class API
         return null;
     }
 
-    public static int GetMean(String[] LevelArray)
-    {
-        int i = 3;
-        int total = 0;
-        try
-        {
-            while (i != 55)
-            {
-                total = total + API.IntParse(LevelArray[i]);
-                i = i + 2;
-            }
-            return total / 27;
-        }
-        catch
-        {
-            return 0;
-        }
-    }
-
     public static string[] GetStats(string Name)
     {
         string[] LevelArray;
@@ -118,7 +99,7 @@ public static class API
     {
         WebClient Download = new WebClient();
         Download.Proxy = null;
-        Download.DownloadFile("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif", @"Profile.gif");
+        Download.DownloadFile("http://services.runescape.com/m=avatar-rs/" + Username + "/chat.gif", Username + ".gif");
         Download.Dispose();
     }
 
@@ -163,6 +144,25 @@ public static class API
         return result;
     }
 
+    public static int GetMean(String[] LevelArray)
+    {
+        int i = 3;
+        int total = 0;
+        try
+        {
+            while (i != 55)
+            {
+                total = total + API.IntParse(LevelArray[i]);
+                i = i + 2;
+            }
+            return total / 27;
+        }
+        catch
+        {
+            return 0;
+        }
+    }
+
     #endregion Calculator Functions
 
     #region Style Functions
@@ -182,6 +182,18 @@ public static class API
 
             case "orange":
                 return MetroFramework.MetroColorStyle.Orange;
+
+            case "silver":
+                return MetroFramework.MetroColorStyle.Silver;
+
+            case "brown":
+                return MetroFramework.MetroColorStyle.Brown;
+
+            case "pink":
+                return MetroFramework.MetroColorStyle.Pink;
+
+            case "purple":
+                return MetroFramework.MetroColorStyle.Purple;
         }
         return MetroFramework.MetroColorStyle.Default;
     }
