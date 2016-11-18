@@ -46,9 +46,7 @@ namespace RuneHelper
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            ClockRefresh.Dispose();
-            API.StreamWriter(string.Join(",", SaveData), @"Data.txt");
-            Application.Exit();
+            this.Close();
         }
 
         private void GraphUpdate_Click(object sender, EventArgs e)
@@ -143,6 +141,15 @@ namespace RuneHelper
             {
                 WooducttingCalculator Woodcut = new WooducttingCalculator();
                 Woodcut.Show();
+            }
+        }
+
+        private void itemSearchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<WooducttingCalculator>().Any())
+            {
+                ItemLookup lookup = new ItemLookup();
+                lookup.Show();
             }
         }
 
@@ -345,5 +352,6 @@ namespace RuneHelper
         }
 
         #endregion Functions
+
     }
 }

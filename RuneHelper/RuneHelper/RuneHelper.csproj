@@ -78,6 +78,10 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -97,6 +101,12 @@
     </Compile>
     <Compile Include="Calculators\FireMakingCalc.Designer.cs">
       <DependentUpon>FireMakingCalc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemLookup.Designer.cs">
+      <DependentUpon>ItemLookup.cs</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -163,6 +173,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Calculators\FireMakingCalc.resx">
       <DependentUpon>FireMakingCalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemLookup.resx">
+      <DependentUpon>ItemLookup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>

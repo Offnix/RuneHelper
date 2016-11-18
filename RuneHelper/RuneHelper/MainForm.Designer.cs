@@ -154,6 +154,7 @@
             this.ClockRefresh = new System.ComponentModel.BackgroundWorker();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
+            this.itemSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -248,21 +249,21 @@
             // OpenSettingsToolStrip
             // 
             this.OpenSettingsToolStrip.Name = "OpenSettingsToolStrip";
-            this.OpenSettingsToolStrip.Size = new System.Drawing.Size(203, 24);
+            this.OpenSettingsToolStrip.Size = new System.Drawing.Size(202, 24);
             this.OpenSettingsToolStrip.Text = "Open Settings Panel";
             this.OpenSettingsToolStrip.Click += new System.EventHandler(this.OpenSettingsToolStrip_Click);
             // 
             // ReloadPageToolStrip
             // 
             this.ReloadPageToolStrip.Name = "ReloadPageToolStrip";
-            this.ReloadPageToolStrip.Size = new System.Drawing.Size(203, 24);
+            this.ReloadPageToolStrip.Size = new System.Drawing.Size(202, 24);
             this.ReloadPageToolStrip.Text = "Reload Page";
             this.ReloadPageToolStrip.Click += new System.EventHandler(this.ReloadPageToolStrip_Click);
             // 
             // AboutToolStrip
             // 
             this.AboutToolStrip.Name = "AboutToolStrip";
-            this.AboutToolStrip.Size = new System.Drawing.Size(203, 24);
+            this.AboutToolStrip.Size = new System.Drawing.Size(202, 24);
             this.AboutToolStrip.Text = "About";
             this.AboutToolStrip.Click += new System.EventHandler(this.AboutToolStrip_Click);
             // 
@@ -285,7 +286,7 @@
             // 
             this.WoodcuttingToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.WoodcuttingToolStrip.Name = "WoodcuttingToolStrip";
-            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(202, 24);
+            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(201, 24);
             this.WoodcuttingToolStrip.Text = "Woodcutting";
             this.WoodcuttingToolStrip.Click += new System.EventHandler(this.WoodcuttingToolStrip_Click);
             // 
@@ -293,7 +294,7 @@
             // 
             this.MiningToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.MiningToolStrip.Name = "MiningToolStrip";
-            this.MiningToolStrip.Size = new System.Drawing.Size(202, 24);
+            this.MiningToolStrip.Size = new System.Drawing.Size(201, 24);
             this.MiningToolStrip.Text = "Mining";
             this.MiningToolStrip.Click += new System.EventHandler(this.MiningToolStrip_Click);
             // 
@@ -304,7 +305,7 @@
             this.SilverHawkFeatherToolStrip});
             this.Agility.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.Agility.Name = "Agility";
-            this.Agility.Size = new System.Drawing.Size(202, 24);
+            this.Agility.Size = new System.Drawing.Size(201, 24);
             this.Agility.Text = "Agility";
             // 
             // AgilityToolStrip
@@ -325,7 +326,7 @@
             // 
             this.inventionPerkMetaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.inventionPerkMetaToolStripMenuItem.Name = "inventionPerkMetaToolStripMenuItem";
-            this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(202, 24);
+            this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
             this.inventionPerkMetaToolStripMenuItem.Text = "Invention Perk Meta";
             this.inventionPerkMetaToolStripMenuItem.Click += new System.EventHandler(this.InventionPerkMetaToolStrip_Click);
             // 
@@ -333,7 +334,7 @@
             // 
             this.FireMakingToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.FireMakingToolStrip.Name = "FireMakingToolStrip";
-            this.FireMakingToolStrip.Size = new System.Drawing.Size(202, 24);
+            this.FireMakingToolStrip.Size = new System.Drawing.Size(201, 24);
             this.FireMakingToolStrip.Text = "FireMaking";
             this.FireMakingToolStrip.Click += new System.EventHandler(this.FireMakingToolStrip_Click);
             // 
@@ -341,7 +342,8 @@
             // 
             this.OtherToolStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.OtherToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CompareStatsToolStrip});
+            this.CompareStatsToolStrip,
+            this.itemSearchToolStripMenuItem});
             this.OtherToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.OtherToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.OtherToolStrip.Name = "OtherToolStrip";
@@ -927,7 +929,7 @@
             this.TotalLevelText.BackColor = System.Drawing.Color.Transparent;
             this.TotalLevelText.Location = new System.Drawing.Point(3, 18);
             this.TotalLevelText.Name = "TotalLevelText";
-            this.TotalLevelText.Size = new System.Drawing.Size(71, 19);
+            this.TotalLevelText.Size = new System.Drawing.Size(69, 19);
             this.TotalLevelText.TabIndex = 60;
             this.TotalLevelText.Text = "Total Level";
             // 
@@ -1294,7 +1296,7 @@
             this.Percentage.BackColor = System.Drawing.Color.Transparent;
             this.Percentage.Location = new System.Drawing.Point(3, 81);
             this.Percentage.Name = "Percentage";
-            this.Percentage.Size = new System.Drawing.Size(137, 19);
+            this.Percentage.Size = new System.Drawing.Size(136, 19);
             this.Percentage.TabIndex = 62;
             this.Percentage.Text = "Percentage Complete";
             // 
@@ -1320,7 +1322,7 @@
             this.XptrackerLabel.AutoSize = true;
             this.XptrackerLabel.Location = new System.Drawing.Point(25, 17);
             this.XptrackerLabel.Name = "XptrackerLabel";
-            this.XptrackerLabel.Size = new System.Drawing.Size(128, 19);
+            this.XptrackerLabel.Size = new System.Drawing.Size(126, 19);
             this.XptrackerLabel.TabIndex = 4;
             this.XptrackerLabel.Text = "Monthly Exp Tracker";
             // 
@@ -1393,6 +1395,13 @@
             // 
             this.StyleManager.Owner = this;
             this.StyleManager.Style = MetroFramework.MetroColorStyle.Orange;
+            // 
+            // itemSearchToolStripMenuItem
+            // 
+            this.itemSearchToolStripMenuItem.Name = "itemSearchToolStripMenuItem";
+            this.itemSearchToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.itemSearchToolStripMenuItem.Text = "Item Search";
+            this.itemSearchToolStripMenuItem.Click += new System.EventHandler(this.itemSearchToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -1659,6 +1668,7 @@
         private new MetroFramework.Components.MetroStyleManager StyleManager;
         private MetroFramework.Components.MetroStyleExtender StyleExtender;
         private System.Windows.Forms.ToolStripMenuItem bUUUGSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem itemSearchToolStripMenuItem;
     }
 }
 
