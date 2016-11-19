@@ -53,9 +53,7 @@ namespace RuneHelper
             }
             catch
             {
-
             }
-            
 
             ResultListView.BeginUpdate();
             ResultListView.Items.Clear();

@@ -50,6 +50,7 @@
             this.FireMakingToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.OtherToolStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.CompareStatsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TimeLabel = new System.Windows.Forms.ToolStripLabel();
             this.Time = new System.Windows.Forms.ToolStripLabel();
             this.UsernameLabel = new MetroFramework.Controls.MetroLabel();
@@ -154,7 +155,7 @@
             this.ClockRefresh = new System.ComponentModel.BackgroundWorker();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
-            this.itemSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchInWiki = new System.Windows.Forms.ToolStripMenuItem();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -356,6 +357,13 @@
             this.CompareStatsToolStrip.Size = new System.Drawing.Size(167, 24);
             this.CompareStatsToolStrip.Text = "Compare Stats";
             this.CompareStatsToolStrip.Click += new System.EventHandler(this.CompareStatsToolStrip_Click);
+            // 
+            // itemSearchToolStripMenuItem
+            // 
+            this.itemSearchToolStripMenuItem.Name = "itemSearchToolStripMenuItem";
+            this.itemSearchToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.itemSearchToolStripMenuItem.Text = "Item Search";
+            this.itemSearchToolStripMenuItem.Click += new System.EventHandler(this.itemSearchToolStripMenuItem_Click);
             // 
             // TimeLabel
             // 
@@ -1209,9 +1217,10 @@
             this.MainFormMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.MainFormMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.OpenStats,
-            this.bUUUGSToolStripMenuItem});
+            this.bUUUGSToolStripMenuItem,
+            this.SearchInWiki});
             this.MainFormMenu.Name = "MainFormMenu";
-            this.MainFormMenu.Size = new System.Drawing.Size(234, 48);
+            this.MainFormMenu.Size = new System.Drawing.Size(234, 92);
             // 
             // OpenStats
             // 
@@ -1396,12 +1405,12 @@
             this.StyleManager.Owner = this;
             this.StyleManager.Style = MetroFramework.MetroColorStyle.Orange;
             // 
-            // itemSearchToolStripMenuItem
+            // SearchInWiki
             // 
-            this.itemSearchToolStripMenuItem.Name = "itemSearchToolStripMenuItem";
-            this.itemSearchToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
-            this.itemSearchToolStripMenuItem.Text = "Item Search";
-            this.itemSearchToolStripMenuItem.Click += new System.EventHandler(this.itemSearchToolStripMenuItem_Click);
+            this.SearchInWiki.Name = "SearchInWiki";
+            this.SearchInWiki.Size = new System.Drawing.Size(233, 22);
+            this.SearchInWiki.Text = "Search in wiki";
+            this.SearchInWiki.Click += new System.EventHandler(this.SearchInWiki_Click);
             // 
             // MainForm
             // 
@@ -1669,6 +1678,7 @@
         private MetroFramework.Components.MetroStyleExtender StyleExtender;
         private System.Windows.Forms.ToolStripMenuItem bUUUGSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemSearchToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SearchInWiki;
     }
 }
 

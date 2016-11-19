@@ -45,17 +45,17 @@
             this.PriceLabel = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.ItemIDLabel = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.PriceTrend = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.CurrentPriceTrend = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.CurrentPriceLabel = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.ItemIDLabel = new MetroFramework.Controls.MetroLabel();
+            this.CurrentPriceTrend = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.PriceTrend = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             this.metroTabControl1.SuspendLayout();
@@ -195,6 +195,7 @@
             // 
             // ItemImage
             // 
+            this.ItemImage.BackColor = System.Drawing.Color.Transparent;
             this.ItemImage.InitialImage = null;
             this.ItemImage.Location = new System.Drawing.Point(0, 15);
             this.ItemImage.Name = "ItemImage";
@@ -251,7 +252,7 @@
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Location = new System.Drawing.Point(14, 306);
+            this.metroTabControl1.Location = new System.Drawing.Point(14, 312);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(368, 187);
@@ -278,6 +279,23 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
+            // ItemIDLabel
+            // 
+            this.ItemIDLabel.AutoSize = true;
+            this.ItemIDLabel.Location = new System.Drawing.Point(99, 78);
+            this.ItemIDLabel.Name = "ItemIDLabel";
+            this.ItemIDLabel.Size = new System.Drawing.Size(0, 0);
+            this.ItemIDLabel.TabIndex = 9;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(99, 59);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel6.TabIndex = 8;
+            this.metroLabel6.Text = "Item ID";
+            // 
             // metroTabPage2
             // 
             this.metroTabPage2.Controls.Add(this.CurrentPriceLabel);
@@ -302,41 +320,23 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
-            // metroLabel3
+            // CurrentPriceLabel
             // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(-4, 41);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(73, 19);
-            this.metroLabel3.TabIndex = 2;
-            this.metroLabel3.Text = "Price trend";
+            this.CurrentPriceLabel.AutoSize = true;
+            this.CurrentPriceLabel.Location = new System.Drawing.Point(140, 106);
+            this.CurrentPriceLabel.Name = "CurrentPriceLabel";
+            this.CurrentPriceLabel.Size = new System.Drawing.Size(16, 19);
+            this.CurrentPriceLabel.TabIndex = 16;
+            this.CurrentPriceLabel.Text = "0";
             // 
-            // PriceTrend
+            // metroLabel9
             // 
-            this.PriceTrend.AutoSize = true;
-            this.PriceTrend.Location = new System.Drawing.Point(-4, 60);
-            this.PriceTrend.Name = "PriceTrend";
-            this.PriceTrend.Size = new System.Drawing.Size(52, 19);
-            this.PriceTrend.TabIndex = 10;
-            this.PriceTrend.Text = "Neutral";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(-4, 9);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(43, 19);
-            this.metroLabel4.TabIndex = 11;
-            this.metroLabel4.Text = "Today";
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(136, 9);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(53, 19);
-            this.metroLabel5.TabIndex = 12;
-            this.metroLabel5.Text = "Current";
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(136, 87);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel9.TabIndex = 15;
+            this.metroLabel9.Text = "Price change";
             // 
             // CurrentPriceTrend
             // 
@@ -356,40 +356,41 @@
             this.metroLabel8.TabIndex = 13;
             this.metroLabel8.Text = "Price trend";
             // 
-            // CurrentPriceLabel
+            // metroLabel5
             // 
-            this.CurrentPriceLabel.AutoSize = true;
-            this.CurrentPriceLabel.Location = new System.Drawing.Point(140, 106);
-            this.CurrentPriceLabel.Name = "CurrentPriceLabel";
-            this.CurrentPriceLabel.Size = new System.Drawing.Size(16, 19);
-            this.CurrentPriceLabel.TabIndex = 16;
-            this.CurrentPriceLabel.Text = "0";
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(136, 9);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(53, 19);
+            this.metroLabel5.TabIndex = 12;
+            this.metroLabel5.Text = "Current";
             // 
-            // metroLabel9
+            // metroLabel4
             // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(136, 87);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(38, 19);
-            this.metroLabel9.TabIndex = 15;
-            this.metroLabel9.Text = "Price";
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(-4, 9);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(43, 19);
+            this.metroLabel4.TabIndex = 11;
+            this.metroLabel4.Text = "Today";
             // 
-            // metroLabel6
+            // PriceTrend
             // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(99, 59);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel6.TabIndex = 8;
-            this.metroLabel6.Text = "Item ID";
+            this.PriceTrend.AutoSize = true;
+            this.PriceTrend.Location = new System.Drawing.Point(-4, 60);
+            this.PriceTrend.Name = "PriceTrend";
+            this.PriceTrend.Size = new System.Drawing.Size(52, 19);
+            this.PriceTrend.TabIndex = 10;
+            this.PriceTrend.Text = "Neutral";
             // 
-            // ItemIDLabel
+            // metroLabel3
             // 
-            this.ItemIDLabel.AutoSize = true;
-            this.ItemIDLabel.Location = new System.Drawing.Point(99, 78);
-            this.ItemIDLabel.Name = "ItemIDLabel";
-            this.ItemIDLabel.Size = new System.Drawing.Size(0, 0);
-            this.ItemIDLabel.TabIndex = 9;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(-4, 41);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(73, 19);
+            this.metroLabel3.TabIndex = 2;
+            this.metroLabel3.Text = "Price trend";
             // 
             // StyleManager
             // 
@@ -450,6 +451,5 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel ItemIDLabel;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }

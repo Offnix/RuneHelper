@@ -165,7 +165,17 @@ namespace RuneHelper
         private void OpenStats_Click(object sender, EventArgs e)
         {
             StringBuilder b = new StringBuilder(SaveData[0]);
-            System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?user1=" + b.Replace(" ", "+"));
+            Process.Start("http://runescape.wikia.com/wiki/Special:Search?search=" + b.Replace(" ", "+"));
+            
+        }
+
+        private void SearchInWiki_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<QuickLaunch>().Any())
+            {
+                QuickLaunch Quick = new QuickLaunch();
+                Quick.Show();
+            }
         }
 
         #endregion Context Menu
@@ -312,7 +322,7 @@ namespace RuneHelper
 
             try
             {
-                int i = MonthSetting + 1;
+                int i = MonthSetting;
                 string[] arraysplit = LevelArray[2].Split('\n');
                 SaveData[DateTime.Now.Day + i] = arraysplit[0];
 
@@ -351,7 +361,6 @@ namespace RuneHelper
             }
         }
 
-        #endregion Functions
-
+        #endregion Functions        
     }
 }

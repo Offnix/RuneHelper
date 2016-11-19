@@ -1,7 +1,6 @@
 ﻿using MetroFramework;
 using MetroFramework.Forms;
 using System;
-using System.IO;
 using System.Windows.Forms;
 
 namespace RuneHelper
@@ -112,7 +111,5 @@ namespace RuneHelper
         }
 
         #endregion Form Controls
-
-
     }
 }
