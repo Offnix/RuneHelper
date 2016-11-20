@@ -166,7 +166,6 @@ namespace RuneHelper
         {
             StringBuilder b = new StringBuilder(SaveData[0]);
             Process.Start("http://runescape.wikia.com/wiki/Special:Search?search=" + b.Replace(" ", "+"));
-            
         }
 
         private void SearchInWiki_Click(object sender, EventArgs e)
@@ -322,14 +321,14 @@ namespace RuneHelper
 
             try
             {
-                int i = MonthSetting;
+                int i = MonthSetting + 1;
                 string[] arraysplit = LevelArray[2].Split('\n');
-                SaveData[DateTime.Now.Day + i] = arraysplit[0];
+                SaveData[DateTime.Now.Day + MonthSetting] = arraysplit[0];
 
                 if (DateTime.Now.Month != API.IntParse(SaveData[MonthSetting]))
                 {
                     SaveData[MonthSetting] = DateTime.Now.Month.ToString();
-                    while (i < SaveData.Length)
+                    while (i  < SaveData.Length)
                     {
                         SaveData[i] = "0";
                         i++;
@@ -361,6 +360,7 @@ namespace RuneHelper
             }
         }
 
-        #endregion Functions        
+        #endregion Functions
+
     }
 }
