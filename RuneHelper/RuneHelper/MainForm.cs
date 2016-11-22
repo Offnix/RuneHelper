@@ -328,14 +328,14 @@ namespace RuneHelper
                 if (DateTime.Now.Month != API.IntParse(SaveData[MonthSetting]))
                 {
                     SaveData[MonthSetting] = DateTime.Now.Month.ToString();
-                    while (i  < SaveData.Length)
+                    while (i < SaveData.Length)
                     {
                         SaveData[i] = "0";
                         i++;
                     }
                 }
 
-                i = 4;
+                i = MonthSetting + 1;
                 while (i < SaveData.Length)
                 {
                     if (string.IsNullOrEmpty(SaveData[i]) == false && SaveData[i] != "0")
@@ -361,6 +361,5 @@ namespace RuneHelper
         }
 
         #endregion Functions
-
     }
 }

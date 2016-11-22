@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new MetroFramework.Controls.MetroLabel();
             this.AttackBar = new MetroFramework.Controls.MetroProgressBar();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
@@ -139,6 +139,7 @@
             this.MainFormMenu = new MetroFramework.Controls.MetroContextMenu(this.components);
             this.OpenStats = new System.Windows.Forms.ToolStripMenuItem();
             this.bUUUGSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchInWiki = new System.Windows.Forms.ToolStripMenuItem();
             this.TabControl = new MetroFramework.Controls.MetroTabControl();
             this.ExtraStats = new MetroFramework.Controls.MetroTabPage();
             this.CombatLevel = new MetroFramework.Controls.MetroLabel();
@@ -155,7 +156,6 @@
             this.ClockRefresh = new System.ComponentModel.BackgroundWorker();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
-            this.SearchInWiki = new System.Windows.Forms.ToolStripMenuItem();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1220,7 +1220,7 @@
             this.bUUUGSToolStripMenuItem,
             this.SearchInWiki});
             this.MainFormMenu.Name = "MainFormMenu";
-            this.MainFormMenu.Size = new System.Drawing.Size(234, 92);
+            this.MainFormMenu.Size = new System.Drawing.Size(234, 70);
             // 
             // OpenStats
             // 
@@ -1235,6 +1235,13 @@
             this.bUUUGSToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.bUUUGSToolStripMenuItem.Text = "Bugs and issues";
             this.bUUUGSToolStripMenuItem.Click += new System.EventHandler(this.BugsAndIssuesToolStripMenuItem_Click);
+            // 
+            // SearchInWiki
+            // 
+            this.SearchInWiki.Name = "SearchInWiki";
+            this.SearchInWiki.Size = new System.Drawing.Size(233, 22);
+            this.SearchInWiki.Text = "Search in wiki";
+            this.SearchInWiki.Click += new System.EventHandler(this.SearchInWiki_Click);
             // 
             // TabControl
             // 
@@ -1337,7 +1344,7 @@
             // 
             // GraphUpdate
             // 
-            this.GraphUpdate.Location = new System.Drawing.Point(25, 309);
+            this.GraphUpdate.Location = new System.Drawing.Point(25, 297);
             this.GraphUpdate.Name = "GraphUpdate";
             this.GraphUpdate.Size = new System.Drawing.Size(115, 23);
             this.GraphUpdate.TabIndex = 3;
@@ -1348,24 +1355,24 @@
             // XPTracker
             // 
             this.StyleExtender.SetApplyMetroTheme(this.XPTracker, true);
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.XPTracker.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
-            this.XPTracker.Legends.Add(legend1);
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea2.BorderColor = System.Drawing.Color.White;
+            chartArea2.Name = "ChartArea1";
+            this.XPTracker.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.ForeColor = System.Drawing.Color.White;
+            legend2.Name = "Legend1";
+            legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            this.XPTracker.Legends.Add(legend2);
             this.XPTracker.Location = new System.Drawing.Point(-4, 39);
             this.XPTracker.Name = "XPTracker";
             this.XPTracker.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.XPTracker.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.XPTracker.Series.Add(series2);
             this.XPTracker.Size = new System.Drawing.Size(457, 271);
             this.XPTracker.TabIndex = 2;
             this.XPTracker.Text = "MonthlyXP";
@@ -1404,13 +1411,6 @@
             // 
             this.StyleManager.Owner = this;
             this.StyleManager.Style = MetroFramework.MetroColorStyle.Orange;
-            // 
-            // SearchInWiki
-            // 
-            this.SearchInWiki.Name = "SearchInWiki";
-            this.SearchInWiki.Size = new System.Drawing.Size(233, 22);
-            this.SearchInWiki.Text = "Search in wiki";
-            this.SearchInWiki.Click += new System.EventHandler(this.SearchInWiki_Click);
             // 
             // MainForm
             // 

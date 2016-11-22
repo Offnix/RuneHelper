@@ -33,6 +33,7 @@
             this.Github = new System.Windows.Forms.PictureBox();
             this.AboutBox = new System.Windows.Forms.RichTextBox();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Github)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             // AboutBox
             // 
+            this.StyleExtender.SetApplyMetroTheme(this.AboutBox, true);
             this.AboutBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.AboutBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AboutBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -77,6 +79,7 @@
             this.Resizable = false;
             this.Text = "About";
             this.TransparencyKey = System.Drawing.Color.Empty;
+            this.Load += new System.EventHandler(this.About_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Github)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
@@ -88,5 +91,6 @@
         private System.Windows.Forms.PictureBox Github;
         private System.Windows.Forms.RichTextBox AboutBox;
         private new MetroFramework.Components.MetroStyleManager StyleManager;
+        private MetroFramework.Components.MetroStyleExtender StyleExtender;
     }
 }
