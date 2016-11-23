@@ -1,4 +1,6 @@
-# RuneHelper
+<a href=" https://raw.githubusercontent.com/Peterburnett/RSThing/master/RuneHelper/RuneHelper/runehelper_logo_MJN_icon.ico
+"><img src=" https://raw.githubusercontent.com/Peterburnett/RSThing/master/RuneHelper/RuneHelper/runehelper_logo_MJN_icon.ico
+" title="source: imgur.com" /></a># RuneHelper
 
 ## Whats all this riff raf?
 Runehelper is a lightweight C# windows form based program that collects stats data about your character
