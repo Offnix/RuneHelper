@@ -102,22 +102,22 @@
     <Compile Include="Calculators\FireMakingCalc.Designer.cs">
       <DependentUpon>FireMakingCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="ItemLookup.cs">
+    <Compile Include="Other Forms\ItemLookup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ItemLookup.Designer.cs">
+    <Compile Include="Other Forms\ItemLookup.Designer.cs">
       <DependentUpon>ItemLookup.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuickLaunch.cs">
+    <Compile Include="Other Forms\QuickLaunch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuickLaunch.Designer.cs">
+    <Compile Include="Other Forms\QuickLaunch.Designer.cs">
       <DependentUpon>QuickLaunch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Welcome.cs">
+    <Compile Include="Other Forms\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Welcome.Designer.cs">
+    <Compile Include="Other Forms\Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="Other Forms\ComparePlayer.cs">
@@ -180,13 +180,13 @@
     <EmbeddedResource Include="Calculators\FireMakingCalc.resx">
       <DependentUpon>FireMakingCalc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ItemLookup.resx">
+    <EmbeddedResource Include="Other Forms\ItemLookup.resx">
       <DependentUpon>ItemLookup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuickLaunch.resx">
+    <EmbeddedResource Include="Other Forms\QuickLaunch.resx">
       <DependentUpon>QuickLaunch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Welcome.resx">
+    <EmbeddedResource Include="Other Forms\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other Forms\ComparePlayer.resx">

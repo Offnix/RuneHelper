@@ -21,17 +21,9 @@ namespace RuneHelper
 
         private void FireMakingCalc_Load(object sender, EventArgs e)
         {
-            if (MainForm.SaveData[1] == "light")
-            {
-                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
-                this.Theme = StyleManager.Theme;
-            }
-
-            if (MainForm.SaveData[1] == "dark")
-            {
-                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
-                this.Theme = StyleManager.Theme;
-            }
+            StyleManager.Theme = API.GetTheme(MainForm.SaveData[1]);
+            StyleManager.Style = API.GetColour(MainForm.SaveData[2]);
+            this.Theme = StyleManager.Theme;
         }
 
         #endregion Load And Close Functions

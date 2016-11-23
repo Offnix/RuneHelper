@@ -81,12 +81,12 @@
             this.CharNameBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.CharNameBox.CustomButton.UseSelectable = true;
             this.CharNameBox.CustomButton.Visible = false;
-            this.CharNameBox.Lines = new string[] {
-        "Enter Character Name Here"};
+            this.CharNameBox.Lines = new string[0];
             this.CharNameBox.Location = new System.Drawing.Point(11, 66);
             this.CharNameBox.MaxLength = 32767;
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.PasswordChar = '\0';
+            this.CharNameBox.PromptText = "Username";
             this.CharNameBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CharNameBox.SelectedText = "";
             this.CharNameBox.SelectionLength = 0;
@@ -94,8 +94,8 @@
             this.CharNameBox.ShortcutsEnabled = true;
             this.CharNameBox.Size = new System.Drawing.Size(140, 20);
             this.CharNameBox.TabIndex = 11;
-            this.CharNameBox.Text = "Enter Character Name Here";
             this.CharNameBox.UseSelectable = true;
+            this.CharNameBox.WaterMark = "Username";
             this.CharNameBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.CharNameBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -104,23 +104,46 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 19);
+            this.label1.Size = new System.Drawing.Size(104, 19);
             this.label1.TabIndex = 14;
             this.label1.Text = "Woodcutting XP";
             // 
             // XPBox
             // 
+            // 
+            // 
+            // 
+            this.XPBox.CustomButton.Image = null;
+            this.XPBox.CustomButton.Location = new System.Drawing.Point(176, 2);
+            this.XPBox.CustomButton.Name = "";
+            this.XPBox.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.XPBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.XPBox.CustomButton.TabIndex = 1;
+            this.XPBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.XPBox.CustomButton.UseSelectable = true;
+            this.XPBox.CustomButton.Visible = false;
+            this.XPBox.Lines = new string[0];
             this.XPBox.Location = new System.Drawing.Point(118, 114);
+            this.XPBox.MaxLength = 32767;
             this.XPBox.Name = "XPBox";
+            this.XPBox.PasswordChar = '\0';
+            this.XPBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.XPBox.SelectedText = "";
+            this.XPBox.SelectionLength = 0;
+            this.XPBox.SelectionStart = 0;
+            this.XPBox.ShortcutsEnabled = true;
             this.XPBox.Size = new System.Drawing.Size(194, 20);
             this.XPBox.TabIndex = 15;
+            this.XPBox.UseSelectable = true;
+            this.XPBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.XPBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // TargetLevelLabel
             // 
             this.TargetLevelLabel.AutoSize = true;
             this.TargetLevelLabel.Location = new System.Drawing.Point(8, 152);
             this.TargetLevelLabel.Name = "TargetLevelLabel";
-            this.TargetLevelLabel.Size = new System.Drawing.Size(114, 19);
+            this.TargetLevelLabel.Size = new System.Drawing.Size(112, 19);
             this.TargetLevelLabel.TabIndex = 16;
             this.TargetLevelLabel.Text = "Enter Target Level";
             this.TargetLevelLabel.Visible = false;

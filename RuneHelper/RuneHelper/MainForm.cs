@@ -300,7 +300,6 @@ namespace RuneHelper
                 DivinationLabel.Text = LevelArray[53];
                 InventionLabel.Text = LevelArray[55];
                 Cursor.Current = Cursors.Default;
-                this.Refresh();
                 s1.Stop();
                 Console.WriteLine(s1.ElapsedMilliseconds);
             }

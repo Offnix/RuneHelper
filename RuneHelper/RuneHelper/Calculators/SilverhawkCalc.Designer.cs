@@ -61,12 +61,12 @@
             this.CharNameBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.CharNameBox.CustomButton.UseSelectable = true;
             this.CharNameBox.CustomButton.Visible = false;
-            this.CharNameBox.Lines = new string[] {
-        "Enter Character Name Here"};
+            this.CharNameBox.Lines = new string[0];
             this.CharNameBox.Location = new System.Drawing.Point(14, 68);
             this.CharNameBox.MaxLength = 32767;
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.PasswordChar = '\0';
+            this.CharNameBox.PromptText = "Username";
             this.CharNameBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CharNameBox.SelectedText = "";
             this.CharNameBox.SelectionLength = 0;
@@ -74,8 +74,8 @@
             this.CharNameBox.ShortcutsEnabled = true;
             this.CharNameBox.Size = new System.Drawing.Size(140, 20);
             this.CharNameBox.TabIndex = 0;
-            this.CharNameBox.Text = "Enter Character Name Here";
             this.CharNameBox.UseSelectable = true;
+            this.CharNameBox.WaterMark = "Username";
             this.CharNameBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.CharNameBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -166,7 +166,7 @@
             this.TargetLabel.AutoSize = true;
             this.TargetLabel.Location = new System.Drawing.Point(11, 156);
             this.TargetLabel.Name = "TargetLabel";
-            this.TargetLabel.Size = new System.Drawing.Size(114, 19);
+            this.TargetLabel.Size = new System.Drawing.Size(112, 19);
             this.TargetLabel.TabIndex = 5;
             this.TargetLabel.Text = "Enter Target Level";
             this.TargetLabel.Visible = false;

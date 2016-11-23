@@ -198,6 +198,21 @@ public static class API
         return MetroFramework.MetroColorStyle.Default;
     }
 
+    public static MetroFramework.MetroThemeStyle GetTheme(string Theme)
+    {
+        if (Theme == "light")
+        {
+            return MetroFramework.MetroThemeStyle.Light;
+        }
+
+        if (Theme == "dark")
+        {
+            return MetroFramework.MetroThemeStyle.Dark;
+        }
+
+        return MetroFramework.MetroThemeStyle.Default;
+    }
+
     #endregion Style Functions
 }
 

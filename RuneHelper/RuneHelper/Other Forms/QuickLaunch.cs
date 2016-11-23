@@ -15,17 +15,9 @@ namespace RuneHelper
 
         private void QuickLaunch_Load(object sender, EventArgs e)
         {
-            if (MainForm.SaveData[1] == "light")
-            {
-                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
-            }
-
-            if (MainForm.SaveData[1] == "dark")
-            {
-                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
-                this.Theme = StyleManager.Theme;
-            }
+            StyleManager.Theme = API.GetTheme(MainForm.SaveData[1]);
             StyleManager.Style = API.GetColour(MainForm.SaveData[2]);
+            this.Theme = StyleManager.Theme;
         }
 
         #endregion Open And Close functions

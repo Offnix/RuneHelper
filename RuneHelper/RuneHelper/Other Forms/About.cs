@@ -31,9 +31,13 @@ namespace RuneHelper
 
         #endregion Load And Close Functions
 
+        #region Form Controls
+
         private void Github_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/Peterburnett/RSThing");
         }
+
+        #endregion Form Controls
     }
 }

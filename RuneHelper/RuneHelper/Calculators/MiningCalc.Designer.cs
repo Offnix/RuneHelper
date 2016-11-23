@@ -81,12 +81,12 @@
             this.CharNameBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.CharNameBox.CustomButton.UseSelectable = true;
             this.CharNameBox.CustomButton.Visible = false;
-            this.CharNameBox.Lines = new string[] {
-        "Enter Character Name Here"};
+            this.CharNameBox.Lines = new string[0];
             this.CharNameBox.Location = new System.Drawing.Point(11, 68);
             this.CharNameBox.MaxLength = 32767;
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.PasswordChar = '\0';
+            this.CharNameBox.PromptText = "Username";
             this.CharNameBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CharNameBox.SelectedText = "";
             this.CharNameBox.SelectionLength = 0;
@@ -94,8 +94,8 @@
             this.CharNameBox.ShortcutsEnabled = true;
             this.CharNameBox.Size = new System.Drawing.Size(140, 20);
             this.CharNameBox.TabIndex = 11;
-            this.CharNameBox.Text = "Enter Character Name Here";
             this.CharNameBox.UseSelectable = true;
+            this.CharNameBox.WaterMark = "Username";
             this.CharNameBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.CharNameBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -143,7 +143,7 @@
             this.TargetLevelLabel.AutoSize = true;
             this.TargetLevelLabel.Location = new System.Drawing.Point(8, 154);
             this.TargetLevelLabel.Name = "TargetLevelLabel";
-            this.TargetLevelLabel.Size = new System.Drawing.Size(114, 19);
+            this.TargetLevelLabel.Size = new System.Drawing.Size(112, 19);
             this.TargetLevelLabel.TabIndex = 16;
             this.TargetLevelLabel.Text = "Enter Target Level";
             this.TargetLevelLabel.Visible = false;
