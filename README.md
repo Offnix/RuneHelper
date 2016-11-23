@@ -1,3 +1,4 @@
+<a href="http://imgur.com/LqS8qms"><img src="http://i.imgur.com/LqS8qms.png" title="source: imgur.com" /></a>
 # RuneHelper
 
 ## Whats all this riff raf?
