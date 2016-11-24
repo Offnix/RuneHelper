@@ -349,14 +349,19 @@ namespace RuneHelper
 
         private void ClockRefresh_DoWork(object sender, DoWorkEventArgs e)
         {
-            while (true)
+            try
             {
-                MainToolStrip.Invoke((MethodInvoker)(() =>
+                while (true)
                 {
-                    Time.Text = DateTime.UtcNow.ToString("HH:mm:ss tt");
-                }));
-                Thread.Sleep(1000);
+                    MainToolStrip.Invoke((MethodInvoker)(() =>
+                    {
+                        Time.Text = DateTime.UtcNow.ToString("HH:mm:ss tt");
+                    }));
+                    Thread.Sleep(1000);
+                }
             }
+            catch { }
+            
         }
 
         #endregion Functions

@@ -41,7 +41,7 @@
             // Github
             // 
             this.Github.Image = ((System.Drawing.Image)(resources.GetObject("Github.Image")));
-            this.Github.Location = new System.Drawing.Point(-1, 275);
+            this.Github.Location = new System.Drawing.Point(23, 280);
             this.Github.Name = "Github";
             this.Github.Size = new System.Drawing.Size(89, 86);
             this.Github.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -55,10 +55,10 @@
             this.AboutBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.AboutBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AboutBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AboutBox.Location = new System.Drawing.Point(5, 59);
+            this.AboutBox.Location = new System.Drawing.Point(23, 58);
             this.AboutBox.Name = "AboutBox";
             this.AboutBox.ReadOnly = true;
-            this.AboutBox.Size = new System.Drawing.Size(311, 216);
+            this.AboutBox.Size = new System.Drawing.Size(294, 216);
             this.AboutBox.TabIndex = 1;
             this.AboutBox.Text = resources.GetString("AboutBox.Text");
             // 

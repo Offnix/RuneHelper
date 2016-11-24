@@ -1,6 +1,7 @@
 ﻿using MetroFramework.Forms;
 using System;
 using System.Text;
+using System.Windows.Forms;
 
 namespace RuneHelper
 {
@@ -26,11 +27,28 @@ namespace RuneHelper
 
         private void Launch_Click(object sender, EventArgs e)
         {
+            OpenForm();
+        }
+
+        #endregion Forms Controls
+
+        #region Functions And Events
+
+        private void Input_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                OpenForm();
+            }
+        }
+
+        public void OpenForm()
+        {
             StringBuilder b = new StringBuilder(Input.Text);
             System.Diagnostics.Process.Start("http://runescape.wikia.com/wiki/Special:Search?search=" + b.Replace(" ", "+"));
             this.Close();
         }
 
-        #endregion Forms Controls
+        #endregion Functions And Events
     }
 }

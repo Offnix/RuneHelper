@@ -56,12 +56,12 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.PriceTrend = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // CatagoryBox
@@ -142,7 +142,6 @@
             this.SearchInput.MaxLength = 32767;
             this.SearchInput.Name = "SearchInput";
             this.SearchInput.PasswordChar = '\0';
-            this.SearchInput.PromptText = "Item name";
             this.SearchInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.SearchInput.SelectedText = "";
             this.SearchInput.SelectionLength = 0;
@@ -155,6 +154,7 @@
             this.SearchInput.WaterMark = "Item name";
             this.SearchInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.SearchInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.SearchInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchInput_KeyDown);
             // 
             // ResultListView
             // 
@@ -394,9 +394,9 @@
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "Price trend";
             // 
-            // metroStyleManager1
+            // StyleManager
             // 
-            this.metroStyleManager1.Owner = this;
+            this.StyleManager.Owner = this;
             // 
             // ItemLookup
             // 
@@ -412,7 +412,6 @@
             this.MaximizeBox = false;
             this.Name = "ItemLookup";
             this.Resizable = false;
-            this.StyleManager = this.metroStyleManager1;
             this.Text = "ItemLookup";
             this.Load += new System.EventHandler(this.ItemLookup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
@@ -421,7 +420,7 @@
             this.metroTabPage1.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -454,6 +453,5 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel ItemIDLabel;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }

@@ -33,6 +33,38 @@ namespace RuneHelper
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
+            SearchFunction();
+        }
+
+        private void ResultListView_ItemActivate(Object sender, EventArgs e)
+        {
+            int number = Convert.ToInt32(ResultListView.SelectedItems[0].Index);
+            // first page of data
+            ItemImage.Load((string)jObject["items"][number]["icon_large"]);
+            ItemNameLabel.Text = (string)jObject["items"][number]["name"];
+            Description.Text = (string)jObject["items"][number]["description"];
+            ItemIDLabel.Text = (string)jObject["items"][number]["id"];
+            // second page
+            PriceLabel.Text = (string)jObject["items"][number]["current"]["price"];
+            PriceTrend.Text = (string)jObject["items"][number]["current"]["trend"];
+            CurrentPriceLabel.Text = (string)jObject["items"][number]["today"]["price"];
+            CurrentPriceTrend.Text = (string)jObject["items"][number]["today"]["trend"];
+        }
+
+        #endregion Form Controls
+
+        #region Events and Functions
+
+        private void SearchInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                SearchFunction();
+            }
+        }
+
+        public void SearchFunction()
+        {
             string Input = SearchInput.Text.Replace(" ", "+");
             try
             {
@@ -66,21 +98,6 @@ namespace RuneHelper
             }
         }
 
-        private void ResultListView_ItemActivate(Object sender, EventArgs e)
-        {
-            int number = Convert.ToInt32(ResultListView.SelectedItems[0].Index);
-            // first page of data
-            ItemImage.Load((string)jObject["items"][number]["icon_large"]);
-            ItemNameLabel.Text = (string)jObject["items"][number]["name"];
-            Description.Text = (string)jObject["items"][number]["description"];
-            ItemIDLabel.Text = (string)jObject["items"][number]["id"];
-            // second page
-            PriceLabel.Text = (string)jObject["items"][number]["current"]["price"];
-            PriceTrend.Text = (string)jObject["items"][number]["current"]["trend"];
-            CurrentPriceLabel.Text = (string)jObject["items"][number]["today"]["price"];
-            CurrentPriceTrend.Text = (string)jObject["items"][number]["today"]["trend"];
-        }
-
-        #endregion Form Controls
+        #endregion Events and Functions
     }
 }

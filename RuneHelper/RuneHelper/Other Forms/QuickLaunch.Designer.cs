@@ -38,7 +38,7 @@
             // 
             // Launch
             // 
-            this.Launch.Location = new System.Drawing.Point(12, 92);
+            this.Launch.Location = new System.Drawing.Point(23, 92);
             this.Launch.Name = "Launch";
             this.Launch.Size = new System.Drawing.Size(100, 23);
             this.Launch.TabIndex = 0;
@@ -61,11 +61,10 @@
             this.Input.CustomButton.UseSelectable = true;
             this.Input.CustomButton.Visible = false;
             this.Input.Lines = new string[0];
-            this.Input.Location = new System.Drawing.Point(12, 63);
+            this.Input.Location = new System.Drawing.Point(23, 63);
             this.Input.MaxLength = 32767;
             this.Input.Name = "Input";
             this.Input.PasswordChar = '\0';
-            this.Input.PromptText = "Wiki item name";
             this.Input.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Input.SelectedText = "";
             this.Input.SelectionLength = 0;
@@ -77,6 +76,7 @@
             this.Input.WaterMark = "Wiki item name";
             this.Input.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Input.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Input.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Input_KeyDown);
             // 
             // metroStyleManager1
             // 
@@ -93,8 +93,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "QuickLaunch";
+            this.Resizable = false;
             this.StyleManager = this.metroStyleManager1;
-            this.Text = "Quick Launch";
+            this.Text = "Search wiki";
             this.Load += new System.EventHandler(this.QuickLaunch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);

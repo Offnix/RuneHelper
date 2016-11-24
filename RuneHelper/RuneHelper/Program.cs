@@ -18,7 +18,6 @@ namespace RuneHelper
             {
                 MainForm M = new MainForm();
                 M.Show();
-
             }
             else
             {

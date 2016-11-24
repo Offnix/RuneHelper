@@ -87,7 +87,6 @@
             this.CharNameBox.MaxLength = 32767;
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.PasswordChar = '\0';
-            this.CharNameBox.PromptText = "Username";
             this.CharNameBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CharNameBox.SelectedText = "";
             this.CharNameBox.SelectionLength = 0;
