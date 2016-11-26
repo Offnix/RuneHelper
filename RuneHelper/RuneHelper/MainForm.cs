@@ -317,7 +317,7 @@ namespace RuneHelper
             {
                 series.Points.Clear();
             }
-
+            // reset function
             try
             {
                 int i = MonthSetting + 1;
@@ -333,18 +333,26 @@ namespace RuneHelper
                         i++;
                     }
                 }
+                // end of reset function
 
                 i = MonthSetting + 1;
+                bool first = true;
+                int Smallest = 0;
+                int largest = 0;
                 while (i < SaveData.Length)
                 {
                     if (string.IsNullOrEmpty(SaveData[i]) == false && SaveData[i] != "0")
                     {
                         XPTracker.Series[0].Points.AddXY(i - 3, API.IntParse(SaveData[i]));
+                        if(first == true) { Smallest = API.IntParse(SaveData[i]); first = false; }
+                        largest = API.IntParse(SaveData[i]);
                     }
                     i++;
                 }
+                XPMade.Text = Convert.ToString(largest - Smallest);
             }
             catch { }
+           
         }
 
         private void ClockRefresh_DoWork(object sender, DoWorkEventArgs e)

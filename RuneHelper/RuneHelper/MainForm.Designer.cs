@@ -156,6 +156,8 @@
             this.ClockRefresh = new System.ComponentModel.BackgroundWorker();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.XPMade = new MetroFramework.Controls.MetroLabel();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1318,6 +1320,8 @@
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.XPMade);
+            this.metroTabPage1.Controls.Add(this.metroLabel1);
             this.metroTabPage1.Controls.Add(this.XptrackerLabel);
             this.metroTabPage1.Controls.Add(this.GraphUpdate);
             this.metroTabPage1.Controls.Add(this.XPTracker);
@@ -1411,6 +1415,24 @@
             // 
             this.StyleManager.Owner = this;
             this.StyleManager.Style = MetroFramework.MetroColorStyle.Orange;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(245, 297);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(128, 19);
+            this.metroLabel1.TabIndex = 5;
+            this.metroLabel1.Text = "XP made this month";
+            // 
+            // XPMade
+            // 
+            this.XPMade.AutoSize = true;
+            this.XPMade.Location = new System.Drawing.Point(245, 316);
+            this.XPMade.Name = "XPMade";
+            this.XPMade.Size = new System.Drawing.Size(16, 19);
+            this.XPMade.TabIndex = 6;
+            this.XPMade.Text = "0";
             // 
             // MainForm
             // 
@@ -1679,6 +1701,8 @@
         private System.Windows.Forms.ToolStripMenuItem bUUUGSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemSearchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SearchInWiki;
+        private MetroFramework.Controls.MetroLabel XPMade;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
 
