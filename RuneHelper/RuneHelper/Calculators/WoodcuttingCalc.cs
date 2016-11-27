@@ -15,7 +15,7 @@ namespace RuneHelper
         private string[] WCArray;
         private string[] LevelArray;
 
-        public static float[] WoodCutXpArray = new float[] { 25, 37.5f, 67.5f, 85, 100, 82.5f, 357.7f, 125, 140.2f, 165, 332.5f, 175, 250, 275, 320, 325, 120, 434.5f, 655.5f };
+        public static float[] WoodCutXpArray = new float[] { 25, 37.5f, 67.5f, 85, 100, 82.5f, 357.7f, 125, 140.2f, 165, 175, 332.5f, 250, 275, 320, 325, 120, 434.5f, 655.5f };
 
         #region Load And Close Functions
 
