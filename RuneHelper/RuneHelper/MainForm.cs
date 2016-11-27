@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RuneHelper
@@ -183,64 +184,22 @@ namespace RuneHelper
 
         public void ReloadPage()
         {
-            var s1 = Stopwatch.StartNew();
             Cursor.Current = Cursors.WaitCursor;
 
-            if (SaveData[1] == "light")
-            {
-                StyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
-                StyleExtender.Theme = MetroFramework.MetroThemeStyle.Light;
-                this.Theme = StyleManager.Theme;
-                XPTracker.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.Black;
-                XPTracker.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Black;
-                XPTracker.ChartAreas["ChartArea1"].AxisX.LabelStyle.ForeColor = Color.Black;
-                XPTracker.ChartAreas["ChartArea1"].AxisY.LabelStyle.ForeColor = Color.Black;
-                XPTracker.ChartAreas[0].AxisX.LineColor = Color.Black;
-                XPTracker.ChartAreas[0].AxisY.LineColor = Color.Black;
-            }
-
-            if (SaveData[1] == "dark")
-            {
-                StyleManager.Theme = MetroFramework.MetroThemeStyle.Dark;
-                StyleExtender.Theme = MetroFramework.MetroThemeStyle.Dark;
-                this.Theme = StyleManager.Theme;
-                XPTracker.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.White;
-                XPTracker.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.White;
-                XPTracker.ChartAreas["ChartArea1"].AxisX.LabelStyle.ForeColor = Color.White;
-                XPTracker.ChartAreas["ChartArea1"].AxisY.LabelStyle.ForeColor = Color.White;
-                XPTracker.ChartAreas[0].AxisX.LineColor = Color.White;
-                XPTracker.ChartAreas[0].AxisY.LineColor = Color.White;
-            }
-
+            var s1 = Stopwatch.StartNew();
+            Task.Run(() => UpdateImage());
+            Task.Run(() => UpdateGraph());
+            StyleManager.Theme = API.GetTheme(SaveData[1]);
             StyleManager.Style = API.GetColour(SaveData[2]);
-
-            string FileName = SaveData[0] + ".gif";
-            try
-            {
-                ProfilePicture.Load(FileName);
-            }
-            catch
-            {
-                if (File.Exists(FileName) == true)
-                {
-                    File.Delete(FileName);
-                }
-                else
-                {
-                    API.UpdateImage(SaveData[0]);
-                    ProfilePicture.Load(FileName);
-                }
-            }
-
+            this.Theme = StyleManager.Theme;
             try
             {
                 UsernameLabel.Text = SaveData[0];
                 LevelArray = API.UpdateLevels(SaveData[0]);
-                AverageLevel.Text = API.GetMean(LevelArray).ToString();
                 TotalLevel.Text = LevelArray[1];
-                PercentageLabel.Text = API.GetLevelPercentage(API.IntParse(LevelArray[1])) + "%";
+                AverageLevel.Text = API.GetMean(LevelArray).ToString();
+                PercentageLabel.Text = LevelArray[1] + "%";
                 CombatLevel.Text = API.GetCombatLvl(LevelArray).ToString();
-                UpdateGraph();
 
                 // find a way to minify this and your a god amongst men
                 //progress bars
@@ -299,8 +258,8 @@ namespace RuneHelper
                 DungeoneeringLabel.Text = LevelArray[51];
                 DivinationLabel.Text = LevelArray[53];
                 InventionLabel.Text = LevelArray[55];
-                Cursor.Current = Cursors.Default;
                 s1.Stop();
+                Cursor.Current = Cursors.Default;
                 Console.WriteLine(s1.ElapsedMilliseconds);
             }
             catch
@@ -313,46 +272,90 @@ namespace RuneHelper
             // this is used for changing the placement of the month savedata in the array.. for when the savedata gets extended
             int MonthSetting = 3;
 
-            foreach (var series in XPTracker.Series)
+            // changes graph style
+            XPTracker.Invoke((MethodInvoker)(() =>
             {
-                series.Points.Clear();
-            }
-            // reset function
-            try
-            {
-                int i = MonthSetting + 1;
-                string[] arraysplit = LevelArray[2].Split('\n');
-                SaveData[DateTime.Now.Day + MonthSetting] = arraysplit[0];
-
-                if (DateTime.Now.Month != API.IntParse(SaveData[MonthSetting]))
+                if (SaveData[1] == "light")
                 {
-                    SaveData[MonthSetting] = DateTime.Now.Month.ToString();
+                    XPTracker.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.Black;
+                    XPTracker.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Black;
+                    XPTracker.ChartAreas["ChartArea1"].AxisX.LabelStyle.ForeColor = Color.Black;
+                    XPTracker.ChartAreas["ChartArea1"].AxisY.LabelStyle.ForeColor = Color.Black;
+                    XPTracker.ChartAreas[0].AxisX.LineColor = Color.Black;
+                    XPTracker.ChartAreas[0].AxisY.LineColor = Color.Black;
+                }
+
+                if (SaveData[1] == "dark")
+                {
+                    XPTracker.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.White;
+                    XPTracker.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.White;
+                    XPTracker.ChartAreas["ChartArea1"].AxisX.LabelStyle.ForeColor = Color.White;
+                    XPTracker.ChartAreas["ChartArea1"].AxisY.LabelStyle.ForeColor = Color.White;
+                    XPTracker.ChartAreas[0].AxisX.LineColor = Color.White;
+                    XPTracker.ChartAreas[0].AxisY.LineColor = Color.White;
+                }
+
+                foreach (var series in XPTracker.Series)
+                {
+                    series.Points.Clear();
+                }
+                // reset function
+                try
+                {
+                    int i = MonthSetting + 1;
+                    string[] arraysplit = LevelArray[2].Split('\n');
+                    SaveData[DateTime.Now.Day + MonthSetting] = arraysplit[0];
+
+                    if (DateTime.Now.Month != API.IntParse(SaveData[MonthSetting]))
+                    {
+                        SaveData[MonthSetting] = DateTime.Now.Month.ToString();
+                        while (i < SaveData.Length)
+                        {
+                            SaveData[i] = "0";
+                            i++;
+                        }
+                    }
+
+                    // end of reset function
+                    i = MonthSetting + 1;
+                    bool first = true;
+                    int Smallest = 0;
+                    int largest = 0;
                     while (i < SaveData.Length)
                     {
-                        SaveData[i] = "0";
+                        if (string.IsNullOrEmpty(SaveData[i]) == false && SaveData[i] != "0")
+                        {
+                            XPTracker.Series[0].Points.AddXY(i - 3, API.IntParse(SaveData[i]));
+                            if (first == true) { Smallest = API.IntParse(SaveData[i]); first = false; }
+                            largest = API.IntParse(SaveData[i]);
+                        }
                         i++;
                     }
+                    XPMade.Text = Convert.ToString(largest - Smallest);
                 }
-                // end of reset function
+                catch { }
+            }));
+        }
 
-                i = MonthSetting + 1;
-                bool first = true;
-                int Smallest = 0;
-                int largest = 0;
-                while (i < SaveData.Length)
-                {
-                    if (string.IsNullOrEmpty(SaveData[i]) == false && SaveData[i] != "0")
-                    {
-                        XPTracker.Series[0].Points.AddXY(i - 3, API.IntParse(SaveData[i]));
-                        if(first == true) { Smallest = API.IntParse(SaveData[i]); first = false; }
-                        largest = API.IntParse(SaveData[i]);
-                    }
-                    i++;
-                }
-                XPMade.Text = Convert.ToString(largest - Smallest);
+        public void UpdateImage()
+        {
+            string FileName = SaveData[0] + ".gif";
+            try
+            {
+                ProfilePicture.Load(FileName);
             }
-            catch { }
-           
+            catch
+            {
+                if (File.Exists(FileName) == true)
+                {
+                    File.Delete(FileName);
+                }
+                else
+                {
+                    API.UpdateImage(SaveData[0]);
+                    ProfilePicture.Load(FileName);
+                }
+            }
         }
 
         private void ClockRefresh_DoWork(object sender, DoWorkEventArgs e)
@@ -369,7 +372,6 @@ namespace RuneHelper
                 }
             }
             catch { }
-            
         }
 
         #endregion Functions

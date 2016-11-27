@@ -142,6 +142,7 @@
             this.SearchInput.MaxLength = 32767;
             this.SearchInput.Name = "SearchInput";
             this.SearchInput.PasswordChar = '\0';
+            this.SearchInput.PromptText = "Item name";
             this.SearchInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.SearchInput.SelectedText = "";
             this.SearchInput.SelectionLength = 0;
@@ -412,7 +413,8 @@
             this.MaximizeBox = false;
             this.Name = "ItemLookup";
             this.Resizable = false;
-            this.Text = "ItemLookup";
+            this.StyleManager = this.StyleManager;
+            this.Text = "Item Lookup";
             this.Load += new System.EventHandler(this.ItemLookup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();
             this.metroTabControl1.ResumeLayout(false);
@@ -453,5 +455,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel ItemIDLabel;
         private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }

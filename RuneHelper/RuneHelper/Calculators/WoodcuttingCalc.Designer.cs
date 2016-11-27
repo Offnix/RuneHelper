@@ -174,7 +174,7 @@
             this.TargetBox.CustomButton.Visible = false;
             this.TargetBox.Lines = new string[0];
             this.TargetBox.Location = new System.Drawing.Point(155, 152);
-            this.TargetBox.MaxLength = 2;
+            this.TargetBox.MaxLength = 3;
             this.TargetBox.Name = "TargetBox";
             this.TargetBox.PasswordChar = '\0';
             this.TargetBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
