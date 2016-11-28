@@ -15,6 +15,7 @@ namespace RuneHelper
         }
 
         private JObject jObject;
+        int i;
 
         #region Open And Close Functions
 
@@ -49,6 +50,15 @@ namespace RuneHelper
             PriceTrend.Text = (string)jObject["items"][number]["current"]["trend"];
             CurrentPriceLabel.Text = (string)jObject["items"][number]["today"]["price"];
             CurrentPriceTrend.Text = (string)jObject["items"][number]["today"]["trend"];
+            try
+            {
+                MultiplyedPrice.Text = Convert.ToString(API.FullForm((string)jObject["items"][ResultListView.SelectedItems[0].Index]["current"]["price"]) * API.IntParse(Multiplyer.Text));
+
+            }
+            catch
+            {
+                MultiplyedPrice.Text = "0";
+            }
         }
 
         #endregion Form Controls
@@ -82,7 +92,7 @@ namespace RuneHelper
             ResultListView.BeginUpdate();
             ResultListView.Items.Clear();
 
-            int i = 0;
+            i = 0;
             try
             {
                 while (true)
@@ -99,5 +109,18 @@ namespace RuneHelper
         }
 
         #endregion Events and Functions
+        // currently inaccurate... ill figure it out later
+        private void Multiplyer_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MultiplyedPrice.Text = Convert.ToString(API.FullForm((string)jObject["items"][ResultListView.SelectedItems[0].Index]["current"]["price"]) * API.IntParse(Multiplyer.Text));
+                
+            }
+            catch
+            {
+                MultiplyedPrice.Text = "0";
+            }  
+        }
     }
 }

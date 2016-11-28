@@ -165,6 +165,24 @@ public static class API
         }
     }
 
+    public static int FullForm(string Number)
+    {
+        Console.WriteLine(Number);
+        decimal New = 00.0M;
+
+        if (Number.Contains("k"))
+        {
+            New = Convert.ToDecimal(Number.Replace("k", "")) * 1000;
+        }
+
+        if (Number.Contains("m"))
+        {
+            New = Convert.ToDecimal(Number.Replace("m", "")) * 1000000;
+            Console.WriteLine(New);
+        }
+        return Convert.ToInt32(New);
+    }
+
     #endregion Calculator Functions
 
     #region Style Functions

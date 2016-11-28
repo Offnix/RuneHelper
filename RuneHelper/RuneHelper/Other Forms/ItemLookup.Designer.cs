@@ -57,6 +57,9 @@
             this.PriceTrend = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.Multiplyer = new MetroFramework.Controls.MetroTextBox();
+            this.MultiplyedPrice = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -257,7 +260,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Location = new System.Drawing.Point(14, 312);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(368, 187);
             this.metroTabControl1.TabIndex = 10;
             this.metroTabControl1.UseSelectable = true;
@@ -301,6 +304,9 @@
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.MultiplyedPrice);
+            this.metroTabPage2.Controls.Add(this.Multiplyer);
+            this.metroTabPage2.Controls.Add(this.metroLabel7);
             this.metroTabPage2.Controls.Add(this.CurrentPriceLabel);
             this.metroTabPage2.Controls.Add(this.metroLabel9);
             this.metroTabPage2.Controls.Add(this.CurrentPriceTrend);
@@ -326,7 +332,7 @@
             // CurrentPriceLabel
             // 
             this.CurrentPriceLabel.AutoSize = true;
-            this.CurrentPriceLabel.Location = new System.Drawing.Point(140, 106);
+            this.CurrentPriceLabel.Location = new System.Drawing.Point(118, 106);
             this.CurrentPriceLabel.Name = "CurrentPriceLabel";
             this.CurrentPriceLabel.Size = new System.Drawing.Size(16, 19);
             this.CurrentPriceLabel.TabIndex = 16;
@@ -335,7 +341,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(136, 87);
+            this.metroLabel9.Location = new System.Drawing.Point(114, 87);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(84, 19);
             this.metroLabel9.TabIndex = 15;
@@ -344,7 +350,7 @@
             // CurrentPriceTrend
             // 
             this.CurrentPriceTrend.AutoSize = true;
-            this.CurrentPriceTrend.Location = new System.Drawing.Point(136, 60);
+            this.CurrentPriceTrend.Location = new System.Drawing.Point(114, 60);
             this.CurrentPriceTrend.Name = "CurrentPriceTrend";
             this.CurrentPriceTrend.Size = new System.Drawing.Size(52, 19);
             this.CurrentPriceTrend.TabIndex = 14;
@@ -353,7 +359,7 @@
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(136, 41);
+            this.metroLabel8.Location = new System.Drawing.Point(114, 41);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(73, 19);
             this.metroLabel8.TabIndex = 13;
@@ -362,7 +368,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(136, 9);
+            this.metroLabel5.Location = new System.Drawing.Point(114, 9);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(53, 19);
             this.metroLabel5.TabIndex = 12;
@@ -398,6 +404,57 @@
             // StyleManager
             // 
             this.StyleManager.Owner = this;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(273, 9);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(38, 19);
+            this.metroLabel7.TabIndex = 17;
+            this.metroLabel7.Text = "Price";
+            // 
+            // Multiplyer
+            // 
+            // 
+            // 
+            // 
+            this.Multiplyer.CustomButton.Image = null;
+            this.Multiplyer.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.Multiplyer.CustomButton.Name = "";
+            this.Multiplyer.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Multiplyer.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Multiplyer.CustomButton.TabIndex = 1;
+            this.Multiplyer.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Multiplyer.CustomButton.UseSelectable = true;
+            this.Multiplyer.CustomButton.Visible = false;
+            this.Multiplyer.Lines = new string[] {
+        "1"};
+            this.Multiplyer.Location = new System.Drawing.Point(273, 31);
+            this.Multiplyer.MaxLength = 5;
+            this.Multiplyer.Name = "Multiplyer";
+            this.Multiplyer.PasswordChar = '\0';
+            this.Multiplyer.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Multiplyer.SelectedText = "";
+            this.Multiplyer.SelectionLength = 0;
+            this.Multiplyer.SelectionStart = 0;
+            this.Multiplyer.ShortcutsEnabled = true;
+            this.Multiplyer.Size = new System.Drawing.Size(75, 23);
+            this.Multiplyer.TabIndex = 18;
+            this.Multiplyer.Text = "1";
+            this.Multiplyer.UseSelectable = true;
+            this.Multiplyer.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Multiplyer.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Multiplyer.TextChanged += new System.EventHandler(this.Multiplyer_TextChanged);
+            // 
+            // MultiplyedPrice
+            // 
+            this.MultiplyedPrice.AutoSize = true;
+            this.MultiplyedPrice.Location = new System.Drawing.Point(273, 60);
+            this.MultiplyedPrice.Name = "MultiplyedPrice";
+            this.MultiplyedPrice.Size = new System.Drawing.Size(16, 19);
+            this.MultiplyedPrice.TabIndex = 19;
+            this.MultiplyedPrice.Text = "0";
             // 
             // ItemLookup
             // 
@@ -455,6 +512,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel ItemIDLabel;
         private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel MultiplyedPrice;
+        private MetroFramework.Controls.MetroTextBox Multiplyer;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }
