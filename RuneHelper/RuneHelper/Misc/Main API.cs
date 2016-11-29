@@ -17,6 +17,7 @@ public static class API
 
     #region IO Functions
 
+    // streamwriter function with error checking
     public static void StreamWriter(string WriteText, string FileLocation)
     {
         try
@@ -31,6 +32,7 @@ public static class API
         }
     }
 
+    // streamreader function with error checking
     public static string StreamReader(string FileLocation)
     {
         try
@@ -61,6 +63,7 @@ public static class API
 
     #region Webclient Functions
 
+    // Gets levels.. Used for mainform
     public static string[] UpdateLevels(String Username)
     {
         try
@@ -78,6 +81,7 @@ public static class API
         return null;
     }
 
+    // Gets levels.. Used for Calculators
     public static string[] GetStats(string Name)
     {
         string[] LevelArray;
@@ -97,6 +101,7 @@ public static class API
         }
     }
 
+    // downloads profile image to program folder
     public static void UpdateImage(string Username)
     {
         WebClient Download = new WebClient();
@@ -109,6 +114,7 @@ public static class API
 
     #region Calculator Functions
 
+    // gets level percentage
     public static string GetLevelPercentage(decimal TotalLevel)
     {
         decimal percentage;
@@ -116,6 +122,7 @@ public static class API
         return Convert.ToInt32(percentage * 100).ToString();
     }
 
+    // calculates combat level
     public static int GetCombatLvl(string[] LevelArray)
     {
         int Attack = IntParse(LevelArray[3]);
@@ -136,6 +143,7 @@ public static class API
         return Convert.ToInt32(Math.Floor(cmb / 4.0));
     }
 
+    // a faster method of prasing a string to int
     public static int IntParse(string value)
     {
         int result = 0;
@@ -146,6 +154,7 @@ public static class API
         return result;
     }
 
+    // returns the mean of the levelarray
     public static int GetMean(String[] LevelArray)
     {
         int i = 3;
@@ -165,20 +174,26 @@ public static class API
         }
     }
 
+    // Converts the json price form of E.G. 15k to 15,000
     public static int FullForm(string Number)
     {
-        Console.WriteLine(Number);
-        decimal New = 00.0M;
-
-        if (Number.Contains("k"))
+        decimal New = 0.00m;
+        try
         {
-            New = Convert.ToDecimal(Number.Replace("k", "")) * 1000;
+            New = Convert.ToDecimal(Number);
         }
-
-        if (Number.Contains("m"))
+        catch
         {
-            New = Convert.ToDecimal(Number.Replace("m", "")) * 1000000;
-            Console.WriteLine(New);
+            if (Number.Contains("k"))
+            {
+                New = Convert.ToDecimal(Number.Replace("k", "")) * 1000;
+            }
+
+            if (Number.Contains("m"))
+            {
+                New = Convert.ToDecimal(Number.Replace("m", "")) * 1000000;
+            }
+            return Convert.ToInt32(New);
         }
         return Convert.ToInt32(New);
     }
@@ -187,6 +202,7 @@ public static class API
 
     #region Style Functions
 
+    // determines the colour from the savedata string
     public static MetroFramework.MetroColorStyle GetColour(string Colour)
     {
         switch (Colour)
@@ -218,6 +234,7 @@ public static class API
         return MetroFramework.MetroColorStyle.Default;
     }
 
+    // Determines the theme colour from the savedata string
     public static MetroFramework.MetroThemeStyle GetTheme(string Theme)
     {
         if (Theme == "light")
@@ -238,6 +255,7 @@ public static class API
 
 #region Designer Functions
 
+// this is used to remove the shitty outline on the toolstrip
 public class CustomToolStripProfessionalRenderer : ToolStripProfessionalRenderer
 {
     protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)

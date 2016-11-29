@@ -26,6 +26,7 @@ namespace RuneHelper
 
         #region Open and close Functions
 
+        // loading point for everything needed in mainform
         private void MainForm_Load(object sender, EventArgs e)
         {
             MainToolStrip.Renderer = new CustomToolStripProfessionalRenderer();
@@ -34,6 +35,7 @@ namespace RuneHelper
             ReloadPage();
         }
 
+        //Closing point for form and whole program. saves data and then closes
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             ClockRefresh.Dispose();
@@ -160,7 +162,7 @@ namespace RuneHelper
 
         private void BugsAndIssuesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/Peterburnett/RSThing/issues");
+            System.Diagnostics.Process.Start("https://github.com/Peterburnett/RuneHelper/issues");
         }
 
         private void OpenStats_Click(object sender, EventArgs e)
@@ -187,18 +189,22 @@ namespace RuneHelper
             Cursor.Current = Cursors.WaitCursor;
 
             var s1 = Stopwatch.StartNew();
+            // run on seperate threads for time saving
             Task.Run(() => UpdateImage());
             Task.Run(() => UpdateGraph());
+            // get and set theme and colour from api
             StyleManager.Theme = API.GetTheme(SaveData[1]);
             StyleManager.Style = API.GetColour(SaveData[2]);
             this.Theme = StyleManager.Theme;
+
+            // load the UI
             try
             {
                 UsernameLabel.Text = SaveData[0];
                 LevelArray = API.UpdateLevels(SaveData[0]);
                 TotalLevel.Text = LevelArray[1];
                 AverageLevel.Text = API.GetMean(LevelArray).ToString();
-                PercentageLabel.Text = LevelArray[1] + "%";
+                PercentageLabel.Text = API.GetLevelPercentage(Convert.ToDecimal(LevelArray[1])) + "%";
                 CombatLevel.Text = API.GetCombatLvl(LevelArray).ToString();
 
                 // find a way to minify this and your a god amongst men
@@ -299,13 +305,13 @@ namespace RuneHelper
                 {
                     series.Points.Clear();
                 }
-                // reset function
                 try
                 {
                     int i = MonthSetting + 1;
                     string[] arraysplit = LevelArray[2].Split('\n');
                     SaveData[DateTime.Now.Day + MonthSetting] = arraysplit[0];
 
+                    // reset function
                     if (DateTime.Now.Month != API.IntParse(SaveData[MonthSetting]))
                     {
                         SaveData[MonthSetting] = DateTime.Now.Month.ToString();
@@ -316,7 +322,7 @@ namespace RuneHelper
                         }
                     }
 
-                    // end of reset function
+                    // Set data points
                     i = MonthSetting + 1;
                     bool first = true;
                     int Smallest = 0;
@@ -337,6 +343,7 @@ namespace RuneHelper
             }));
         }
 
+        // update the profile image 
         public void UpdateImage()
         {
             string FileName = SaveData[0] + ".gif";
@@ -358,6 +365,7 @@ namespace RuneHelper
             }
         }
 
+        //seperate thread for refreshing the clock
         private void ClockRefresh_DoWork(object sender, DoWorkEventArgs e)
         {
             try

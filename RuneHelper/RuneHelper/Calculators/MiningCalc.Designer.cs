@@ -44,6 +44,7 @@
             this.AmountBox = new MetroFramework.Controls.MetroTextBox();
             this.BackBtn = new MetroFramework.Controls.MetroButton();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +87,7 @@
             this.CharNameBox.MaxLength = 32767;
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.PasswordChar = '\0';
+            this.CharNameBox.PromptText = "Username";
             this.CharNameBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CharNameBox.SelectedText = "";
             this.CharNameBox.SelectionLength = 0;
@@ -221,7 +223,7 @@
             // 
             // CalculateBtn
             // 
-            this.CalculateBtn.Location = new System.Drawing.Point(143, 335);
+            this.CalculateBtn.Location = new System.Drawing.Point(143, 299);
             this.CalculateBtn.Name = "CalculateBtn";
             this.CalculateBtn.Size = new System.Drawing.Size(75, 23);
             this.CalculateBtn.TabIndex = 20;
@@ -271,7 +273,7 @@
             // 
             // 
             this.AmountBox.CustomButton.Image = null;
-            this.AmountBox.CustomButton.Location = new System.Drawing.Point(139, 2);
+            this.AmountBox.CustomButton.Location = new System.Drawing.Point(98, 2);
             this.AmountBox.CustomButton.Name = "";
             this.AmountBox.CustomButton.Size = new System.Drawing.Size(15, 15);
             this.AmountBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -280,7 +282,7 @@
             this.AmountBox.CustomButton.UseSelectable = true;
             this.AmountBox.CustomButton.Visible = false;
             this.AmountBox.Lines = new string[0];
-            this.AmountBox.Location = new System.Drawing.Point(105, 374);
+            this.AmountBox.Location = new System.Drawing.Point(118, 373);
             this.AmountBox.MaxLength = 32767;
             this.AmountBox.Name = "AmountBox";
             this.AmountBox.PasswordChar = '\0';
@@ -289,7 +291,7 @@
             this.AmountBox.SelectionLength = 0;
             this.AmountBox.SelectionStart = 0;
             this.AmountBox.ShortcutsEnabled = true;
-            this.AmountBox.Size = new System.Drawing.Size(157, 20);
+            this.AmountBox.Size = new System.Drawing.Size(116, 20);
             this.AmountBox.TabIndex = 22;
             this.AmountBox.UseSelectable = true;
             this.AmountBox.Visible = false;
@@ -310,11 +312,21 @@
             // 
             this.StyleManager.Owner = this;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(240, 374);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(37, 19);
+            this.metroLabel1.TabIndex = 24;
+            this.metroLabel1.Text = "Ores";
+            // 
             // MiningCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 449);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.AmountBox);
             this.Controls.Add(this.TypeBox);
@@ -355,5 +367,6 @@
         private MetroFramework.Controls.MetroTextBox AmountBox;
         private MetroFramework.Controls.MetroButton BackBtn;
         private new MetroFramework.Components.MetroStyleManager StyleManager;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

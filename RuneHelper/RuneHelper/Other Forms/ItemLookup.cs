@@ -32,11 +32,13 @@ namespace RuneHelper
 
         #region Form Controls
 
+        // if 
         private void SearchButton_Click(object sender, EventArgs e)
         {
             SearchFunction();
         }
 
+        // updates the tab list page items depending on item selected
         private void ResultListView_ItemActivate(Object sender, EventArgs e)
         {
             int number = Convert.ToInt32(ResultListView.SelectedItems[0].Index);
@@ -61,10 +63,21 @@ namespace RuneHelper
             }
         }
 
-        #endregion Form Controls
+        // used to multiply to price of the item
+        private void Multiplyer_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                MultiplyedPrice.Text = Convert.ToString(API.FullForm((string)jObject["items"][ResultListView.SelectedItems[0].Index]["current"]["price"]) * API.IntParse(Multiplyer.Text));
 
-        #region Events and Functions
+            }
+            catch
+            {
+                MultiplyedPrice.Text = "0";
+            }
+        }
 
+        // enter key event incase the person is to lazy to press the search button
         private void SearchInput_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
@@ -73,6 +86,12 @@ namespace RuneHelper
             }
         }
 
+
+        #endregion Form Controls
+
+        #region Functions
+
+        // search item function
         public void SearchFunction()
         {
             string Input = SearchInput.Text.Replace(" ", "+");
@@ -109,18 +128,6 @@ namespace RuneHelper
         }
 
         #endregion Events and Functions
-        // currently inaccurate... ill figure it out later
-        private void Multiplyer_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                MultiplyedPrice.Text = Convert.ToString(API.FullForm((string)jObject["items"][ResultListView.SelectedItems[0].Index]["current"]["price"]) * API.IntParse(Multiplyer.Text));
-                
-            }
-            catch
-            {
-                MultiplyedPrice.Text = "0";
-            }  
-        }
+       
     }
 }

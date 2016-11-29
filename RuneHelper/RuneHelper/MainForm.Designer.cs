@@ -147,6 +147,8 @@
             this.PercentageLabel = new MetroFramework.Controls.MetroLabel();
             this.Percentage = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.XPMade = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.XptrackerLabel = new MetroFramework.Controls.MetroLabel();
             this.GraphUpdate = new MetroFramework.Controls.MetroButton();
             this.XPTracker = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -156,8 +158,6 @@
             this.ClockRefresh = new System.ComponentModel.BackgroundWorker();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.XPMade = new MetroFramework.Controls.MetroLabel();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -356,15 +356,15 @@
             // CompareStatsToolStrip
             // 
             this.CompareStatsToolStrip.Name = "CompareStatsToolStrip";
-            this.CompareStatsToolStrip.Size = new System.Drawing.Size(167, 24);
+            this.CompareStatsToolStrip.Size = new System.Drawing.Size(180, 24);
             this.CompareStatsToolStrip.Text = "Compare Stats";
             this.CompareStatsToolStrip.Click += new System.EventHandler(this.CompareStatsToolStrip_Click);
             // 
             // itemSearchToolStripMenuItem
             // 
             this.itemSearchToolStripMenuItem.Name = "itemSearchToolStripMenuItem";
-            this.itemSearchToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
-            this.itemSearchToolStripMenuItem.Text = "Item Search";
+            this.itemSearchToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.itemSearchToolStripMenuItem.Text = "Grand Exchange";
             this.itemSearchToolStripMenuItem.Click += new System.EventHandler(this.itemSearchToolStripMenuItem_Click);
             // 
             // TimeLabel
@@ -1337,6 +1337,24 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
+            // XPMade
+            // 
+            this.XPMade.AutoSize = true;
+            this.XPMade.Location = new System.Drawing.Point(245, 316);
+            this.XPMade.Name = "XPMade";
+            this.XPMade.Size = new System.Drawing.Size(16, 19);
+            this.XPMade.TabIndex = 6;
+            this.XPMade.Text = "0";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(245, 297);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(128, 19);
+            this.metroLabel1.TabIndex = 5;
+            this.metroLabel1.Text = "XP made this month";
+            // 
             // XptrackerLabel
             // 
             this.XptrackerLabel.AutoSize = true;
@@ -1415,24 +1433,6 @@
             // 
             this.StyleManager.Owner = this;
             this.StyleManager.Style = MetroFramework.MetroColorStyle.Orange;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(245, 297);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(128, 19);
-            this.metroLabel1.TabIndex = 5;
-            this.metroLabel1.Text = "XP made this month";
-            // 
-            // XPMade
-            // 
-            this.XPMade.AutoSize = true;
-            this.XPMade.Location = new System.Drawing.Point(245, 316);
-            this.XPMade.Name = "XPMade";
-            this.XPMade.Size = new System.Drawing.Size(16, 19);
-            this.XPMade.TabIndex = 6;
-            this.XPMade.Text = "0";
             // 
             // MainForm
             // 
