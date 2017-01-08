@@ -17,38 +17,6 @@ public static class API
 
     #region IO Functions
 
-    // streamwriter function with error checking
-    public static void StreamWriter(string WriteText, string FileLocation)
-    {
-        try
-        {
-            StreamWriter writer = new StreamWriter(FileLocation);
-            writer.Write(WriteText);
-            writer.Close();
-        }
-        catch
-        {
-            MessageBox.Show("ERROR: File could not be accessed or doesnt exsist", "RuneHelper");
-        }
-    }
-
-    // streamreader function with error checking
-    public static string StreamReader(string FileLocation)
-    {
-        try
-        {
-            StreamReader Reader = new StreamReader(FileLocation);
-            string text = Reader.ReadToEnd();
-            Reader.Close();
-            return text;
-        }
-        catch
-        {
-            MessageBox.Show("ERROR: File could not be accessed or doesnt exsist", "RuneHelper");
-            return "";
-        }
-    }
-
     public static bool CheckFileIntegrity()
     {
         if (File.Exists(@"Data.txt") == false)
@@ -199,58 +167,6 @@ public static class API
     }
 
     #endregion Calculator Functions
-
-    #region Style Functions
-
-    // determines the colour from the savedata string
-    public static MetroFramework.MetroColorStyle GetColour(string Colour)
-    {
-        switch (Colour)
-        {
-            case "red":
-                return MetroFramework.MetroColorStyle.Red;
-
-            case "blue":
-                return MetroFramework.MetroColorStyle.Blue;
-
-            case "green":
-                return MetroFramework.MetroColorStyle.Green;
-
-            case "orange":
-                return MetroFramework.MetroColorStyle.Orange;
-
-            case "silver":
-                return MetroFramework.MetroColorStyle.Silver;
-
-            case "brown":
-                return MetroFramework.MetroColorStyle.Brown;
-
-            case "pink":
-                return MetroFramework.MetroColorStyle.Pink;
-
-            case "purple":
-                return MetroFramework.MetroColorStyle.Purple;
-        }
-        return MetroFramework.MetroColorStyle.Default;
-    }
-
-    // Determines the theme colour from the savedata string
-    public static MetroFramework.MetroThemeStyle GetTheme(string Theme)
-    {
-        if (Theme == "light")
-        {
-            return MetroFramework.MetroThemeStyle.Light;
-        }
-
-        if (Theme == "dark")
-        {
-            return MetroFramework.MetroThemeStyle.Dark;
-        }
-
-        return MetroFramework.MetroThemeStyle.Default;
-    }
-
-    #endregion Style Functions
 }
 
 #region Designer Functions

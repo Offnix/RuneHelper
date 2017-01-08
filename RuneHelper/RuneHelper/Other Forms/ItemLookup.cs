@@ -15,14 +15,14 @@ namespace RuneHelper
         }
 
         private JObject jObject;
-        int i;
+        private int i;
 
         #region Open And Close Functions
 
         private void ItemLookup_Load(object sender, EventArgs e)
         {
-            StyleManager.Theme = API.GetTheme(MainForm.SaveData[1]);
-            StyleManager.Style = API.GetColour(MainForm.SaveData[2]);
+            StyleManager.Theme = MainForm.data.Theme;
+            StyleManager.Style = MainForm.data.Colour;
             this.Theme = StyleManager.Theme;
             ResultListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
             ResultListView.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -32,7 +32,7 @@ namespace RuneHelper
 
         #region Form Controls
 
-        // if 
+        // if
         private void SearchButton_Click(object sender, EventArgs e)
         {
             SearchFunction();
@@ -55,7 +55,6 @@ namespace RuneHelper
             try
             {
                 MultiplyedPrice.Text = Convert.ToString(API.FullForm((string)jObject["items"][ResultListView.SelectedItems[0].Index]["current"]["price"]) * API.IntParse(Multiplyer.Text));
-
             }
             catch
             {
@@ -69,7 +68,6 @@ namespace RuneHelper
             try
             {
                 MultiplyedPrice.Text = Convert.ToString(API.FullForm((string)jObject["items"][ResultListView.SelectedItems[0].Index]["current"]["price"]) * API.IntParse(Multiplyer.Text));
-
             }
             catch
             {
@@ -85,7 +83,6 @@ namespace RuneHelper
                 SearchFunction();
             }
         }
-
 
         #endregion Form Controls
 
@@ -127,7 +124,6 @@ namespace RuneHelper
             }
         }
 
-        #endregion Events and Functions
-       
+        #endregion Functions
     }
 }

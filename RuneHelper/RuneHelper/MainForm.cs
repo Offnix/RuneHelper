@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Forms;
+using Newtonsoft.Json;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -16,13 +17,24 @@ namespace RuneHelper
     {
         public static string[] LevelArray;
 
-        public static string[] SaveData = new string[35];
-
         public MainForm()
         {
             InitializeComponent();
             ClockRefresh.DoWork += new DoWorkEventHandler(ClockRefresh_DoWork);
         }
+
+        // json object class
+        public class Data
+        {
+            public string Name { get; set; }
+            public string Clan { get; set; }
+            public MetroFramework.MetroThemeStyle Theme { get; set; }
+            public MetroFramework.MetroColorStyle Colour { get; set; }
+            public int Month { get; set; }
+            public int[] XPArray { get; set; }
+        }
+
+        public static Data data = new Data();
 
         #region Open and close Functions
 
@@ -30,7 +42,7 @@ namespace RuneHelper
         private void MainForm_Load(object sender, EventArgs e)
         {
             MainToolStrip.Renderer = new CustomToolStripProfessionalRenderer();
-            SaveData = API.StreamReader(@"Data.txt").Split(',');
+            Data data = JsonConvert.DeserializeObject<Data>(File.ReadAllText(@"Data.txt"));
             ClockRefresh.RunWorkerAsync();
             ReloadPage();
         }
@@ -39,7 +51,9 @@ namespace RuneHelper
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             ClockRefresh.Dispose();
-            API.StreamWriter(string.Join(",", SaveData), @"Data.txt");
+            // write json obj to file
+            string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+            File.WriteAllText(@"Data.txt", json);
             Application.Exit();
         }
 
@@ -167,7 +181,7 @@ namespace RuneHelper
 
         private void OpenStats_Click(object sender, EventArgs e)
         {
-            StringBuilder b = new StringBuilder(SaveData[0]);
+            StringBuilder b = new StringBuilder(data.Name);
             Process.Start("http://runescape.wikia.com/wiki/Special:Search?search=" + b.Replace(" ", "+"));
         }
 
@@ -192,16 +206,15 @@ namespace RuneHelper
             // run on seperate threads for time saving
             Task.Run(() => UpdateImage());
             Task.Run(() => UpdateGraph());
-            // get and set theme and colour from api
-            StyleManager.Theme = API.GetTheme(SaveData[1]);
-            StyleManager.Style = API.GetColour(SaveData[2]);
+            StyleManager.Theme = data.Theme;
+            StyleManager.Style = data.Colour;
             this.Theme = StyleManager.Theme;
 
             // load the UI
             try
             {
-                UsernameLabel.Text = SaveData[0];
-                LevelArray = API.UpdateLevels(SaveData[0]);
+                UsernameLabel.Text = data.Name;
+                LevelArray = API.UpdateLevels(data.Name);
                 TotalLevel.Text = LevelArray[1];
                 AverageLevel.Text = API.GetMean(LevelArray).ToString();
                 PercentageLabel.Text = API.GetLevelPercentage(Convert.ToDecimal(LevelArray[1])) + "%";
@@ -275,13 +288,10 @@ namespace RuneHelper
 
         public void UpdateGraph()
         {
-            // this is used for changing the placement of the month savedata in the array.. for when the savedata gets extended
-            int MonthSetting = 3;
-
             // changes graph style
             XPTracker.Invoke((MethodInvoker)(() =>
             {
-                if (SaveData[1] == "light")
+                if (data.Theme == MetroFramework.MetroThemeStyle.Light)
                 {
                     XPTracker.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.Black;
                     XPTracker.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.Black;
@@ -291,7 +301,7 @@ namespace RuneHelper
                     XPTracker.ChartAreas[0].AxisY.LineColor = Color.Black;
                 }
 
-                if (SaveData[1] == "dark")
+                if (data.Theme == MetroFramework.MetroThemeStyle.Dark)
                 {
                     XPTracker.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineColor = Color.White;
                     XPTracker.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineColor = Color.White;
@@ -307,33 +317,33 @@ namespace RuneHelper
                 }
                 try
                 {
-                    int i = MonthSetting + 1;
+                    int i = 0;
                     string[] arraysplit = LevelArray[2].Split('\n');
-                    SaveData[DateTime.Now.Day + MonthSetting] = arraysplit[0];
+                    data.XPArray[DateTime.Now.Day] = API.IntParse(arraysplit[0]);
 
                     // reset function
-                    if (DateTime.Now.Month != API.IntParse(SaveData[MonthSetting]))
+                    if (DateTime.Now.Month != data.Month)
                     {
-                        SaveData[MonthSetting] = DateTime.Now.Month.ToString();
-                        while (i < SaveData.Length)
+                        data.Month = DateTime.Now.Month;
+                        while (i != data.XPArray.Length)
                         {
-                            SaveData[i] = "0";
+                            i = 0;
                             i++;
                         }
                     }
 
                     // Set data points
-                    i = MonthSetting + 1;
+                    i = 0;
                     bool first = true;
                     int Smallest = 0;
                     int largest = 0;
-                    while (i < SaveData.Length)
+                    while (i < data.XPArray.Length)
                     {
-                        if (string.IsNullOrEmpty(SaveData[i]) == false && SaveData[i] != "0")
+                        if (data.XPArray[i] != 0)
                         {
-                            XPTracker.Series[0].Points.AddXY(i - 3, API.IntParse(SaveData[i]));
-                            if (first == true) { Smallest = API.IntParse(SaveData[i]); first = false; }
-                            largest = API.IntParse(SaveData[i]);
+                            XPTracker.Series[0].Points.AddXY(i, data.XPArray[i]);
+                            if (first == true) { Smallest = data.XPArray[i]; first = false; }
+                            largest = data.XPArray[i];
                         }
                         i++;
                     }
@@ -343,10 +353,10 @@ namespace RuneHelper
             }));
         }
 
-        // update the profile image 
+        // update the profile image
         public void UpdateImage()
         {
-            string FileName = SaveData[0] + ".gif";
+            string FileName = data.Name + ".gif";
             try
             {
                 ProfilePicture.Load(FileName);
@@ -359,7 +369,7 @@ namespace RuneHelper
                 }
                 else
                 {
-                    API.UpdateImage(SaveData[0]);
+                    API.UpdateImage(data.Name);
                     ProfilePicture.Load(FileName);
                 }
             }

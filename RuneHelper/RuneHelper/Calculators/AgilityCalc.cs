@@ -21,8 +21,8 @@ namespace RuneHelper
 
         private void AglilityCalc_Load(object sender, EventArgs e)
         {
-            StyleManager.Theme = API.GetTheme(MainForm.SaveData[1]);
-            StyleManager.Style = API.GetColour(MainForm.SaveData[2]);
+            StyleManager.Theme = MainForm.data.Theme;
+            StyleManager.Style = MainForm.data.Colour;
             this.Theme = StyleManager.Theme;
         }
 
@@ -52,8 +52,8 @@ namespace RuneHelper
 
         private void CachedName_Click(object sender, EventArgs e)
         {
-            CharNameBox.Text = MainForm.SaveData[0];
-            result = GetPlayerMiningXP(MainForm.SaveData[0]);
+            CharNameBox.Text = MainForm.data.Name;
+            result = GetPlayerMiningXP(MainForm.data.Name);
             XPBox.Text = result;
             ShowBoxes();
         }

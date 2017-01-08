@@ -15,9 +15,9 @@ namespace RuneHelper
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            StyleManager.Theme = API.GetTheme(MainForm.SaveData[1]);
-            StyleManager.Style = API.GetColour(MainForm.SaveData[2]);
-            StyleExtender.Theme = API.GetTheme(MainForm.SaveData[1]);
+            StyleManager.Theme = MainForm.data.Theme;
+            StyleManager.Style = MainForm.data.Colour;
+            StyleExtender.Theme = MainForm.data.Theme;
             this.Theme = StyleManager.Theme;
         }
 

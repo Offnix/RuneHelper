@@ -16,9 +16,9 @@ namespace RuneHelper
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            UsernameTextBox.Text = MainForm.SaveData[0];
-            StyleManager.Theme = API.GetTheme(MainForm.SaveData[1]);
-            StyleManager.Style = API.GetColour(MainForm.SaveData[2]);
+            UsernameTextBox.Text = MainForm.data.Name;
+            StyleManager.Theme = MainForm.data.Theme;
+            StyleManager.Style = MainForm.data.Colour;
             this.Theme = StyleManager.Theme;
         }
 
@@ -28,7 +28,7 @@ namespace RuneHelper
 
         private void Exit_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[0] = UsernameTextBox.Text;
+            MainForm.data.Name = UsernameTextBox.Text;
             (Application.OpenForms["Mainform"] as MainForm).ReloadPage();
             this.Close();
         }
@@ -37,7 +37,7 @@ namespace RuneHelper
         {
             if (MetroMessageBox.Show(this, "Clicking ok will delete all cached data stored over this last month. Are you sure? ", "Delete saved XP data", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                MainForm.SaveData[3] = "13";
+                MainForm.data.Month = 13;
             }
         }
 
@@ -48,57 +48,57 @@ namespace RuneHelper
 
         private void Light_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[1] = "light";
+            MainForm.data.Theme = MetroThemeStyle.Light;
         }
 
         private void Dark_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[1] = "dark";
+            MainForm.data.Theme = MetroThemeStyle.Dark;
         }
 
         private void Red_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[2] = "red";
+            MainForm.data.Colour = MetroColorStyle.Red;
         }
 
         private void Default_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[2] = "blue";
+            MainForm.data.Colour = MetroColorStyle.Default;
         }
 
         private void Green_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[2] = "green";
+            MainForm.data.Colour = MetroColorStyle.Green;
         }
 
         private void Orange_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[2] = "orange";
+            MainForm.data.Colour = MetroColorStyle.Orange;
         }
 
         private void Pink_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[2] = "pink";
+            MainForm.data.Colour = MetroColorStyle.Pink;
         }
 
         private void Silver_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[2] = "silver";
+            MainForm.data.Colour = MetroColorStyle.Silver;
         }
 
         private void Purple_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[2] = "purple";
+            MainForm.data.Colour = MetroColorStyle.Purple;
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[2] = "brown";
+            MainForm.data.Colour = MetroColorStyle.Purple;
         }
 
         private void Blue_Click(object sender, EventArgs e)
         {
-            MainForm.SaveData[2] = "blue";
+            MainForm.data.Colour = MetroColorStyle.Blue;
         }
 
         #endregion Form Controls

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new MetroFramework.Controls.MetroLabel();
             this.AttackBar = new MetroFramework.Controls.MetroProgressBar();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
@@ -158,6 +158,7 @@
             this.ClockRefresh = new System.ComponentModel.BackgroundWorker();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
+            this.ClanTracker = new MetroFramework.Controls.MetroTabPage();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -385,9 +386,10 @@
             // 
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.UsernameLabel.Location = new System.Drawing.Point(83, 215);
+            this.UsernameLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.UsernameLabel.Location = new System.Drawing.Point(74, 216);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(68, 19);
+            this.UsernameLabel.Size = new System.Drawing.Size(89, 25);
             this.UsernameLabel.TabIndex = 5;
             this.UsernameLabel.Text = "Username";
             // 
@@ -1249,9 +1251,10 @@
             // 
             this.TabControl.Controls.Add(this.ExtraStats);
             this.TabControl.Controls.Add(this.metroTabPage1);
+            this.TabControl.Controls.Add(this.ClanTracker);
             this.TabControl.Location = new System.Drawing.Point(472, 100);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 1;
+            this.TabControl.SelectedIndex = 2;
             this.TabControl.Size = new System.Drawing.Size(457, 425);
             this.TabControl.TabIndex = 88;
             this.TabControl.UseSelectable = true;
@@ -1377,24 +1380,24 @@
             // XPTracker
             // 
             this.StyleExtender.SetApplyMetroTheme(this.XPTracker, true);
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.XPTracker.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
-            this.XPTracker.Legends.Add(legend1);
+            chartArea9.BackColor = System.Drawing.Color.Transparent;
+            chartArea9.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea9.BorderColor = System.Drawing.Color.White;
+            chartArea9.Name = "ChartArea1";
+            this.XPTracker.ChartAreas.Add(chartArea9);
+            legend9.Enabled = false;
+            legend9.ForeColor = System.Drawing.Color.White;
+            legend9.Name = "Legend1";
+            legend9.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            this.XPTracker.Legends.Add(legend9);
             this.XPTracker.Location = new System.Drawing.Point(-4, 39);
             this.XPTracker.Name = "XPTracker";
             this.XPTracker.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.XPTracker.Series.Add(series1);
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.XPTracker.Series.Add(series9);
             this.XPTracker.Size = new System.Drawing.Size(457, 271);
             this.XPTracker.TabIndex = 2;
             this.XPTracker.Text = "MonthlyXP";
@@ -1433,6 +1436,20 @@
             // 
             this.StyleManager.Owner = this;
             this.StyleManager.Style = MetroFramework.MetroColorStyle.Orange;
+            // 
+            // ClanTracker
+            // 
+            this.ClanTracker.HorizontalScrollbarBarColor = true;
+            this.ClanTracker.HorizontalScrollbarHighlightOnWheel = false;
+            this.ClanTracker.HorizontalScrollbarSize = 10;
+            this.ClanTracker.Location = new System.Drawing.Point(4, 38);
+            this.ClanTracker.Name = "ClanTracker";
+            this.ClanTracker.Size = new System.Drawing.Size(449, 383);
+            this.ClanTracker.TabIndex = 2;
+            this.ClanTracker.Text = "Clan";
+            this.ClanTracker.VerticalScrollbarBarColor = true;
+            this.ClanTracker.VerticalScrollbarHighlightOnWheel = false;
+            this.ClanTracker.VerticalScrollbarSize = 10;
             // 
             // MainForm
             // 
@@ -1703,6 +1720,7 @@
         private System.Windows.Forms.ToolStripMenuItem SearchInWiki;
         private MetroFramework.Controls.MetroLabel XPMade;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTabPage ClanTracker;
     }
 }
 
