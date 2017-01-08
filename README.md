@@ -5,6 +5,12 @@
 Runehelper is a lightweight C# windows form based program that collects stats data about your character
 With features like stat visualisation, calculators for skills, comparing player stats, Monthly total XP tracking and more.
 
+## Why did you fork? what was wrong with the orignal creators repo?
+Well, it was a jointed desiscion when we started creating this program, though because of our differences in workload i was able
+to basically create the whole program whislt he had barely any input. I found it annoying that i could not change certain aspects of the 
+Repo and this is basically 98% of my own code. It just made sense to host it.
+
+
 ## I can already do all this through other methods, why is this better?
 Well, You can goto the runescape highscores page and look at it there. We wont hate you for it. But doing it
 through Runehelper can help lessen data usage as the only things that are downloaded is your stats and your avatar picture.
