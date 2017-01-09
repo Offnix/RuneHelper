@@ -42,7 +42,7 @@ namespace RuneHelper
         private void MainForm_Load(object sender, EventArgs e)
         {
             MainToolStrip.Renderer = new CustomToolStripProfessionalRenderer();
-            Data data = JsonConvert.DeserializeObject<Data>(File.ReadAllText(@"Data.txt"));
+            data = JsonConvert.DeserializeObject<Data>(File.ReadAllText(@"Data.txt"));
             ClockRefresh.RunWorkerAsync();
             ReloadPage();
         }
@@ -373,6 +373,11 @@ namespace RuneHelper
                     ProfilePicture.Load(FileName);
                 }
             }
+        }
+
+        public void UnloadImage()
+        {
+            ProfilePicture.Image = null;
         }
 
         //seperate thread for refreshing the clock

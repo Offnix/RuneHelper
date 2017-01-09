@@ -41,7 +41,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(27, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(316, 38);
+            this.label2.Size = new System.Drawing.Size(313, 38);
             this.label2.TabIndex = 1;
             this.label2.Text = "Welcome too Runehelper, we noticed you dont have\r\n";
             // 
@@ -65,14 +65,14 @@
             // 
             // UsernameInput
             // 
-            this.UsernameInput.Location = new System.Drawing.Point(27, 159);
+            this.UsernameInput.Location = new System.Drawing.Point(27, 186);
             this.UsernameInput.Name = "UsernameInput";
             this.UsernameInput.Size = new System.Drawing.Size(174, 20);
             this.UsernameInput.TabIndex = 4;
             // 
             // ConfirmInput
             // 
-            this.ConfirmInput.Location = new System.Drawing.Point(207, 159);
+            this.ConfirmInput.Location = new System.Drawing.Point(207, 186);
             this.ConfirmInput.Name = "ConfirmInput";
             this.ConfirmInput.Size = new System.Drawing.Size(77, 23);
             this.ConfirmInput.TabIndex = 5;
@@ -84,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 204);
+            this.ClientSize = new System.Drawing.Size(366, 232);
             this.Controls.Add(this.ConfirmInput);
             this.Controls.Add(this.UsernameInput);
             this.Controls.Add(this.label4);

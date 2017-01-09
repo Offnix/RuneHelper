@@ -194,7 +194,7 @@
             // ColourLabel
             // 
             this.ColourLabel.AutoSize = true;
-            this.ColourLabel.Location = new System.Drawing.Point(311, 23);
+            this.ColourLabel.Location = new System.Drawing.Point(312, 20);
             this.ColourLabel.Name = "ColourLabel";
             this.ColourLabel.Size = new System.Drawing.Size(131, 19);
             this.ColourLabel.TabIndex = 12;

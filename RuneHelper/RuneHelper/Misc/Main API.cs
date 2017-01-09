@@ -129,12 +129,12 @@ public static class API
         int total = 0;
         try
         {
-            while (i != 55)
+            while (i != 57)
             {
-                total = total + API.IntParse(LevelArray[i]);
-                i = i + 2;
+                total += API.IntParse(LevelArray[i]);
+                i += 2;
             }
-            return total / 27;
+            return Convert.ToInt32(total / 27);
         }
         catch
         {
