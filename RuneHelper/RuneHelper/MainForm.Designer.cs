@@ -1433,7 +1433,6 @@
             // StyleManager
             // 
             this.StyleManager.Owner = this;
-            this.StyleManager.Style = MetroFramework.MetroColorStyle.Orange;
             // 
             // MainForm
             // 

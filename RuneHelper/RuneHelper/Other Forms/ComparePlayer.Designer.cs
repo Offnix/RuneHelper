@@ -30,35 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComparePlayer));
-            this.InventionLabel = new System.Windows.Forms.Label();
-            this.DivinationLabel = new System.Windows.Forms.Label();
-            this.DungeoneeringLabel = new System.Windows.Forms.Label();
-            this.SummoningLabel = new System.Windows.Forms.Label();
-            this.ConstructionLabel = new System.Windows.Forms.Label();
-            this.HunterLabel = new System.Windows.Forms.Label();
-            this.RunecraftingLabel = new System.Windows.Forms.Label();
-            this.FarmingLabel = new System.Windows.Forms.Label();
-            this.SlayerLabel = new System.Windows.Forms.Label();
-            this.ThievingLabel = new System.Windows.Forms.Label();
-            this.AgilityLabel = new System.Windows.Forms.Label();
-            this.HerbloreLabel = new System.Windows.Forms.Label();
-            this.MiningLabel = new System.Windows.Forms.Label();
-            this.SmithingLabel = new System.Windows.Forms.Label();
-            this.CraftingLabel = new System.Windows.Forms.Label();
-            this.FiremakingLabel = new System.Windows.Forms.Label();
-            this.FishingLabel = new System.Windows.Forms.Label();
-            this.FletchingLabel = new System.Windows.Forms.Label();
-            this.WoodcuttingLabel = new System.Windows.Forms.Label();
-            this.MagicLabel = new System.Windows.Forms.Label();
-            this.PrayerLabel = new System.Windows.Forms.Label();
-            this.RangedLabel = new System.Windows.Forms.Label();
-            this.HealthLabel = new System.Windows.Forms.Label();
-            this.StrengthLabel = new System.Windows.Forms.Label();
-            this.DefenceLabel = new System.Windows.Forms.Label();
-            this.AttackLabel = new System.Windows.Forms.Label();
+            this.InventionLabel = new MetroFramework.Controls.MetroLabel();
+            this.DivinationLabel = new MetroFramework.Controls.MetroLabel();
+            this.DungeoneeringLabel = new MetroFramework.Controls.MetroLabel();
+            this.SummoningLabel = new MetroFramework.Controls.MetroLabel();
+            this.ConstructionLabel = new MetroFramework.Controls.MetroLabel();
+            this.HunterLabel = new MetroFramework.Controls.MetroLabel();
+            this.RunecraftingLabel = new MetroFramework.Controls.MetroLabel();
+            this.FarmingLabel = new MetroFramework.Controls.MetroLabel();
+            this.SlayerLabel = new MetroFramework.Controls.MetroLabel();
+            this.ThievingLabel = new MetroFramework.Controls.MetroLabel();
+            this.AgilityLabel = new MetroFramework.Controls.MetroLabel();
+            this.HerbloreLabel = new MetroFramework.Controls.MetroLabel();
+            this.MiningLabel = new MetroFramework.Controls.MetroLabel();
+            this.SmithingLabel = new MetroFramework.Controls.MetroLabel();
+            this.CraftingLabel = new MetroFramework.Controls.MetroLabel();
+            this.FiremakingLabel = new MetroFramework.Controls.MetroLabel();
+            this.FishingLabel = new MetroFramework.Controls.MetroLabel();
+            this.FletchingLabel = new MetroFramework.Controls.MetroLabel();
+            this.WoodcuttingLabel = new MetroFramework.Controls.MetroLabel();
+            this.MagicLabel = new MetroFramework.Controls.MetroLabel();
+            this.PrayerLabel = new MetroFramework.Controls.MetroLabel();
+            this.RangedLabel = new MetroFramework.Controls.MetroLabel();
+            this.HealthLabel = new MetroFramework.Controls.MetroLabel();
+            this.StrengthLabel = new MetroFramework.Controls.MetroLabel();
+            this.DefenceLabel = new MetroFramework.Controls.MetroLabel();
+            this.AttackLabel = new MetroFramework.Controls.MetroLabel();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.InventorBar = new System.Windows.Forms.ProgressBar();
+            this.InventorBar = new MetroFramework.Controls.MetroProgressBar();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
@@ -82,61 +82,61 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.DivinationBar = new System.Windows.Forms.ProgressBar();
-            this.DungeoneeringBar = new System.Windows.Forms.ProgressBar();
-            this.SummoningBar = new System.Windows.Forms.ProgressBar();
-            this.ConstructionBar = new System.Windows.Forms.ProgressBar();
-            this.HunterBar = new System.Windows.Forms.ProgressBar();
-            this.RunecraftingBar = new System.Windows.Forms.ProgressBar();
-            this.FarmingBar = new System.Windows.Forms.ProgressBar();
-            this.SlayerBar = new System.Windows.Forms.ProgressBar();
-            this.ThievingBar = new System.Windows.Forms.ProgressBar();
-            this.AgilityBar = new System.Windows.Forms.ProgressBar();
-            this.HerbloreBar = new System.Windows.Forms.ProgressBar();
-            this.MiningBar = new System.Windows.Forms.ProgressBar();
-            this.SmithingBar = new System.Windows.Forms.ProgressBar();
-            this.CraftingBar = new System.Windows.Forms.ProgressBar();
-            this.FiremakingBar = new System.Windows.Forms.ProgressBar();
-            this.FishingBar = new System.Windows.Forms.ProgressBar();
-            this.FletchingBar = new System.Windows.Forms.ProgressBar();
-            this.WoodcuttingBar = new System.Windows.Forms.ProgressBar();
-            this.MagicBar = new System.Windows.Forms.ProgressBar();
-            this.PrayerBar = new System.Windows.Forms.ProgressBar();
+            this.DivinationBar = new MetroFramework.Controls.MetroProgressBar();
+            this.DungeoneeringBar = new MetroFramework.Controls.MetroProgressBar();
+            this.SummoningBar = new MetroFramework.Controls.MetroProgressBar();
+            this.ConstructionBar = new MetroFramework.Controls.MetroProgressBar();
+            this.HunterBar = new MetroFramework.Controls.MetroProgressBar();
+            this.RunecraftingBar = new MetroFramework.Controls.MetroProgressBar();
+            this.FarmingBar = new MetroFramework.Controls.MetroProgressBar();
+            this.SlayerBar = new MetroFramework.Controls.MetroProgressBar();
+            this.ThievingBar = new MetroFramework.Controls.MetroProgressBar();
+            this.AgilityBar = new MetroFramework.Controls.MetroProgressBar();
+            this.HerbloreBar = new MetroFramework.Controls.MetroProgressBar();
+            this.MiningBar = new MetroFramework.Controls.MetroProgressBar();
+            this.SmithingBar = new MetroFramework.Controls.MetroProgressBar();
+            this.CraftingBar = new MetroFramework.Controls.MetroProgressBar();
+            this.FiremakingBar = new MetroFramework.Controls.MetroProgressBar();
+            this.FishingBar = new MetroFramework.Controls.MetroProgressBar();
+            this.FletchingBar = new MetroFramework.Controls.MetroProgressBar();
+            this.WoodcuttingBar = new MetroFramework.Controls.MetroProgressBar();
+            this.MagicBar = new MetroFramework.Controls.MetroProgressBar();
+            this.PrayerBar = new MetroFramework.Controls.MetroProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.RangedBar = new System.Windows.Forms.ProgressBar();
-            this.HealthBar = new System.Windows.Forms.ProgressBar();
-            this.StrengthBar = new System.Windows.Forms.ProgressBar();
-            this.DefenceBar = new System.Windows.Forms.ProgressBar();
-            this.AttackBar = new System.Windows.Forms.ProgressBar();
-            this.InventionLabel2 = new System.Windows.Forms.Label();
-            this.DivinationLabel2 = new System.Windows.Forms.Label();
-            this.DungeoneeringLabel2 = new System.Windows.Forms.Label();
-            this.SummoningLabel2 = new System.Windows.Forms.Label();
-            this.ContructionLabel2 = new System.Windows.Forms.Label();
-            this.HunterLabel2 = new System.Windows.Forms.Label();
-            this.RunecraftingLabel2 = new System.Windows.Forms.Label();
-            this.FarmingLabel2 = new System.Windows.Forms.Label();
-            this.SlayerLabel2 = new System.Windows.Forms.Label();
-            this.ThievingLabel2 = new System.Windows.Forms.Label();
-            this.AgilityLabel2 = new System.Windows.Forms.Label();
-            this.HerbloreLabel2 = new System.Windows.Forms.Label();
-            this.MiningLabel2 = new System.Windows.Forms.Label();
-            this.SmithingLabel2 = new System.Windows.Forms.Label();
-            this.CraftingLabel2 = new System.Windows.Forms.Label();
-            this.FiremakingLabel2 = new System.Windows.Forms.Label();
-            this.FishingLabel2 = new System.Windows.Forms.Label();
-            this.FletchingLabel2 = new System.Windows.Forms.Label();
-            this.WoodcuttingLabel2 = new System.Windows.Forms.Label();
-            this.MagicLabel2 = new System.Windows.Forms.Label();
-            this.PrayerLabel2 = new System.Windows.Forms.Label();
-            this.RangedLabel2 = new System.Windows.Forms.Label();
-            this.HealthLabel2 = new System.Windows.Forms.Label();
-            this.StrengthLabel2 = new System.Windows.Forms.Label();
-            this.DefenceLabel2 = new System.Windows.Forms.Label();
-            this.AttackLabel2 = new System.Windows.Forms.Label();
+            this.RangedBar = new MetroFramework.Controls.MetroProgressBar();
+            this.HealthBar = new MetroFramework.Controls.MetroProgressBar();
+            this.StrengthBar = new MetroFramework.Controls.MetroProgressBar();
+            this.DefenceBar = new MetroFramework.Controls.MetroProgressBar();
+            this.AttackBar = new MetroFramework.Controls.MetroProgressBar();
+            this.InventionLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.DivinationLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.DungeoneeringLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.SummoningLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.ContructionLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.HunterLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.RunecraftingLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.FarmingLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.SlayerLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.ThievingLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.AgilityLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.HerbloreLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.MiningLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.SmithingLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.CraftingLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.FiremakingLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.FishingLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.FletchingLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.WoodcuttingLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.MagicLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.PrayerLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.RangedLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.HealthLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.StrengthLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.DefenceLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.AttackLabel2 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
-            this.InventorBar2 = new System.Windows.Forms.ProgressBar();
+            this.InventorBar2 = new MetroFramework.Controls.MetroProgressBar();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
@@ -160,42 +160,43 @@
             this.pictureBox49 = new System.Windows.Forms.PictureBox();
             this.pictureBox50 = new System.Windows.Forms.PictureBox();
             this.pictureBox51 = new System.Windows.Forms.PictureBox();
-            this.DivinationBar2 = new System.Windows.Forms.ProgressBar();
-            this.DungeoneeringBar2 = new System.Windows.Forms.ProgressBar();
-            this.SummoningBar2 = new System.Windows.Forms.ProgressBar();
-            this.ConstructionBar2 = new System.Windows.Forms.ProgressBar();
-            this.HunterBar2 = new System.Windows.Forms.ProgressBar();
-            this.RunecraftingBar2 = new System.Windows.Forms.ProgressBar();
-            this.FarmingBar2 = new System.Windows.Forms.ProgressBar();
-            this.SlayerBar2 = new System.Windows.Forms.ProgressBar();
-            this.ThievingBar2 = new System.Windows.Forms.ProgressBar();
-            this.AgilityBar2 = new System.Windows.Forms.ProgressBar();
-            this.HerbloreBar2 = new System.Windows.Forms.ProgressBar();
-            this.MiningBar2 = new System.Windows.Forms.ProgressBar();
-            this.SmithingBar2 = new System.Windows.Forms.ProgressBar();
-            this.CraftingBar2 = new System.Windows.Forms.ProgressBar();
-            this.FiremakingBar2 = new System.Windows.Forms.ProgressBar();
-            this.FishingBar2 = new System.Windows.Forms.ProgressBar();
-            this.FletchingBar2 = new System.Windows.Forms.ProgressBar();
-            this.WoodcuttingBar2 = new System.Windows.Forms.ProgressBar();
-            this.MagicBar2 = new System.Windows.Forms.ProgressBar();
-            this.PrayerBar2 = new System.Windows.Forms.ProgressBar();
+            this.DivinationBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.DungeoneeringBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.SummoningBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.ConstructionBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.HunterBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.RunecraftingBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.FarmingBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.SlayerBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.ThievingBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.AgilityBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.HerbloreBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.MiningBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.SmithingBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.CraftingBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.FiremakingBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.FishingBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.FletchingBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.WoodcuttingBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.MagicBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.PrayerBar2 = new MetroFramework.Controls.MetroProgressBar();
             this.pictureBox52 = new System.Windows.Forms.PictureBox();
-            this.RangedBar2 = new System.Windows.Forms.ProgressBar();
-            this.HealthBar2 = new System.Windows.Forms.ProgressBar();
-            this.StrengthBar2 = new System.Windows.Forms.ProgressBar();
-            this.DefenceBar2 = new System.Windows.Forms.ProgressBar();
-            this.AttackBar2 = new System.Windows.Forms.ProgressBar();
-            this.PLayerInput1 = new System.Windows.Forms.TextBox();
-            this.PlayerInput2 = new System.Windows.Forms.TextBox();
+            this.RangedBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.HealthBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.StrengthBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.DefenceBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.AttackBar2 = new MetroFramework.Controls.MetroProgressBar();
+            this.PLayerInput1 = new MetroFramework.Controls.MetroTextBox();
+            this.PlayerInput2 = new MetroFramework.Controls.MetroTextBox();
             this.CachedName = new System.Windows.Forms.Button();
             this.Compare = new System.Windows.Forms.Button();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new MetroFramework.Controls.MetroLabel();
+            this.label28 = new MetroFramework.Controls.MetroLabel();
             this.ProfileBox2 = new System.Windows.Forms.PictureBox();
             this.ProfileBox1 = new System.Windows.Forms.PictureBox();
             this.ComparePlayerMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.OpenStats = new System.Windows.Forms.ToolStripMenuItem();
+            this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
@@ -251,16 +252,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProfileBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileBox1)).BeginInit();
             this.ComparePlayerMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // InventionLabel
             // 
             this.InventionLabel.AutoSize = true;
             this.InventionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.InventionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InventionLabel.Location = new System.Drawing.Point(241, 568);
             this.InventionLabel.Name = "InventionLabel";
-            this.InventionLabel.Size = new System.Drawing.Size(16, 18);
+            this.InventionLabel.Size = new System.Drawing.Size(16, 19);
             this.InventionLabel.TabIndex = 165;
             this.InventionLabel.Text = "0";
             // 
@@ -268,10 +269,9 @@
             // 
             this.DivinationLabel.AutoSize = true;
             this.DivinationLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DivinationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DivinationLabel.Location = new System.Drawing.Point(241, 539);
             this.DivinationLabel.Name = "DivinationLabel";
-            this.DivinationLabel.Size = new System.Drawing.Size(16, 18);
+            this.DivinationLabel.Size = new System.Drawing.Size(16, 19);
             this.DivinationLabel.TabIndex = 164;
             this.DivinationLabel.Text = "0";
             // 
@@ -279,10 +279,9 @@
             // 
             this.DungeoneeringLabel.AutoSize = true;
             this.DungeoneeringLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DungeoneeringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DungeoneeringLabel.Location = new System.Drawing.Point(241, 510);
             this.DungeoneeringLabel.Name = "DungeoneeringLabel";
-            this.DungeoneeringLabel.Size = new System.Drawing.Size(16, 18);
+            this.DungeoneeringLabel.Size = new System.Drawing.Size(16, 19);
             this.DungeoneeringLabel.TabIndex = 163;
             this.DungeoneeringLabel.Text = "0";
             // 
@@ -290,10 +289,9 @@
             // 
             this.SummoningLabel.AutoSize = true;
             this.SummoningLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SummoningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SummoningLabel.Location = new System.Drawing.Point(241, 481);
             this.SummoningLabel.Name = "SummoningLabel";
-            this.SummoningLabel.Size = new System.Drawing.Size(16, 18);
+            this.SummoningLabel.Size = new System.Drawing.Size(16, 19);
             this.SummoningLabel.TabIndex = 162;
             this.SummoningLabel.Text = "0";
             // 
@@ -301,10 +299,9 @@
             // 
             this.ConstructionLabel.AutoSize = true;
             this.ConstructionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ConstructionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConstructionLabel.Location = new System.Drawing.Point(241, 452);
             this.ConstructionLabel.Name = "ConstructionLabel";
-            this.ConstructionLabel.Size = new System.Drawing.Size(16, 18);
+            this.ConstructionLabel.Size = new System.Drawing.Size(16, 19);
             this.ConstructionLabel.TabIndex = 161;
             this.ConstructionLabel.Text = "0";
             // 
@@ -312,10 +309,9 @@
             // 
             this.HunterLabel.AutoSize = true;
             this.HunterLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HunterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HunterLabel.Location = new System.Drawing.Point(241, 423);
             this.HunterLabel.Name = "HunterLabel";
-            this.HunterLabel.Size = new System.Drawing.Size(16, 18);
+            this.HunterLabel.Size = new System.Drawing.Size(16, 19);
             this.HunterLabel.TabIndex = 160;
             this.HunterLabel.Text = "0";
             // 
@@ -323,10 +319,9 @@
             // 
             this.RunecraftingLabel.AutoSize = true;
             this.RunecraftingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.RunecraftingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RunecraftingLabel.Location = new System.Drawing.Point(241, 394);
             this.RunecraftingLabel.Name = "RunecraftingLabel";
-            this.RunecraftingLabel.Size = new System.Drawing.Size(16, 18);
+            this.RunecraftingLabel.Size = new System.Drawing.Size(16, 19);
             this.RunecraftingLabel.TabIndex = 159;
             this.RunecraftingLabel.Text = "0";
             // 
@@ -334,10 +329,9 @@
             // 
             this.FarmingLabel.AutoSize = true;
             this.FarmingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FarmingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FarmingLabel.Location = new System.Drawing.Point(241, 365);
             this.FarmingLabel.Name = "FarmingLabel";
-            this.FarmingLabel.Size = new System.Drawing.Size(16, 18);
+            this.FarmingLabel.Size = new System.Drawing.Size(16, 19);
             this.FarmingLabel.TabIndex = 158;
             this.FarmingLabel.Text = "0";
             // 
@@ -345,10 +339,9 @@
             // 
             this.SlayerLabel.AutoSize = true;
             this.SlayerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SlayerLabel.Location = new System.Drawing.Point(241, 336);
             this.SlayerLabel.Name = "SlayerLabel";
-            this.SlayerLabel.Size = new System.Drawing.Size(16, 18);
+            this.SlayerLabel.Size = new System.Drawing.Size(16, 19);
             this.SlayerLabel.TabIndex = 157;
             this.SlayerLabel.Text = "0";
             // 
@@ -356,10 +349,9 @@
             // 
             this.ThievingLabel.AutoSize = true;
             this.ThievingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ThievingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThievingLabel.Location = new System.Drawing.Point(241, 307);
             this.ThievingLabel.Name = "ThievingLabel";
-            this.ThievingLabel.Size = new System.Drawing.Size(16, 18);
+            this.ThievingLabel.Size = new System.Drawing.Size(16, 19);
             this.ThievingLabel.TabIndex = 156;
             this.ThievingLabel.Text = "0";
             // 
@@ -367,10 +359,9 @@
             // 
             this.AgilityLabel.AutoSize = true;
             this.AgilityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AgilityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgilityLabel.Location = new System.Drawing.Point(241, 274);
             this.AgilityLabel.Name = "AgilityLabel";
-            this.AgilityLabel.Size = new System.Drawing.Size(16, 18);
+            this.AgilityLabel.Size = new System.Drawing.Size(16, 19);
             this.AgilityLabel.TabIndex = 155;
             this.AgilityLabel.Text = "0";
             // 
@@ -378,10 +369,9 @@
             // 
             this.HerbloreLabel.AutoSize = true;
             this.HerbloreLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HerbloreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HerbloreLabel.Location = new System.Drawing.Point(241, 245);
             this.HerbloreLabel.Name = "HerbloreLabel";
-            this.HerbloreLabel.Size = new System.Drawing.Size(16, 18);
+            this.HerbloreLabel.Size = new System.Drawing.Size(16, 19);
             this.HerbloreLabel.TabIndex = 154;
             this.HerbloreLabel.Text = "0";
             // 
@@ -389,10 +379,9 @@
             // 
             this.MiningLabel.AutoSize = true;
             this.MiningLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MiningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiningLabel.Location = new System.Drawing.Point(241, 214);
             this.MiningLabel.Name = "MiningLabel";
-            this.MiningLabel.Size = new System.Drawing.Size(16, 18);
+            this.MiningLabel.Size = new System.Drawing.Size(16, 19);
             this.MiningLabel.TabIndex = 153;
             this.MiningLabel.Text = "0";
             // 
@@ -400,10 +389,9 @@
             // 
             this.SmithingLabel.AutoSize = true;
             this.SmithingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SmithingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SmithingLabel.Location = new System.Drawing.Point(241, 185);
             this.SmithingLabel.Name = "SmithingLabel";
-            this.SmithingLabel.Size = new System.Drawing.Size(16, 18);
+            this.SmithingLabel.Size = new System.Drawing.Size(16, 19);
             this.SmithingLabel.TabIndex = 152;
             this.SmithingLabel.Text = "0";
             // 
@@ -411,10 +399,9 @@
             // 
             this.CraftingLabel.AutoSize = true;
             this.CraftingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CraftingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CraftingLabel.Location = new System.Drawing.Point(241, 156);
             this.CraftingLabel.Name = "CraftingLabel";
-            this.CraftingLabel.Size = new System.Drawing.Size(16, 18);
+            this.CraftingLabel.Size = new System.Drawing.Size(16, 19);
             this.CraftingLabel.TabIndex = 151;
             this.CraftingLabel.Text = "0";
             // 
@@ -422,10 +409,9 @@
             // 
             this.FiremakingLabel.AutoSize = true;
             this.FiremakingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FiremakingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FiremakingLabel.Location = new System.Drawing.Point(119, 562);
             this.FiremakingLabel.Name = "FiremakingLabel";
-            this.FiremakingLabel.Size = new System.Drawing.Size(16, 18);
+            this.FiremakingLabel.Size = new System.Drawing.Size(16, 19);
             this.FiremakingLabel.TabIndex = 150;
             this.FiremakingLabel.Text = "0";
             // 
@@ -433,10 +419,9 @@
             // 
             this.FishingLabel.AutoSize = true;
             this.FishingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FishingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FishingLabel.Location = new System.Drawing.Point(119, 533);
             this.FishingLabel.Name = "FishingLabel";
-            this.FishingLabel.Size = new System.Drawing.Size(16, 18);
+            this.FishingLabel.Size = new System.Drawing.Size(16, 19);
             this.FishingLabel.TabIndex = 149;
             this.FishingLabel.Text = "0";
             // 
@@ -444,10 +429,9 @@
             // 
             this.FletchingLabel.AutoSize = true;
             this.FletchingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FletchingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FletchingLabel.Location = new System.Drawing.Point(119, 504);
             this.FletchingLabel.Name = "FletchingLabel";
-            this.FletchingLabel.Size = new System.Drawing.Size(16, 18);
+            this.FletchingLabel.Size = new System.Drawing.Size(16, 19);
             this.FletchingLabel.TabIndex = 148;
             this.FletchingLabel.Text = "0";
             // 
@@ -455,10 +439,9 @@
             // 
             this.WoodcuttingLabel.AutoSize = true;
             this.WoodcuttingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.WoodcuttingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WoodcuttingLabel.Location = new System.Drawing.Point(119, 475);
             this.WoodcuttingLabel.Name = "WoodcuttingLabel";
-            this.WoodcuttingLabel.Size = new System.Drawing.Size(16, 18);
+            this.WoodcuttingLabel.Size = new System.Drawing.Size(16, 19);
             this.WoodcuttingLabel.TabIndex = 147;
             this.WoodcuttingLabel.Text = "0";
             // 
@@ -466,10 +449,9 @@
             // 
             this.MagicLabel.AutoSize = true;
             this.MagicLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MagicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MagicLabel.Location = new System.Drawing.Point(119, 446);
             this.MagicLabel.Name = "MagicLabel";
-            this.MagicLabel.Size = new System.Drawing.Size(16, 18);
+            this.MagicLabel.Size = new System.Drawing.Size(16, 19);
             this.MagicLabel.TabIndex = 146;
             this.MagicLabel.Text = "0";
             // 
@@ -477,10 +459,9 @@
             // 
             this.PrayerLabel.AutoSize = true;
             this.PrayerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PrayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrayerLabel.Location = new System.Drawing.Point(119, 417);
             this.PrayerLabel.Name = "PrayerLabel";
-            this.PrayerLabel.Size = new System.Drawing.Size(16, 18);
+            this.PrayerLabel.Size = new System.Drawing.Size(16, 19);
             this.PrayerLabel.TabIndex = 145;
             this.PrayerLabel.Text = "0";
             // 
@@ -488,10 +469,9 @@
             // 
             this.RangedLabel.AutoSize = true;
             this.RangedLabel.BackColor = System.Drawing.Color.Transparent;
-            this.RangedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RangedLabel.Location = new System.Drawing.Point(119, 388);
             this.RangedLabel.Name = "RangedLabel";
-            this.RangedLabel.Size = new System.Drawing.Size(16, 18);
+            this.RangedLabel.Size = new System.Drawing.Size(16, 19);
             this.RangedLabel.TabIndex = 144;
             this.RangedLabel.Text = "0";
             // 
@@ -499,10 +479,9 @@
             // 
             this.HealthLabel.AutoSize = true;
             this.HealthLabel.BackColor = System.Drawing.Color.Transparent;
-            this.HealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HealthLabel.Location = new System.Drawing.Point(119, 359);
             this.HealthLabel.Name = "HealthLabel";
-            this.HealthLabel.Size = new System.Drawing.Size(16, 18);
+            this.HealthLabel.Size = new System.Drawing.Size(16, 19);
             this.HealthLabel.TabIndex = 143;
             this.HealthLabel.Text = "0";
             // 
@@ -510,10 +489,9 @@
             // 
             this.StrengthLabel.AutoSize = true;
             this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
-            this.StrengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StrengthLabel.Location = new System.Drawing.Point(119, 330);
             this.StrengthLabel.Name = "StrengthLabel";
-            this.StrengthLabel.Size = new System.Drawing.Size(16, 18);
+            this.StrengthLabel.Size = new System.Drawing.Size(16, 19);
             this.StrengthLabel.TabIndex = 142;
             this.StrengthLabel.Text = "0";
             // 
@@ -521,10 +499,9 @@
             // 
             this.DefenceLabel.AutoSize = true;
             this.DefenceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DefenceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DefenceLabel.Location = new System.Drawing.Point(119, 301);
             this.DefenceLabel.Name = "DefenceLabel";
-            this.DefenceLabel.Size = new System.Drawing.Size(16, 18);
+            this.DefenceLabel.Size = new System.Drawing.Size(16, 19);
             this.DefenceLabel.TabIndex = 141;
             this.DefenceLabel.Text = "0";
             // 
@@ -532,10 +509,9 @@
             // 
             this.AttackLabel.AutoSize = true;
             this.AttackLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AttackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AttackLabel.Location = new System.Drawing.Point(119, 266);
             this.AttackLabel.Name = "AttackLabel";
-            this.AttackLabel.Size = new System.Drawing.Size(16, 18);
+            this.AttackLabel.Size = new System.Drawing.Size(16, 19);
             this.AttackLabel.TabIndex = 140;
             this.AttackLabel.Text = "0";
             // 
@@ -1063,10 +1039,9 @@
             // 
             this.InventionLabel2.AutoSize = true;
             this.InventionLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.InventionLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InventionLabel2.Location = new System.Drawing.Point(519, 562);
+            this.InventionLabel2.Location = new System.Drawing.Point(572, 555);
             this.InventionLabel2.Name = "InventionLabel2";
-            this.InventionLabel2.Size = new System.Drawing.Size(16, 18);
+            this.InventionLabel2.Size = new System.Drawing.Size(16, 19);
             this.InventionLabel2.TabIndex = 243;
             this.InventionLabel2.Text = "0";
             // 
@@ -1074,10 +1049,9 @@
             // 
             this.DivinationLabel2.AutoSize = true;
             this.DivinationLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.DivinationLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivinationLabel2.Location = new System.Drawing.Point(519, 533);
+            this.DivinationLabel2.Location = new System.Drawing.Point(572, 526);
             this.DivinationLabel2.Name = "DivinationLabel2";
-            this.DivinationLabel2.Size = new System.Drawing.Size(16, 18);
+            this.DivinationLabel2.Size = new System.Drawing.Size(16, 19);
             this.DivinationLabel2.TabIndex = 242;
             this.DivinationLabel2.Text = "0";
             // 
@@ -1085,10 +1059,9 @@
             // 
             this.DungeoneeringLabel2.AutoSize = true;
             this.DungeoneeringLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.DungeoneeringLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DungeoneeringLabel2.Location = new System.Drawing.Point(519, 504);
+            this.DungeoneeringLabel2.Location = new System.Drawing.Point(572, 497);
             this.DungeoneeringLabel2.Name = "DungeoneeringLabel2";
-            this.DungeoneeringLabel2.Size = new System.Drawing.Size(16, 18);
+            this.DungeoneeringLabel2.Size = new System.Drawing.Size(16, 19);
             this.DungeoneeringLabel2.TabIndex = 241;
             this.DungeoneeringLabel2.Text = "0";
             // 
@@ -1096,10 +1069,9 @@
             // 
             this.SummoningLabel2.AutoSize = true;
             this.SummoningLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.SummoningLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SummoningLabel2.Location = new System.Drawing.Point(519, 475);
+            this.SummoningLabel2.Location = new System.Drawing.Point(572, 468);
             this.SummoningLabel2.Name = "SummoningLabel2";
-            this.SummoningLabel2.Size = new System.Drawing.Size(16, 18);
+            this.SummoningLabel2.Size = new System.Drawing.Size(16, 19);
             this.SummoningLabel2.TabIndex = 240;
             this.SummoningLabel2.Text = "0";
             // 
@@ -1107,10 +1079,9 @@
             // 
             this.ContructionLabel2.AutoSize = true;
             this.ContructionLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.ContructionLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContructionLabel2.Location = new System.Drawing.Point(519, 446);
+            this.ContructionLabel2.Location = new System.Drawing.Point(572, 439);
             this.ContructionLabel2.Name = "ContructionLabel2";
-            this.ContructionLabel2.Size = new System.Drawing.Size(16, 18);
+            this.ContructionLabel2.Size = new System.Drawing.Size(16, 19);
             this.ContructionLabel2.TabIndex = 239;
             this.ContructionLabel2.Text = "0";
             // 
@@ -1118,10 +1089,9 @@
             // 
             this.HunterLabel2.AutoSize = true;
             this.HunterLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.HunterLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HunterLabel2.Location = new System.Drawing.Point(519, 417);
+            this.HunterLabel2.Location = new System.Drawing.Point(572, 410);
             this.HunterLabel2.Name = "HunterLabel2";
-            this.HunterLabel2.Size = new System.Drawing.Size(16, 18);
+            this.HunterLabel2.Size = new System.Drawing.Size(16, 19);
             this.HunterLabel2.TabIndex = 238;
             this.HunterLabel2.Text = "0";
             // 
@@ -1129,10 +1099,9 @@
             // 
             this.RunecraftingLabel2.AutoSize = true;
             this.RunecraftingLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.RunecraftingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RunecraftingLabel2.Location = new System.Drawing.Point(519, 388);
+            this.RunecraftingLabel2.Location = new System.Drawing.Point(572, 381);
             this.RunecraftingLabel2.Name = "RunecraftingLabel2";
-            this.RunecraftingLabel2.Size = new System.Drawing.Size(16, 18);
+            this.RunecraftingLabel2.Size = new System.Drawing.Size(16, 19);
             this.RunecraftingLabel2.TabIndex = 237;
             this.RunecraftingLabel2.Text = "0";
             // 
@@ -1140,10 +1109,9 @@
             // 
             this.FarmingLabel2.AutoSize = true;
             this.FarmingLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.FarmingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FarmingLabel2.Location = new System.Drawing.Point(519, 359);
+            this.FarmingLabel2.Location = new System.Drawing.Point(572, 352);
             this.FarmingLabel2.Name = "FarmingLabel2";
-            this.FarmingLabel2.Size = new System.Drawing.Size(16, 18);
+            this.FarmingLabel2.Size = new System.Drawing.Size(16, 19);
             this.FarmingLabel2.TabIndex = 236;
             this.FarmingLabel2.Text = "0";
             // 
@@ -1151,10 +1119,9 @@
             // 
             this.SlayerLabel2.AutoSize = true;
             this.SlayerLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.SlayerLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SlayerLabel2.Location = new System.Drawing.Point(519, 330);
+            this.SlayerLabel2.Location = new System.Drawing.Point(572, 323);
             this.SlayerLabel2.Name = "SlayerLabel2";
-            this.SlayerLabel2.Size = new System.Drawing.Size(16, 18);
+            this.SlayerLabel2.Size = new System.Drawing.Size(16, 19);
             this.SlayerLabel2.TabIndex = 235;
             this.SlayerLabel2.Text = "0";
             // 
@@ -1162,10 +1129,9 @@
             // 
             this.ThievingLabel2.AutoSize = true;
             this.ThievingLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.ThievingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThievingLabel2.Location = new System.Drawing.Point(519, 301);
+            this.ThievingLabel2.Location = new System.Drawing.Point(572, 294);
             this.ThievingLabel2.Name = "ThievingLabel2";
-            this.ThievingLabel2.Size = new System.Drawing.Size(16, 18);
+            this.ThievingLabel2.Size = new System.Drawing.Size(16, 19);
             this.ThievingLabel2.TabIndex = 234;
             this.ThievingLabel2.Text = "0";
             // 
@@ -1173,10 +1139,9 @@
             // 
             this.AgilityLabel2.AutoSize = true;
             this.AgilityLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.AgilityLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgilityLabel2.Location = new System.Drawing.Point(519, 268);
+            this.AgilityLabel2.Location = new System.Drawing.Point(572, 261);
             this.AgilityLabel2.Name = "AgilityLabel2";
-            this.AgilityLabel2.Size = new System.Drawing.Size(16, 18);
+            this.AgilityLabel2.Size = new System.Drawing.Size(16, 19);
             this.AgilityLabel2.TabIndex = 233;
             this.AgilityLabel2.Text = "0";
             // 
@@ -1184,10 +1149,9 @@
             // 
             this.HerbloreLabel2.AutoSize = true;
             this.HerbloreLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.HerbloreLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HerbloreLabel2.Location = new System.Drawing.Point(396, 569);
+            this.HerbloreLabel2.Location = new System.Drawing.Point(449, 562);
             this.HerbloreLabel2.Name = "HerbloreLabel2";
-            this.HerbloreLabel2.Size = new System.Drawing.Size(16, 18);
+            this.HerbloreLabel2.Size = new System.Drawing.Size(16, 19);
             this.HerbloreLabel2.TabIndex = 232;
             this.HerbloreLabel2.Text = "0";
             // 
@@ -1195,10 +1159,9 @@
             // 
             this.MiningLabel2.AutoSize = true;
             this.MiningLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.MiningLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiningLabel2.Location = new System.Drawing.Point(396, 538);
+            this.MiningLabel2.Location = new System.Drawing.Point(449, 531);
             this.MiningLabel2.Name = "MiningLabel2";
-            this.MiningLabel2.Size = new System.Drawing.Size(16, 18);
+            this.MiningLabel2.Size = new System.Drawing.Size(16, 19);
             this.MiningLabel2.TabIndex = 231;
             this.MiningLabel2.Text = "0";
             // 
@@ -1206,10 +1169,9 @@
             // 
             this.SmithingLabel2.AutoSize = true;
             this.SmithingLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.SmithingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SmithingLabel2.Location = new System.Drawing.Point(396, 506);
+            this.SmithingLabel2.Location = new System.Drawing.Point(449, 499);
             this.SmithingLabel2.Name = "SmithingLabel2";
-            this.SmithingLabel2.Size = new System.Drawing.Size(16, 18);
+            this.SmithingLabel2.Size = new System.Drawing.Size(16, 19);
             this.SmithingLabel2.TabIndex = 230;
             this.SmithingLabel2.Text = "0";
             // 
@@ -1217,10 +1179,9 @@
             // 
             this.CraftingLabel2.AutoSize = true;
             this.CraftingLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.CraftingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CraftingLabel2.Location = new System.Drawing.Point(396, 477);
+            this.CraftingLabel2.Location = new System.Drawing.Point(449, 470);
             this.CraftingLabel2.Name = "CraftingLabel2";
-            this.CraftingLabel2.Size = new System.Drawing.Size(16, 18);
+            this.CraftingLabel2.Size = new System.Drawing.Size(16, 19);
             this.CraftingLabel2.TabIndex = 229;
             this.CraftingLabel2.Text = "0";
             // 
@@ -1228,10 +1189,9 @@
             // 
             this.FiremakingLabel2.AutoSize = true;
             this.FiremakingLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.FiremakingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FiremakingLabel2.Location = new System.Drawing.Point(396, 454);
+            this.FiremakingLabel2.Location = new System.Drawing.Point(449, 447);
             this.FiremakingLabel2.Name = "FiremakingLabel2";
-            this.FiremakingLabel2.Size = new System.Drawing.Size(16, 18);
+            this.FiremakingLabel2.Size = new System.Drawing.Size(16, 19);
             this.FiremakingLabel2.TabIndex = 228;
             this.FiremakingLabel2.Text = "0";
             // 
@@ -1239,10 +1199,9 @@
             // 
             this.FishingLabel2.AutoSize = true;
             this.FishingLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.FishingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FishingLabel2.Location = new System.Drawing.Point(396, 425);
+            this.FishingLabel2.Location = new System.Drawing.Point(449, 418);
             this.FishingLabel2.Name = "FishingLabel2";
-            this.FishingLabel2.Size = new System.Drawing.Size(16, 18);
+            this.FishingLabel2.Size = new System.Drawing.Size(16, 19);
             this.FishingLabel2.TabIndex = 227;
             this.FishingLabel2.Text = "0";
             // 
@@ -1250,10 +1209,9 @@
             // 
             this.FletchingLabel2.AutoSize = true;
             this.FletchingLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.FletchingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FletchingLabel2.Location = new System.Drawing.Point(396, 396);
+            this.FletchingLabel2.Location = new System.Drawing.Point(449, 389);
             this.FletchingLabel2.Name = "FletchingLabel2";
-            this.FletchingLabel2.Size = new System.Drawing.Size(16, 18);
+            this.FletchingLabel2.Size = new System.Drawing.Size(16, 19);
             this.FletchingLabel2.TabIndex = 226;
             this.FletchingLabel2.Text = "0";
             // 
@@ -1261,10 +1219,9 @@
             // 
             this.WoodcuttingLabel2.AutoSize = true;
             this.WoodcuttingLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.WoodcuttingLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WoodcuttingLabel2.Location = new System.Drawing.Point(396, 367);
+            this.WoodcuttingLabel2.Location = new System.Drawing.Point(449, 360);
             this.WoodcuttingLabel2.Name = "WoodcuttingLabel2";
-            this.WoodcuttingLabel2.Size = new System.Drawing.Size(16, 18);
+            this.WoodcuttingLabel2.Size = new System.Drawing.Size(16, 19);
             this.WoodcuttingLabel2.TabIndex = 225;
             this.WoodcuttingLabel2.Text = "0";
             // 
@@ -1272,10 +1229,9 @@
             // 
             this.MagicLabel2.AutoSize = true;
             this.MagicLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.MagicLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MagicLabel2.Location = new System.Drawing.Point(396, 338);
+            this.MagicLabel2.Location = new System.Drawing.Point(449, 331);
             this.MagicLabel2.Name = "MagicLabel2";
-            this.MagicLabel2.Size = new System.Drawing.Size(16, 18);
+            this.MagicLabel2.Size = new System.Drawing.Size(16, 19);
             this.MagicLabel2.TabIndex = 224;
             this.MagicLabel2.Text = "0";
             // 
@@ -1283,10 +1239,9 @@
             // 
             this.PrayerLabel2.AutoSize = true;
             this.PrayerLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.PrayerLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrayerLabel2.Location = new System.Drawing.Point(396, 309);
+            this.PrayerLabel2.Location = new System.Drawing.Point(449, 302);
             this.PrayerLabel2.Name = "PrayerLabel2";
-            this.PrayerLabel2.Size = new System.Drawing.Size(16, 18);
+            this.PrayerLabel2.Size = new System.Drawing.Size(16, 19);
             this.PrayerLabel2.TabIndex = 223;
             this.PrayerLabel2.Text = "0";
             // 
@@ -1294,10 +1249,9 @@
             // 
             this.RangedLabel2.AutoSize = true;
             this.RangedLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.RangedLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangedLabel2.Location = new System.Drawing.Point(396, 280);
+            this.RangedLabel2.Location = new System.Drawing.Point(449, 273);
             this.RangedLabel2.Name = "RangedLabel2";
-            this.RangedLabel2.Size = new System.Drawing.Size(16, 18);
+            this.RangedLabel2.Size = new System.Drawing.Size(16, 19);
             this.RangedLabel2.TabIndex = 222;
             this.RangedLabel2.Text = "0";
             // 
@@ -1305,10 +1259,9 @@
             // 
             this.HealthLabel2.AutoSize = true;
             this.HealthLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.HealthLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HealthLabel2.Location = new System.Drawing.Point(396, 251);
+            this.HealthLabel2.Location = new System.Drawing.Point(449, 244);
             this.HealthLabel2.Name = "HealthLabel2";
-            this.HealthLabel2.Size = new System.Drawing.Size(16, 18);
+            this.HealthLabel2.Size = new System.Drawing.Size(16, 19);
             this.HealthLabel2.TabIndex = 221;
             this.HealthLabel2.Text = "0";
             // 
@@ -1316,10 +1269,9 @@
             // 
             this.StrengthLabel2.AutoSize = true;
             this.StrengthLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.StrengthLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StrengthLabel2.Location = new System.Drawing.Point(396, 222);
+            this.StrengthLabel2.Location = new System.Drawing.Point(449, 215);
             this.StrengthLabel2.Name = "StrengthLabel2";
-            this.StrengthLabel2.Size = new System.Drawing.Size(16, 18);
+            this.StrengthLabel2.Size = new System.Drawing.Size(16, 19);
             this.StrengthLabel2.TabIndex = 220;
             this.StrengthLabel2.Text = "0";
             // 
@@ -1327,10 +1279,9 @@
             // 
             this.DefenceLabel2.AutoSize = true;
             this.DefenceLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.DefenceLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DefenceLabel2.Location = new System.Drawing.Point(396, 193);
+            this.DefenceLabel2.Location = new System.Drawing.Point(449, 186);
             this.DefenceLabel2.Name = "DefenceLabel2";
-            this.DefenceLabel2.Size = new System.Drawing.Size(16, 18);
+            this.DefenceLabel2.Size = new System.Drawing.Size(16, 19);
             this.DefenceLabel2.TabIndex = 219;
             this.DefenceLabel2.Text = "0";
             // 
@@ -1338,10 +1289,9 @@
             // 
             this.AttackLabel2.AutoSize = true;
             this.AttackLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.AttackLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AttackLabel2.Location = new System.Drawing.Point(396, 164);
+            this.AttackLabel2.Location = new System.Drawing.Point(449, 157);
             this.AttackLabel2.Name = "AttackLabel2";
-            this.AttackLabel2.Size = new System.Drawing.Size(16, 18);
+            this.AttackLabel2.Size = new System.Drawing.Size(16, 19);
             this.AttackLabel2.TabIndex = 218;
             this.AttackLabel2.Text = "0";
             // 
@@ -1349,7 +1299,7 @@
             // 
             this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(417, 557);
+            this.pictureBox27.Location = new System.Drawing.Point(470, 550);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(23, 23);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1360,7 +1310,7 @@
             // 
             this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox28.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox28.Image")));
-            this.pictureBox28.Location = new System.Drawing.Point(417, 528);
+            this.pictureBox28.Location = new System.Drawing.Point(470, 521);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(23, 23);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1369,7 +1319,7 @@
             // 
             // InventorBar2
             // 
-            this.InventorBar2.Location = new System.Drawing.Point(446, 557);
+            this.InventorBar2.Location = new System.Drawing.Point(499, 550);
             this.InventorBar2.MarqueeAnimationSpeed = 0;
             this.InventorBar2.Maximum = 120;
             this.InventorBar2.Name = "InventorBar2";
@@ -1380,7 +1330,7 @@
             // 
             this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(417, 499);
+            this.pictureBox29.Location = new System.Drawing.Point(470, 492);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(23, 23);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1391,7 +1341,7 @@
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
-            this.pictureBox30.Location = new System.Drawing.Point(417, 470);
+            this.pictureBox30.Location = new System.Drawing.Point(470, 463);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(23, 23);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1402,7 +1352,7 @@
             // 
             this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox31.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox31.Image")));
-            this.pictureBox31.Location = new System.Drawing.Point(417, 441);
+            this.pictureBox31.Location = new System.Drawing.Point(470, 434);
             this.pictureBox31.Name = "pictureBox31";
             this.pictureBox31.Size = new System.Drawing.Size(23, 23);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1413,7 +1363,7 @@
             // 
             this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox32.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox32.Image")));
-            this.pictureBox32.Location = new System.Drawing.Point(417, 415);
+            this.pictureBox32.Location = new System.Drawing.Point(470, 408);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(23, 23);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1424,7 +1374,7 @@
             // 
             this.pictureBox33.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox33.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox33.Image")));
-            this.pictureBox33.Location = new System.Drawing.Point(417, 383);
+            this.pictureBox33.Location = new System.Drawing.Point(470, 376);
             this.pictureBox33.Name = "pictureBox33";
             this.pictureBox33.Size = new System.Drawing.Size(23, 23);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1435,7 +1385,7 @@
             // 
             this.pictureBox34.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
-            this.pictureBox34.Location = new System.Drawing.Point(417, 354);
+            this.pictureBox34.Location = new System.Drawing.Point(470, 347);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(23, 23);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1446,7 +1396,7 @@
             // 
             this.pictureBox35.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox35.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox35.Image")));
-            this.pictureBox35.Location = new System.Drawing.Point(417, 325);
+            this.pictureBox35.Location = new System.Drawing.Point(470, 318);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(23, 23);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1457,7 +1407,7 @@
             // 
             this.pictureBox36.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox36.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox36.Image")));
-            this.pictureBox36.Location = new System.Drawing.Point(417, 296);
+            this.pictureBox36.Location = new System.Drawing.Point(470, 289);
             this.pictureBox36.Name = "pictureBox36";
             this.pictureBox36.Size = new System.Drawing.Size(23, 23);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1468,7 +1418,7 @@
             // 
             this.pictureBox37.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox37.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox37.Image")));
-            this.pictureBox37.Location = new System.Drawing.Point(417, 267);
+            this.pictureBox37.Location = new System.Drawing.Point(470, 260);
             this.pictureBox37.Name = "pictureBox37";
             this.pictureBox37.Size = new System.Drawing.Size(23, 23);
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1479,7 +1429,7 @@
             // 
             this.pictureBox38.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox38.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox38.Image")));
-            this.pictureBox38.Location = new System.Drawing.Point(294, 568);
+            this.pictureBox38.Location = new System.Drawing.Point(347, 561);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(23, 23);
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1490,7 +1440,7 @@
             // 
             this.pictureBox39.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox39.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox39.Image")));
-            this.pictureBox39.Location = new System.Drawing.Point(294, 538);
+            this.pictureBox39.Location = new System.Drawing.Point(347, 531);
             this.pictureBox39.Name = "pictureBox39";
             this.pictureBox39.Size = new System.Drawing.Size(23, 23);
             this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1501,7 +1451,7 @@
             // 
             this.pictureBox40.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox40.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox40.Image")));
-            this.pictureBox40.Location = new System.Drawing.Point(294, 506);
+            this.pictureBox40.Location = new System.Drawing.Point(347, 499);
             this.pictureBox40.Name = "pictureBox40";
             this.pictureBox40.Size = new System.Drawing.Size(23, 23);
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1512,7 +1462,7 @@
             // 
             this.pictureBox41.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox41.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox41.Image")));
-            this.pictureBox41.Location = new System.Drawing.Point(294, 477);
+            this.pictureBox41.Location = new System.Drawing.Point(347, 470);
             this.pictureBox41.Name = "pictureBox41";
             this.pictureBox41.Size = new System.Drawing.Size(23, 23);
             this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1523,7 +1473,7 @@
             // 
             this.pictureBox42.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox42.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox42.Image")));
-            this.pictureBox42.Location = new System.Drawing.Point(294, 449);
+            this.pictureBox42.Location = new System.Drawing.Point(347, 442);
             this.pictureBox42.Name = "pictureBox42";
             this.pictureBox42.Size = new System.Drawing.Size(23, 23);
             this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1534,7 +1484,7 @@
             // 
             this.pictureBox43.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox43.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox43.Image")));
-            this.pictureBox43.Location = new System.Drawing.Point(294, 420);
+            this.pictureBox43.Location = new System.Drawing.Point(347, 413);
             this.pictureBox43.Name = "pictureBox43";
             this.pictureBox43.Size = new System.Drawing.Size(23, 23);
             this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1545,7 +1495,7 @@
             // 
             this.pictureBox44.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox44.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox44.Image")));
-            this.pictureBox44.Location = new System.Drawing.Point(294, 391);
+            this.pictureBox44.Location = new System.Drawing.Point(347, 384);
             this.pictureBox44.Name = "pictureBox44";
             this.pictureBox44.Size = new System.Drawing.Size(23, 23);
             this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1556,7 +1506,7 @@
             // 
             this.pictureBox45.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox45.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox45.Image")));
-            this.pictureBox45.Location = new System.Drawing.Point(294, 362);
+            this.pictureBox45.Location = new System.Drawing.Point(347, 355);
             this.pictureBox45.Name = "pictureBox45";
             this.pictureBox45.Size = new System.Drawing.Size(23, 23);
             this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1567,7 +1517,7 @@
             // 
             this.pictureBox46.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox46.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox46.Image")));
-            this.pictureBox46.Location = new System.Drawing.Point(294, 333);
+            this.pictureBox46.Location = new System.Drawing.Point(347, 326);
             this.pictureBox46.Name = "pictureBox46";
             this.pictureBox46.Size = new System.Drawing.Size(23, 23);
             this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1578,7 +1528,7 @@
             // 
             this.pictureBox47.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox47.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox47.Image")));
-            this.pictureBox47.Location = new System.Drawing.Point(294, 304);
+            this.pictureBox47.Location = new System.Drawing.Point(347, 297);
             this.pictureBox47.Name = "pictureBox47";
             this.pictureBox47.Size = new System.Drawing.Size(23, 23);
             this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1589,7 +1539,7 @@
             // 
             this.pictureBox48.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox48.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox48.Image")));
-            this.pictureBox48.Location = new System.Drawing.Point(294, 275);
+            this.pictureBox48.Location = new System.Drawing.Point(347, 268);
             this.pictureBox48.Name = "pictureBox48";
             this.pictureBox48.Size = new System.Drawing.Size(23, 23);
             this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1600,7 +1550,7 @@
             // 
             this.pictureBox49.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox49.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox49.Image")));
-            this.pictureBox49.Location = new System.Drawing.Point(294, 246);
+            this.pictureBox49.Location = new System.Drawing.Point(347, 239);
             this.pictureBox49.Name = "pictureBox49";
             this.pictureBox49.Size = new System.Drawing.Size(23, 23);
             this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1611,7 +1561,7 @@
             // 
             this.pictureBox50.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox50.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox50.Image")));
-            this.pictureBox50.Location = new System.Drawing.Point(294, 217);
+            this.pictureBox50.Location = new System.Drawing.Point(347, 210);
             this.pictureBox50.Name = "pictureBox50";
             this.pictureBox50.Size = new System.Drawing.Size(23, 23);
             this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1622,7 +1572,7 @@
             // 
             this.pictureBox51.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox51.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox51.Image")));
-            this.pictureBox51.Location = new System.Drawing.Point(294, 188);
+            this.pictureBox51.Location = new System.Drawing.Point(347, 181);
             this.pictureBox51.Name = "pictureBox51";
             this.pictureBox51.Size = new System.Drawing.Size(23, 23);
             this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1631,7 +1581,7 @@
             // 
             // DivinationBar2
             // 
-            this.DivinationBar2.Location = new System.Drawing.Point(446, 528);
+            this.DivinationBar2.Location = new System.Drawing.Point(499, 521);
             this.DivinationBar2.MarqueeAnimationSpeed = 0;
             this.DivinationBar2.Maximum = 99;
             this.DivinationBar2.Name = "DivinationBar2";
@@ -1640,7 +1590,7 @@
             // 
             // DungeoneeringBar2
             // 
-            this.DungeoneeringBar2.Location = new System.Drawing.Point(446, 499);
+            this.DungeoneeringBar2.Location = new System.Drawing.Point(499, 492);
             this.DungeoneeringBar2.MarqueeAnimationSpeed = 0;
             this.DungeoneeringBar2.Maximum = 120;
             this.DungeoneeringBar2.Name = "DungeoneeringBar2";
@@ -1649,7 +1599,7 @@
             // 
             // SummoningBar2
             // 
-            this.SummoningBar2.Location = new System.Drawing.Point(446, 470);
+            this.SummoningBar2.Location = new System.Drawing.Point(499, 463);
             this.SummoningBar2.MarqueeAnimationSpeed = 0;
             this.SummoningBar2.Maximum = 99;
             this.SummoningBar2.Name = "SummoningBar2";
@@ -1658,7 +1608,7 @@
             // 
             // ConstructionBar2
             // 
-            this.ConstructionBar2.Location = new System.Drawing.Point(446, 441);
+            this.ConstructionBar2.Location = new System.Drawing.Point(499, 434);
             this.ConstructionBar2.MarqueeAnimationSpeed = 0;
             this.ConstructionBar2.Maximum = 99;
             this.ConstructionBar2.Name = "ConstructionBar2";
@@ -1667,7 +1617,7 @@
             // 
             // HunterBar2
             // 
-            this.HunterBar2.Location = new System.Drawing.Point(446, 412);
+            this.HunterBar2.Location = new System.Drawing.Point(499, 405);
             this.HunterBar2.MarqueeAnimationSpeed = 0;
             this.HunterBar2.Maximum = 99;
             this.HunterBar2.Name = "HunterBar2";
@@ -1676,7 +1626,7 @@
             // 
             // RunecraftingBar2
             // 
-            this.RunecraftingBar2.Location = new System.Drawing.Point(446, 383);
+            this.RunecraftingBar2.Location = new System.Drawing.Point(499, 376);
             this.RunecraftingBar2.MarqueeAnimationSpeed = 0;
             this.RunecraftingBar2.Maximum = 99;
             this.RunecraftingBar2.Name = "RunecraftingBar2";
@@ -1685,7 +1635,7 @@
             // 
             // FarmingBar2
             // 
-            this.FarmingBar2.Location = new System.Drawing.Point(446, 354);
+            this.FarmingBar2.Location = new System.Drawing.Point(499, 347);
             this.FarmingBar2.MarqueeAnimationSpeed = 0;
             this.FarmingBar2.Maximum = 99;
             this.FarmingBar2.Name = "FarmingBar2";
@@ -1694,7 +1644,7 @@
             // 
             // SlayerBar2
             // 
-            this.SlayerBar2.Location = new System.Drawing.Point(446, 325);
+            this.SlayerBar2.Location = new System.Drawing.Point(499, 318);
             this.SlayerBar2.MarqueeAnimationSpeed = 0;
             this.SlayerBar2.Maximum = 99;
             this.SlayerBar2.Name = "SlayerBar2";
@@ -1703,7 +1653,7 @@
             // 
             // ThievingBar2
             // 
-            this.ThievingBar2.Location = new System.Drawing.Point(446, 296);
+            this.ThievingBar2.Location = new System.Drawing.Point(499, 289);
             this.ThievingBar2.MarqueeAnimationSpeed = 0;
             this.ThievingBar2.Maximum = 99;
             this.ThievingBar2.Name = "ThievingBar2";
@@ -1712,7 +1662,7 @@
             // 
             // AgilityBar2
             // 
-            this.AgilityBar2.Location = new System.Drawing.Point(446, 267);
+            this.AgilityBar2.Location = new System.Drawing.Point(499, 260);
             this.AgilityBar2.MarqueeAnimationSpeed = 0;
             this.AgilityBar2.Maximum = 99;
             this.AgilityBar2.Name = "AgilityBar2";
@@ -1721,7 +1671,7 @@
             // 
             // HerbloreBar2
             // 
-            this.HerbloreBar2.Location = new System.Drawing.Point(323, 568);
+            this.HerbloreBar2.Location = new System.Drawing.Point(376, 561);
             this.HerbloreBar2.MarqueeAnimationSpeed = 0;
             this.HerbloreBar2.Maximum = 99;
             this.HerbloreBar2.Name = "HerbloreBar2";
@@ -1730,7 +1680,7 @@
             // 
             // MiningBar2
             // 
-            this.MiningBar2.Location = new System.Drawing.Point(323, 538);
+            this.MiningBar2.Location = new System.Drawing.Point(376, 531);
             this.MiningBar2.MarqueeAnimationSpeed = 0;
             this.MiningBar2.Maximum = 99;
             this.MiningBar2.Name = "MiningBar2";
@@ -1739,7 +1689,7 @@
             // 
             // SmithingBar2
             // 
-            this.SmithingBar2.Location = new System.Drawing.Point(323, 506);
+            this.SmithingBar2.Location = new System.Drawing.Point(376, 499);
             this.SmithingBar2.MarqueeAnimationSpeed = 0;
             this.SmithingBar2.Maximum = 99;
             this.SmithingBar2.Name = "SmithingBar2";
@@ -1748,7 +1698,7 @@
             // 
             // CraftingBar2
             // 
-            this.CraftingBar2.Location = new System.Drawing.Point(323, 477);
+            this.CraftingBar2.Location = new System.Drawing.Point(376, 470);
             this.CraftingBar2.MarqueeAnimationSpeed = 0;
             this.CraftingBar2.Maximum = 99;
             this.CraftingBar2.Name = "CraftingBar2";
@@ -1757,7 +1707,7 @@
             // 
             // FiremakingBar2
             // 
-            this.FiremakingBar2.Location = new System.Drawing.Point(323, 449);
+            this.FiremakingBar2.Location = new System.Drawing.Point(376, 442);
             this.FiremakingBar2.MarqueeAnimationSpeed = 0;
             this.FiremakingBar2.Maximum = 99;
             this.FiremakingBar2.Name = "FiremakingBar2";
@@ -1766,7 +1716,7 @@
             // 
             // FishingBar2
             // 
-            this.FishingBar2.Location = new System.Drawing.Point(323, 420);
+            this.FishingBar2.Location = new System.Drawing.Point(376, 413);
             this.FishingBar2.MarqueeAnimationSpeed = 0;
             this.FishingBar2.Maximum = 99;
             this.FishingBar2.Name = "FishingBar2";
@@ -1775,7 +1725,7 @@
             // 
             // FletchingBar2
             // 
-            this.FletchingBar2.Location = new System.Drawing.Point(323, 391);
+            this.FletchingBar2.Location = new System.Drawing.Point(376, 384);
             this.FletchingBar2.MarqueeAnimationSpeed = 0;
             this.FletchingBar2.Maximum = 99;
             this.FletchingBar2.Name = "FletchingBar2";
@@ -1784,7 +1734,7 @@
             // 
             // WoodcuttingBar2
             // 
-            this.WoodcuttingBar2.Location = new System.Drawing.Point(323, 362);
+            this.WoodcuttingBar2.Location = new System.Drawing.Point(376, 355);
             this.WoodcuttingBar2.MarqueeAnimationSpeed = 0;
             this.WoodcuttingBar2.Maximum = 99;
             this.WoodcuttingBar2.Name = "WoodcuttingBar2";
@@ -1793,7 +1743,7 @@
             // 
             // MagicBar2
             // 
-            this.MagicBar2.Location = new System.Drawing.Point(323, 333);
+            this.MagicBar2.Location = new System.Drawing.Point(376, 326);
             this.MagicBar2.MarqueeAnimationSpeed = 0;
             this.MagicBar2.Maximum = 99;
             this.MagicBar2.Name = "MagicBar2";
@@ -1802,7 +1752,7 @@
             // 
             // PrayerBar2
             // 
-            this.PrayerBar2.Location = new System.Drawing.Point(323, 304);
+            this.PrayerBar2.Location = new System.Drawing.Point(376, 297);
             this.PrayerBar2.MarqueeAnimationSpeed = 0;
             this.PrayerBar2.Maximum = 99;
             this.PrayerBar2.Name = "PrayerBar2";
@@ -1813,7 +1763,7 @@
             // 
             this.pictureBox52.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox52.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox52.Image")));
-            this.pictureBox52.Location = new System.Drawing.Point(294, 159);
+            this.pictureBox52.Location = new System.Drawing.Point(347, 152);
             this.pictureBox52.Name = "pictureBox52";
             this.pictureBox52.Size = new System.Drawing.Size(23, 23);
             this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1822,7 +1772,7 @@
             // 
             // RangedBar2
             // 
-            this.RangedBar2.Location = new System.Drawing.Point(323, 275);
+            this.RangedBar2.Location = new System.Drawing.Point(376, 268);
             this.RangedBar2.MarqueeAnimationSpeed = 0;
             this.RangedBar2.Maximum = 99;
             this.RangedBar2.Name = "RangedBar2";
@@ -1831,7 +1781,7 @@
             // 
             // HealthBar2
             // 
-            this.HealthBar2.Location = new System.Drawing.Point(323, 246);
+            this.HealthBar2.Location = new System.Drawing.Point(376, 239);
             this.HealthBar2.MarqueeAnimationSpeed = 0;
             this.HealthBar2.Maximum = 99;
             this.HealthBar2.Name = "HealthBar2";
@@ -1840,7 +1790,7 @@
             // 
             // StrengthBar2
             // 
-            this.StrengthBar2.Location = new System.Drawing.Point(323, 217);
+            this.StrengthBar2.Location = new System.Drawing.Point(376, 210);
             this.StrengthBar2.MarqueeAnimationSpeed = 0;
             this.StrengthBar2.Maximum = 99;
             this.StrengthBar2.Name = "StrengthBar2";
@@ -1849,7 +1799,7 @@
             // 
             // DefenceBar2
             // 
-            this.DefenceBar2.Location = new System.Drawing.Point(323, 188);
+            this.DefenceBar2.Location = new System.Drawing.Point(376, 181);
             this.DefenceBar2.MarqueeAnimationSpeed = 0;
             this.DefenceBar2.Maximum = 99;
             this.DefenceBar2.Name = "DefenceBar2";
@@ -1858,7 +1808,7 @@
             // 
             // AttackBar2
             // 
-            this.AttackBar2.Location = new System.Drawing.Point(323, 159);
+            this.AttackBar2.Location = new System.Drawing.Point(376, 152);
             this.AttackBar2.MarqueeAnimationSpeed = 0;
             this.AttackBar2.Maximum = 99;
             this.AttackBar2.Name = "AttackBar2";
@@ -1867,21 +1817,67 @@
             // 
             // PLayerInput1
             // 
-            this.PLayerInput1.Location = new System.Drawing.Point(13, 24);
+            // 
+            // 
+            // 
+            this.PLayerInput1.CustomButton.Image = null;
+            this.PLayerInput1.CustomButton.Location = new System.Drawing.Point(100, 2);
+            this.PLayerInput1.CustomButton.Name = "";
+            this.PLayerInput1.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.PLayerInput1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.PLayerInput1.CustomButton.TabIndex = 1;
+            this.PLayerInput1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.PLayerInput1.CustomButton.UseSelectable = true;
+            this.PLayerInput1.CustomButton.Visible = false;
+            this.PLayerInput1.Lines = new string[0];
+            this.PLayerInput1.Location = new System.Drawing.Point(17, 82);
+            this.PLayerInput1.MaxLength = 32767;
             this.PLayerInput1.Name = "PLayerInput1";
+            this.PLayerInput1.PasswordChar = '\0';
+            this.PLayerInput1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.PLayerInput1.SelectedText = "";
+            this.PLayerInput1.SelectionLength = 0;
+            this.PLayerInput1.SelectionStart = 0;
+            this.PLayerInput1.ShortcutsEnabled = true;
             this.PLayerInput1.Size = new System.Drawing.Size(118, 20);
             this.PLayerInput1.TabIndex = 244;
+            this.PLayerInput1.UseSelectable = true;
+            this.PLayerInput1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.PLayerInput1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // PlayerInput2
             // 
-            this.PlayerInput2.Location = new System.Drawing.Point(431, 25);
+            // 
+            // 
+            // 
+            this.PlayerInput2.CustomButton.Image = null;
+            this.PlayerInput2.CustomButton.Location = new System.Drawing.Point(100, 2);
+            this.PlayerInput2.CustomButton.Name = "";
+            this.PlayerInput2.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.PlayerInput2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.PlayerInput2.CustomButton.TabIndex = 1;
+            this.PlayerInput2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.PlayerInput2.CustomButton.UseSelectable = true;
+            this.PlayerInput2.CustomButton.Visible = false;
+            this.PlayerInput2.Lines = new string[0];
+            this.PlayerInput2.Location = new System.Drawing.Point(466, 82);
+            this.PlayerInput2.MaxLength = 32767;
             this.PlayerInput2.Name = "PlayerInput2";
+            this.PlayerInput2.PasswordChar = '\0';
+            this.PlayerInput2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.PlayerInput2.SelectedText = "";
+            this.PlayerInput2.SelectionLength = 0;
+            this.PlayerInput2.SelectionStart = 0;
+            this.PlayerInput2.ShortcutsEnabled = true;
             this.PlayerInput2.Size = new System.Drawing.Size(118, 20);
             this.PlayerInput2.TabIndex = 245;
+            this.PlayerInput2.UseSelectable = true;
+            this.PlayerInput2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.PlayerInput2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // CachedName
             // 
-            this.CachedName.Location = new System.Drawing.Point(147, 22);
+            this.CachedName.Location = new System.Drawing.Point(141, 79);
             this.CachedName.Name = "CachedName";
             this.CachedName.Size = new System.Drawing.Size(110, 23);
             this.CachedName.TabIndex = 246;
@@ -1891,7 +1887,7 @@
             // 
             // Compare
             // 
-            this.Compare.Location = new System.Drawing.Point(263, 21);
+            this.Compare.Location = new System.Drawing.Point(260, 79);
             this.Compare.Name = "Compare";
             this.Compare.Size = new System.Drawing.Size(110, 23);
             this.Compare.TabIndex = 247;
@@ -1902,26 +1898,26 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(14, 9);
+            this.label27.Location = new System.Drawing.Point(17, 60);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(76, 13);
+            this.label27.Size = new System.Drawing.Size(94, 19);
             this.label27.TabIndex = 248;
             this.label27.Text = "Player 1 Name";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(428, 7);
+            this.label28.Location = new System.Drawing.Point(488, 60);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(76, 13);
+            this.label28.Size = new System.Drawing.Size(96, 19);
             this.label28.TabIndex = 249;
             this.label28.Text = "Player 2 Name";
             // 
             // ProfileBox2
             // 
-            this.ProfileBox2.Location = new System.Drawing.Point(413, 115);
+            this.ProfileBox2.Location = new System.Drawing.Point(466, 108);
             this.ProfileBox2.Name = "ProfileBox2";
-            this.ProfileBox2.Size = new System.Drawing.Size(141, 140);
+            this.ProfileBox2.Size = new System.Drawing.Size(135, 147);
             this.ProfileBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.ProfileBox2.TabIndex = 250;
             this.ProfileBox2.TabStop = false;
@@ -1949,11 +1945,16 @@
             this.OpenStats.Text = "Open in runescape highscores";
             this.OpenStats.Click += new System.EventHandler(this.OpenStats_Click);
             // 
+            // StyleManager
+            // 
+            this.StyleManager.Owner = this;
+            // 
             // ComparePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 595);
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(616, 604);
             this.ContextMenuStrip = this.ComparePlayerMenu;
             this.Controls.Add(this.ProfileBox1);
             this.Controls.Add(this.ProfileBox2);
@@ -2122,6 +2123,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ComparePlayer";
             this.Text = "Compare Player Stats";
+            this.Load += new System.EventHandler(this.ComparePlayer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
@@ -2177,6 +2179,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProfileBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfileBox1)).EndInit();
             this.ComparePlayerMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2184,35 +2187,35 @@
 
         #endregion
 
-        private System.Windows.Forms.Label InventionLabel;
-        private System.Windows.Forms.Label DivinationLabel;
-        private System.Windows.Forms.Label DungeoneeringLabel;
-        private System.Windows.Forms.Label SummoningLabel;
-        private System.Windows.Forms.Label ConstructionLabel;
-        private System.Windows.Forms.Label HunterLabel;
-        private System.Windows.Forms.Label RunecraftingLabel;
-        private System.Windows.Forms.Label FarmingLabel;
-        private System.Windows.Forms.Label SlayerLabel;
-        private System.Windows.Forms.Label ThievingLabel;
-        private System.Windows.Forms.Label AgilityLabel;
-        private System.Windows.Forms.Label HerbloreLabel;
-        private System.Windows.Forms.Label MiningLabel;
-        private System.Windows.Forms.Label SmithingLabel;
-        private System.Windows.Forms.Label CraftingLabel;
-        private System.Windows.Forms.Label FiremakingLabel;
-        private System.Windows.Forms.Label FishingLabel;
-        private System.Windows.Forms.Label FletchingLabel;
-        private System.Windows.Forms.Label WoodcuttingLabel;
-        private System.Windows.Forms.Label MagicLabel;
-        private System.Windows.Forms.Label PrayerLabel;
-        private System.Windows.Forms.Label RangedLabel;
-        private System.Windows.Forms.Label HealthLabel;
-        private System.Windows.Forms.Label StrengthLabel;
-        private System.Windows.Forms.Label DefenceLabel;
-        private System.Windows.Forms.Label AttackLabel;
+        private MetroFramework.Controls.MetroLabel InventionLabel;
+        private MetroFramework.Controls.MetroLabel DivinationLabel;
+        private MetroFramework.Controls.MetroLabel DungeoneeringLabel;
+        private MetroFramework.Controls.MetroLabel SummoningLabel;
+        private MetroFramework.Controls.MetroLabel ConstructionLabel;
+        private MetroFramework.Controls.MetroLabel HunterLabel;
+        private MetroFramework.Controls.MetroLabel RunecraftingLabel;
+        private MetroFramework.Controls.MetroLabel FarmingLabel;
+        private MetroFramework.Controls.MetroLabel SlayerLabel;
+        private MetroFramework.Controls.MetroLabel ThievingLabel;
+        private MetroFramework.Controls.MetroLabel AgilityLabel;
+        private MetroFramework.Controls.MetroLabel HerbloreLabel;
+        private MetroFramework.Controls.MetroLabel MiningLabel;
+        private MetroFramework.Controls.MetroLabel SmithingLabel;
+        private MetroFramework.Controls.MetroLabel CraftingLabel;
+        private MetroFramework.Controls.MetroLabel FiremakingLabel;
+        private MetroFramework.Controls.MetroLabel FishingLabel;
+        private MetroFramework.Controls.MetroLabel FletchingLabel;
+        private MetroFramework.Controls.MetroLabel WoodcuttingLabel;
+        private MetroFramework.Controls.MetroLabel MagicLabel;
+        private MetroFramework.Controls.MetroLabel PrayerLabel;
+        private MetroFramework.Controls.MetroLabel RangedLabel;
+        private MetroFramework.Controls.MetroLabel HealthLabel;
+        private MetroFramework.Controls.MetroLabel StrengthLabel;
+        private MetroFramework.Controls.MetroLabel DefenceLabel;
+        private MetroFramework.Controls.MetroLabel AttackLabel;
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.PictureBox pictureBox26;
-        private System.Windows.Forms.ProgressBar InventorBar;
+        private MetroFramework.Controls.MetroProgressBar InventorBar;
         private System.Windows.Forms.PictureBox pictureBox24;
         private System.Windows.Forms.PictureBox pictureBox25;
         private System.Windows.Forms.PictureBox pictureBox12;
@@ -2236,61 +2239,61 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ProgressBar DivinationBar;
-        private System.Windows.Forms.ProgressBar DungeoneeringBar;
-        private System.Windows.Forms.ProgressBar SummoningBar;
-        private System.Windows.Forms.ProgressBar ConstructionBar;
-        private System.Windows.Forms.ProgressBar HunterBar;
-        private System.Windows.Forms.ProgressBar RunecraftingBar;
-        private System.Windows.Forms.ProgressBar FarmingBar;
-        private System.Windows.Forms.ProgressBar SlayerBar;
-        private System.Windows.Forms.ProgressBar ThievingBar;
-        private System.Windows.Forms.ProgressBar AgilityBar;
-        private System.Windows.Forms.ProgressBar HerbloreBar;
-        private System.Windows.Forms.ProgressBar MiningBar;
-        private System.Windows.Forms.ProgressBar SmithingBar;
-        private System.Windows.Forms.ProgressBar CraftingBar;
-        private System.Windows.Forms.ProgressBar FiremakingBar;
-        private System.Windows.Forms.ProgressBar FishingBar;
-        private System.Windows.Forms.ProgressBar FletchingBar;
-        private System.Windows.Forms.ProgressBar WoodcuttingBar;
-        private System.Windows.Forms.ProgressBar MagicBar;
-        private System.Windows.Forms.ProgressBar PrayerBar;
+        private MetroFramework.Controls.MetroProgressBar DivinationBar;
+        private MetroFramework.Controls.MetroProgressBar DungeoneeringBar;
+        private MetroFramework.Controls.MetroProgressBar SummoningBar;
+        private MetroFramework.Controls.MetroProgressBar ConstructionBar;
+        private MetroFramework.Controls.MetroProgressBar HunterBar;
+        private MetroFramework.Controls.MetroProgressBar RunecraftingBar;
+        private MetroFramework.Controls.MetroProgressBar FarmingBar;
+        private MetroFramework.Controls.MetroProgressBar SlayerBar;
+        private MetroFramework.Controls.MetroProgressBar ThievingBar;
+        private MetroFramework.Controls.MetroProgressBar AgilityBar;
+        private MetroFramework.Controls.MetroProgressBar HerbloreBar;
+        private MetroFramework.Controls.MetroProgressBar MiningBar;
+        private MetroFramework.Controls.MetroProgressBar SmithingBar;
+        private MetroFramework.Controls.MetroProgressBar CraftingBar;
+        private MetroFramework.Controls.MetroProgressBar FiremakingBar;
+        private MetroFramework.Controls.MetroProgressBar FishingBar;
+        private MetroFramework.Controls.MetroProgressBar FletchingBar;
+        private MetroFramework.Controls.MetroProgressBar WoodcuttingBar;
+        private MetroFramework.Controls.MetroProgressBar MagicBar;
+        private MetroFramework.Controls.MetroProgressBar PrayerBar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ProgressBar RangedBar;
-        private System.Windows.Forms.ProgressBar HealthBar;
-        private System.Windows.Forms.ProgressBar StrengthBar;
-        private System.Windows.Forms.ProgressBar DefenceBar;
-        private System.Windows.Forms.ProgressBar AttackBar;
-        private System.Windows.Forms.Label InventionLabel2;
-        private System.Windows.Forms.Label DivinationLabel2;
-        private System.Windows.Forms.Label DungeoneeringLabel2;
-        private System.Windows.Forms.Label SummoningLabel2;
-        private System.Windows.Forms.Label ContructionLabel2;
-        private System.Windows.Forms.Label HunterLabel2;
-        private System.Windows.Forms.Label RunecraftingLabel2;
-        private System.Windows.Forms.Label FarmingLabel2;
-        private System.Windows.Forms.Label SlayerLabel2;
-        private System.Windows.Forms.Label ThievingLabel2;
-        private System.Windows.Forms.Label AgilityLabel2;
-        private System.Windows.Forms.Label HerbloreLabel2;
-        private System.Windows.Forms.Label MiningLabel2;
-        private System.Windows.Forms.Label SmithingLabel2;
-        private System.Windows.Forms.Label CraftingLabel2;
-        private System.Windows.Forms.Label FiremakingLabel2;
-        private System.Windows.Forms.Label FishingLabel2;
-        private System.Windows.Forms.Label FletchingLabel2;
-        private System.Windows.Forms.Label WoodcuttingLabel2;
-        private System.Windows.Forms.Label MagicLabel2;
-        private System.Windows.Forms.Label PrayerLabel2;
-        private System.Windows.Forms.Label RangedLabel2;
-        private System.Windows.Forms.Label HealthLabel2;
-        private System.Windows.Forms.Label StrengthLabel2;
-        private System.Windows.Forms.Label DefenceLabel2;
-        private System.Windows.Forms.Label AttackLabel2;
+        private MetroFramework.Controls.MetroProgressBar RangedBar;
+        private MetroFramework.Controls.MetroProgressBar HealthBar;
+        private MetroFramework.Controls.MetroProgressBar StrengthBar;
+        private MetroFramework.Controls.MetroProgressBar DefenceBar;
+        private MetroFramework.Controls.MetroProgressBar AttackBar;
+        private MetroFramework.Controls.MetroLabel InventionLabel2;
+        private MetroFramework.Controls.MetroLabel DivinationLabel2;
+        private MetroFramework.Controls.MetroLabel DungeoneeringLabel2;
+        private MetroFramework.Controls.MetroLabel SummoningLabel2;
+        private MetroFramework.Controls.MetroLabel ContructionLabel2;
+        private MetroFramework.Controls.MetroLabel HunterLabel2;
+        private MetroFramework.Controls.MetroLabel RunecraftingLabel2;
+        private MetroFramework.Controls.MetroLabel FarmingLabel2;
+        private MetroFramework.Controls.MetroLabel SlayerLabel2;
+        private MetroFramework.Controls.MetroLabel ThievingLabel2;
+        private MetroFramework.Controls.MetroLabel AgilityLabel2;
+        private MetroFramework.Controls.MetroLabel HerbloreLabel2;
+        private MetroFramework.Controls.MetroLabel MiningLabel2;
+        private MetroFramework.Controls.MetroLabel SmithingLabel2;
+        private MetroFramework.Controls.MetroLabel CraftingLabel2;
+        private MetroFramework.Controls.MetroLabel FiremakingLabel2;
+        private MetroFramework.Controls.MetroLabel FishingLabel2;
+        private MetroFramework.Controls.MetroLabel FletchingLabel2;
+        private MetroFramework.Controls.MetroLabel WoodcuttingLabel2;
+        private MetroFramework.Controls.MetroLabel MagicLabel2;
+        private MetroFramework.Controls.MetroLabel PrayerLabel2;
+        private MetroFramework.Controls.MetroLabel RangedLabel2;
+        private MetroFramework.Controls.MetroLabel HealthLabel2;
+        private MetroFramework.Controls.MetroLabel StrengthLabel2;
+        private MetroFramework.Controls.MetroLabel DefenceLabel2;
+        private MetroFramework.Controls.MetroLabel AttackLabel2;
         private System.Windows.Forms.PictureBox pictureBox27;
         private System.Windows.Forms.PictureBox pictureBox28;
-        private System.Windows.Forms.ProgressBar InventorBar2;
+        private MetroFramework.Controls.MetroProgressBar InventorBar2;
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.PictureBox pictureBox31;
@@ -2314,41 +2317,42 @@
         private System.Windows.Forms.PictureBox pictureBox49;
         private System.Windows.Forms.PictureBox pictureBox50;
         private System.Windows.Forms.PictureBox pictureBox51;
-        private System.Windows.Forms.ProgressBar DivinationBar2;
-        private System.Windows.Forms.ProgressBar DungeoneeringBar2;
-        private System.Windows.Forms.ProgressBar SummoningBar2;
-        private System.Windows.Forms.ProgressBar ConstructionBar2;
-        private System.Windows.Forms.ProgressBar HunterBar2;
-        private System.Windows.Forms.ProgressBar RunecraftingBar2;
-        private System.Windows.Forms.ProgressBar FarmingBar2;
-        private System.Windows.Forms.ProgressBar SlayerBar2;
-        private System.Windows.Forms.ProgressBar ThievingBar2;
-        private System.Windows.Forms.ProgressBar AgilityBar2;
-        private System.Windows.Forms.ProgressBar HerbloreBar2;
-        private System.Windows.Forms.ProgressBar MiningBar2;
-        private System.Windows.Forms.ProgressBar SmithingBar2;
-        private System.Windows.Forms.ProgressBar CraftingBar2;
-        private System.Windows.Forms.ProgressBar FiremakingBar2;
-        private System.Windows.Forms.ProgressBar FishingBar2;
-        private System.Windows.Forms.ProgressBar FletchingBar2;
-        private System.Windows.Forms.ProgressBar WoodcuttingBar2;
-        private System.Windows.Forms.ProgressBar MagicBar2;
-        private System.Windows.Forms.ProgressBar PrayerBar2;
+        private MetroFramework.Controls.MetroProgressBar DivinationBar2;
+        private MetroFramework.Controls.MetroProgressBar DungeoneeringBar2;
+        private MetroFramework.Controls.MetroProgressBar SummoningBar2;
+        private MetroFramework.Controls.MetroProgressBar ConstructionBar2;
+        private MetroFramework.Controls.MetroProgressBar HunterBar2;
+        private MetroFramework.Controls.MetroProgressBar RunecraftingBar2;
+        private MetroFramework.Controls.MetroProgressBar FarmingBar2;
+        private MetroFramework.Controls.MetroProgressBar SlayerBar2;
+        private MetroFramework.Controls.MetroProgressBar ThievingBar2;
+        private MetroFramework.Controls.MetroProgressBar AgilityBar2;
+        private MetroFramework.Controls.MetroProgressBar HerbloreBar2;
+        private MetroFramework.Controls.MetroProgressBar MiningBar2;
+        private MetroFramework.Controls.MetroProgressBar SmithingBar2;
+        private MetroFramework.Controls.MetroProgressBar CraftingBar2;
+        private MetroFramework.Controls.MetroProgressBar FiremakingBar2;
+        private MetroFramework.Controls.MetroProgressBar FishingBar2;
+        private MetroFramework.Controls.MetroProgressBar FletchingBar2;
+        private MetroFramework.Controls.MetroProgressBar WoodcuttingBar2;
+        private MetroFramework.Controls.MetroProgressBar MagicBar2;
+        private MetroFramework.Controls.MetroProgressBar PrayerBar2;
         private System.Windows.Forms.PictureBox pictureBox52;
-        private System.Windows.Forms.ProgressBar RangedBar2;
-        private System.Windows.Forms.ProgressBar HealthBar2;
-        private System.Windows.Forms.ProgressBar StrengthBar2;
-        private System.Windows.Forms.ProgressBar DefenceBar2;
-        private System.Windows.Forms.ProgressBar AttackBar2;
-        private System.Windows.Forms.TextBox PLayerInput1;
-        private System.Windows.Forms.TextBox PlayerInput2;
+        private MetroFramework.Controls.MetroProgressBar RangedBar2;
+        private MetroFramework.Controls.MetroProgressBar HealthBar2;
+        private MetroFramework.Controls.MetroProgressBar StrengthBar2;
+        private MetroFramework.Controls.MetroProgressBar DefenceBar2;
+        private MetroFramework.Controls.MetroProgressBar AttackBar2;
+        private MetroFramework.Controls.MetroTextBox PLayerInput1;
+        private MetroFramework.Controls.MetroTextBox PlayerInput2;
         private System.Windows.Forms.Button CachedName;
         private System.Windows.Forms.Button Compare;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
+        private MetroFramework.Controls.MetroLabel label27;
+        private MetroFramework.Controls.MetroLabel label28;
         private System.Windows.Forms.PictureBox ProfileBox2;
         private System.Windows.Forms.PictureBox ProfileBox1;
         private System.Windows.Forms.ContextMenuStrip ComparePlayerMenu;
         private System.Windows.Forms.ToolStripMenuItem OpenStats;
+        private MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }

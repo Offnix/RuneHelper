@@ -80,6 +80,8 @@ namespace RuneHelper
         {
             if (e.KeyData == Keys.Enter)
             {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 SearchFunction();
             }
         }

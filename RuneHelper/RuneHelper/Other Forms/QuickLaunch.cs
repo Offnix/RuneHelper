@@ -16,9 +16,9 @@ namespace RuneHelper
 
         private void QuickLaunch_Load(object sender, EventArgs e)
         {
-            StyleManager.Theme = MainForm.data.Theme;
-            StyleManager.Style = MainForm.data.Colour;
-            this.Theme = StyleManager.Theme;
+            base.StyleManager.Theme = MainForm.data.Theme;
+            base.StyleManager.Style = MainForm.data.Colour;
+            this.Theme = base.StyleManager.Theme;
         }
 
         #endregion Open And Close functions
@@ -38,6 +38,8 @@ namespace RuneHelper
         {
             if (e.KeyData == Keys.Enter)
             {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 OpenForm();
             }
         }

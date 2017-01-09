@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace RuneHelper
 {
-    public partial class ComparePlayer : Form
+    public partial class ComparePlayer : MetroForm
     {
         public string[] LevelArray;
         public string[] LevelArray2;
@@ -11,6 +12,13 @@ namespace RuneHelper
         public ComparePlayer()
         {
             InitializeComponent();
+        }
+
+        private void ComparePlayer_Load(object sender, EventArgs e)
+        {
+            StyleManager.Theme = MainForm.data.Theme;
+            StyleManager.Style = MainForm.data.Colour;
+            this.Theme = StyleManager.Theme;
         }
 
         private void Compare_Click(object sender, EventArgs e)
@@ -161,5 +169,7 @@ namespace RuneHelper
         {
             System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?category_type=-1&user1=" + PLayerInput1.Text.Replace(" ", "+") + "&user2=" + PlayerInput2.Text.Replace(" ", "+"));
         }
+
+        
     }
 }

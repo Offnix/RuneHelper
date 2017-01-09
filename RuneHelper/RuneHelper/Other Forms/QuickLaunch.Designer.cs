@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuickLaunch));
             this.Launch = new MetroFramework.Controls.MetroButton();
             this.Input = new MetroFramework.Controls.MetroTextBox();
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
+            this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // Launch
@@ -65,6 +65,7 @@
             this.Input.MaxLength = 32767;
             this.Input.Name = "Input";
             this.Input.PasswordChar = '\0';
+            this.Input.PromptText = "Wiki item name";
             this.Input.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Input.SelectedText = "";
             this.Input.SelectionLength = 0;
@@ -78,9 +79,9 @@
             this.Input.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.Input.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Input_KeyDown);
             // 
-            // metroStyleManager1
+            // StyleManager
             // 
-            this.metroStyleManager1.Owner = null;
+            this.StyleManager.Owner = this;
             // 
             // QuickLaunch
             // 
@@ -94,10 +95,10 @@
             this.MinimizeBox = false;
             this.Name = "QuickLaunch";
             this.Resizable = false;
-            this.StyleManager = this.metroStyleManager1;
+            this.StyleManager = this.StyleManager;
             this.Text = "Search wiki";
             this.Load += new System.EventHandler(this.QuickLaunch_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,6 +107,6 @@
 
         private MetroFramework.Controls.MetroButton Launch;
         private MetroFramework.Controls.MetroTextBox Input;
-        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
+        private MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }
