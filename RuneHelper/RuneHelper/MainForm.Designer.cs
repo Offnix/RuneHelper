@@ -245,8 +245,8 @@
             this.Settings.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(96, 24);
-            this.Settings.Text = "RuneHelper";
+            this.Settings.Size = new System.Drawing.Size(75, 24);
+            this.Settings.Text = "Program";
             this.Settings.ToolTipText = "ApplicationToolStrip";
             // 
             // OpenSettingsToolStrip

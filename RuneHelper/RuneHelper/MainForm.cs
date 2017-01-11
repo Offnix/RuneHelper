@@ -24,7 +24,7 @@ namespace RuneHelper
         }
 
         // json object class
-        public class Data
+        public class SaveData
         {
             public string Name { get; set; }
             public string Clan { get; set; }
@@ -34,7 +34,7 @@ namespace RuneHelper
             public int[] XPArray { get; set; }
         }
 
-        public static Data data = new Data();
+        public static SaveData data = new SaveData();
 
         #region Open and close Functions
 
@@ -42,7 +42,7 @@ namespace RuneHelper
         private void MainForm_Load(object sender, EventArgs e)
         {
             MainToolStrip.Renderer = new CustomToolStripProfessionalRenderer();
-            data = JsonConvert.DeserializeObject<Data>(File.ReadAllText(@"Data.txt"));
+            data = JsonConvert.DeserializeObject<SaveData>(File.ReadAllText(@"Data.txt"));
             ClockRefresh.RunWorkerAsync();
             ReloadPage();
         }
@@ -325,9 +325,8 @@ namespace RuneHelper
                     if (DateTime.Now.Month != data.Month)
                     {
                         data.Month = DateTime.Now.Month;
-                        while (i != data.XPArray.Length)
+                        while (i != data.XPArray.Length + 1)
                         {
-                            i = 0;
                             i++;
                         }
                     }
@@ -378,6 +377,8 @@ namespace RuneHelper
         public void UnloadImage()
         {
             ProfilePicture.Image = null;
+            ProfilePicture.Dispose();
+            File.Delete(data.Name + ".gif");
         }
 
         //seperate thread for refreshing the clock

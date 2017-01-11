@@ -45,7 +45,6 @@ namespace RuneHelper
         private void DeleteImage_Click(object sender, EventArgs e)
         {
             (Application.OpenForms["Mainform"] as MainForm).UnloadImage();
-            File.Delete(MainForm.data.Name + ".gif");
         }
 
         private void Light_Click(object sender, EventArgs e)

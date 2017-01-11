@@ -65,7 +65,7 @@
             this.Input.MaxLength = 32767;
             this.Input.Name = "Input";
             this.Input.PasswordChar = '\0';
-            this.Input.PromptText = "Wiki item name";
+            this.Input.WaterMark = "Wiki item name";
             this.Input.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Input.SelectedText = "";
             this.Input.SelectionLength = 0;
@@ -95,7 +95,6 @@
             this.MinimizeBox = false;
             this.Name = "QuickLaunch";
             this.Resizable = false;
-            this.StyleManager = this.StyleManager;
             this.Text = "Search wiki";
             this.Load += new System.EventHandler(this.QuickLaunch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
@@ -107,6 +106,6 @@
 
         private MetroFramework.Controls.MetroButton Launch;
         private MetroFramework.Controls.MetroTextBox Input;
-        private MetroFramework.Components.MetroStyleManager StyleManager;
+        private new MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }

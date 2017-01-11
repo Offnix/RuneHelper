@@ -15,7 +15,7 @@ namespace RuneHelper
         private string[] AgilArray;
         private string[] LevelArray;
 
-        public static float[] CourseXPArray = new float[] { 79.5f, 86.5f, 750, 1014, 775, 139.5f, 580, 571.5f, 380, 540, 704, 880, 1056, 1184, 1328, 2375, 725, 740.7f };
+        float[] CourseXPArray = new float[] { 79.5f, 86.5f, 750, 1014, 775, 139.5f, 580, 571.5f, 380, 540, 704, 880, 1056, 1184, 1328, 2375, 725, 740.7f };
 
         #region Load And Close Functions
 

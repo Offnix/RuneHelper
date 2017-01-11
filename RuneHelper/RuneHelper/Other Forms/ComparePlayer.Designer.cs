@@ -2353,6 +2353,6 @@
         private System.Windows.Forms.PictureBox ProfileBox1;
         private System.Windows.Forms.ContextMenuStrip ComparePlayerMenu;
         private System.Windows.Forms.ToolStripMenuItem OpenStats;
-        private MetroFramework.Components.MetroStyleManager StyleManager;
+        private new MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }

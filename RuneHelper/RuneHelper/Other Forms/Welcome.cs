@@ -13,7 +13,7 @@ namespace RuneHelper
             InitializeComponent();
         }
 
-        public class Data
+        public class SaveData
         {
             public string Name { get; set; }
             public string Clan { get; set; }
@@ -35,7 +35,7 @@ namespace RuneHelper
 
         private void ConfirmInput_Click(object sender, EventArgs e)
         {
-            Data data = new Data();
+            SaveData data = new SaveData();
 
             data.Name = UsernameInput.Text;
             data.Clan = "";
@@ -43,15 +43,16 @@ namespace RuneHelper
             data.Colour = MetroFramework.MetroColorStyle.Blue;
             data.Month = DateTime.Now.Month;
             data.XPArray = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            using (FileStream fs = File.Open(@"Data.txt", FileMode.Open))
-            using (StreamWriter sw = new StreamWriter(fs))
-            using (JsonWriter jw = new JsonTextWriter(sw))
-            {
-                jw.Formatting = Formatting.Indented;
+            FileStream fs = File.Open(@"Data.txt", FileMode.Open);
+            StreamWriter sw = new StreamWriter(fs);
+            JsonWriter jw = new JsonTextWriter(sw);
+            jw.Formatting = Formatting.Indented;
 
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(jw, data);
-            }
+            JsonSerializer serializer = new JsonSerializer();
+            serializer.Serialize(jw, data);
+            sw.Dispose();
+            fs.Dispose();
+
             MainForm Mainform = new MainForm();
             Mainform.Show();
             this.Close();

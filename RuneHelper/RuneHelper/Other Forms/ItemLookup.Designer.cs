@@ -145,7 +145,7 @@
             this.SearchInput.MaxLength = 32767;
             this.SearchInput.Name = "SearchInput";
             this.SearchInput.PasswordChar = '\0';
-            this.SearchInput.PromptText = "Item name";
+            this.SearchInput.WaterMark = "Item name";
             this.SearchInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.SearchInput.SelectedText = "";
             this.SearchInput.SelectionLength = 0;
@@ -514,6 +514,6 @@
         private MetroFramework.Controls.MetroLabel MultiplyedPrice;
         private MetroFramework.Controls.MetroTextBox Multiplyer;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Components.MetroStyleManager StyleManager;
+        private new MetroFramework.Components.MetroStyleManager StyleManager;
     }
 }
