@@ -1,6 +1,6 @@
 ﻿namespace RuneHelper
 {
-    partial class ItemLookup
+    partial class GrandExchange
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemLookup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GrandExchange));
             this.CatagoryBox = new MetroFramework.Controls.MetroComboBox();
             this.SearchButton = new MetroFramework.Controls.MetroButton();
             this.SearchInput = new MetroFramework.Controls.MetroTextBox();

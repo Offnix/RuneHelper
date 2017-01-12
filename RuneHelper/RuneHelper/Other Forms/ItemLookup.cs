@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace RuneHelper
 {
-    public partial class ItemLookup : MetroForm
+    public partial class GrandExchange : MetroForm
     {
-        public ItemLookup()
+        public GrandExchange()
         {
             InitializeComponent();
         }

@@ -147,6 +147,8 @@
             this.PercentageLabel = new MetroFramework.Controls.MetroLabel();
             this.Percentage = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.NoDataComment = new MetroFramework.Controls.MetroLabel();
+            this.NoDataLabel = new MetroFramework.Controls.MetroLabel();
             this.XPMade = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.XptrackerLabel = new MetroFramework.Controls.MetroLabel();
@@ -159,6 +161,7 @@
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.TitleLabel = new MetroFramework.Controls.MetroLabel();
+            this.bestiaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -200,9 +203,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(3, 59);
+            this.label1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.label1.Location = new System.Drawing.Point(256, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 19);
+            this.label1.Size = new System.Drawing.Size(116, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Average Level";
             // 
@@ -347,7 +351,8 @@
             this.OtherToolStrip.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.OtherToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CompareStatsToolStrip,
-            this.itemSearchToolStripMenuItem});
+            this.itemSearchToolStripMenuItem,
+            this.bestiaryToolStripMenuItem});
             this.OtherToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.OtherToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.OtherToolStrip.Name = "OtherToolStrip";
@@ -387,7 +392,7 @@
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.UsernameLabel.Location = new System.Drawing.Point(73, 196);
+            this.UsernameLabel.Location = new System.Drawing.Point(72, 197);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(89, 25);
             this.UsernameLabel.TabIndex = 5;
@@ -396,7 +401,7 @@
             // ProfilePicture
             // 
             this.ProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.ProfilePicture.Location = new System.Drawing.Point(57, 93);
+            this.ProfilePicture.Location = new System.Drawing.Point(54, 90);
             this.ProfilePicture.Name = "ProfilePicture";
             this.ProfilePicture.Size = new System.Drawing.Size(124, 110);
             this.ProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -929,7 +934,7 @@
             // 
             this.AverageLevel.AutoSize = true;
             this.AverageLevel.BackColor = System.Drawing.Color.Transparent;
-            this.AverageLevel.Location = new System.Drawing.Point(93, 59);
+            this.AverageLevel.Location = new System.Drawing.Point(310, 158);
             this.AverageLevel.Name = "AverageLevel";
             this.AverageLevel.Size = new System.Drawing.Size(16, 19);
             this.AverageLevel.TabIndex = 59;
@@ -939,9 +944,10 @@
             // 
             this.TotalLevelText.AutoSize = true;
             this.TotalLevelText.BackColor = System.Drawing.Color.Transparent;
-            this.TotalLevelText.Location = new System.Drawing.Point(3, 18);
+            this.TotalLevelText.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.TotalLevelText.Location = new System.Drawing.Point(64, 47);
             this.TotalLevelText.Name = "TotalLevelText";
-            this.TotalLevelText.Size = new System.Drawing.Size(69, 19);
+            this.TotalLevelText.Size = new System.Drawing.Size(89, 25);
             this.TotalLevelText.TabIndex = 60;
             this.TotalLevelText.Text = "Total Level";
             // 
@@ -949,7 +955,7 @@
             // 
             this.TotalLevel.AutoSize = true;
             this.TotalLevel.BackColor = System.Drawing.Color.Transparent;
-            this.TotalLevel.Location = new System.Drawing.Point(93, 18);
+            this.TotalLevel.Location = new System.Drawing.Point(100, 76);
             this.TotalLevel.Name = "TotalLevel";
             this.TotalLevel.Size = new System.Drawing.Size(16, 19);
             this.TotalLevel.TabIndex = 61;
@@ -1253,7 +1259,7 @@
             this.TabControl.Controls.Add(this.metroTabPage1);
             this.TabControl.Location = new System.Drawing.Point(472, 100);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 1;
+            this.TabControl.SelectedIndex = 0;
             this.TabControl.Size = new System.Drawing.Size(457, 425);
             this.TabControl.TabIndex = 88;
             this.TabControl.UseSelectable = true;
@@ -1284,7 +1290,7 @@
             // 
             this.CombatLevel.AutoSize = true;
             this.CombatLevel.BackColor = System.Drawing.Color.Transparent;
-            this.CombatLevel.Location = new System.Drawing.Point(93, 39);
+            this.CombatLevel.Location = new System.Drawing.Point(310, 77);
             this.CombatLevel.Name = "CombatLevel";
             this.CombatLevel.Size = new System.Drawing.Size(16, 19);
             this.CombatLevel.TabIndex = 65;
@@ -1294,9 +1300,10 @@
             // 
             this.CombatLevelLabel.AutoSize = true;
             this.CombatLevelLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CombatLevelLabel.Location = new System.Drawing.Point(3, 39);
+            this.CombatLevelLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.CombatLevelLabel.Location = new System.Drawing.Point(256, 47);
             this.CombatLevelLabel.Name = "CombatLevelLabel";
-            this.CombatLevelLabel.Size = new System.Drawing.Size(90, 19);
+            this.CombatLevelLabel.Size = new System.Drawing.Size(115, 25);
             this.CombatLevelLabel.TabIndex = 64;
             this.CombatLevelLabel.Text = "Combat Level";
             // 
@@ -1304,7 +1311,7 @@
             // 
             this.PercentageLabel.AutoSize = true;
             this.PercentageLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PercentageLabel.Location = new System.Drawing.Point(146, 81);
+            this.PercentageLabel.Location = new System.Drawing.Point(100, 158);
             this.PercentageLabel.Name = "PercentageLabel";
             this.PercentageLabel.Size = new System.Drawing.Size(16, 19);
             this.PercentageLabel.TabIndex = 63;
@@ -1314,14 +1321,17 @@
             // 
             this.Percentage.AutoSize = true;
             this.Percentage.BackColor = System.Drawing.Color.Transparent;
-            this.Percentage.Location = new System.Drawing.Point(3, 81);
+            this.Percentage.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.Percentage.Location = new System.Drawing.Point(64, 133);
             this.Percentage.Name = "Percentage";
-            this.Percentage.Size = new System.Drawing.Size(136, 19);
+            this.Percentage.Size = new System.Drawing.Size(96, 25);
             this.Percentage.TabIndex = 62;
-            this.Percentage.Text = "Percentage Complete";
+            this.Percentage.Text = "Percentage";
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.NoDataComment);
+            this.metroTabPage1.Controls.Add(this.NoDataLabel);
             this.metroTabPage1.Controls.Add(this.XPMade);
             this.metroTabPage1.Controls.Add(this.metroLabel1);
             this.metroTabPage1.Controls.Add(this.XptrackerLabel);
@@ -1338,6 +1348,27 @@
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // NoDataComment
+            // 
+            this.NoDataComment.AutoSize = true;
+            this.NoDataComment.Location = new System.Drawing.Point(88, 121);
+            this.NoDataComment.Name = "NoDataComment";
+            this.NoDataComment.Size = new System.Drawing.Size(270, 19);
+            this.NoDataComment.TabIndex = 8;
+            this.NoDataComment.Text = "It takes a couple of days till data gets shown..";
+            this.NoDataComment.Visible = false;
+            // 
+            // NoDataLabel
+            // 
+            this.NoDataLabel.AutoSize = true;
+            this.NoDataLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.NoDataLabel.Location = new System.Drawing.Point(151, 84);
+            this.NoDataLabel.Name = "NoDataLabel";
+            this.NoDataLabel.Size = new System.Drawing.Size(137, 25);
+            this.NoDataLabel.TabIndex = 7;
+            this.NoDataLabel.Text = "No data to show";
+            this.NoDataLabel.Visible = false;
             // 
             // XPMade
             // 
@@ -1444,6 +1475,13 @@
             this.TitleLabel.Size = new System.Drawing.Size(33, 19);
             this.TitleLabel.TabIndex = 92;
             this.TitleLabel.Text = "Title";
+            // 
+            // bestiaryToolStripMenuItem
+            // 
+            this.bestiaryToolStripMenuItem.Name = "bestiaryToolStripMenuItem";
+            this.bestiaryToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.bestiaryToolStripMenuItem.Text = "Bestiary";
+            this.bestiaryToolStripMenuItem.Click += new System.EventHandler(this.bestiaryToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -1716,6 +1754,9 @@
         private MetroFramework.Controls.MetroLabel XPMade;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel TitleLabel;
+        private MetroFramework.Controls.MetroLabel NoDataComment;
+        private MetroFramework.Controls.MetroLabel NoDataLabel;
+        private System.Windows.Forms.ToolStripMenuItem bestiaryToolStripMenuItem;
     }
 }
 

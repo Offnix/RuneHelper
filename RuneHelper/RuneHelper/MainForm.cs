@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
@@ -168,8 +169,17 @@ namespace RuneHelper
         {
             if (!Application.OpenForms.OfType<WooducttingCalculator>().Any())
             {
-                ItemLookup lookup = new ItemLookup();
+                GrandExchange lookup = new GrandExchange();
                 lookup.Show();
+            }
+        }
+
+        private void bestiaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<WooducttingCalculator>().Any())
+            {
+                Bestiary Bestiary = new Bestiary();
+                Bestiary.Show();
             }
         }
 
@@ -204,7 +214,7 @@ namespace RuneHelper
         public void ReloadPage()
         {
             Cursor.Current = Cursors.WaitCursor;
-            //GetSecondaryData(data.Name); - currently broken.. dont touch
+            //GetSecondaryData(data.Name);
             var s1 = Stopwatch.StartNew();
             // run on seperate threads for time saving
             Task.Run(() => UpdateImage());
@@ -291,6 +301,8 @@ namespace RuneHelper
 
         public void UpdateGraph()
         {
+            NoDataLabel.Visible = false;
+            NoDataComment.Visible = false;
             // changes graph style
             XPTracker.Invoke((MethodInvoker)(() =>
             {
@@ -322,19 +334,21 @@ namespace RuneHelper
                 {
                     int i = 0;
                     string[] arraysplit = LevelArray[2].Split('\n');
-                    data.XPArray[DateTime.Now.Day] = API.IntParse(arraysplit[0]);
 
                     // reset function
                     if (DateTime.Now.Month != data.Month)
                     {
                         data.Month = DateTime.Now.Month;
-                        while (i != data.XPArray.Length + 1)
+                        while (i <= data.XPArray.Length + 1)
                         {
+                            data.XPArray[i] = 0;
                             i++;
                         }
+                        XPMade.Text = "0";
                     }
 
                     // Set data points
+                    data.XPArray[DateTime.Now.Day] = API.IntParse(arraysplit[0]);
                     i = 0;
                     bool first = true;
                     int Smallest = 0;
@@ -348,10 +362,14 @@ namespace RuneHelper
                             largest = data.XPArray[i];
                         }
                         i++;
+                        XPMade.Text = Convert.ToString(largest - Smallest);
                     }
-                    XPMade.Text = Convert.ToString(largest - Smallest);
                 }
-                catch { }
+                catch
+                {
+                    NoDataLabel.Visible = true;
+                    NoDataComment.Visible = true;
+                }
             }));
         }
 
@@ -387,8 +405,19 @@ namespace RuneHelper
         public void GetSecondaryData(string Username)
         {
             WebClient wc = new WebClient();
-            var json = (JObject)JsonConvert.DeserializeObject(wc.DownloadString("http://services.runescape.com/m=website-data/playerDetails.ws?names=[%22" + Username.Replace(" ", "%20") + "%22]&callback=jQuery000000000000000_0000000000&_=0"));
-            //Console.WriteLine(json[0]["title"]);
+            string url = "http://services.runescape.com/m=website-data/playerDetails.ws?names=[%22" + Username.Replace(" ", "%20") + "%22]&callback=jQuery000000000000000_0000000000&_=0";
+            string response = wc.DownloadString(url);
+            response = response.Substring(response.IndexOf('(') + 1);
+            response = response.Substring(0, response.Length - 1);
+            JObject result = null;
+            if (response.StartsWith("["))
+            {
+                result = JsonConvert.DeserializeObject<List<JObject>>(response)[0];
+            }
+            else
+            {
+                result = JsonConvert.DeserializeObject<JObject>(response);
+            }
         }
 
         //seperate thread for refreshing the clock
@@ -409,5 +438,6 @@ namespace RuneHelper
         }
 
         #endregion Functions
+        
     }
 }

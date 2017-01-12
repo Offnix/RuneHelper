@@ -110,6 +110,12 @@
     <Compile Include="Calculators\FireMakingCalc.Designer.cs">
       <DependentUpon>FireMakingCalc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Other Forms\Bestiary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Forms\Bestiary.Designer.cs">
+      <DependentUpon>Bestiary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Other Forms\ItemLookup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Calculators\FireMakingCalc.resx">
       <DependentUpon>FireMakingCalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other Forms\Bestiary.resx">
+      <DependentUpon>Bestiary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other Forms\ItemLookup.resx">
       <DependentUpon>ItemLookup.cs</DependentUpon>
