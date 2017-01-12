@@ -44,7 +44,9 @@
             this.AmountBox = new MetroFramework.Controls.MetroTextBox();
             this.BackBtn = new MetroFramework.Controls.MetroButton();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.AmountLabel = new MetroFramework.Controls.MetroLabel();
+            this.BonusPercentLabel = new MetroFramework.Controls.MetroLabel();
+            this.BonusPercent = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
@@ -223,7 +225,7 @@
             // 
             // CalculateBtn
             // 
-            this.CalculateBtn.Location = new System.Drawing.Point(143, 299);
+            this.CalculateBtn.Location = new System.Drawing.Point(143, 309);
             this.CalculateBtn.Name = "CalculateBtn";
             this.CalculateBtn.Size = new System.Drawing.Size(75, 23);
             this.CalculateBtn.TabIndex = 20;
@@ -260,7 +262,7 @@
             "Salty crablet",
             "Alaea crablet",
             "Idol crablet\t"});
-            this.TypeBox.Location = new System.Drawing.Point(11, 224);
+            this.TypeBox.Location = new System.Drawing.Point(8, 256);
             this.TypeBox.Name = "TypeBox";
             this.TypeBox.Size = new System.Drawing.Size(181, 29);
             this.TypeBox.TabIndex = 21;
@@ -312,21 +314,66 @@
             // 
             this.StyleManager.Owner = this;
             // 
-            // metroLabel1
+            // AmountLabel
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(240, 374);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(37, 19);
-            this.metroLabel1.TabIndex = 24;
-            this.metroLabel1.Text = "Ores";
+            this.AmountLabel.AutoSize = true;
+            this.AmountLabel.Location = new System.Drawing.Point(240, 374);
+            this.AmountLabel.Name = "AmountLabel";
+            this.AmountLabel.Size = new System.Drawing.Size(37, 19);
+            this.AmountLabel.TabIndex = 24;
+            this.AmountLabel.Text = "Ores";
+            // 
+            // BonusPercentLabel
+            // 
+            this.BonusPercentLabel.AutoSize = true;
+            this.BonusPercentLabel.Location = new System.Drawing.Point(205, 216);
+            this.BonusPercentLabel.Name = "BonusPercentLabel";
+            this.BonusPercentLabel.Size = new System.Drawing.Size(20, 19);
+            this.BonusPercentLabel.TabIndex = 28;
+            this.BonusPercentLabel.Text = "%";
+            this.BonusPercentLabel.Visible = false;
+            // 
+            // BonusPercent
+            // 
+            // 
+            // 
+            // 
+            this.BonusPercent.CustomButton.Image = null;
+            this.BonusPercent.CustomButton.Location = new System.Drawing.Point(33, 2);
+            this.BonusPercent.CustomButton.Name = "";
+            this.BonusPercent.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.BonusPercent.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BonusPercent.CustomButton.TabIndex = 1;
+            this.BonusPercent.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BonusPercent.CustomButton.UseSelectable = true;
+            this.BonusPercent.CustomButton.Visible = false;
+            this.BonusPercent.Lines = new string[0];
+            this.BonusPercent.Location = new System.Drawing.Point(155, 215);
+            this.BonusPercent.MaxLength = 32767;
+            this.BonusPercent.Name = "BonusPercent";
+            this.BonusPercent.PasswordChar = '\0';
+            this.BonusPercent.WaterMark = "10";
+            this.BonusPercent.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BonusPercent.SelectedText = "";
+            this.BonusPercent.SelectionLength = 0;
+            this.BonusPercent.SelectionStart = 0;
+            this.BonusPercent.ShortcutsEnabled = true;
+            this.BonusPercent.Size = new System.Drawing.Size(51, 20);
+            this.BonusPercent.TabIndex = 27;
+            this.BonusPercent.UseSelectable = true;
+            this.BonusPercent.Visible = false;
+            this.BonusPercent.WaterMark = "10";
+            this.BonusPercent.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BonusPercent.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // MiningCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 449);
-            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.BonusPercentLabel);
+            this.Controls.Add(this.BonusPercent);
+            this.Controls.Add(this.AmountLabel);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.AmountBox);
             this.Controls.Add(this.TypeBox);
@@ -367,6 +414,8 @@
         private MetroFramework.Controls.MetroTextBox AmountBox;
         private MetroFramework.Controls.MetroButton BackBtn;
         private new MetroFramework.Components.MetroStyleManager StyleManager;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel AmountLabel;
+        private MetroFramework.Controls.MetroLabel BonusPercentLabel;
+        private MetroFramework.Controls.MetroTextBox BonusPercent;
     }
 }

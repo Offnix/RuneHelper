@@ -40,10 +40,13 @@
             this.TargetBox = new MetroFramework.Controls.MetroTextBox();
             this.BonusBox = new MetroFramework.Controls.MetroTextBox();
             this.CalculateBtn = new MetroFramework.Controls.MetroButton();
-            this.TreeTypeBox = new MetroFramework.Controls.MetroComboBox();
+            this.TypeBox = new MetroFramework.Controls.MetroComboBox();
             this.AmountBox = new MetroFramework.Controls.MetroTextBox();
             this.BackBtn = new MetroFramework.Controls.MetroButton();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.BonusPercentLabel = new MetroFramework.Controls.MetroLabel();
+            this.BonusPercent = new MetroFramework.Controls.MetroTextBox();
+            this.AmountLabel = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,6 +89,7 @@
             this.CharNameBox.MaxLength = 32767;
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.PasswordChar = '\0';
+            this.CharNameBox.WaterMark = "Username";
             this.CharNameBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CharNameBox.SelectedText = "";
             this.CharNameBox.SelectionLength = 0;
@@ -230,12 +234,12 @@
             this.CalculateBtn.Visible = false;
             this.CalculateBtn.Click += new System.EventHandler(this.CalculateBtn_Click);
             // 
-            // TreeTypeBox
+            // TypeBox
             // 
-            this.TreeTypeBox.FormattingEnabled = true;
-            this.TreeTypeBox.IntegralHeight = false;
-            this.TreeTypeBox.ItemHeight = 23;
-            this.TreeTypeBox.Items.AddRange(new object[] {
+            this.TypeBox.FormattingEnabled = true;
+            this.TypeBox.IntegralHeight = false;
+            this.TypeBox.ItemHeight = 23;
+            this.TypeBox.Items.AddRange(new object[] {
             "Tree",
             "Oak",
             "Willow",
@@ -255,12 +259,12 @@
             "Bamboo",
             "Crystal tree",
             "Golden bamboo"});
-            this.TreeTypeBox.Location = new System.Drawing.Point(11, 222);
-            this.TreeTypeBox.Name = "TreeTypeBox";
-            this.TreeTypeBox.Size = new System.Drawing.Size(157, 29);
-            this.TreeTypeBox.TabIndex = 21;
-            this.TreeTypeBox.UseSelectable = true;
-            this.TreeTypeBox.Visible = false;
+            this.TypeBox.Location = new System.Drawing.Point(8, 255);
+            this.TypeBox.Name = "TypeBox";
+            this.TypeBox.Size = new System.Drawing.Size(157, 29);
+            this.TypeBox.TabIndex = 21;
+            this.TypeBox.UseSelectable = true;
+            this.TypeBox.Visible = false;
             // 
             // AmountBox
             // 
@@ -307,14 +311,70 @@
             // 
             this.StyleManager.Owner = this;
             // 
+            // BonusPercentLabel
+            // 
+            this.BonusPercentLabel.AutoSize = true;
+            this.BonusPercentLabel.Location = new System.Drawing.Point(205, 212);
+            this.BonusPercentLabel.Name = "BonusPercentLabel";
+            this.BonusPercentLabel.Size = new System.Drawing.Size(20, 19);
+            this.BonusPercentLabel.TabIndex = 28;
+            this.BonusPercentLabel.Text = "%";
+            this.BonusPercentLabel.Visible = false;
+            // 
+            // BonusPercent
+            // 
+            // 
+            // 
+            // 
+            this.BonusPercent.CustomButton.Image = null;
+            this.BonusPercent.CustomButton.Location = new System.Drawing.Point(33, 2);
+            this.BonusPercent.CustomButton.Name = "";
+            this.BonusPercent.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.BonusPercent.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BonusPercent.CustomButton.TabIndex = 1;
+            this.BonusPercent.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BonusPercent.CustomButton.UseSelectable = true;
+            this.BonusPercent.CustomButton.Visible = false;
+            this.BonusPercent.Lines = new string[0];
+            this.BonusPercent.Location = new System.Drawing.Point(155, 211);
+            this.BonusPercent.MaxLength = 32767;
+            this.BonusPercent.Name = "BonusPercent";
+            this.BonusPercent.PasswordChar = '\0';
+            this.BonusPercent.WaterMark = "10";
+            this.BonusPercent.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BonusPercent.SelectedText = "";
+            this.BonusPercent.SelectionLength = 0;
+            this.BonusPercent.SelectionStart = 0;
+            this.BonusPercent.ShortcutsEnabled = true;
+            this.BonusPercent.Size = new System.Drawing.Size(51, 20);
+            this.BonusPercent.TabIndex = 27;
+            this.BonusPercent.UseSelectable = true;
+            this.BonusPercent.Visible = false;
+            this.BonusPercent.WaterMark = "10";
+            this.BonusPercent.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BonusPercent.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // AmountLabel
+            // 
+            this.AmountLabel.AutoSize = true;
+            this.AmountLabel.Location = new System.Drawing.Point(238, 373);
+            this.AmountLabel.Name = "AmountLabel";
+            this.AmountLabel.Size = new System.Drawing.Size(36, 19);
+            this.AmountLabel.TabIndex = 29;
+            this.AmountLabel.Text = "Logs";
+            this.AmountLabel.Visible = false;
+            // 
             // WooducttingCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 459);
+            this.Controls.Add(this.AmountLabel);
+            this.Controls.Add(this.BonusPercentLabel);
+            this.Controls.Add(this.BonusPercent);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.AmountBox);
-            this.Controls.Add(this.TreeTypeBox);
+            this.Controls.Add(this.TypeBox);
             this.Controls.Add(this.CalculateBtn);
             this.Controls.Add(this.BonusBox);
             this.Controls.Add(this.TargetBox);
@@ -329,7 +389,7 @@
             this.MaximizeBox = false;
             this.Name = "WooducttingCalculator";
             this.Text = "WoodCutting Calculator";
-            this.Load += new System.EventHandler(this.WooducttingCalculator_Load);
+            this.Load += new System.EventHandler(this.WoodcuttingCalc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -347,10 +407,13 @@
         private MetroFramework.Controls.MetroTextBox TargetBox;
         private MetroFramework.Controls.MetroTextBox BonusBox;
         private MetroFramework.Controls.MetroButton CalculateBtn;
-        private MetroFramework.Controls.MetroComboBox TreeTypeBox;
+        private MetroFramework.Controls.MetroComboBox TypeBox;
         private MetroFramework.Controls.MetroTextBox AmountBox;
         private MetroFramework.Controls.MetroButton BackBtn;
         private MetroFramework.Controls.MetroTextBox XPBox;
         private new MetroFramework.Components.MetroStyleManager StyleManager;
+        private MetroFramework.Controls.MetroLabel BonusPercentLabel;
+        private MetroFramework.Controls.MetroTextBox BonusPercent;
+        private MetroFramework.Controls.MetroLabel AmountLabel;
     }
 }

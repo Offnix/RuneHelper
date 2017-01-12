@@ -158,6 +158,7 @@
             this.ClockRefresh = new System.ComponentModel.BackgroundWorker();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
+            this.TitleLabel = new MetroFramework.Controls.MetroLabel();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -386,7 +387,7 @@
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.UsernameLabel.Location = new System.Drawing.Point(74, 216);
+            this.UsernameLabel.Location = new System.Drawing.Point(73, 196);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(89, 25);
             this.UsernameLabel.TabIndex = 5;
@@ -395,9 +396,9 @@
             // ProfilePicture
             // 
             this.ProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.ProfilePicture.Location = new System.Drawing.Point(58, 102);
+            this.ProfilePicture.Location = new System.Drawing.Point(57, 93);
             this.ProfilePicture.Name = "ProfilePicture";
-            this.ProfilePicture.Size = new System.Drawing.Size(123, 110);
+            this.ProfilePicture.Size = new System.Drawing.Size(124, 110);
             this.ProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ProfilePicture.TabIndex = 6;
             this.ProfilePicture.TabStop = false;
@@ -1252,7 +1253,7 @@
             this.TabControl.Controls.Add(this.metroTabPage1);
             this.TabControl.Location = new System.Drawing.Point(472, 100);
             this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 0;
+            this.TabControl.SelectedIndex = 1;
             this.TabControl.Size = new System.Drawing.Size(457, 425);
             this.TabControl.TabIndex = 88;
             this.TabControl.UseSelectable = true;
@@ -1434,6 +1435,16 @@
             // 
             this.StyleManager.Owner = this;
             // 
+            // TitleLabel
+            // 
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TitleLabel.Location = new System.Drawing.Point(96, 222);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(33, 19);
+            this.TitleLabel.TabIndex = 92;
+            this.TitleLabel.Text = "Title";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1441,6 +1452,7 @@
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(949, 570);
             this.ContextMenuStrip = this.MainFormMenu;
+            this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.CookingLabel);
             this.Controls.Add(this.TabControl);
             this.Controls.Add(this.pictureBox27);
@@ -1703,6 +1715,7 @@
         private System.Windows.Forms.ToolStripMenuItem SearchInWiki;
         private MetroFramework.Controls.MetroLabel XPMade;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel TitleLabel;
     }
 }
 

@@ -43,8 +43,10 @@
             this.TypeBox = new MetroFramework.Controls.MetroComboBox();
             this.AmountBox = new MetroFramework.Controls.MetroTextBox();
             this.BackBtn = new MetroFramework.Controls.MetroButton();
-            this.LapsLabel = new MetroFramework.Controls.MetroLabel();
+            this.AmountLabel = new MetroFramework.Controls.MetroLabel();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.BonusPercent = new MetroFramework.Controls.MetroTextBox();
+            this.BonusPercentLabel = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +89,7 @@
             this.CharNameBox.MaxLength = 32767;
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.PasswordChar = '\0';
+            this.CharNameBox.WaterMark = "Username";
             this.CharNameBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CharNameBox.SelectedText = "";
             this.CharNameBox.SelectionLength = 0;
@@ -177,6 +180,7 @@
             this.TargetBox.MaxLength = 3;
             this.TargetBox.Name = "TargetBox";
             this.TargetBox.PasswordChar = '\0';
+            this.TargetBox.WaterMark = "120";
             this.TargetBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TargetBox.SelectedText = "";
             this.TargetBox.SelectionLength = 0;
@@ -186,6 +190,7 @@
             this.TargetBox.TabIndex = 18;
             this.TargetBox.UseSelectable = true;
             this.TargetBox.Visible = false;
+            this.TargetBox.WaterMark = "120";
             this.TargetBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TargetBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -208,6 +213,7 @@
             this.BonusBox.MaxLength = 32767;
             this.BonusBox.Name = "BonusBox";
             this.BonusBox.PasswordChar = '\0';
+            this.BonusBox.WaterMark = "10000";
             this.BonusBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.BonusBox.SelectedText = "";
             this.BonusBox.SelectionLength = 0;
@@ -217,6 +223,7 @@
             this.BonusBox.TabIndex = 19;
             this.BonusBox.UseSelectable = true;
             this.BonusBox.Visible = false;
+            this.BonusBox.WaterMark = "10000";
             this.BonusBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.BonusBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
@@ -251,7 +258,7 @@
             "Dorgesh-Kaan Agility Course",
             "Advanced Gnome Stronghold Agility Course",
             "Advanced Barbarian Outpost Agility Course"});
-            this.TypeBox.Location = new System.Drawing.Point(11, 220);
+            this.TypeBox.Location = new System.Drawing.Point(8, 247);
             this.TypeBox.Name = "TypeBox";
             this.TypeBox.Size = new System.Drawing.Size(207, 29);
             this.TypeBox.TabIndex = 21;
@@ -299,26 +306,71 @@
             this.BackBtn.UseSelectable = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
-            // LapsLabel
+            // AmountLabel
             // 
-            this.LapsLabel.AutoSize = true;
-            this.LapsLabel.Location = new System.Drawing.Point(238, 376);
-            this.LapsLabel.Name = "LapsLabel";
-            this.LapsLabel.Size = new System.Drawing.Size(35, 19);
-            this.LapsLabel.TabIndex = 24;
-            this.LapsLabel.Text = "Laps";
-            this.LapsLabel.Visible = false;
+            this.AmountLabel.AutoSize = true;
+            this.AmountLabel.Location = new System.Drawing.Point(238, 376);
+            this.AmountLabel.Name = "AmountLabel";
+            this.AmountLabel.Size = new System.Drawing.Size(35, 19);
+            this.AmountLabel.TabIndex = 24;
+            this.AmountLabel.Text = "Laps";
+            this.AmountLabel.Visible = false;
             // 
             // StyleManager
             // 
             this.StyleManager.Owner = this;
+            // 
+            // BonusPercent
+            // 
+            // 
+            // 
+            // 
+            this.BonusPercent.CustomButton.Image = null;
+            this.BonusPercent.CustomButton.Location = new System.Drawing.Point(33, 2);
+            this.BonusPercent.CustomButton.Name = "";
+            this.BonusPercent.CustomButton.Size = new System.Drawing.Size(15, 15);
+            this.BonusPercent.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BonusPercent.CustomButton.TabIndex = 1;
+            this.BonusPercent.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BonusPercent.CustomButton.UseSelectable = true;
+            this.BonusPercent.CustomButton.Visible = false;
+            this.BonusPercent.Lines = new string[0];
+            this.BonusPercent.Location = new System.Drawing.Point(155, 209);
+            this.BonusPercent.MaxLength = 32767;
+            this.BonusPercent.Name = "BonusPercent";
+            this.BonusPercent.PasswordChar = '\0';
+            this.BonusPercent.WaterMark = "10";
+            this.BonusPercent.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BonusPercent.SelectedText = "";
+            this.BonusPercent.SelectionLength = 0;
+            this.BonusPercent.SelectionStart = 0;
+            this.BonusPercent.ShortcutsEnabled = true;
+            this.BonusPercent.Size = new System.Drawing.Size(51, 20);
+            this.BonusPercent.TabIndex = 25;
+            this.BonusPercent.UseSelectable = true;
+            this.BonusPercent.Visible = false;
+            this.BonusPercent.WaterMark = "10";
+            this.BonusPercent.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BonusPercent.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BonusPercentLabel
+            // 
+            this.BonusPercentLabel.AutoSize = true;
+            this.BonusPercentLabel.Location = new System.Drawing.Point(205, 210);
+            this.BonusPercentLabel.Name = "BonusPercentLabel";
+            this.BonusPercentLabel.Size = new System.Drawing.Size(20, 19);
+            this.BonusPercentLabel.TabIndex = 26;
+            this.BonusPercentLabel.Text = "%";
+            this.BonusPercentLabel.Visible = false;
             // 
             // AgilityCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 446);
-            this.Controls.Add(this.LapsLabel);
+            this.Controls.Add(this.BonusPercentLabel);
+            this.Controls.Add(this.BonusPercent);
+            this.Controls.Add(this.AmountLabel);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.AmountBox);
             this.Controls.Add(this.TypeBox);
@@ -359,7 +411,9 @@
         private MetroFramework.Controls.MetroComboBox TypeBox;
         private MetroFramework.Controls.MetroTextBox AmountBox;
         private MetroFramework.Controls.MetroButton BackBtn;
-        private MetroFramework.Controls.MetroLabel LapsLabel;
+        private MetroFramework.Controls.MetroLabel AmountLabel;
         private new MetroFramework.Components.MetroStyleManager StyleManager;
+        private MetroFramework.Controls.MetroLabel BonusPercentLabel;
+        private MetroFramework.Controls.MetroTextBox BonusPercent;
     }
 }

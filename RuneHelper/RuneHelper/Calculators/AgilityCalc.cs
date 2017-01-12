@@ -12,10 +12,10 @@ namespace RuneHelper
         }
 
         private string result;
-        private string[] AgilArray;
+        private string[] TempArray;
         private string[] LevelArray;
 
-        float[] CourseXPArray = new float[] { 79.5f, 86.5f, 750, 1014, 775, 139.5f, 580, 571.5f, 380, 540, 704, 880, 1056, 1184, 1328, 2375, 725, 740.7f };
+        private float[] XPArray = new float[] { 79.5f, 86.5f, 750, 1014, 775, 139.5f, 580, 571.5f, 380, 540, 704, 880, 1056, 1184, 1328, 2375, 725, 740.7f };
 
         #region Load And Close Functions
 
@@ -33,27 +33,20 @@ namespace RuneHelper
         private void CharSearchButton_Click(object sender, EventArgs e)
         {
             string Name = CharNameBox.Text;
-            string result = GetPlayerMiningXP(Name);
+            string result = GetPlayerXP(Name);
             XPBox.Text = result;
             ShowBoxes();
         }
 
         private void CalculateBtn_Click(object sender, EventArgs e)
         {
-            if (API.IntParse(AgilArray[1]) < API.IntParse(TargetBox.Text))
-            {
-                Calculate();
-            }
-            else
-            {
-                MessageBox.Show("Target Level Cant be under or same as current level", "ERROR");
-            }
+            Calculate();
         }
 
         private void CachedName_Click(object sender, EventArgs e)
         {
             CharNameBox.Text = MainForm.data.Name;
-            result = GetPlayerMiningXP(MainForm.data.Name);
+            result = GetPlayerXP(MainForm.data.Name);
             XPBox.Text = result;
             ShowBoxes();
         }
@@ -73,21 +66,23 @@ namespace RuneHelper
             TargetBox.Visible = true;
             BonusXPlabel.Visible = true;
             BonusBox.Visible = true;
+            BonusPercent.Visible = true;
+            BonusPercentLabel.Visible = true;
             TypeBox.Visible = true;
             CalculateBtn.Visible = true;
         }
 
-        private String GetPlayerMiningXP(string Name)
+        private String GetPlayerXP(string Name)
         {
             try
             {
                 LevelArray = API.GetStats(Name);
-                AgilArray = LevelArray[17].Split(',');
-                return AgilArray[2];
+                TempArray = LevelArray[35].Split(',');
+                return TempArray[2];
             }
             catch
             {
-                MessageBox.Show("Username was not found in the runescape highscores. Or highscores or are offline", "ERROR");
+                MessageBox.Show("Username was not found in the runescape highscores.", "ERROR");
             }
             return null;
         }
@@ -96,15 +91,15 @@ namespace RuneHelper
         {
             try
             {
-                double NeededXP;
-
+                double NeededXP;             
                 int XP = API.IntParse(XPBox.Text) + API.IntParse(BonusBox.Text);
-
+                double PercentBonus = Convert.ToInt32(BonusPercent.Text) / 100.00f;
+                PercentBonus = XP * PercentBonus;
+                XP += Convert.ToInt32(PercentBonus);
                 NeededXP = API.LevelXpArray[API.IntParse(TargetBox.Text)] - XP;
-
-                AmountBox.Text = Convert.ToString(Math.Round(NeededXP / CourseXPArray[TypeBox.SelectedIndex]));
+                AmountBox.Text = Convert.ToString(Math.Round(NeededXP / XPArray[TypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
-                LapsLabel.Visible = true;
+                AmountLabel.Visible = true;
             }
             catch
             {

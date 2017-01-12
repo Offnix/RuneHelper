@@ -1,11 +1,13 @@
 ﻿using MetroFramework.Forms;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -28,6 +30,7 @@ namespace RuneHelper
         {
             public string Name { get; set; }
             public string Clan { get; set; }
+            public string Title { get; set; }
             public MetroFramework.MetroThemeStyle Theme { get; set; }
             public MetroFramework.MetroColorStyle Colour { get; set; }
             public int Month { get; set; }
@@ -201,7 +204,7 @@ namespace RuneHelper
         public void ReloadPage()
         {
             Cursor.Current = Cursors.WaitCursor;
-
+            //GetSecondaryData(data.Name); - currently broken.. dont touch
             var s1 = Stopwatch.StartNew();
             // run on seperate threads for time saving
             Task.Run(() => UpdateImage());
@@ -379,6 +382,13 @@ namespace RuneHelper
             ProfilePicture.Image = null;
             ProfilePicture.Dispose();
             File.Delete(data.Name + ".gif");
+        }
+
+        public void GetSecondaryData(string Username)
+        {
+            WebClient wc = new WebClient();
+            var json = (JObject)JsonConvert.DeserializeObject(wc.DownloadString("http://services.runescape.com/m=website-data/playerDetails.ws?names=[%22" + Username.Replace(" ", "%20") + "%22]&callback=jQuery000000000000000_0000000000&_=0"));
+            //Console.WriteLine(json[0]["title"]);
         }
 
         //seperate thread for refreshing the clock

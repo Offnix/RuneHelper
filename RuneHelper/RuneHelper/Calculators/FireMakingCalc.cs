@@ -12,10 +12,10 @@ namespace RuneHelper
         }
 
         private string result;
-        private string[] WCArray;
+        private string[] TempArray;
         private string[] LevelArray;
 
-        public static float[] FireMakeXpArray = new float[] { 25, 37.5f, 67.5f, 105, 125, 135, 157.5f, 171, 202.5f, 303.8f, 435 };
+        private float[] XPArray = new float[] { 25, 37.5f, 67.5f, 105, 125, 135, 157.5f, 171, 202.5f, 303.8f, 435 };
 
         #region Load And Close Functions
 
@@ -33,27 +33,20 @@ namespace RuneHelper
         private void CharSearchButton_Click(object sender, EventArgs e)
         {
             string Name = CharNameBox.Text;
-            string result = GetPlayerFireMakingXP(Name);
+            string result = GetPlayerXP(Name);
             XPBox.Text = result;
             ShowBoxes();
         }
 
         private void CalculateBtn_Click(object sender, EventArgs e)
         {
-            if (API.IntParse(WCArray[1]) < API.IntParse(TargetBox.Text))
-            {
-                Calculate();
-            }
-            else
-            {
-                MessageBox.Show("Target Level Cant be under or same as current level", "ERROR");
-            }
+            Calculate();
         }
 
         private void CachedName_Click(object sender, EventArgs e)
         {
             CharNameBox.Text = MainForm.data.Name;
-            result = GetPlayerFireMakingXP(MainForm.data.Name);
+            result = GetPlayerXP(MainForm.data.Name);
             XPBox.Text = result;
             ShowBoxes();
         }
@@ -73,20 +66,23 @@ namespace RuneHelper
             TargetBox.Visible = true;
             BonusXPlabel.Visible = true;
             BonusBox.Visible = true;
-            TreeTypeBox.Visible = true;
+            BonusPercent.Visible = true;
+            BonusPercentLabel.Visible = true;
+            TypeBox.Visible = true;
             CalculateBtn.Visible = true;
         }
 
-        private String GetPlayerFireMakingXP(string Name)
+        private String GetPlayerXP(string Name)
         {
             try
             {
                 LevelArray = API.GetStats(Name);
-                WCArray = LevelArray[11].Split(',');
-                return WCArray[2];
+                TempArray = LevelArray[11].Split(',');
+                return TempArray[2];
             }
             catch
             {
+                MessageBox.Show("Username was not found in the runescape highscores.", "ERROR");
             }
             return null;
         }
@@ -97,8 +93,11 @@ namespace RuneHelper
             {
                 double NeededXP;
                 int XP = API.IntParse(XPBox.Text) + API.IntParse(BonusBox.Text);
+                double PercentBonus = Convert.ToInt32(BonusPercent.Text) / 100.00f;
+                PercentBonus = XP * PercentBonus;
+                XP += Convert.ToInt32(PercentBonus);
                 NeededXP = API.LevelXpArray[API.IntParse(TargetBox.Text)] - XP;
-                AmountBox.Text = Convert.ToString(Math.Round(NeededXP / FireMakeXpArray[TreeTypeBox.SelectedIndex]));
+                AmountBox.Text = Convert.ToString(Math.Round(NeededXP / XPArray[TypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
             }
             catch

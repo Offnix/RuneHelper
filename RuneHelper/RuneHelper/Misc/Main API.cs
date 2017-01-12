@@ -78,6 +78,24 @@ public static class API
         Download.Dispose();
     }
 
+    public static string SecondaryData(String Username)
+    {
+        try
+        {
+            WebClient Download = new WebClient();
+            Download.Proxy = null;
+            string Data = (Download.DownloadString("http://services.runescape.com/m=website-data/playerDetails.ws?names=[%22"+Username.Replace(" ","%20")+"%22]&callback=jQuery000000000000000_0000000000&_=0"));
+            Download.Dispose();
+            return Data;
+
+        }
+        catch
+        {
+            MessageBox.Show("ERROR: Username was not found in the runescape  highscores or highscores or are offline", "RuneHelper");
+        }
+        return null;
+    }
+
     #endregion Webclient Functions
 
     #region Calculator Functions
@@ -165,7 +183,6 @@ public static class API
         }
         return Convert.ToInt32(New);
     }
-
     #endregion Calculator Functions
 }
 
