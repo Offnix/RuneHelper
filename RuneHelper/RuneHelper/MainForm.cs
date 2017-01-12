@@ -37,7 +37,7 @@ namespace RuneHelper
             public int Month { get; set; }
             public int[] XPArray { get; set; }
         }
-
+        public static JObject SecondData;
         public static SaveData data = new SaveData();
 
         #region Open and close Functions
@@ -214,7 +214,8 @@ namespace RuneHelper
         public void ReloadPage()
         {
             Cursor.Current = Cursors.WaitCursor;
-            //GetSecondaryData(data.Name);
+            GetSecondaryData(data.Name);
+            TitleLabel.Text = (string)SecondData["title"];
             var s1 = Stopwatch.StartNew();
             // run on seperate threads for time saving
             Task.Run(() => UpdateImage());
@@ -339,7 +340,7 @@ namespace RuneHelper
                     if (DateTime.Now.Month != data.Month)
                     {
                         data.Month = DateTime.Now.Month;
-                        while (i <= data.XPArray.Length + 1)
+                        while (i <= data.XPArray.Length)
                         {
                             data.XPArray[i] = 0;
                             i++;
@@ -407,18 +408,12 @@ namespace RuneHelper
             WebClient wc = new WebClient();
             string url = "http://services.runescape.com/m=website-data/playerDetails.ws?names=[%22" + Username.Replace(" ", "%20") + "%22]&callback=jQuery000000000000000_0000000000&_=0";
             string response = wc.DownloadString(url);
-            response = response.Substring(response.IndexOf('(') + 1);
-            response = response.Substring(0, response.Length - 1);
-            JObject result = null;
-            if (response.StartsWith("["))
-            {
-                result = JsonConvert.DeserializeObject<List<JObject>>(response)[0];
-            }
-            else
-            {
-                result = JsonConvert.DeserializeObject<JObject>(response);
-            }
+            response = response.Substring(33);
+            response = response.Substring(0, response.Length - 3);
+            SecondData = JsonConvert.DeserializeObject<List<JObject>>(response)[0];
         }
+            
+        
 
         //seperate thread for refreshing the clock
         private void ClockRefresh_DoWork(object sender, DoWorkEventArgs e)

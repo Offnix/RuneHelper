@@ -51,6 +51,7 @@
             this.OtherToolStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.CompareStatsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.itemSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bestiaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TimeLabel = new System.Windows.Forms.ToolStripLabel();
             this.Time = new System.Windows.Forms.ToolStripLabel();
             this.UsernameLabel = new MetroFramework.Controls.MetroLabel();
@@ -161,7 +162,6 @@
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.StyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.TitleLabel = new MetroFramework.Controls.MetroLabel();
-            this.bestiaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -372,6 +372,13 @@
             this.itemSearchToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.itemSearchToolStripMenuItem.Text = "Grand Exchange";
             this.itemSearchToolStripMenuItem.Click += new System.EventHandler(this.itemSearchToolStripMenuItem_Click);
+            // 
+            // bestiaryToolStripMenuItem
+            // 
+            this.bestiaryToolStripMenuItem.Name = "bestiaryToolStripMenuItem";
+            this.bestiaryToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.bestiaryToolStripMenuItem.Text = "Bestiary";
+            this.bestiaryToolStripMenuItem.Click += new System.EventHandler(this.bestiaryToolStripMenuItem_Click);
             // 
             // TimeLabel
             // 
@@ -1470,18 +1477,11 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TitleLabel.Location = new System.Drawing.Point(96, 222);
+            this.TitleLabel.Location = new System.Drawing.Point(95, 222);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(33, 19);
             this.TitleLabel.TabIndex = 92;
             this.TitleLabel.Text = "Title";
-            // 
-            // bestiaryToolStripMenuItem
-            // 
-            this.bestiaryToolStripMenuItem.Name = "bestiaryToolStripMenuItem";
-            this.bestiaryToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.bestiaryToolStripMenuItem.Text = "Bestiary";
-            this.bestiaryToolStripMenuItem.Click += new System.EventHandler(this.bestiaryToolStripMenuItem_Click);
             // 
             // MainForm
             // 
