@@ -37,6 +37,7 @@ namespace RuneHelper
             public int Month { get; set; }
             public int[] XPArray { get; set; }
         }
+
         public static JObject SecondData;
         public static SaveData data = new SaveData();
 
@@ -64,11 +65,6 @@ namespace RuneHelper
         #endregion Open and close Functions
 
         #region Form Controls
-
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void GraphUpdate_Click(object sender, EventArgs e)
         {
@@ -377,10 +373,14 @@ namespace RuneHelper
         // update the profile image
         public void UpdateImage()
         {
+            Image Profile;
             string FileName = data.Name + ".gif";
             try
             {
-                ProfilePicture.Load(FileName);
+                Image tmp = Image.FromFile(FileName);
+                Profile = new Bitmap(tmp);
+                ProfilePicture.Image = Profile;
+                tmp.Dispose();
             }
             catch
             {
@@ -391,18 +391,12 @@ namespace RuneHelper
                 else
                 {
                     API.UpdateImage(data.Name);
-                    ProfilePicture.Load(FileName);
+                    Image tmp = Image.FromFile(FileName);
+                    Profile = new Bitmap(tmp);
+                    ProfilePicture.Image = Profile;
                 }
             }
         }
-
-        public void UnloadImage()
-        {
-            ProfilePicture.Image = null;
-            ProfilePicture.Dispose();
-            File.Delete(data.Name + ".gif");
-        }
-
         public void GetSecondaryData(string Username)
         {
             WebClient wc = new WebClient();
@@ -412,8 +406,6 @@ namespace RuneHelper
             response = response.Substring(0, response.Length - 3);
             SecondData = JsonConvert.DeserializeObject<List<JObject>>(response)[0];
         }
-            
-        
 
         //seperate thread for refreshing the clock
         private void ClockRefresh_DoWork(object sender, DoWorkEventArgs e)
@@ -433,6 +425,5 @@ namespace RuneHelper
         }
 
         #endregion Functions
-        
     }
 }

@@ -77,6 +77,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "About";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "About";
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.About_Load);

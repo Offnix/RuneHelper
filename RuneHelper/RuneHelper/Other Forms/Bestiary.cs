@@ -13,6 +13,7 @@ namespace RuneHelper
         {
             InitializeComponent();
         }
+
         public class BeastData
         {
             public string name { get; set; }
@@ -129,7 +130,7 @@ namespace RuneHelper
 
             i = 0;
             Console.WriteLine();
-             try
+            try
             {
                 while (true)
                 {

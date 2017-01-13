@@ -89,7 +89,7 @@
             this.CharNameBox.MaxLength = 32767;
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.PasswordChar = '\0';
-            this.CharNameBox.WaterMark = "Username";
+            this.CharNameBox.PromptText = "Username";
             this.CharNameBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CharNameBox.SelectedText = "";
             this.CharNameBox.SelectionLength = 0;
@@ -352,7 +352,7 @@
             this.BonusPercent.MaxLength = 32767;
             this.BonusPercent.Name = "BonusPercent";
             this.BonusPercent.PasswordChar = '\0';
-            this.BonusPercent.WaterMark = "10";
+            this.BonusPercent.PromptText = "10";
             this.BonusPercent.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.BonusPercent.SelectedText = "";
             this.BonusPercent.SelectionLength = 0;
@@ -390,6 +390,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MiningCalc";
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Mining Calculator";
             this.Load += new System.EventHandler(this.MiningCalc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();

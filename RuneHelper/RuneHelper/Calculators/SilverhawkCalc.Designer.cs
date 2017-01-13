@@ -66,6 +66,7 @@
             this.CharNameBox.MaxLength = 32767;
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.PasswordChar = '\0';
+            this.CharNameBox.PromptText = "Username";
             this.CharNameBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CharNameBox.SelectedText = "";
             this.CharNameBox.SelectionLength = 0;
@@ -310,6 +311,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SilverhawkForm";
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "SilverHawk Calculator";
             this.Load += new System.EventHandler(this.SilverhawkForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();

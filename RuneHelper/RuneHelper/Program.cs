@@ -14,7 +14,6 @@ namespace RuneHelper
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-           
             if (API.CheckFileIntegrity() == false)
             {
                 MainForm M = new MainForm();

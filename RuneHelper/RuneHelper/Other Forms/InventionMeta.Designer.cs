@@ -326,6 +326,7 @@
             this.MaximizeBox = false;
             this.Name = "InventionMeta";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Invention Meta";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AftershockIcon)).EndInit();

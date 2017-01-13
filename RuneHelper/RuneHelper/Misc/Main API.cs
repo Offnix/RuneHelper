@@ -84,10 +84,9 @@ public static class API
         {
             WebClient Download = new WebClient();
             Download.Proxy = null;
-            string Data = (Download.DownloadString("http://services.runescape.com/m=website-data/playerDetails.ws?names=[%22"+Username.Replace(" ","%20")+"%22]&callback=jQuery000000000000000_0000000000&_=0"));
+            string Data = (Download.DownloadString("http://services.runescape.com/m=website-data/playerDetails.ws?names=[%22" + Username.Replace(" ", "%20") + "%22]&callback=jQuery000000000000000_0000000000&_=0"));
             Download.Dispose();
             return Data;
-
         }
         catch
         {
@@ -183,6 +182,7 @@ public static class API
         }
         return Convert.ToInt32(New);
     }
+
     #endregion Calculator Functions
 }
 

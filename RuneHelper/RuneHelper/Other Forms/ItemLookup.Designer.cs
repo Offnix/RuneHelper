@@ -145,7 +145,7 @@
             this.SearchInput.MaxLength = 32767;
             this.SearchInput.Name = "SearchInput";
             this.SearchInput.PasswordChar = '\0';
-            this.SearchInput.WaterMark = "Item name";
+            this.SearchInput.PromptText = "Item name";
             this.SearchInput.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.SearchInput.SelectedText = "";
             this.SearchInput.SelectionLength = 0;
@@ -456,7 +456,7 @@
             // 
             this.StyleManager.Owner = this;
             // 
-            // ItemLookup
+            // GrandExchange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -468,8 +468,9 @@
             this.Controls.Add(this.CatagoryBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "ItemLookup";
+            this.Name = "GrandExchange";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Item Lookup";
             this.Load += new System.EventHandler(this.ItemLookup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ItemImage)).EndInit();

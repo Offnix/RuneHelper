@@ -91,7 +91,7 @@ namespace RuneHelper
         {
             try
             {
-                double NeededXP;             
+                double NeededXP;
                 int XP = API.IntParse(XPBox.Text) + API.IntParse(BonusBox.Text);
                 double PercentBonus = Convert.ToInt32(BonusPercent.Text) / 100.00f;
                 PercentBonus = XP * PercentBonus;

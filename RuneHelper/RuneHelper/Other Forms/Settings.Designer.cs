@@ -52,7 +52,7 @@
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(12, 219);
+            this.Exit.Location = new System.Drawing.Point(23, 219);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(113, 23);
             this.Exit.TabIndex = 0;
@@ -101,7 +101,7 @@
             // 
             // DeleteXP
             // 
-            this.DeleteXP.Location = new System.Drawing.Point(23, 112);
+            this.DeleteXP.Location = new System.Drawing.Point(23, 141);
             this.DeleteXP.Name = "DeleteXP";
             this.DeleteXP.Size = new System.Drawing.Size(117, 23);
             this.DeleteXP.TabIndex = 3;
@@ -111,9 +111,9 @@
             // 
             // DeleteImage
             // 
-            this.DeleteImage.Location = new System.Drawing.Point(23, 141);
+            this.DeleteImage.Location = new System.Drawing.Point(23, 112);
             this.DeleteImage.Name = "DeleteImage";
-            this.DeleteImage.Size = new System.Drawing.Size(171, 23);
+            this.DeleteImage.Size = new System.Drawing.Size(158, 23);
             this.DeleteImage.TabIndex = 4;
             this.DeleteImage.Text = "Delete Cached Profile Image";
             this.DeleteImage.UseSelectable = true;
@@ -194,7 +194,7 @@
             // ColourLabel
             // 
             this.ColourLabel.AutoSize = true;
-            this.ColourLabel.Location = new System.Drawing.Point(312, 20);
+            this.ColourLabel.Location = new System.Drawing.Point(312, 21);
             this.ColourLabel.Name = "ColourLabel";
             this.ColourLabel.Size = new System.Drawing.Size(131, 19);
             this.ColourLabel.TabIndex = 12;
@@ -269,6 +269,7 @@
             this.MaximizeBox = false;
             this.Name = "SettingsForm";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Settings";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();

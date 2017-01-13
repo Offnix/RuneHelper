@@ -25,7 +25,7 @@ namespace RuneHelper
 
         private void Github_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/Peterburnett/RSThing");
+            System.Diagnostics.Process.Start("https://github.com/Offnix/RuneHelper");
         }
 
         #endregion Form Controls

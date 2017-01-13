@@ -2122,6 +2122,7 @@
             this.Controls.Add(this.AttackBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ComparePlayer";
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Compare Player Stats";
             this.Load += new System.EventHandler(this.ComparePlayer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();

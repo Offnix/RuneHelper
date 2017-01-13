@@ -89,7 +89,7 @@
             this.CharNameBox.MaxLength = 32767;
             this.CharNameBox.Name = "CharNameBox";
             this.CharNameBox.PasswordChar = '\0';
-            this.CharNameBox.WaterMark = "Username";
+            this.CharNameBox.PromptText = "Username";
             this.CharNameBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CharNameBox.SelectedText = "";
             this.CharNameBox.SelectionLength = 0;
@@ -180,7 +180,7 @@
             this.TargetBox.MaxLength = 3;
             this.TargetBox.Name = "TargetBox";
             this.TargetBox.PasswordChar = '\0';
-            this.TargetBox.WaterMark = "120";
+            this.TargetBox.PromptText = "120";
             this.TargetBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TargetBox.SelectedText = "";
             this.TargetBox.SelectionLength = 0;
@@ -213,7 +213,7 @@
             this.BonusBox.MaxLength = 32767;
             this.BonusBox.Name = "BonusBox";
             this.BonusBox.PasswordChar = '\0';
-            this.BonusBox.WaterMark = "10000";
+            this.BonusBox.PromptText = "10000";
             this.BonusBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.BonusBox.SelectedText = "";
             this.BonusBox.SelectionLength = 0;
@@ -339,7 +339,7 @@
             this.BonusPercent.MaxLength = 32767;
             this.BonusPercent.Name = "BonusPercent";
             this.BonusPercent.PasswordChar = '\0';
-            this.BonusPercent.WaterMark = "10";
+            this.BonusPercent.PromptText = "10";
             this.BonusPercent.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.BonusPercent.SelectedText = "";
             this.BonusPercent.SelectionLength = 0;
@@ -388,6 +388,7 @@
             this.MaximizeBox = false;
             this.Name = "AgilityCalc";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Agility Calculator";
             this.Load += new System.EventHandler(this.AglilityCalc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();

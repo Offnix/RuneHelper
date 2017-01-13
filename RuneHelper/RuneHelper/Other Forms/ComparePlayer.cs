@@ -1,6 +1,6 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Windows.Forms;
-using MetroFramework.Forms;
 
 namespace RuneHelper
 {
@@ -169,7 +169,5 @@ namespace RuneHelper
         {
             System.Diagnostics.Process.Start("http://services.runescape.com/m=hiscore/compare?category_type=-1&user1=" + PLayerInput1.Text.Replace(" ", "+") + "&user2=" + PlayerInput2.Text.Replace(" ", "+"));
         }
-
-        
     }
 }

@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new MetroFramework.Controls.MetroLabel();
             this.AttackBar = new MetroFramework.Controls.MetroProgressBar();
             this.MainToolStrip = new System.Windows.Forms.ToolStrip();
@@ -56,7 +56,6 @@
             this.Time = new System.Windows.Forms.ToolStripLabel();
             this.UsernameLabel = new MetroFramework.Controls.MetroLabel();
             this.ProfilePicture = new System.Windows.Forms.PictureBox();
-            this.ExitButton = new MetroFramework.Controls.MetroButton();
             this.DefenceBar = new MetroFramework.Controls.MetroProgressBar();
             this.StrengthBar = new MetroFramework.Controls.MetroProgressBar();
             this.HealthBar = new MetroFramework.Controls.MetroProgressBar();
@@ -319,7 +318,7 @@
             // AgilityToolStrip
             // 
             this.AgilityToolStrip.Name = "AgilityToolStrip";
-            this.AgilityToolStrip.Size = new System.Drawing.Size(200, 24);
+            this.AgilityToolStrip.Size = new System.Drawing.Size(194, 24);
             this.AgilityToolStrip.Text = "Agility";
             this.AgilityToolStrip.Click += new System.EventHandler(this.AgilityToolStrip_Click);
             // 
@@ -327,7 +326,7 @@
             // 
             this.SilverHawkFeatherToolStrip.Name = "SilverHawkFeatherToolStrip";
             this.SilverHawkFeatherToolStrip.Size = new System.Drawing.Size(200, 24);
-            this.SilverHawkFeatherToolStrip.Text = "Silver Hawk Feather";
+            this.SilverHawkFeatherToolStrip.Text = "Silverhawk Feathers";
             this.SilverHawkFeatherToolStrip.Click += new System.EventHandler(this.silverHawkFeatherToolStrip_Click);
             // 
             // inventionPerkMetaToolStripMenuItem
@@ -343,7 +342,7 @@
             this.FireMakingToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.FireMakingToolStrip.Name = "FireMakingToolStrip";
             this.FireMakingToolStrip.Size = new System.Drawing.Size(201, 24);
-            this.FireMakingToolStrip.Text = "FireMaking";
+            this.FireMakingToolStrip.Text = "Firemaking";
             this.FireMakingToolStrip.Click += new System.EventHandler(this.FireMakingToolStrip_Click);
             // 
             // OtherToolStrip
@@ -399,32 +398,22 @@
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.UsernameLabel.Location = new System.Drawing.Point(72, 197);
+            this.UsernameLabel.Location = new System.Drawing.Point(41, 199);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(89, 25);
             this.UsernameLabel.TabIndex = 5;
             this.UsernameLabel.Text = "Username";
+            this.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ProfilePicture
             // 
             this.ProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.ProfilePicture.Location = new System.Drawing.Point(54, 90);
+            this.ProfilePicture.Location = new System.Drawing.Point(41, 92);
             this.ProfilePicture.Name = "ProfilePicture";
-            this.ProfilePicture.Size = new System.Drawing.Size(124, 110);
+            this.ProfilePicture.Size = new System.Drawing.Size(125, 111);
             this.ProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ProfilePicture.TabIndex = 6;
             this.ProfilePicture.TabStop = false;
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitButton.Location = new System.Drawing.Point(847, 531);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(98, 35);
-            this.ExitButton.TabIndex = 7;
-            this.ExitButton.Text = "Exit";
-            this.ExitButton.UseSelectable = true;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // DefenceBar
             // 
@@ -946,6 +935,7 @@
             this.AverageLevel.Size = new System.Drawing.Size(16, 19);
             this.AverageLevel.TabIndex = 59;
             this.AverageLevel.Text = "0";
+            this.AverageLevel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // TotalLevelText
             // 
@@ -967,6 +957,7 @@
             this.TotalLevel.Size = new System.Drawing.Size(16, 19);
             this.TotalLevel.TabIndex = 61;
             this.TotalLevel.Text = "0";
+            this.TotalLevel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // AttackLabel
             // 
@@ -1267,7 +1258,7 @@
             this.TabControl.Location = new System.Drawing.Point(472, 100);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(457, 425);
+            this.TabControl.Size = new System.Drawing.Size(457, 457);
             this.TabControl.TabIndex = 88;
             this.TabControl.UseSelectable = true;
             // 
@@ -1286,9 +1277,9 @@
             this.ExtraStats.HorizontalScrollbarSize = 10;
             this.ExtraStats.Location = new System.Drawing.Point(4, 38);
             this.ExtraStats.Name = "ExtraStats";
-            this.ExtraStats.Size = new System.Drawing.Size(449, 383);
+            this.ExtraStats.Size = new System.Drawing.Size(449, 415);
             this.ExtraStats.TabIndex = 0;
-            this.ExtraStats.Text = "Extra Stats";
+            this.ExtraStats.Text = "Stats";
             this.ExtraStats.VerticalScrollbarBarColor = true;
             this.ExtraStats.VerticalScrollbarHighlightOnWheel = false;
             this.ExtraStats.VerticalScrollbarSize = 10;
@@ -1302,6 +1293,7 @@
             this.CombatLevel.Size = new System.Drawing.Size(16, 19);
             this.CombatLevel.TabIndex = 65;
             this.CombatLevel.Text = "0";
+            this.CombatLevel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // CombatLevelLabel
             // 
@@ -1323,6 +1315,7 @@
             this.PercentageLabel.Size = new System.Drawing.Size(16, 19);
             this.PercentageLabel.TabIndex = 63;
             this.PercentageLabel.Text = "0";
+            this.PercentageLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Percentage
             // 
@@ -1349,7 +1342,7 @@
             this.metroTabPage1.HorizontalScrollbarSize = 10;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(449, 383);
+            this.metroTabPage1.Size = new System.Drawing.Size(449, 415);
             this.metroTabPage1.TabIndex = 1;
             this.metroTabPage1.Text = "Monthly XP";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -1391,9 +1384,9 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(245, 297);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(128, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(134, 19);
             this.metroLabel1.TabIndex = 5;
-            this.metroLabel1.Text = "XP made this month";
+            this.metroLabel1.Text = "XP gained this month";
             // 
             // XptrackerLabel
             // 
@@ -1417,24 +1410,24 @@
             // XPTracker
             // 
             this.StyleExtender.SetApplyMetroTheme(this.XPTracker, true);
-            chartArea1.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.BackSecondaryColor = System.Drawing.Color.Transparent;
-            chartArea1.BorderColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.XPTracker.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            legend1.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
-            this.XPTracker.Legends.Add(legend1);
+            chartArea8.BackColor = System.Drawing.Color.Transparent;
+            chartArea8.BackSecondaryColor = System.Drawing.Color.Transparent;
+            chartArea8.BorderColor = System.Drawing.Color.White;
+            chartArea8.Name = "ChartArea1";
+            this.XPTracker.ChartAreas.Add(chartArea8);
+            legend8.Enabled = false;
+            legend8.ForeColor = System.Drawing.Color.White;
+            legend8.Name = "Legend1";
+            legend8.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Wide;
+            this.XPTracker.Legends.Add(legend8);
             this.XPTracker.Location = new System.Drawing.Point(-4, 39);
             this.XPTracker.Name = "XPTracker";
             this.XPTracker.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.XPTracker.Series.Add(series1);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.XPTracker.Series.Add(series8);
             this.XPTracker.Size = new System.Drawing.Size(457, 271);
             this.XPTracker.TabIndex = 2;
             this.XPTracker.Text = "MonthlyXP";
@@ -1477,17 +1470,17 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TitleLabel.Location = new System.Drawing.Point(95, 222);
+            this.TitleLabel.Location = new System.Drawing.Point(44, 224);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(33, 19);
             this.TitleLabel.TabIndex = 92;
             this.TitleLabel.Text = "Title";
+            this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(949, 570);
             this.ContextMenuStrip = this.MainFormMenu;
             this.Controls.Add(this.TitleLabel);
@@ -1573,7 +1566,6 @@
             this.Controls.Add(this.HealthBar);
             this.Controls.Add(this.StrengthBar);
             this.Controls.Add(this.DefenceBar);
-            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ProfilePicture);
             this.Controls.Add(this.MainToolStrip);
             this.Controls.Add(this.AttackBar);
@@ -1581,7 +1573,9 @@
             this.MinimumSize = new System.Drawing.Size(826, 570);
             this.Name = "MainForm";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "RuneHelper";
+            this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MainToolStrip.ResumeLayout(false);
             this.MainToolStrip.PerformLayout();
@@ -1729,7 +1723,6 @@
         private System.Windows.Forms.ToolStripMenuItem CompareStatsToolStrip;
         private MetroFramework.Controls.MetroContextMenu MainFormMenu;
         private System.Windows.Forms.ToolStripMenuItem OpenStats;
-        private MetroFramework.Controls.MetroButton ExitButton;
         private MetroFramework.Controls.MetroTabControl TabControl;
         private MetroFramework.Controls.MetroTabPage ExtraStats;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
