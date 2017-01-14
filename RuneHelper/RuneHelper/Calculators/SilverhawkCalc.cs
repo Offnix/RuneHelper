@@ -44,6 +44,19 @@ namespace RuneHelper
             ShowBoxes();
         }
 
+        private void CharNameBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                string Name = CharNameBox.Text;
+                result = GetPlayerAgilityXP(Name);
+                WebReturnBox.Text = result;
+                ShowBoxes();
+            }
+        }
+
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             RunCalculation();

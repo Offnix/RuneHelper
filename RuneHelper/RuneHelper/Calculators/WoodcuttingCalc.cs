@@ -38,6 +38,19 @@ namespace RuneHelper
             ShowBoxes();
         }
 
+        private void CharNameBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                string Name = CharNameBox.Text;
+                string result = GetPlayerXP(Name);
+                XPBox.Text = result;
+                ShowBoxes();
+            }
+        }
+
         private void CalculateBtn_Click(object sender, EventArgs e)
         {
             Calculate();
@@ -77,7 +90,7 @@ namespace RuneHelper
             try
             {
                 LevelArray = API.GetStats(Name);
-                TempArray = LevelArray[19].Split(',');
+                TempArray = LevelArray[8].Split(',');
                 return TempArray[2];
             }
             catch

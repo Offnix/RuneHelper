@@ -101,6 +101,7 @@
             this.CharNameBox.WaterMark = "Username";
             this.CharNameBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.CharNameBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.CharNameBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CharNameBox_KeyDown);
             // 
             // label1
             // 

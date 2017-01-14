@@ -38,6 +38,19 @@ namespace RuneHelper
             ShowBoxes();
         }
 
+        private void CharNameBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                string Name = CharNameBox.Text;
+                string result = GetPlayerXP(Name);
+                XPBox.Text = result;
+                ShowBoxes();
+            }
+        }
+
         private void CalculateBtn_Click(object sender, EventArgs e)
         {
             Calculate();
@@ -77,7 +90,7 @@ namespace RuneHelper
             try
             {
                 LevelArray = API.GetStats(Name);
-                TempArray = LevelArray[11].Split(',');
+                TempArray = LevelArray[12].Split(',');
                 return TempArray[2];
             }
             catch
@@ -93,9 +106,14 @@ namespace RuneHelper
             {
                 double NeededXP;
                 int XP = API.IntParse(XPBox.Text) + API.IntParse(BonusBox.Text);
-                double PercentBonus = Convert.ToInt32(BonusPercent.Text) / 100.00f;
-                PercentBonus = XP * PercentBonus;
-                XP += Convert.ToInt32(PercentBonus);
+
+                if (BonusPercent.Text != "" && BonusPercent != null)
+                {
+                    double PercentBonus = Convert.ToInt32(BonusPercent.Text) / 100.00f;
+                    PercentBonus = XP * PercentBonus;
+                    XP += Convert.ToInt32(PercentBonus);
+                }
+
                 NeededXP = API.LevelXpArray[API.IntParse(TargetBox.Text)] - XP;
                 AmountBox.Text = Convert.ToString(Math.Round(NeededXP / XPArray[TypeBox.SelectedIndex]));
                 AmountBox.Visible = true;
