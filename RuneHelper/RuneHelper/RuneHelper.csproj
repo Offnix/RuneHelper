@@ -76,10 +76,10 @@
     <AssemblyOriginatorKeyFile>RuneHelper.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>13F6B769D773FB3C25EFF7EBBF147BB94B920B8D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>3BD179C40496586092585B8FAA2E81ABE65642AB</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>RuneHelper_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>RuneHelper_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
@@ -263,6 +263,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="RuneHelper.snk" />
+    <None Include="RuneHelper_1_TemporaryKey.pfx" />
     <None Include="RuneHelper_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

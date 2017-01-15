@@ -208,23 +208,27 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.DivinationBar2 = new MetroFramework.Controls.MetroProgressBar();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.DivinationLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.TotalLevel2 = new MetroFramework.Controls.MetroLabel();
+            this.TotalLevel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
@@ -294,20 +298,20 @@
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel26.SuspendLayout();
+            this.panel28.SuspendLayout();
             this.panel27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            this.panel28.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // InventionLabel
@@ -1932,7 +1936,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(488, 60);
+            this.label28.Location = new System.Drawing.Point(466, 60);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(96, 19);
             this.label28.TabIndex = 249;
@@ -2177,156 +2181,18 @@
             this.panel14.Size = new System.Drawing.Size(319, 387);
             this.panel14.TabIndex = 265;
             // 
-            // panel15
+            // panel28
             // 
-            this.panel15.Controls.Add(this.pictureBox39);
-            this.panel15.Controls.Add(this.MiningBar2);
-            this.panel15.Controls.Add(this.MiningLabel2);
-            this.panel15.Controls.Add(this.MiningBar);
-            this.panel15.Controls.Add(this.pictureBox20);
-            this.panel15.Controls.Add(this.MiningLabel);
-            this.panel15.Location = new System.Drawing.Point(3, 421);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(292, 31);
-            this.panel15.TabIndex = 266;
-            // 
-            // panel16
-            // 
-            this.panel16.Controls.Add(this.pictureBox38);
-            this.panel16.Controls.Add(this.HerbloreBar2);
-            this.panel16.Controls.Add(this.HerbloreLabel2);
-            this.panel16.Controls.Add(this.HerbloreBar);
-            this.panel16.Controls.Add(this.pictureBox19);
-            this.panel16.Controls.Add(this.HerbloreLabel);
-            this.panel16.Location = new System.Drawing.Point(3, 453);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(292, 31);
-            this.panel16.TabIndex = 267;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.AgilityBar2);
-            this.panel17.Controls.Add(this.pictureBox37);
-            this.panel17.Controls.Add(this.AgilityLabel2);
-            this.panel17.Controls.Add(this.AgilityBar);
-            this.panel17.Controls.Add(this.pictureBox18);
-            this.panel17.Controls.Add(this.AgilityLabel);
-            this.panel17.Location = new System.Drawing.Point(3, 485);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(292, 31);
-            this.panel17.TabIndex = 266;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.ThievingBar2);
-            this.panel18.Controls.Add(this.pictureBox36);
-            this.panel18.Controls.Add(this.ThievingLabel2);
-            this.panel18.Controls.Add(this.ThievingBar);
-            this.panel18.Controls.Add(this.pictureBox17);
-            this.panel18.Controls.Add(this.ThievingLabel);
-            this.panel18.Location = new System.Drawing.Point(3, 517);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(292, 31);
-            this.panel18.TabIndex = 266;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.SlayerBar2);
-            this.panel19.Controls.Add(this.pictureBox35);
-            this.panel19.Controls.Add(this.SlayerLabel2);
-            this.panel19.Controls.Add(this.pictureBox16);
-            this.panel19.Controls.Add(this.SlayerBar);
-            this.panel19.Controls.Add(this.SlayerLabel);
-            this.panel19.Location = new System.Drawing.Point(3, 549);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(292, 31);
-            this.panel19.TabIndex = 266;
-            // 
-            // panel20
-            // 
-            this.panel20.Controls.Add(this.FarmingBar2);
-            this.panel20.Controls.Add(this.pictureBox34);
-            this.panel20.Controls.Add(this.FarmingLabel2);
-            this.panel20.Controls.Add(this.FarmingBar);
-            this.panel20.Controls.Add(this.pictureBox15);
-            this.panel20.Controls.Add(this.FarmingLabel);
-            this.panel20.Location = new System.Drawing.Point(3, 581);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(292, 31);
-            this.panel20.TabIndex = 266;
-            // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.RunecraftingBar2);
-            this.panel21.Controls.Add(this.pictureBox33);
-            this.panel21.Controls.Add(this.RunecraftingLabel2);
-            this.panel21.Controls.Add(this.RunecraftingBar);
-            this.panel21.Controls.Add(this.pictureBox14);
-            this.panel21.Controls.Add(this.RunecraftingLabel);
-            this.panel21.Location = new System.Drawing.Point(3, 613);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(292, 31);
-            this.panel21.TabIndex = 266;
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.HunterBar2);
-            this.panel22.Controls.Add(this.pictureBox32);
-            this.panel22.Controls.Add(this.HunterLabel2);
-            this.panel22.Controls.Add(this.HunterBar);
-            this.panel22.Controls.Add(this.pictureBox13);
-            this.panel22.Controls.Add(this.HunterLabel);
-            this.panel22.Location = new System.Drawing.Point(3, 645);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(292, 31);
-            this.panel22.TabIndex = 266;
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.ConstructionBar);
-            this.panel23.Controls.Add(this.pictureBox12);
-            this.panel23.Controls.Add(this.ConstructionLabel);
-            this.panel23.Controls.Add(this.ConstructionBar2);
-            this.panel23.Controls.Add(this.pictureBox31);
-            this.panel23.Controls.Add(this.ContructionLabel2);
-            this.panel23.Location = new System.Drawing.Point(3, 677);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(292, 31);
-            this.panel23.TabIndex = 266;
-            // 
-            // panel24
-            // 
-            this.panel24.Controls.Add(this.panel25);
-            this.panel24.Controls.Add(this.SummoningBar);
-            this.panel24.Controls.Add(this.pictureBox25);
-            this.panel24.Controls.Add(this.SummoningLabel);
-            this.panel24.Controls.Add(this.SummoningBar2);
-            this.panel24.Controls.Add(this.pictureBox30);
-            this.panel24.Controls.Add(this.SummoningLabel2);
-            this.panel24.Location = new System.Drawing.Point(3, 709);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(292, 31);
-            this.panel24.TabIndex = 266;
-            // 
-            // panel25
-            // 
-            this.panel25.Location = new System.Drawing.Point(0, 37);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(292, 31);
-            this.panel25.TabIndex = 266;
-            // 
-            // panel26
-            // 
-            this.panel26.Controls.Add(this.DungeoneeringBar);
-            this.panel26.Controls.Add(this.pictureBox24);
-            this.panel26.Controls.Add(this.DungeoneeringLabel);
-            this.panel26.Controls.Add(this.DungeoneeringBar2);
-            this.panel26.Controls.Add(this.pictureBox29);
-            this.panel26.Controls.Add(this.DungeoneeringLabel2);
-            this.panel26.Location = new System.Drawing.Point(3, 741);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(292, 31);
-            this.panel26.TabIndex = 266;
+            this.panel28.Controls.Add(this.pictureBox23);
+            this.panel28.Controls.Add(this.InventorBar);
+            this.panel28.Controls.Add(this.InventionLabel);
+            this.panel28.Controls.Add(this.InventorBar2);
+            this.panel28.Controls.Add(this.pictureBox27);
+            this.panel28.Controls.Add(this.InventionLabel2);
+            this.panel28.Location = new System.Drawing.Point(3, 805);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(292, 31);
+            this.panel28.TabIndex = 267;
             // 
             // panel27
             // 
@@ -2371,18 +2237,190 @@
             this.DivinationLabel2.TabIndex = 242;
             this.DivinationLabel2.Text = "0";
             // 
-            // panel28
+            // panel26
             // 
-            this.panel28.Controls.Add(this.pictureBox23);
-            this.panel28.Controls.Add(this.InventorBar);
-            this.panel28.Controls.Add(this.InventionLabel);
-            this.panel28.Controls.Add(this.InventorBar2);
-            this.panel28.Controls.Add(this.pictureBox27);
-            this.panel28.Controls.Add(this.InventionLabel2);
-            this.panel28.Location = new System.Drawing.Point(3, 805);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(292, 31);
-            this.panel28.TabIndex = 267;
+            this.panel26.Controls.Add(this.DungeoneeringBar);
+            this.panel26.Controls.Add(this.pictureBox24);
+            this.panel26.Controls.Add(this.DungeoneeringLabel);
+            this.panel26.Controls.Add(this.DungeoneeringBar2);
+            this.panel26.Controls.Add(this.pictureBox29);
+            this.panel26.Controls.Add(this.DungeoneeringLabel2);
+            this.panel26.Location = new System.Drawing.Point(3, 741);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(292, 31);
+            this.panel26.TabIndex = 266;
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.panel25);
+            this.panel24.Controls.Add(this.SummoningBar);
+            this.panel24.Controls.Add(this.pictureBox25);
+            this.panel24.Controls.Add(this.SummoningLabel);
+            this.panel24.Controls.Add(this.SummoningBar2);
+            this.panel24.Controls.Add(this.pictureBox30);
+            this.panel24.Controls.Add(this.SummoningLabel2);
+            this.panel24.Location = new System.Drawing.Point(3, 709);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(292, 31);
+            this.panel24.TabIndex = 266;
+            // 
+            // panel25
+            // 
+            this.panel25.Location = new System.Drawing.Point(0, 37);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(292, 31);
+            this.panel25.TabIndex = 266;
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.ConstructionBar);
+            this.panel23.Controls.Add(this.pictureBox12);
+            this.panel23.Controls.Add(this.ConstructionLabel);
+            this.panel23.Controls.Add(this.ConstructionBar2);
+            this.panel23.Controls.Add(this.pictureBox31);
+            this.panel23.Controls.Add(this.ContructionLabel2);
+            this.panel23.Location = new System.Drawing.Point(3, 677);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(292, 31);
+            this.panel23.TabIndex = 266;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.HunterBar2);
+            this.panel22.Controls.Add(this.pictureBox32);
+            this.panel22.Controls.Add(this.HunterLabel2);
+            this.panel22.Controls.Add(this.HunterBar);
+            this.panel22.Controls.Add(this.pictureBox13);
+            this.panel22.Controls.Add(this.HunterLabel);
+            this.panel22.Location = new System.Drawing.Point(3, 645);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(292, 31);
+            this.panel22.TabIndex = 266;
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.RunecraftingBar2);
+            this.panel21.Controls.Add(this.pictureBox33);
+            this.panel21.Controls.Add(this.RunecraftingLabel2);
+            this.panel21.Controls.Add(this.RunecraftingBar);
+            this.panel21.Controls.Add(this.pictureBox14);
+            this.panel21.Controls.Add(this.RunecraftingLabel);
+            this.panel21.Location = new System.Drawing.Point(3, 613);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(292, 31);
+            this.panel21.TabIndex = 266;
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.FarmingBar2);
+            this.panel20.Controls.Add(this.pictureBox34);
+            this.panel20.Controls.Add(this.FarmingLabel2);
+            this.panel20.Controls.Add(this.FarmingBar);
+            this.panel20.Controls.Add(this.pictureBox15);
+            this.panel20.Controls.Add(this.FarmingLabel);
+            this.panel20.Location = new System.Drawing.Point(3, 581);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(292, 31);
+            this.panel20.TabIndex = 266;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.SlayerBar2);
+            this.panel19.Controls.Add(this.pictureBox35);
+            this.panel19.Controls.Add(this.SlayerLabel2);
+            this.panel19.Controls.Add(this.pictureBox16);
+            this.panel19.Controls.Add(this.SlayerBar);
+            this.panel19.Controls.Add(this.SlayerLabel);
+            this.panel19.Location = new System.Drawing.Point(3, 549);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(292, 31);
+            this.panel19.TabIndex = 266;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.ThievingBar2);
+            this.panel18.Controls.Add(this.pictureBox36);
+            this.panel18.Controls.Add(this.ThievingLabel2);
+            this.panel18.Controls.Add(this.ThievingBar);
+            this.panel18.Controls.Add(this.pictureBox17);
+            this.panel18.Controls.Add(this.ThievingLabel);
+            this.panel18.Location = new System.Drawing.Point(3, 517);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(292, 31);
+            this.panel18.TabIndex = 266;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.AgilityBar2);
+            this.panel17.Controls.Add(this.pictureBox37);
+            this.panel17.Controls.Add(this.AgilityLabel2);
+            this.panel17.Controls.Add(this.AgilityBar);
+            this.panel17.Controls.Add(this.pictureBox18);
+            this.panel17.Controls.Add(this.AgilityLabel);
+            this.panel17.Location = new System.Drawing.Point(3, 485);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(292, 31);
+            this.panel17.TabIndex = 266;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.pictureBox38);
+            this.panel16.Controls.Add(this.HerbloreBar2);
+            this.panel16.Controls.Add(this.HerbloreLabel2);
+            this.panel16.Controls.Add(this.HerbloreBar);
+            this.panel16.Controls.Add(this.pictureBox19);
+            this.panel16.Controls.Add(this.HerbloreLabel);
+            this.panel16.Location = new System.Drawing.Point(3, 453);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(292, 31);
+            this.panel16.TabIndex = 267;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.pictureBox39);
+            this.panel15.Controls.Add(this.MiningBar2);
+            this.panel15.Controls.Add(this.MiningLabel2);
+            this.panel15.Controls.Add(this.MiningBar);
+            this.panel15.Controls.Add(this.pictureBox20);
+            this.panel15.Controls.Add(this.MiningLabel);
+            this.panel15.Location = new System.Drawing.Point(3, 421);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(292, 31);
+            this.panel15.TabIndex = 266;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(493, 258);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel1.TabIndex = 266;
+            this.metroLabel1.Text = "Total Level";
+            // 
+            // TotalLevel2
+            // 
+            this.TotalLevel2.AutoSize = true;
+            this.TotalLevel2.Location = new System.Drawing.Point(493, 278);
+            this.TotalLevel2.Name = "TotalLevel2";
+            this.TotalLevel2.Size = new System.Drawing.Size(0, 0);
+            this.TotalLevel2.TabIndex = 267;
+            // 
+            // TotalLevel1
+            // 
+            this.TotalLevel1.AutoSize = true;
+            this.TotalLevel1.Location = new System.Drawing.Point(42, 279);
+            this.TotalLevel1.Name = "TotalLevel1";
+            this.TotalLevel1.Size = new System.Drawing.Size(0, 0);
+            this.TotalLevel1.TabIndex = 269;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(42, 259);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel3.TabIndex = 268;
+            this.metroLabel3.Text = "Total Level";
             // 
             // ComparePlayer
             // 
@@ -2391,6 +2429,10 @@
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(610, 529);
             this.ContextMenuStrip = this.ComparePlayerMenu;
+            this.Controls.Add(this.TotalLevel1);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.TotalLevel2);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.ProfileBox1);
             this.Controls.Add(this.ProfileBox2);
@@ -2487,33 +2529,33 @@
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2716,5 +2758,9 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
+        private MetroFramework.Controls.MetroLabel TotalLevel2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel TotalLevel1;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }

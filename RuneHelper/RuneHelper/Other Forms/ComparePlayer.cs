@@ -46,6 +46,9 @@ namespace RuneHelper
                 LevelArray = API.UpdateLevels(PLayerInput1.Text);
                 LevelArray2 = API.UpdateLevels(PlayerInput2.Text);
 
+                TotalLevel1.Text = LevelArray[1];
+                TotalLevel2.Text = LevelArray2[1];
+
                 AttackBar.Value = API.IntParse(LevelArray[5]);
                 DefenceBar.Value = API.IntParse(LevelArray[7]);
                 StrengthBar.Value = API.IntParse(LevelArray[9]);
