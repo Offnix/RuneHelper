@@ -111,7 +111,16 @@ namespace RuneHelper
             }
         }
 
-        private void InventionPerkMetaToolStrip_Click(object sender, EventArgs e)
+        /*private void InventionPerkMetaToolStrip_Click(object sender, EventArgs e)
+        {
+            if (!Application.OpenForms.OfType<InventionMeta>().Any())
+            {
+                InventionMeta InventionForm = new InventionMeta();
+                InventionForm.Show();
+            }
+        } Moved to other toolstrip */
+
+        private void PerkMetaToolstrip_Click(object sender, EventArgs e)
         {
             if (!Application.OpenForms.OfType<InventionMeta>().Any())
             {
@@ -425,5 +434,7 @@ namespace RuneHelper
         }
 
         #endregion Functions
+
+        
     }
 }

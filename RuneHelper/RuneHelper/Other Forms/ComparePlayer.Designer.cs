@@ -197,6 +197,7 @@
             this.ComparePlayerMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.OpenStats = new System.Windows.Forms.ToolStripMenuItem();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
@@ -253,6 +254,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProfileBox1)).BeginInit();
             this.ComparePlayerMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // InventionLabel
@@ -509,7 +511,7 @@
             // 
             this.AttackLabel.AutoSize = true;
             this.AttackLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AttackLabel.Location = new System.Drawing.Point(119, 266);
+            this.AttackLabel.Location = new System.Drawing.Point(105, 7);
             this.AttackLabel.Name = "AttackLabel";
             this.AttackLabel.Size = new System.Drawing.Size(16, 19);
             this.AttackLabel.TabIndex = 140;
@@ -983,7 +985,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 261);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(23, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1028,7 +1030,7 @@
             // 
             // AttackBar
             // 
-            this.AttackBar.Location = new System.Drawing.Point(46, 261);
+            this.AttackBar.Location = new System.Drawing.Point(32, 3);
             this.AttackBar.MarqueeAnimationSpeed = 0;
             this.AttackBar.Maximum = 99;
             this.AttackBar.Name = "AttackBar";
@@ -1289,7 +1291,7 @@
             // 
             this.AttackLabel2.AutoSize = true;
             this.AttackLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.AttackLabel2.Location = new System.Drawing.Point(449, 157);
+            this.AttackLabel2.Location = new System.Drawing.Point(269, 7);
             this.AttackLabel2.Name = "AttackLabel2";
             this.AttackLabel2.Size = new System.Drawing.Size(16, 19);
             this.AttackLabel2.TabIndex = 218;
@@ -1763,7 +1765,7 @@
             // 
             this.pictureBox52.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox52.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox52.Image")));
-            this.pictureBox52.Location = new System.Drawing.Point(347, 152);
+            this.pictureBox52.Location = new System.Drawing.Point(167, 3);
             this.pictureBox52.Name = "pictureBox52";
             this.pictureBox52.Size = new System.Drawing.Size(23, 23);
             this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1808,7 +1810,7 @@
             // 
             // AttackBar2
             // 
-            this.AttackBar2.Location = new System.Drawing.Point(376, 152);
+            this.AttackBar2.Location = new System.Drawing.Point(196, 3);
             this.AttackBar2.MarqueeAnimationSpeed = 0;
             this.AttackBar2.Maximum = 99;
             this.AttackBar2.Name = "AttackBar2";
@@ -1949,6 +1951,19 @@
             // 
             this.StyleManager.Owner = this;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.AttackBar);
+            this.panel1.Controls.Add(this.AttackLabel);
+            this.panel1.Controls.Add(this.pictureBox52);
+            this.panel1.Controls.Add(this.AttackBar2);
+            this.panel1.Controls.Add(this.AttackLabel2);
+            this.panel1.Location = new System.Drawing.Point(151, 108);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(292, 31);
+            this.panel1.TabIndex = 252;
+            // 
             // ComparePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1956,6 +1971,7 @@
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(616, 604);
             this.ContextMenuStrip = this.ComparePlayerMenu;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ProfileBox1);
             this.Controls.Add(this.ProfileBox2);
             this.Controls.Add(this.label28);
@@ -1989,7 +2005,6 @@
             this.Controls.Add(this.HealthLabel2);
             this.Controls.Add(this.StrengthLabel2);
             this.Controls.Add(this.DefenceLabel2);
-            this.Controls.Add(this.AttackLabel2);
             this.Controls.Add(this.pictureBox27);
             this.Controls.Add(this.pictureBox28);
             this.Controls.Add(this.InventorBar2);
@@ -2036,12 +2051,10 @@
             this.Controls.Add(this.WoodcuttingBar2);
             this.Controls.Add(this.MagicBar2);
             this.Controls.Add(this.PrayerBar2);
-            this.Controls.Add(this.pictureBox52);
             this.Controls.Add(this.RangedBar2);
             this.Controls.Add(this.HealthBar2);
             this.Controls.Add(this.StrengthBar2);
             this.Controls.Add(this.DefenceBar2);
-            this.Controls.Add(this.AttackBar2);
             this.Controls.Add(this.InventionLabel);
             this.Controls.Add(this.DivinationLabel);
             this.Controls.Add(this.DungeoneeringLabel);
@@ -2067,7 +2080,6 @@
             this.Controls.Add(this.HealthLabel);
             this.Controls.Add(this.StrengthLabel);
             this.Controls.Add(this.DefenceLabel);
-            this.Controls.Add(this.AttackLabel);
             this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox26);
             this.Controls.Add(this.InventorBar);
@@ -2114,12 +2126,10 @@
             this.Controls.Add(this.WoodcuttingBar);
             this.Controls.Add(this.MagicBar);
             this.Controls.Add(this.PrayerBar);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.RangedBar);
             this.Controls.Add(this.HealthBar);
             this.Controls.Add(this.StrengthBar);
             this.Controls.Add(this.DefenceBar);
-            this.Controls.Add(this.AttackBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ComparePlayer";
             this.Style = MetroFramework.MetroColorStyle.White;
@@ -2181,6 +2191,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProfileBox1)).EndInit();
             this.ComparePlayerMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2355,5 +2367,6 @@
         private System.Windows.Forms.ContextMenuStrip ComparePlayerMenu;
         private System.Windows.Forms.ToolStripMenuItem OpenStats;
         private new MetroFramework.Components.MetroStyleManager StyleManager;
+        private System.Windows.Forms.Panel panel1;
     }
 }

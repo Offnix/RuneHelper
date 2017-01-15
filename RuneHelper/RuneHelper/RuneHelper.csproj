@@ -54,7 +54,7 @@
     <ApplicationIcon>runehelper_logo_MJN_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>Internet</TargetZone>
@@ -76,7 +76,7 @@
     <AssemblyOriginatorKeyFile>RuneHelper.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>1932E6EA8A1D256AD6CCDF72D65CC658704C41DD</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>13F6B769D773FB3C25EFF7EBBF147BB94B920B8D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>RuneHelper_TemporaryKey.pfx</ManifestKeyFile>
@@ -263,6 +263,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="RuneHelper.snk" />
+    <None Include="RuneHelper_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

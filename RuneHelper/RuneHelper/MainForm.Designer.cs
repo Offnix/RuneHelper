@@ -46,12 +46,12 @@
             this.Agility = new System.Windows.Forms.ToolStripMenuItem();
             this.AgilityToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.SilverHawkFeatherToolStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventionPerkMetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FireMakingToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.OtherToolStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.CompareStatsToolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.itemSearchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bestiaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PerkMetaToolstrip = new System.Windows.Forms.ToolStripMenuItem();
             this.TimeLabel = new System.Windows.Forms.ToolStripLabel();
             this.Time = new System.Windows.Forms.ToolStripLabel();
             this.UsernameLabel = new MetroFramework.Controls.MetroLabel();
@@ -281,7 +281,6 @@
             this.WoodcuttingToolStrip,
             this.MiningToolStrip,
             this.Agility,
-            this.inventionPerkMetaToolStripMenuItem,
             this.FireMakingToolStrip});
             this.Calculators.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.Calculators.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -293,7 +292,7 @@
             // 
             this.WoodcuttingToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.WoodcuttingToolStrip.Name = "WoodcuttingToolStrip";
-            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(201, 24);
+            this.WoodcuttingToolStrip.Size = new System.Drawing.Size(156, 24);
             this.WoodcuttingToolStrip.Text = "Woodcutting";
             this.WoodcuttingToolStrip.Click += new System.EventHandler(this.WoodcuttingToolStrip_Click);
             // 
@@ -301,7 +300,7 @@
             // 
             this.MiningToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.MiningToolStrip.Name = "MiningToolStrip";
-            this.MiningToolStrip.Size = new System.Drawing.Size(201, 24);
+            this.MiningToolStrip.Size = new System.Drawing.Size(156, 24);
             this.MiningToolStrip.Text = "Mining";
             this.MiningToolStrip.Click += new System.EventHandler(this.MiningToolStrip_Click);
             // 
@@ -312,7 +311,7 @@
             this.SilverHawkFeatherToolStrip});
             this.Agility.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.Agility.Name = "Agility";
-            this.Agility.Size = new System.Drawing.Size(201, 24);
+            this.Agility.Size = new System.Drawing.Size(156, 24);
             this.Agility.Text = "Agility";
             // 
             // AgilityToolStrip
@@ -329,19 +328,11 @@
             this.SilverHawkFeatherToolStrip.Text = "Silverhawk Feathers";
             this.SilverHawkFeatherToolStrip.Click += new System.EventHandler(this.silverHawkFeatherToolStrip_Click);
             // 
-            // inventionPerkMetaToolStripMenuItem
-            // 
-            this.inventionPerkMetaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Light", 11F);
-            this.inventionPerkMetaToolStripMenuItem.Name = "inventionPerkMetaToolStripMenuItem";
-            this.inventionPerkMetaToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
-            this.inventionPerkMetaToolStripMenuItem.Text = "Invention Perk Meta";
-            this.inventionPerkMetaToolStripMenuItem.Click += new System.EventHandler(this.InventionPerkMetaToolStrip_Click);
-            // 
             // FireMakingToolStrip
             // 
             this.FireMakingToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.FireMakingToolStrip.Name = "FireMakingToolStrip";
-            this.FireMakingToolStrip.Size = new System.Drawing.Size(201, 24);
+            this.FireMakingToolStrip.Size = new System.Drawing.Size(156, 24);
             this.FireMakingToolStrip.Text = "Firemaking";
             this.FireMakingToolStrip.Click += new System.EventHandler(this.FireMakingToolStrip_Click);
             // 
@@ -351,7 +342,8 @@
             this.OtherToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CompareStatsToolStrip,
             this.itemSearchToolStripMenuItem,
-            this.bestiaryToolStripMenuItem});
+            this.bestiaryToolStripMenuItem,
+            this.PerkMetaToolstrip});
             this.OtherToolStrip.Font = new System.Drawing.Font("Segoe UI Light", 11F);
             this.OtherToolStrip.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.OtherToolStrip.Name = "OtherToolStrip";
@@ -361,23 +353,30 @@
             // CompareStatsToolStrip
             // 
             this.CompareStatsToolStrip.Name = "CompareStatsToolStrip";
-            this.CompareStatsToolStrip.Size = new System.Drawing.Size(180, 24);
+            this.CompareStatsToolStrip.Size = new System.Drawing.Size(201, 24);
             this.CompareStatsToolStrip.Text = "Compare Stats";
             this.CompareStatsToolStrip.Click += new System.EventHandler(this.CompareStatsToolStrip_Click);
             // 
             // itemSearchToolStripMenuItem
             // 
             this.itemSearchToolStripMenuItem.Name = "itemSearchToolStripMenuItem";
-            this.itemSearchToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.itemSearchToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
             this.itemSearchToolStripMenuItem.Text = "Grand Exchange";
             this.itemSearchToolStripMenuItem.Click += new System.EventHandler(this.itemSearchToolStripMenuItem_Click);
             // 
             // bestiaryToolStripMenuItem
             // 
             this.bestiaryToolStripMenuItem.Name = "bestiaryToolStripMenuItem";
-            this.bestiaryToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.bestiaryToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
             this.bestiaryToolStripMenuItem.Text = "Bestiary";
             this.bestiaryToolStripMenuItem.Click += new System.EventHandler(this.bestiaryToolStripMenuItem_Click);
+            // 
+            // PerkMetaToolstrip
+            // 
+            this.PerkMetaToolstrip.Name = "PerkMetaToolstrip";
+            this.PerkMetaToolstrip.Size = new System.Drawing.Size(201, 24);
+            this.PerkMetaToolstrip.Text = "Invention Perk Meta";
+            this.PerkMetaToolstrip.Click += new System.EventHandler(this.PerkMetaToolstrip_Click);
             // 
             // TimeLabel
             // 
@@ -1716,7 +1715,6 @@
         private System.Windows.Forms.ToolStripDropDownButton Settings;
         private System.Windows.Forms.ToolStripMenuItem OpenSettingsToolStrip;
         private System.Windows.Forms.ToolStripMenuItem ReloadPageToolStrip;
-        private System.Windows.Forms.ToolStripMenuItem inventionPerkMetaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutToolStrip;
         private System.Windows.Forms.ToolStripMenuItem FireMakingToolStrip;
         private System.Windows.Forms.ToolStripDropDownButton OtherToolStrip;
@@ -1750,6 +1748,7 @@
         private MetroFramework.Controls.MetroLabel NoDataComment;
         private MetroFramework.Controls.MetroLabel NoDataLabel;
         private System.Windows.Forms.ToolStripMenuItem bestiaryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PerkMetaToolstrip;
     }
 }
 
