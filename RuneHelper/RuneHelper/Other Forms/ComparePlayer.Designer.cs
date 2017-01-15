@@ -198,6 +198,8 @@
             this.OpenStats = new System.Windows.Forms.ToolStripMenuItem();
             this.StyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
@@ -255,6 +257,8 @@
             this.ComparePlayerMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // InventionLabel
@@ -391,7 +395,7 @@
             // 
             this.SmithingLabel.AutoSize = true;
             this.SmithingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.SmithingLabel.Location = new System.Drawing.Point(241, 185);
+            this.SmithingLabel.Location = new System.Drawing.Point(117, 331);
             this.SmithingLabel.Name = "SmithingLabel";
             this.SmithingLabel.Size = new System.Drawing.Size(16, 19);
             this.SmithingLabel.TabIndex = 152;
@@ -401,7 +405,7 @@
             // 
             this.CraftingLabel.AutoSize = true;
             this.CraftingLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CraftingLabel.Location = new System.Drawing.Point(241, 156);
+            this.CraftingLabel.Location = new System.Drawing.Point(117, 307);
             this.CraftingLabel.Name = "CraftingLabel";
             this.CraftingLabel.Size = new System.Drawing.Size(16, 19);
             this.CraftingLabel.TabIndex = 151;
@@ -491,7 +495,7 @@
             // 
             this.StrengthLabel.AutoSize = true;
             this.StrengthLabel.BackColor = System.Drawing.Color.Transparent;
-            this.StrengthLabel.Location = new System.Drawing.Point(119, 330);
+            this.StrengthLabel.Location = new System.Drawing.Point(105, 7);
             this.StrengthLabel.Name = "StrengthLabel";
             this.StrengthLabel.Size = new System.Drawing.Size(16, 19);
             this.StrengthLabel.TabIndex = 142;
@@ -501,7 +505,7 @@
             // 
             this.DefenceLabel.AutoSize = true;
             this.DefenceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DefenceLabel.Location = new System.Drawing.Point(119, 301);
+            this.DefenceLabel.Location = new System.Drawing.Point(105, 7);
             this.DefenceLabel.Name = "DefenceLabel";
             this.DefenceLabel.Size = new System.Drawing.Size(16, 19);
             this.DefenceLabel.TabIndex = 141;
@@ -673,7 +677,7 @@
             // 
             this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(139, 185);
+            this.pictureBox21.Location = new System.Drawing.Point(17, 331);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(23, 23);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -684,7 +688,7 @@
             // 
             this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(139, 156);
+            this.pictureBox22.Location = new System.Drawing.Point(17, 303);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(23, 23);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -783,7 +787,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(17, 325);
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(23, 23);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -794,7 +798,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(17, 296);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(23, 23);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -911,7 +915,7 @@
             // 
             // SmithingBar
             // 
-            this.SmithingBar.Location = new System.Drawing.Point(168, 185);
+            this.SmithingBar.Location = new System.Drawing.Point(44, 331);
             this.SmithingBar.MarqueeAnimationSpeed = 0;
             this.SmithingBar.Maximum = 99;
             this.SmithingBar.Name = "SmithingBar";
@@ -920,7 +924,7 @@
             // 
             // CraftingBar
             // 
-            this.CraftingBar.Location = new System.Drawing.Point(168, 156);
+            this.CraftingBar.Location = new System.Drawing.Point(44, 303);
             this.CraftingBar.MarqueeAnimationSpeed = 0;
             this.CraftingBar.Maximum = 99;
             this.CraftingBar.Name = "CraftingBar";
@@ -1012,7 +1016,7 @@
             // 
             // StrengthBar
             // 
-            this.StrengthBar.Location = new System.Drawing.Point(46, 325);
+            this.StrengthBar.Location = new System.Drawing.Point(32, 3);
             this.StrengthBar.MarqueeAnimationSpeed = 0;
             this.StrengthBar.Maximum = 99;
             this.StrengthBar.Name = "StrengthBar";
@@ -1021,7 +1025,7 @@
             // 
             // DefenceBar
             // 
-            this.DefenceBar.Location = new System.Drawing.Point(46, 296);
+            this.DefenceBar.Location = new System.Drawing.Point(32, 3);
             this.DefenceBar.MarqueeAnimationSpeed = 0;
             this.DefenceBar.Maximum = 99;
             this.DefenceBar.Name = "DefenceBar";
@@ -1271,7 +1275,7 @@
             // 
             this.StrengthLabel2.AutoSize = true;
             this.StrengthLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.StrengthLabel2.Location = new System.Drawing.Point(449, 215);
+            this.StrengthLabel2.Location = new System.Drawing.Point(269, 7);
             this.StrengthLabel2.Name = "StrengthLabel2";
             this.StrengthLabel2.Size = new System.Drawing.Size(16, 19);
             this.StrengthLabel2.TabIndex = 220;
@@ -1281,7 +1285,7 @@
             // 
             this.DefenceLabel2.AutoSize = true;
             this.DefenceLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.DefenceLabel2.Location = new System.Drawing.Point(449, 186);
+            this.DefenceLabel2.Location = new System.Drawing.Point(269, 7);
             this.DefenceLabel2.Name = "DefenceLabel2";
             this.DefenceLabel2.Size = new System.Drawing.Size(16, 19);
             this.DefenceLabel2.TabIndex = 219;
@@ -1563,7 +1567,7 @@
             // 
             this.pictureBox50.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox50.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox50.Image")));
-            this.pictureBox50.Location = new System.Drawing.Point(347, 210);
+            this.pictureBox50.Location = new System.Drawing.Point(167, 3);
             this.pictureBox50.Name = "pictureBox50";
             this.pictureBox50.Size = new System.Drawing.Size(23, 23);
             this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1574,7 +1578,7 @@
             // 
             this.pictureBox51.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox51.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox51.Image")));
-            this.pictureBox51.Location = new System.Drawing.Point(347, 181);
+            this.pictureBox51.Location = new System.Drawing.Point(167, 3);
             this.pictureBox51.Name = "pictureBox51";
             this.pictureBox51.Size = new System.Drawing.Size(23, 23);
             this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1792,7 +1796,7 @@
             // 
             // StrengthBar2
             // 
-            this.StrengthBar2.Location = new System.Drawing.Point(376, 210);
+            this.StrengthBar2.Location = new System.Drawing.Point(196, 3);
             this.StrengthBar2.MarqueeAnimationSpeed = 0;
             this.StrengthBar2.Maximum = 99;
             this.StrengthBar2.Name = "StrengthBar2";
@@ -1801,7 +1805,7 @@
             // 
             // DefenceBar2
             // 
-            this.DefenceBar2.Location = new System.Drawing.Point(376, 181);
+            this.DefenceBar2.Location = new System.Drawing.Point(196, 3);
             this.DefenceBar2.MarqueeAnimationSpeed = 0;
             this.DefenceBar2.Maximum = 99;
             this.DefenceBar2.Name = "DefenceBar2";
@@ -1964,6 +1968,32 @@
             this.panel1.Size = new System.Drawing.Size(292, 31);
             this.panel1.TabIndex = 252;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.DefenceBar);
+            this.panel2.Controls.Add(this.DefenceLabel);
+            this.panel2.Controls.Add(this.pictureBox51);
+            this.panel2.Controls.Add(this.DefenceBar2);
+            this.panel2.Controls.Add(this.DefenceLabel2);
+            this.panel2.Location = new System.Drawing.Point(151, 140);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(292, 31);
+            this.panel2.TabIndex = 253;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.StrengthBar);
+            this.panel3.Controls.Add(this.StrengthLabel);
+            this.panel3.Controls.Add(this.pictureBox50);
+            this.panel3.Controls.Add(this.StrengthBar2);
+            this.panel3.Controls.Add(this.StrengthLabel2);
+            this.panel3.Location = new System.Drawing.Point(151, 172);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(292, 31);
+            this.panel3.TabIndex = 254;
+            // 
             // ComparePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1971,6 +2001,8 @@
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(616, 604);
             this.ContextMenuStrip = this.ComparePlayerMenu;
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ProfileBox1);
             this.Controls.Add(this.ProfileBox2);
@@ -2003,8 +2035,6 @@
             this.Controls.Add(this.PrayerLabel2);
             this.Controls.Add(this.RangedLabel2);
             this.Controls.Add(this.HealthLabel2);
-            this.Controls.Add(this.StrengthLabel2);
-            this.Controls.Add(this.DefenceLabel2);
             this.Controls.Add(this.pictureBox27);
             this.Controls.Add(this.pictureBox28);
             this.Controls.Add(this.InventorBar2);
@@ -2029,8 +2059,6 @@
             this.Controls.Add(this.pictureBox47);
             this.Controls.Add(this.pictureBox48);
             this.Controls.Add(this.pictureBox49);
-            this.Controls.Add(this.pictureBox50);
-            this.Controls.Add(this.pictureBox51);
             this.Controls.Add(this.DivinationBar2);
             this.Controls.Add(this.DungeoneeringBar2);
             this.Controls.Add(this.SummoningBar2);
@@ -2053,8 +2081,6 @@
             this.Controls.Add(this.PrayerBar2);
             this.Controls.Add(this.RangedBar2);
             this.Controls.Add(this.HealthBar2);
-            this.Controls.Add(this.StrengthBar2);
-            this.Controls.Add(this.DefenceBar2);
             this.Controls.Add(this.InventionLabel);
             this.Controls.Add(this.DivinationLabel);
             this.Controls.Add(this.DungeoneeringLabel);
@@ -2078,8 +2104,6 @@
             this.Controls.Add(this.PrayerLabel);
             this.Controls.Add(this.RangedLabel);
             this.Controls.Add(this.HealthLabel);
-            this.Controls.Add(this.StrengthLabel);
-            this.Controls.Add(this.DefenceLabel);
             this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox26);
             this.Controls.Add(this.InventorBar);
@@ -2104,8 +2128,6 @@
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.DivinationBar);
             this.Controls.Add(this.DungeoneeringBar);
             this.Controls.Add(this.SummoningBar);
@@ -2128,8 +2150,6 @@
             this.Controls.Add(this.PrayerBar);
             this.Controls.Add(this.RangedBar);
             this.Controls.Add(this.HealthBar);
-            this.Controls.Add(this.StrengthBar);
-            this.Controls.Add(this.DefenceBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ComparePlayer";
             this.Style = MetroFramework.MetroColorStyle.White;
@@ -2193,6 +2213,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.StyleManager)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2368,5 +2392,7 @@
         private System.Windows.Forms.ToolStripMenuItem OpenStats;
         private new MetroFramework.Components.MetroStyleManager StyleManager;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
     }
 }
