@@ -48,6 +48,10 @@ namespace RuneHelper
 
                 TotalLevel1.Text = LevelArray[1];
                 TotalLevel2.Text = LevelArray2[1];
+                PercentLabel1.Text = API.GetLevelPercentage(Convert.ToDecimal(LevelArray[1])).ToString() + "%";
+                PercentLabel2.Text = API.GetLevelPercentage(Convert.ToDecimal(LevelArray2[1])).ToString() + "%";
+                AverageLevel1.Text = API.GetMean(LevelArray).ToString();
+                AverageLevel2.Text = API.GetMean(LevelArray2).ToString();
 
                 AttackBar.Value = API.IntParse(LevelArray[5]);
                 DefenceBar.Value = API.IntParse(LevelArray[7]);

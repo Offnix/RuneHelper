@@ -229,6 +229,14 @@
             this.TotalLevel2 = new MetroFramework.Controls.MetroLabel();
             this.TotalLevel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.PercentLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.PercentLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.AverageLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.AverageLevel1 = new MetroFramework.Controls.MetroLabel();
+            this.AverageLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.AverageLevel2 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
@@ -2402,16 +2410,18 @@
             this.TotalLevel2.AutoSize = true;
             this.TotalLevel2.Location = new System.Drawing.Point(493, 278);
             this.TotalLevel2.Name = "TotalLevel2";
-            this.TotalLevel2.Size = new System.Drawing.Size(0, 0);
+            this.TotalLevel2.Size = new System.Drawing.Size(37, 19);
             this.TotalLevel2.TabIndex = 267;
+            this.TotalLevel2.Text = "9999";
             // 
             // TotalLevel1
             // 
             this.TotalLevel1.AutoSize = true;
             this.TotalLevel1.Location = new System.Drawing.Point(42, 279);
             this.TotalLevel1.Name = "TotalLevel1";
-            this.TotalLevel1.Size = new System.Drawing.Size(0, 0);
+            this.TotalLevel1.Size = new System.Drawing.Size(37, 19);
             this.TotalLevel1.TabIndex = 269;
+            this.TotalLevel1.Text = "9999";
             // 
             // metroLabel3
             // 
@@ -2422,6 +2432,78 @@
             this.metroLabel3.TabIndex = 268;
             this.metroLabel3.Text = "Total Level";
             // 
+            // PercentLabel1
+            // 
+            this.PercentLabel1.AutoSize = true;
+            this.PercentLabel1.Location = new System.Drawing.Point(42, 326);
+            this.PercentLabel1.Name = "PercentLabel1";
+            this.PercentLabel1.Size = new System.Drawing.Size(37, 19);
+            this.PercentLabel1.TabIndex = 271;
+            this.PercentLabel1.Text = "9999";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(42, 306);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel4.TabIndex = 270;
+            this.metroLabel4.Text = "Percentage";
+            // 
+            // PercentLabel2
+            // 
+            this.PercentLabel2.AutoSize = true;
+            this.PercentLabel2.Location = new System.Drawing.Point(493, 323);
+            this.PercentLabel2.Name = "PercentLabel2";
+            this.PercentLabel2.Size = new System.Drawing.Size(37, 19);
+            this.PercentLabel2.TabIndex = 273;
+            this.PercentLabel2.Text = "9999";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(493, 303);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel6.TabIndex = 272;
+            this.metroLabel6.Text = "Percentage";
+            // 
+            // AverageLabel1
+            // 
+            this.AverageLabel1.AutoSize = true;
+            this.AverageLabel1.Location = new System.Drawing.Point(42, 367);
+            this.AverageLabel1.Name = "AverageLabel1";
+            this.AverageLabel1.Size = new System.Drawing.Size(37, 19);
+            this.AverageLabel1.TabIndex = 275;
+            this.AverageLabel1.Text = "9999";
+            // 
+            // AverageLevel1
+            // 
+            this.AverageLevel1.AutoSize = true;
+            this.AverageLevel1.Location = new System.Drawing.Point(42, 347);
+            this.AverageLevel1.Name = "AverageLevel1";
+            this.AverageLevel1.Size = new System.Drawing.Size(74, 19);
+            this.AverageLevel1.TabIndex = 274;
+            this.AverageLevel1.Text = "Percentage";
+            // 
+            // AverageLabel2
+            // 
+            this.AverageLabel2.AutoSize = true;
+            this.AverageLabel2.Location = new System.Drawing.Point(493, 367);
+            this.AverageLabel2.Name = "AverageLabel2";
+            this.AverageLabel2.Size = new System.Drawing.Size(37, 19);
+            this.AverageLabel2.TabIndex = 277;
+            this.AverageLabel2.Text = "9999";
+            // 
+            // AverageLevel2
+            // 
+            this.AverageLevel2.AutoSize = true;
+            this.AverageLevel2.Location = new System.Drawing.Point(493, 347);
+            this.AverageLevel2.Name = "AverageLevel2";
+            this.AverageLevel2.Size = new System.Drawing.Size(87, 19);
+            this.AverageLevel2.TabIndex = 276;
+            this.AverageLevel2.Text = "AverageLevel";
+            // 
             // ComparePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2429,6 +2511,14 @@
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(610, 529);
             this.ContextMenuStrip = this.ComparePlayerMenu;
+            this.Controls.Add(this.AverageLabel2);
+            this.Controls.Add(this.AverageLevel2);
+            this.Controls.Add(this.AverageLabel1);
+            this.Controls.Add(this.AverageLevel1);
+            this.Controls.Add(this.PercentLabel2);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.PercentLabel1);
+            this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.TotalLevel1);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.TotalLevel2);
@@ -2762,5 +2852,13 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel TotalLevel1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel PercentLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel PercentLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel AverageLabel2;
+        private MetroFramework.Controls.MetroLabel AverageLevel2;
+        private MetroFramework.Controls.MetroLabel AverageLabel1;
+        private MetroFramework.Controls.MetroLabel AverageLevel1;
     }
 }
